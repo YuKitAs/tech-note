@@ -14,7 +14,7 @@ Firstly, add the spring-context dependency of Spring Framework:
   </dependencies>
   ```
   
-We will create an interface with a getMessage() method:
+We will create an interface with `getMessage()` method:
 
   ```java
   public interface MessageService {
@@ -22,7 +22,7 @@ We will create an interface with a getMessage() method:
   }
   ```
   
-Then, create a class which calls the getMessage() method. This class must be annotated with @Component annotation:
+Then, create a class which calls the a `getMessage()` method. This class must be annotated with `@Component` annotation to indicate this is an auto scan component:
 
   ```java
   import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +44,7 @@ Then, create a class which calls the getMessage() method. This class must be ann
   }
   ```
 
-At last, create a class with @Configuration and @ComponentScan annotations. We will annotate an instance of MessageService as a Bean and implement the getMessage():
+At last, create a class with `@Configuration` and `@ComponentScan` annotations. The `@Configuration` annotation indicates that this class will be used by JavaConfig as a source of bean definitions. We will declare the `mockMessageService()` method which returns an instance of MessageService as a bean using `@Bean` annotation:
 
   ```java
   import org.springframework.context.ApplicationContext;
@@ -55,7 +55,7 @@ At last, create a class with @Configuration and @ComponentScan annotations. We w
   public class Application {
 
       @Bean
-      MessageService mockMessageService() {
+      public MessageService mockMessageService() {
           return new MessageService() {
               public String getMessage() {
                 return "Hello World!";
@@ -71,3 +71,5 @@ At last, create a class with @Configuration and @ComponentScan annotations. We w
       }
   }
   ```
+
+As shown above, the `MessagePrinter()` class doesn't need to care about the object it depends on. It'll be done by Spring's `ApplicationContext.getBean()`.

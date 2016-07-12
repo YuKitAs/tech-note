@@ -2,7 +2,7 @@
 
 The following example shows the basic concept of spring dependency injection.
 
-Firstly, add the spring-context dependency of Spring Framework:
+Dependency of spring-context:
 
   ```xml
   <dependencies>
@@ -14,7 +14,7 @@ Firstly, add the spring-context dependency of Spring Framework:
   </dependencies>
   ```
   
-We will create an interface with `getMessage()` method:
+Firstly, create an interface with `getMessage()` method:
 
   ```java
   public interface MessageService {
@@ -22,7 +22,7 @@ We will create an interface with `getMessage()` method:
   }
   ```
   
-Then, create a class which calls the a `getMessage()` method. This class must be annotated with `@Component` annotation to indicate this is an auto scan component:
+Then, create a class which uses the `MessageService` interface:
 
   ```java
   import org.springframework.beans.factory.annotation.Autowired;
@@ -43,8 +43,9 @@ Then, create a class which calls the a `getMessage()` method. This class must be
       }
   }
   ```
+Notice that the class is annotated with `@Component`, which means it should be one of the candidates for auto-detection. The annotation `@Autowired` could also be applied on the private fields, which means the fields should be resolved as dependencies.
 
-At last, create a class with `@Configuration` and `@ComponentScan` annotations. The `@Configuration` annotation indicates that this class will be used by JavaConfig as a source of bean definitions. We will declare the `mockMessageService()` method which returns an instance of MessageService as a bean using `@Bean` annotation:
+Finally, wire everthing together:
 
   ```java
   import org.springframework.context.ApplicationContext;
@@ -71,5 +72,6 @@ At last, create a class with `@Configuration` and `@ComponentScan` annotations. 
       }
   }
   ```
+The annotation `@Configuration` indicates that this class contains definitions of Beans. The annotation `@ComponentScan` indicates the components are automatically scanned. And the annotation `@Bean` means the annotated method is a definition of Bean.
 
-As shown above, the `MessagePrinter()` class doesn't need to care about the object it depends on. It'll be done by Spring's `ApplicationContext.getBean()`.
+In the `main` method, we could see that we could get an instance of `MessagePrinter` directly from the `context` and do not need to resolve the dependencies.

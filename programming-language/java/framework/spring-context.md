@@ -74,4 +74,4 @@ Finally, wire everthing together:
   ```
 The annotation `@Configuration` indicates that this class contains definitions of Beans. The annotation `@ComponentScan` indicates the components are automatically scanned. And the annotation `@Bean` means the annotated method is a definition of Bean.
 
-In the `main` method, we could see that we could get an instance of `MessagePrinter` directly from the `context` and do not need to resolve the dependencies.
+As shown in the `main` method, we could get an instance of `MessagePrinter` directly from the `context` and do not need to resolve the dependencies.

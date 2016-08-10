@@ -101,6 +101,7 @@ How it works:
 
 Output:
 
-Observed value: 60
-
-Observed value: 100
+  ```
+  Observed value: 60
+  Observed value: 100
+  ```

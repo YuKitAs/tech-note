@@ -86,7 +86,7 @@ ConcreteObserver:
   }
   ```
   
-How it works:
+Demo:
 
   ```java
   public class Main {

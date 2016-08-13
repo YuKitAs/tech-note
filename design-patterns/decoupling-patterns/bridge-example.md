@@ -67,7 +67,7 @@ ConcreteImplementorB:
   }
   ```
   
-Main class:
+Demo:
 
   ```java
   public class Main {

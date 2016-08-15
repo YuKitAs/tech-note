@@ -1,13 +1,13 @@
 # Iterator example
 
-Participants:
+**Participants:**
 
 * Iterator: defines an interface for accessing and traversing elements.
 * ConcreteIterator: implements Iterator; keeps track of the current position in the traversal of the aggregate.
 * Aggregate: defines an interface for creating an Iterator object.
 * ConcreteAggregate: implements the Iterator creation interface to return an instance of the proper ConcreteIterator.
 
-Iterator:
+**Iterator:**
 
   ```java
   public interface Iterator {
@@ -16,7 +16,7 @@ Iterator:
   }
   ```
   
-Aggregate:
+**Aggregate:**
 
   ```java
   public interface Repo {
@@ -24,7 +24,7 @@ Aggregate:
   }
   ```
   
-ConcreteAggregate with ConcreteIterator:
+**ConcreteAggregate with ConcreteIterator:**
 
   ```java
   public class NameRepo implements Repo {
@@ -57,7 +57,7 @@ ConcreteAggregate with ConcreteIterator:
   }
   ```
 
-Demo:
+**Demo:**
 
   ```java
   public class Main {
@@ -71,7 +71,7 @@ Demo:
   }
   ```
 
-Output:
+**Output:**
 
   ```
   Name: Alvin

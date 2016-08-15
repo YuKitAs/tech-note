@@ -1,13 +1,13 @@
 # Decorator example
 
-Participants:
+**Participants:**
 
 * Component: defines the interface for objects that can have responsibilities added to them dynamically.
 * ConcreteComponent: defines an object to which additional responsibilities can be attached.
 * Decorator: maintains a reference to a Component object and defines an interface that conforms to Component's interface.
 * ConcreteDecorator: adds responsibilities to the ConcreteComponent.
 
-Component:
+**Component:**
   
   ```java
   public interface Shape {
@@ -15,7 +15,7 @@ Component:
   }
   ```
 
-ConcreteComponent:
+**ConcreteComponent:**
 
   ```java
   public class Circle implements Shape {
@@ -26,7 +26,7 @@ ConcreteComponent:
   }
   ```
   
-Decorator:
+**Decorator:**
 
   ```java
   public abstract class ShapeDecorator implements Shape {
@@ -42,7 +42,7 @@ Decorator:
   }
   ```
   
-ConcreteDecorator:
+**ConcreteDecorator:**
 
   ```java
   public class RedShapeDecorator extends ShapeDecorator {
@@ -62,7 +62,7 @@ ConcreteDecorator:
   }
   ```
 
-Demo:
+**Demo:**
 
   ```java
   public class Main {
@@ -78,7 +78,7 @@ Demo:
   }
   ```
 
-Output:
+**Output:**
 
   ```
   Shape: Circle

@@ -1,13 +1,13 @@
 # Adapter example
 
-Participants: 
+**Participants:**
 
 * Target: defines the domain-specific interface that Client uses.
 * Client: collaborates with objects conforming to the Target interface.
 * Adaptee: defines an existing interface or class that needs adapting. 
 * Adapter: adapts Adaptee to the Target interface.
 
-Target:
+**Target:**
 
   ```java
   public interface Sorter {
@@ -15,7 +15,7 @@ Target:
   }
   ```
   
-Client:
+**Client:**
 
   ```java
   public class Main {
@@ -30,7 +30,7 @@ Client:
   }
   ```
   
-Adaptee:
+**Adaptee:**
 
   ```java
   public class IntegerSorter {
@@ -47,7 +47,7 @@ Adaptee:
   }
   ```
 
-Adapter:
+**Adapter:**
 
   ```java
   public class SorterAdapter implements Sorter {

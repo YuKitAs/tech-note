@@ -1,13 +1,13 @@
 # Observer example
 
-Participants:
+**Participants:**
 
 * Subject: knows its observers; provides an interface for attaching and detaching Observer objects.
 * Observer: defines an updating interface for objects that should be notified of changes in a subject.
 * ConcreteSubject: stores states of interest to ConcreteObserver objects; sends a notification to its observers when its state changes.
 * ConcreteObserver: maintains a reference to a ConcreteSubject object; stores state that should stay consistent with the subject's; implements the Observer updating interface to keep its state consistent with the subject's.
 
-Subject:
+**Subject:**
 
   ```java
   public interface Observable {
@@ -23,7 +23,7 @@ Subject:
   }
   ```
   
-Observer:
+**Observer:**
 
   ```java
   public interface Observer {
@@ -31,7 +31,7 @@ Observer:
   }
   ```
   
-ConcreteSubject:
+**ConcreteSubject:**
 
   ```java
   public class ObservableValue implements Observable {
@@ -68,7 +68,7 @@ ConcreteSubject:
   }
   ```
 
-ConcreteObserver:
+**ConcreteObserver:**
 
   ```java
   public class ValueObserver implements Observer {
@@ -86,7 +86,7 @@ ConcreteObserver:
   }
   ```
   
-Demo:
+**Demo:**
 
   ```java
   public class Main {
@@ -99,7 +99,7 @@ Demo:
   }
   ```
 
-Output:
+**Output:**
 
   ```
   Observed value: 60

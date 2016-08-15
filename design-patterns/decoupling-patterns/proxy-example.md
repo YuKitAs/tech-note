@@ -1,12 +1,12 @@
 # Proxy example
 
-Participants:
+**Participants:**
 
 * Subject: defines the common interface for RealSubject and Proxy so that a Proxy can be used anywhere a RealSubject is expected.
 * RealSubject: defines the real object that the proxy represents.
 * Proxy: maintains a reference that lets the proxy access the real subject; provides an interface identical to Subject's so that a proxy can by substituted for the real subject; controls access to the real subject.
 
-Subject:
+**Subject:**
 
   ```java
   public interface Image {
@@ -14,7 +14,7 @@ Subject:
   }
   ```
   
-RealSubject:
+**RealSubject:**
 
   ```java
   public class RealImage implements Image {
@@ -36,7 +36,7 @@ RealSubject:
   }
   ```
   
-Proxy:
+**Proxy:**
 
   ```java
   public class ImageProxy implements Image {
@@ -57,7 +57,7 @@ Proxy:
   }
   ```
   
-Demo:
+**Demo:**
 
   ```java
   public class Main {
@@ -70,7 +70,7 @@ Demo:
   }
   ```
   
-Output:
+**Output:**
 
   ```
   Loading: test-image.jpg
@@ -79,4 +79,6 @@ Output:
   Displaying: test-image.jpg
   ```
   
-**Compared with Adapter design pattern:** an Adapter provides a different interface to the object it adapts, a Proxy provides the same interface as its subject.
+**Compared with Adapter design pattern:** 
+
+An Adapter provides a different interface to the object it adapts, a Proxy provides the same interface as its subject.

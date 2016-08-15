@@ -1,13 +1,13 @@
 # Bridge example
 
-Participants:
+**Participants:**
 
 * Abstraction: defines the abstraction's interface; maintains a reference to an object of type Implementor.
 * RefinedAbstraction: extends the interface defined by Abstraction.
 * Implementor: defines the interface for implementation classes.
 * ConcreteImplementor: implements the Implementor interface and defines its concrete implementation.
 
-Abstraction:
+**Abstraction:**
 
   ```java
   public abstract class Shape {
@@ -21,7 +21,7 @@ Abstraction:
   }
   ```
   
-RefinedAbstraction:
+**RefinedAbstraction:**
 
   ```java
   public class Circle extends Shape {
@@ -37,7 +37,7 @@ RefinedAbstraction:
   }
   ```
   
-Implementor:
+**Implementor:**
 
   ```java
   public interface Color {
@@ -45,7 +45,7 @@ Implementor:
   }
   ```
   
-ConcreteImplementorA:
+**ConcreteImplementorA:**
 
   ```java
   public class Black implements Color {
@@ -56,7 +56,7 @@ ConcreteImplementorA:
   }
   ```
 
-ConcreteImplementorB:
+**ConcreteImplementorB:**
 
   ```java
   public class White implements Color {
@@ -67,7 +67,7 @@ ConcreteImplementorB:
   }
   ```
   
-Demo:
+**Demo:**
 
   ```java
   public class Main {
@@ -78,7 +78,7 @@ Demo:
   }
   ```
 
-Output:
+**Output:**
 
   ```
   Circle is black.

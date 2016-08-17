@@ -35,9 +35,9 @@
       this.mediator = mediator;
     }
 
-    public abstract void sendMessage();
+    abstract void sendMessage();
 
-    public abstract String getName();
+    abstract String getName();
   }
   ```
   

@@ -29,19 +29,15 @@
 
   ```java
   public abstract class Colleague {
-    private String name;
     protected Mediator mediator;
 
-    public Colleague(String name, Mediator mediator) {
-      this.name = name;
+    public Colleague(Mediator mediator) {
       this.mediator = mediator;
     }
 
     public abstract void sendMessage();
 
-    public String getName() {
-      return name;
-    }
+    public abstract String getName();
   }
   ```
   
@@ -49,13 +45,18 @@
 
   ```java
   public class ColleagueA extends Colleague {
-    public ColleagueA(String name, Mediator mediator) {
-      super(name, mediator);
+    public ColleagueA(Mediator mediator) {
+      super(mediator);
     }
 
     @Override
     public void sendMessage() {
       mediator.showMessage(this, "Hello World!");
+    }
+    
+    @Override
+    public String getName() {
+      return "A";
     }
   }
   ```
@@ -64,13 +65,18 @@
 
   ```java
   public class ColleagueB extends Colleague {
-    public ColleagueB(String name, Mediator mediator) {
-      super(name, mediator);
+    public ColleagueB(Mediator mediator) {
+      super(mediator);
     }
 
     @Override
     public void sendMessage() {
       mediator.showMessage(this, "Goodbye World!");
+    }
+
+    @Override
+    public String getName() {
+      return "B";
     }
   }
   ```

@@ -12,9 +12,9 @@
 
   ```java
   public interface PizzaFactory {
-    String getCrust();
+    String createCrust();
 
-    String getTopping();
+    String createTopping();
   }
   ```
   
@@ -23,12 +23,12 @@
   ```java
   public class AmericanPizzaFactory implements PizzaFactory {
     @Override
-    public String getCrust() {
+    public String createCrust() {
       return new AmericanCrust().getType() + " crust";
     }
 
     @Override
-    public String getTopping() {
+    public String createTopping() {
       return new AmericanTopping().getType() + " topping";
     }
   }
@@ -39,12 +39,12 @@
   ```java
   public class ItalianPizzaFactory implements PizzaFactory {
     @Override
-    public String getCrust() {
+    public String createCrust() {
       return new ItalianCrust().getType() + " crust";
     }
 
     @Override
-    public String getTopping() {
+    public String createTopping() {
       return new ItalianTopping().getType() + " topping";
     }
   }
@@ -134,8 +134,8 @@
       PizzaFactory americanPizza = FactoryProducer.getPizzaFactory("american");
       PizzaFactory italianPizza = FactoryProducer.getPizzaFactory("italian");
 
-      System.out.println("American pizza: " + americanPizza.getCrust() + " + " + americanPizza.getTopping());
-      System.out.println("Italian pizza: " + italianPizza.getCrust() + " + " + italianPizza.getTopping());
+      System.out.println("American pizza: " + americanPizza.createCrust() + " + " + americanPizza.createTopping());
+      System.out.println("Italian pizza: " + italianPizza.createCrust() + " + " + italianPizza.createTopping());
     }
   }
   ```

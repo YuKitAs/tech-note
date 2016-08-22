@@ -31,7 +31,7 @@
 
     @Override
     public void applyColor() {
-      System.out.print(getClass().getName() + " is ");
+      System.out.print("Circle is ");
       color.apply();
     }
   }
@@ -51,7 +51,7 @@
   public class Black implements Color {
     @Override
     public void apply() {
-      System.out.println(getClass().getName().toLowerCase() + ".");
+      System.out.println("black");
     }
   }
   ```
@@ -62,7 +62,7 @@
   public class White implements Color {
     @Override
     public void apply() {
-      System.out.println(getClass().getName().toLowerCase() + ".");
+      System.out.println("white");
     }
   }
   ```
@@ -81,6 +81,6 @@
 **Output:**
 
   ```
-  Circle is black.
-  Circle is white.
+  Circle is black
+  Circle is white
   ```

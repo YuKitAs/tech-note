@@ -75,3 +75,7 @@
   This is a circle.
   This is a square.
   ```
+  
+**Compared with Abstract Factory design pattern:**
+
+Abstract Factory is often implemented with Factory Methods.

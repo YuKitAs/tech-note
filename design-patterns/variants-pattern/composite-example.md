@@ -35,6 +35,7 @@
 
     @Override
     public void add(Employee employee) {
+      // a leaf has no children
     }
 
     @Override
@@ -94,12 +95,18 @@
       manager.add(developer2);
       manager.add(developer3);
 
+      generalManager.print();
+
       for (Employee emp : generalManager.getSubordinates()) {
+        System.out.print("  ");
         emp.print();
 
         if (emp.getSubordinates() == null) {
         } else {
-          emp.getSubordinates().forEach(e -> e.print());
+          emp.getSubordinates().forEach(e -> {
+            System.out.print("    ");
+            e.print();
+          });
         }
       }
     }
@@ -109,8 +116,9 @@
 **Output:**
 
   ```
-  Employee: Phillip
-  Employee: Angela
-  Employee: Johannes
-  Employee: Peter
+  Employee: Michael
+    Employee: Phillip
+      Employee: Angela
+      Employee: Johannes
+    Employee: Peter
   ```

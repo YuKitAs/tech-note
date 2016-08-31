@@ -1,11 +1,11 @@
 # Template Method example
 
-***Participants:***
+**Participants:**
 
 * AbstractClass: defines abstract primitive opertaions that concrete subclasses define to implement steps of an algorithm; implements a template method defining the skeleton of an algorithm.
 * ConcreteClass: implements the primitive opertaions to carry out subclass-specific steps of the algorithm.
 
-***AbstractClass:***
+**AbstractClass:**
 
   ```java
   public abstract class Game {
@@ -21,7 +21,7 @@
   ```
   
   
-***ConcreteClass:***
+**ConcreteClass:**
 
   ```java
   public class PokemonGo extends Game {
@@ -37,7 +37,7 @@
   }
   ```
   
-***Demo:***
+**Demo:**
 
   ```java
   public class Main {
@@ -48,7 +48,7 @@
   }
   ```
   
-***Output:***
+**Output:**
 
   ```
   Pokemon Go started.

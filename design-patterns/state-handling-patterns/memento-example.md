@@ -36,11 +36,11 @@
       return state;
     }
 
-    public Memento saveStateToMemento() {
+    public Memento saveState() {
       return new Memento(state);
     }
 
-    public void loadStateFromMemento(Memento memento) {
+    public void restoreState(Memento memento) {
       state = memento.getState();
     }
   }
@@ -59,10 +59,6 @@
       mementos.add(memento);
     }
 
-    public List<Memento> getAllMementos() {
-      return mementos;
-    }
-
     public Memento get(int i) {
       return mementos.get(i);
     }
@@ -77,19 +73,16 @@
       Originator originator = new Originator();
       CareTaker careTaker = new CareTaker();
 
-      originator.setState("State #1");
-      careTaker.add(originator.saveStateToMemento());
+      originator.setState("State1");
 
-      originator.setState("State #2");
-      careTaker.add(originator.saveStateToMemento());
+      originator.setState("State2");
+      careTaker.add(originator.saveState());
 
-      originator.setState("State #3");
+      originator.setState("State3");
       System.out.println("Current state: " + originator.getState());
 
-      careTaker.getAllMementos().forEach(memo -> {
-        originator.loadStateFromMemento(memo);
-        System.out.println("Saved state: " + originator.getState());
-      });
+      originator.restoreState(careTaker.get(0));
+      System.out.println("First saved state: " + originator.getState());
     }
   }
   ```
@@ -97,7 +90,6 @@
 **Output:**
 
   ```java
-  Current state: State #3
-  Saved state: State #1
-  Saved state: State #2
+  Current state: State3
+  First saved state: State2
   ```

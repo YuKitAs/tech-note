@@ -3,9 +3,9 @@
 **Participants:**
 
 * Command: declares an interface for executing an operation.
-* ConcreteCommand: defines a binding between a Receiver object and an action; implements execute() method by invoking the corresponding operation(s) on Receiver.
+* ConcreteCommand: defines a binding between a Receiver object and an action; implements `execute()` method by invoking the corresponding operation(s) on Receiver.
 * Client: creates a ConcreteCommand object and sets its receiver.
-* Invoker: asks the Command to carry out the request by calling its execute() method.
+* Invoker: asks the Command to carry out the request by calling its `execute()` method.
 * Receiver: knows how to perform the operations needed to carry out a request; any class can act as a Receiver.
 
 **Command:**

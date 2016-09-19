@@ -1,9 +1,9 @@
-# Master/worker example
+# Master/Worker example
 
 **Participants:**
 
 * Master: responsible for creating and launching active Worker objects.
-* Worker: extends Java's Thread class and override its `run` method.
+* Worker: extends Java's `Thread` class and override its `run` method.
 
 **Master:**
 

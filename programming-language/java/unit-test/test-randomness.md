@@ -18,7 +18,7 @@ The following class will use the random object by accepting a `Random random` pa
   }
   ```
   
-Mock a RNG with deterministic results, which extends Java's `Random` class and overrides its `nextInt()` method:
+Mock a RNG with deterministic results, which extends Java's [`Random`](https://docs.oracle.com/javase/8/docs/api/java/util/Random.html) class and overrides its [`nextInt()`](https://docs.oracle.com/javase/8/docs/api/java/util/Random.html#nextInt--) method:
 
   ```java
   public class DeterministicRNG extends Random {

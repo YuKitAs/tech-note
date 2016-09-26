@@ -1,5 +1,7 @@
 # Strategy example
 
+![strategy](../class-diagrams/strategy.png)
+
 **Participans:**
 
 * Strategy: declares an interface common to all supported algorithms.

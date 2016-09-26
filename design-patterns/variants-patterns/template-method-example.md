@@ -1,5 +1,7 @@
 # Template Method example
 
+![template-method](../class-diagrams/template-method.png)
+
 **Participants:**
 
 * AbstractClass: defines abstract primitive opertaions that concrete subclasses define to implement steps of an algorithm; implements a template method defining the skeleton of an algorithm.

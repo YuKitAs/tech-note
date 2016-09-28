@@ -1,5 +1,7 @@
 # Composite example
 
+![composite](../class-diagrams/composite.png)
+
 **Participants:**
 
 * Component: declares the interface for objects in the composition; implements default behavior for the interface common to all classes.

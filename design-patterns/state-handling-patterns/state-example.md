@@ -1,5 +1,7 @@
 # State example
 
+![state](../class-diagrams/state.png)
+
 **Participants:**
 
 * Context: defines the interface of interest to clients; maintains an instance of a ConcreteState that defines the current state.

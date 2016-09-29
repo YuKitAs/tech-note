@@ -1,5 +1,7 @@
 # Iterator example
 
+![iterator](../class-diagrams/iterator.png)
+
 **Participants:**
 
 * Iterator: defines an interface for accessing and traversing elements.

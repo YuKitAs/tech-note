@@ -2,6 +2,8 @@
 
 ![observer](../class-diagrams/observer.png)
 
+![observer-interaction](../class-diagrams/observer-interaction.png)
+
 **Participants:**
 
 * Subject: knows its observers; provides an interface for attaching and detaching Observer objects.

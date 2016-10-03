@@ -1,5 +1,7 @@
 # Visitor example
 
+![visitor](../class-diagrams/visitor.png)
+
 **Participants:**
 
 * Visitor: declares a Visit operation for rach class of ConcreteElement in the object structures.

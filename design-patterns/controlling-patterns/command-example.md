@@ -1,5 +1,7 @@
 # Command example
 
+![command](../class-diagrams/command.png)
+
 **Participants:**
 
 * Command: declares an interface for executing an operation.

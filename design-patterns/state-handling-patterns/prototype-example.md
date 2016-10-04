@@ -1,5 +1,7 @@
 # Prototype example
 
+![prototype](../class-diagrams/prototype.png)
+
 **Participants:**
 
 * Prototype: declares an interface for cloning itself.

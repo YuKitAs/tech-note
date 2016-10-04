@@ -1,5 +1,7 @@
 # Abstract Factory example
 
+![abstract-factory](../class-diagrams/abstract-factory.png)
+
 **Participants:**
 
 * AbstractFactory: declares an interface for operations that create abstract product objects.

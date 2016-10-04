@@ -1,5 +1,7 @@
 # Adapter example
 
+![adapter](../class-diagrams/adapter.png)
+
 **Participants:**
 
 * Target: defines the domain-specific interface that Client uses.

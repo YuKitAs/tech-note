@@ -1,5 +1,7 @@
 # Mediator example
 
+![mediator](../class-diagrams/mediator.png)
+
 **Participants:**
 
 * Mediator: defines an interface for communicating with Colleague objects.

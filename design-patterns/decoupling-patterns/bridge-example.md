@@ -1,5 +1,7 @@
 # Bridge example
 
+![bridge](../class-diagrams/bridge.png)
+
 **Participants:**
 
 * Abstraction: defines the abstraction's interface; maintains a reference to an object of type Implementor.

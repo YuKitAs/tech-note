@@ -5,5 +5,5 @@
   2. Design Patterns Tutorial from [tutorialspoint](http://www.tutorialspoint.com/design_pattern/).
 
 
-* All the Class Diagrams are drawn with [UMLet](http://www.umlet.com/).
+* All the UML Diagrams are drawn with [UMLet](http://www.umlet.com/).
 

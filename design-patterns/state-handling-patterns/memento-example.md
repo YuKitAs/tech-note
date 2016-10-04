@@ -1,5 +1,7 @@
 # Memento example
 
+![memento](../class-diagrams/memento.png)
+
 **Participants:**
 
 * Memento: stores internal state of the Originator object; protects against access by objects other than the originator.

@@ -1,5 +1,7 @@
 # Flyweight example
 
+![flyweight](../class-diagrams/flyweight.png)
+
 **Participants:**
 
 * Flyweight: declares an interface through which flyweights can receive and act on extrinsic state.

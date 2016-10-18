@@ -45,17 +45,11 @@ ld -Ttext=0x7c00 --oformat binary -o boot boot.o
 
 ```
 
-`-Ttext=0x7c00` is to set up 4K stack space after this bootloader.
+`-Ttext=0x7c00` is used to set up 4K stack space after this bootloader.
 
-Install QEMU and we can boot our OS from hard disk:
+Install QEMU and we can boot our simple OS from hard disk:
 
 ```
 qemu-system-i386 -hda boot -boot c -m 256
 
 ```
-
-
-
-
-
-

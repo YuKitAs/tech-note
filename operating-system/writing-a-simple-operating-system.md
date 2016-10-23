@@ -2,7 +2,7 @@
 
 First of all, we will write a 512-byte boot sector named `boot.S`. Here is an example written in GNU assembly:
 
-```gas
+```asm
 
 .code16
 .text
@@ -33,23 +33,19 @@ bootMsg:
 .org 510                    # pad remainder of boot sector with zeros
 .byte 0x55                  # the standard PC boot signature
 .byte 0xaa                  # the standard PC boot signature
-
 ```
 
 Then we are going to build our OS. Use the following commands to compile `boot.S`:
 
+```console
+$ as -o boot.o boot.S 
+$ ld -Ttext=0x7c00 --oformat binary -o boot boot.o
 ```
 
-as -o boot.o boot.S 
-ld -Ttext=0x7c00 --oformat binary -o boot boot.o
-
-```
-
-`-Ttext=0x7c00` is used to set up 4K stack space after this bootloader.
+`-Ttext=0x7c00` means setting up the beginning of the text section to 0x7c00.
 
 Install QEMU and we can boot our simple OS from hard disk:
 
-```
-qemu-system-i386 -hda boot -boot c -m 256
-
+```console
+$ qemu-system-i386 -hda boot -boot c -m 256
 ```

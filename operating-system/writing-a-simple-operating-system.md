@@ -45,6 +45,8 @@ If the assembler is running on an x64 system, then add `--32` option to `as` com
 
 `-Ttext=0x7c00` means setting up the beginning of the text section to 0x7c00.
 
+  
+
 Install QEMU and we can boot our simple OS from hard disk:
 
 ```console

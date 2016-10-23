@@ -3,7 +3,6 @@
 First of all, we will write a 512-byte boot sector named `boot.S`. Here is an example written in GNU assembly:
 
 ```asm
-
 .code16
 .text
   .global _start
@@ -13,7 +12,7 @@ _start:               # conventionally recogized as entry point
   mov %ax,%ds
   mov %ax,%es
   
-                      # string-printing routine
+# string-printing routine:
                       
   mov $bootMsg,%ax
   mov %ax,%bp
@@ -31,8 +30,8 @@ bootMsg:
   len = . - bootMsg         # length of the message string
   
 .org 510                    # pad remainder of boot sector with zeros
-.byte 0x55                  # the standard PC boot signature
-.byte 0xaa                  # the standard PC boot signature
+.byte 0x55                  # end of the first sector
+.byte 0xaa                  # end of the first sector
 ```
 
 Then we are going to build our OS. Use the following commands to compile `boot.S`:

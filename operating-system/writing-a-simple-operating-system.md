@@ -33,6 +33,10 @@ bootMsg:
 .word 0xaa55                # end of the first sector
 ```
 
+We use `.word` because `word` has length of 16 bits (in i386 architecture `byte` = 8 bits and `int` = 32 bits). 
+
+&nbsp;
+
 Then we are going to build our OS. Use the following commands to compile `boot.S`:
 
 ```console

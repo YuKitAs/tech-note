@@ -44,6 +44,7 @@ $ ld -Ttext=0x7c00 --oformat binary -o boot boot.
 If the assembler is running on an x64 system, then add `--32` option to `as` command and `-m elf_i386` option to `ld` command. This will make `as` command generate instructions for i386 architecture, and `ld` command generate i386 target.
 
 `-Ttext=0x7c00` means setting up the beginning of the text section to 0x7c00.
+&nbsp;
 
 Install QEMU and we can boot our simple OS from hard disk:
 

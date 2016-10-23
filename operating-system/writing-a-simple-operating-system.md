@@ -30,8 +30,7 @@ bootMsg:
   len = . - bootMsg         # length of the message string
   
 .org 510                    # pad remainder of boot sector with zeros
-.byte 0x55                  # end of the first sector
-.byte 0xaa                  # end of the first sector
+.word 0xaa55                # end of the first sector
 ```
 
 Then we are going to build our OS. Use the following commands to compile `boot.S`:

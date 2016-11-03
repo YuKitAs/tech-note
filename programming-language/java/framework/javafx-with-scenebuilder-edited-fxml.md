@@ -26,4 +26,4 @@
 
 &nbsp;
 
-Find more tutorials for JavaFX [here](http://docs.oracle.com/javase/8/javafx/get-started-tutorial/get_start_apps.htm#BACECIIB).
+Find more JavaFX samples [here](http://docs.oracle.com/javase/8/javafx/get-started-tutorial/get_start_apps.htm#BACECIIB).

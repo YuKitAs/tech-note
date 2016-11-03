@@ -8,7 +8,7 @@
   
   ```java
   Parent root = FXMLLoader.load(Main.class.getResource("example.fxml"));
-  Scene scene = new Scene(root);
+  Scene scene = new Scene(root, 300, 275);
   primaryStage.setTitle("Hello World!");
   primaryStage.setScene(scene);
   primaryStage.show();
@@ -18,7 +18,7 @@
   
   Create a `Controller` class which implements the `Initializable` interface.
   
-  Define a `fx:id` to an object, either in SceneBuilder or in the FXML file. Here we add `fx:id="myButton"` to a button as an example.
+  Define a `fx:id` to an object, either in SceneBuilder or in the FXML file. Here we "add `fx:id="myButton"` to a button for example.
   
   Then, add `fx:controller="Controller"` to the root object in the `example.fxml` and declare `@FXML private Button myButton` in the `Controller` class, so that the value of `myButton` will be injected by `FXMLLoader`.
   

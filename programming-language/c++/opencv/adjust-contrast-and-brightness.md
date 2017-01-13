@@ -6,7 +6,7 @@ A commonly used expression is:
 
 where `f(i, j)` are the source image pixels and `g(i, j)` are the output image pixels; `i` and `j` indicate the pixel located in the *i-th* row and *j-th* column of the image; `α > 0` is called *gain* parameter and said to control contrast, `β` is called *bias* parameter and said to control brightness.
 
-Use the following codes to loop all the pixels of an RGB source image and perform the operation:
+Use the following loop to go through all the pixels of an RGB source image and perform the operation:
 
 ```cpp
 double alpha;

@@ -2,9 +2,9 @@
 
 A commonly used expression is:
 
-<center>g(i, j) = α * f(i, j) + β</center>
+<p align="center">g(i, j) = α * f(i, j) + β</p>
 
-where `f(i, j)` are the source image pixels and `g(i, j)` are the output image pixels; `i` and `j` indicate the pixel located in the *i-th* row and *j-th* column of the image; $$\alpha > 0$$ is called *gain* parameter and said to control contrast, $$\beta$$ is called *bias* parameter and said to control brightness.
+where `f(i, j)` are the source image pixels and `g(i, j)` are the output image pixels; `i` and `j` indicate the pixel located in the *i-th* row and *j-th* column of the image; `α > 0` is called *gain* parameter and said to control contrast, `β` is called *bias* parameter and said to control brightness.
 
 Use the following codes to perform the operation with an RGB source image:
 

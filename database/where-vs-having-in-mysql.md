@@ -10,3 +10,7 @@ This will cause "Unknown column" error. But it works well with `HAVING` clause:
 ```console
 SELECT value AS v FROM sometable HAVING v > 0;
 ```
+By the way, a trick of using aliases in `WHERE` is to use subquery in `FROM` clause like:
+```console
+SELECT v FROM (SELECT value AS v FROM sometable WHERE v > 0) AS q;
+```

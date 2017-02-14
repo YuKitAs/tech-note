@@ -14,4 +14,3 @@ By the way, a trick of using aliases in `WHERE` is to use subquery in `FROM` cla
 ```console
 SELECT v FROM (SELECT value AS v FROM sometable WHERE v > 0) AS q;
 ```
-It is useful when the column definition is complicated.

@@ -1,4 +1,4 @@
-# Writing a Simple Operating System #
+# Write a Simple Boot Sector With GAS #
 
 First of all, we will write a 512-byte boot sector named `boot.S`. Here is an example written in GNU assembly:
 

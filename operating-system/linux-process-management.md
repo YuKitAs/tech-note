@@ -10,6 +10,6 @@
 
 * `fg <%JOB_NUMBER>`: bring a certain or the most recently suspended process to the foreground
 
-* `Ctrl` + `C`: terminate the currently foregrounded process by sending a `SIGINT` signal to it
+* `Ctrl` + `C`: terminate the currently foregrounded process by sending a `SIGINT` signal to the process
 
-* `kill <PID>`: terminate a certain process by sending `SIGKILL` signal which can not be ignored by the process
+* `kill <PID>`: terminate a certain process by sending a `SIGKILL` signal which can not be ignored by the process

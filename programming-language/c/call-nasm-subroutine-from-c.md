@@ -29,16 +29,11 @@ add:
     ret
 ```
 
-Then we can compile and link the files:
+Then we can compile and link the files and run it to check the result:
 
 ```console
 $ nasm -f elf -o add.o add.asm
 $ gcc -m32 -o main main.c add.o
-```
-
-And run it to check the result:
-
-```console
 $ ./main
 Result: 5
 ```

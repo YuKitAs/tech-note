@@ -21,7 +21,7 @@ TIMES 510-($-$$) db 0   ; $ represents the address of the current line
 DW 0xaa55               ; add boot signature at the end
 ```
 
-`print_string.asm` with function `PRINT_STRING`:
+`print_string.asm` with subroutine `PRINT_STRING`:
 
 ```asm
 PRINT_STRING:
@@ -36,7 +36,7 @@ PRINT_STRING:
 %INCLUDE "print_character.asm"
 ```
 
-`print_character.asm` with function `PRINT_CHARACTER`:
+`print_character.asm` with subroutine `PRINT_CHARACTER`:
 
 ```asm
 PRINT_CHARACTER:

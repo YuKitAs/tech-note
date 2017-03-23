@@ -1,6 +1,6 @@
 # Struct Pointer
 
-We have a struct defined as follow:
+We have a struct defined as follows:
 
 ```c
 typedef struct {
@@ -9,11 +9,9 @@ typedef struct {
 } simpleStr;
 ```
 
-Now we are going to create an instance of the struct in a function, and return a struct pointer:
+Now we are going to create an instance of the struct in a function, initialize the members and return a struct pointer:
 
 ```c
-
-
 simpleStr *generateStruct(int a, int b) {
     simpleStr *p = malloc(sizeof(simpleStr));
     p->a = a;
@@ -23,4 +21,4 @@ simpleStr *generateStruct(int a, int b) {
 }
 ```
 
-It is important to use `malloc` so that the `struct` variable will be stored in the heap segment, because local variables allocated in the stack segment will be unavailable once the function finishes execution.
+It is important to use `malloc` so that the struct variable will be allocated in the heap segment, because local variables in the stack segment will be unavailable once the function finishes execution.

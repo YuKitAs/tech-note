@@ -6,7 +6,7 @@
 
 * `Ctrl` + `Z`: suspend the currently foregrounded process, which can be resumed with command `fg %1`
 
-* `bg <%JOB_NUMBER>`: bring a certain or the most recently suspended process to the background
+* `bg <%JOB_NUMBER>`: bring a certain or the most recently suspended process to the background, or alternative `<%JOB_NUMBER> &`
 
 * `fg <%JOB_NUMBER>`: bring a certain or the most recently suspended process to the foreground
 

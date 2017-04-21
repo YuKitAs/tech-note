@@ -1,10 +1,20 @@
 # Simple Data Binding
 
-## Biding annotations
+## Binding annotations
 
 * One-way delimiters which support downward data flow only (from host to target): `[[binding]]`
 * Two-way or "automatic" delimiters which support both upward and downward data flow: `{{binding}}`
 
+## Data binding in local DOM template
+
+```html
+<dom-module id="host-element">
+    <template>
+        <target-element target-property="{{hostProperty}}"></target-element>
+        <target-element target-attribute$="{{hostProperty}}"></target-element>
+    </template>
+</dom-module>
+```
 
 ### paper-input
 

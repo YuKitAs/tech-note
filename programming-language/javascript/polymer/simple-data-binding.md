@@ -75,3 +75,37 @@ Define the host property `selectedValue`:
   });
 </script>
 ```
+
+### paper-listbox
+
+If we want to bind the items of the listbox to an array,
+we should use the `template repeater`, which creates an instance of the template's content for each item in the array. Here is an example:
+
+```html
+<template>
+    <paper-listbox class="dropdown-content">
+        <template is="dom-repeat" items="{{pokemons}}" as="pokemon">
+            <paper-item>{{pokemon.name}}: {{pokemon.type}}</paper-item>
+        </template>
+    </paper-listbox>
+</template>
+...
+<script>
+Polymer({
+  is: "...",
+  properties: {
+    pokemons: {
+      type: Array,
+      value: function() {
+          return [
+              {name: "Bulbasaur", type: "Grass"},
+              {name: "Charmander", type: "Fire"},
+              {name: "Squirtle", type: "Water"},
+              ...
+          ];
+      }
+    }
+  }
+});
+</script>
+```

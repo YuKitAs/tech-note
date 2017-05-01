@@ -29,16 +29,17 @@ Define the host property `inputValue`:
 
 ```html
 <script>
-  Polymer({
-    is: "...",
-    properties: {
-      inputValue: {
-        type: String,
-        notify: true,
-        value: null
-      }
-    }
-  });
+    Polymer({
+        is: "...",
+
+        properties: {
+            inputValue: {
+                type: String,
+                notify: true,
+                value: null
+            }
+        }
+    });
 </script>
 ```
 
@@ -46,7 +47,7 @@ To bind to text content, simply include the annotation inside the target element
 
 ```html
 <template>
-  <div>[[inputValue]]</div>
+    <div>[[inputValue]]</div>
 </template>
 ```
 
@@ -56,6 +57,7 @@ Similar to paper-input, bind the host property `selectedValue` to the target pro
 
 ```html
 <paper-dropdown-menu label="..." selected-item-label="{{selectedValue}}">
+    ...
 </paper-dropdown-menu>
 ```
 
@@ -63,16 +65,17 @@ Define the host property `selectedValue`:
 
 ```html
 <script>
-  Polymer({
-    is: "...",
-    properties: {
-      selectedValue: {
-        type: String,
-        notify: true,
-        value: null
-      }
-    }
-  });
+    Polymer({
+        is: "...",
+
+        properties: {
+            selectedValue: {
+                type: String,
+                notify: true,
+                value: null
+            }
+        }
+    });
 </script>
 ```
 
@@ -91,21 +94,22 @@ we should use the `template repeater`, which creates an instance of the template
 </template>
 ...
 <script>
-Polymer({
-  is: "...",
-  properties: {
-    pokemons: {
-      type: Array,
-      value: function() {
-          return [
-              {name: "Bulbasaur", type: "Grass"},
-              {name: "Charmander", type: "Fire"},
-              {name: "Squirtle", type: "Water"},
-              ...
-          ];
-      }
-    }
-  }
-});
+    Polymer({
+        is: "...",
+
+        properties: {
+            pokemons: {
+                type: Array,
+                value: function() {
+                    return [
+                        {name: "Bulbasaur", type: "Grass"},
+                        {name: "Charmander", type: "Fire"},
+                        {name: "Squirtle", type: "Water"},
+                        ...
+                    ];
+                }
+            }
+        }
+    });
 </script>
 ```

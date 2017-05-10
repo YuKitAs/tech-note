@@ -10,10 +10,22 @@
 ```html
 <dom-module id="host-element">
     <template>
-        <target-element target-property="{{hostProperty}}"></target-element>
-        <target-element target-attribute$="{{hostProperty}}"></target-element>
+        <target-element target-property="{{value}}"></target-element>
+        <target-element target-attribute$="[[value]]"></target-element>
     </template>
 </dom-module>
+```
+
+Property binding results in:
+
+```javascript
+element.property = value;
+```
+
+While attribute binding is always one-way (see [Document](https://www.polymer-project.org/1.0/docs/devguide/data-binding#attribute-binding)) and results in:
+
+```javascript
+element.setAttribute(attribute, value);
 ```
 
 ### paper-input

@@ -35,7 +35,7 @@ Define the target property `value` of `<paper-input>`:
 <paper-input label="..." value="{{inputValue::change}}"></paper-input>
 ```
 
-`value="{{text::change}}"` links the `inputValue` property with `<paper-input>.value` and listens for `change` event, so that Polymer will update `inputValue` whenever the input value changes.
+`value="{{inputValue::change}}"` links the `inputValue` property with `<paper-input>.value` and listens for `change` event, so that Polymer will update `inputValue` whenever the input value changes.
 
 Define the host property `inputValue`:
 

@@ -40,7 +40,8 @@ $ bower init
 The content of `my-el.html` should somehow look like this:
 
 ```javascript
-The <link rel="import"  href="path/to/bower_components/polymer/polymer.html">
+<link rel="import"  href="path/to/bower_components/polymer/polymer.html">
+
 <dom-module id="my-el">
     <template>
         <style></style>

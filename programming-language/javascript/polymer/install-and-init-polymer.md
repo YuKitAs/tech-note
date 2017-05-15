@@ -68,6 +68,9 @@ The content of the test file should look like this:
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
     <title></title>
+    
+    <script src="path/to/webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="path/to/web-component-tester/browser.js"></script>
 
     <link rel="import" href="path/to/my-el.html">
     </head>

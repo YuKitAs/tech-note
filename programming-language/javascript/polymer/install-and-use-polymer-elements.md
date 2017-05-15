@@ -2,19 +2,9 @@
 
 The recommended way to install Polymer elements is through [Bower](https://bower.io/). When we install a new component, Bower makes sure its dependencies are installed as well.
 
-1. Install Bower with `npm`:
+After installing `Bower` and `Polymer CLI`:
 
-    ```console
-    $ npm install -g bower
-    ```
-
-2. If we don't have a `bower.json` file in the Polymer project, create one with
-
-    ```console
-    $ bower init
-    ```
-
-3. Install Polymer elements with Bower in the root of the project:
+1. Install Polymer elements with Bower in the root of the project:
 
     ```console
     $ bower install --save <package_name>
@@ -22,20 +12,20 @@ The recommended way to install Polymer elements is through [Bower](https://bower
 
     `bower install` will add a `bower_components/` folder in the root of the project. Use `--save` to add the item as dependencies in `bower.json`. An example package name is `PolymerElements/paper-elements`.
 
-4. Load the web components polyfill library `webcomponents-lite.min.js` which provides `polyfill support`:
+2. Load the web components polyfill library `webcomponents-lite.min.js` which provides `polyfill support`:
 
     ```html
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js">
     </script>
     ```
 
-5. Use HTML Import to link the elements, for example:
+3. Use HTML Import to link the elements, for example:
 
     ```html
     <link rel="import" href="../bower_components/paper-elements/paper-elements.html">
     ```
 
-6. Declare the elements and configure the attributes, for example:
+4. Declare the elements and configure the attributes, for example:
 
     ```html
     <paper-input label="input with at most 200 characters" char-counter maxlength="200"></paper-input>

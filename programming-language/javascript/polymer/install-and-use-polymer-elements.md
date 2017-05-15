@@ -2,7 +2,7 @@
 
 The recommended way to install Polymer elements is through [Bower](https://bower.io/). When we install a new component, Bower makes sure its dependencies are installed as well.
 
-After installing `Bower` and `Polymer CLI`:
+After installing `Bower` and `Polymer CLI` (check this [note](https://github.com/YuKitAs/tech-note/blob/master/programming-language/javascript/polymer/install-and-init-polymer.md)):
 
 1. Install Polymer elements with Bower in the root of the project:
 

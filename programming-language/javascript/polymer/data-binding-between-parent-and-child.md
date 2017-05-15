@@ -1,19 +1,19 @@
 # Data Binding Between Parent And Child
 
-Suppose we have defined a child element with two-way data binding:
+Suppose we have defined a child element with a two-way data binding:
 
 ```html
 <dom-module id="child">
     <template>
-        <custom-el value="{{prop}}"></custom-el>
+        <custom-el value="{{myProp}}"></custom-el>
     <template>
 
     <script>
         Polymer({
-            is: 'child',
+            is: "child",
 
             properties: {
-                prop: {
+                myProp: {
                     type: Number,
                     notify: true
                 }
@@ -22,33 +22,21 @@ Suppose we have defined a child element with two-way data binding:
     </script>
 </dom-module>
 ```
-Now we want to include the child element in a parent element, here is a way how to bind the property of the child with the property of the parent:
+Now we want to include the child element in a parent element and bind the `myProp` property of the child to the parent:
 
 ```html
 <dom-module id="parent">
     <template>
-        <child prop="{{prop}}"></child>
-        <div>[[prop]]</div>
+        <child my-prop="{{myProp}}"></child>
+        <div>[[myProp]]</div>
     <template>
-
-    <script>
-        Polymer({
-            is: 'parent',
-
-            properties: {
-                prop: {
-                    type: Number
-                }
-            }
-        });
-    </script>
 </dom-module>
 ```
 
-And we can access the `prop` property in `javascript` functions:
+If we write unit test for the parent we can see that the parent already has the `myProp` property without defining it again. So we can access the `myProp` property directly from the parent in `javascript` functions:
 
 ```javascript
-function getProp() {
-    return document.querySelector('parent').prop;
+function getMyProp() {
+    return document.querySelector("parent").myProp;
 }
 ```

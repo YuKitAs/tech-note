@@ -42,18 +42,14 @@
 
       @Override
       public boolean hasNext() {
-        if (i < names.length) {
-            return true;
-        }
-        return false;
+        return i < names.length;
       }
 
       @Override
       public String next() {
-        if (this.hasNext()) {
-            return names[i++];
-        }
-        return null;
+        if (!this.hasNext()) return null;
+            
+        return names[i++];
       }
     }
   }

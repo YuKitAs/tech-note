@@ -3,8 +3,14 @@
 The Tomcat server is started automatically on Ubuntu, to restart or stop Tomcat use the following commands:
 
 ```console
-sudo /etc/init.d/tomcat{X} restart
-sudo /etc/init.d/tomcat{X} stop
+$ sudo /etc/init.d/tomcat{X} restart
+$ sudo /etc/init.d/tomcat{X} stop
+```
+
+To disable the autostart use the following trick:
+
+```console
+$ sudo update-rc.d tomcat{X} disable
 ```
 
 `{X}` is the Tomcat major version number.

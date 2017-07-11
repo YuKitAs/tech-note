@@ -4,7 +4,9 @@ There are 2 ways to create threads.
 
 ### Method 1: Creation by implementing `Runnable` Interface
 
-We create a class that initializes and starts a thread in the constructor. The task of this thread is to print five numbers in sequence, which is defined in the `run()` method.
+We create a class that initializes and starts a thread in the constructor. The task of this thread is to print five numbers in sequence, which is defined in the `run()` method. 
+
+The `run()` method will be executed after `start()` is called. The `start()` method will return as soon as the thread is started, it won't wait until the `run()` method is finished.
 
 ```java
 public class MultithreadingDemo implements Runnable {
@@ -71,13 +73,13 @@ Main thread is finished.
 
 ### Method 2: Creation by extending `Thread` Class
 
-This time we will create a child thread directly, so we use `start()` directly in the constructor.
+This time we will create a child thread directly, so we use `start()` in the constructor.
 
 ```java
 public class MultithreadingDemo extends Thread {
     MultithreadingDemo() {
         super("Runnable child thread");
-        System.out.println(this + "created.");
+        System.out.println(this + " created.");
         start();
     }
 

@@ -1,6 +1,6 @@
 # Multithreading Implementation
 
-There are 2 ways to create threads.
+There are 2 ways to create and run threads.
 
 ### Method 1: Creation by implementing `Runnable` Interface
 
@@ -33,7 +33,7 @@ public class MultithreadingDemo implements Runnable {
 }
 ```
 
-Then we initialize a child thread in the `main()` method and make it run. `isAlive()` is used to check if the child thread is running.
+Then we initialize a child thread in the `main()` method so it'll be started and run. `isAlive()` is used to check if the child thread is running.
 
 ```java
 public class RunnableDemo {

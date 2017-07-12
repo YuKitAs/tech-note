@@ -8,8 +8,6 @@
 **Master:**
 
   ```java
-  import java.util.Arrays;
-
   public class Master {
     private static final int WORKER_COUNT = 5;
     private Worker[] workers = new Worker[WORKER_COUNT];

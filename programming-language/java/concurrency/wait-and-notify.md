@@ -10,7 +10,7 @@
 `notifyAll()` method wakes up all the threads waiting on the object's monitor. The awakened threads will not be able to proceed until the current thread relinquishes the lock on this object.
 
 ___
-Here is an example to show how these methods actually work. Firstly we define an object class `Message`.
+Here is an example to show how these methods actually work. Firstly we define an object class `Message`:
 
 ```java
 public class Message {
@@ -30,7 +30,7 @@ public class Message {
 }
 ```
 
-Then the `Waiter` thread and `Notifier` thread which implement `Runnable`.
+Then the `Waiter` and `Notifier` classes which implement `Runnable`:
 
 ```java
 public class Waiter implements Runnable {

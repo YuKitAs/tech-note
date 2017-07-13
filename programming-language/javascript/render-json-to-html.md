@@ -8,7 +8,7 @@ JSON.stringify(data, null, 4);
 
 The third parameter indicates the number of space characters to use as white spaces.
 
-Then we can render the returned JSON String to HTML inside `<pre>` tags because `<pre>` defined preformatted text, the javascript code would be like:
+Then we can render the returned JSON String to HTML inside `<pre>` tags because `<pre>` defined preformatted text. The javascript code would be like:
 
 ```javascript
 this.$.pre.innerHTML = JSON.stringify(data, null, 4);

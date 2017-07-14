@@ -99,3 +99,9 @@ public class MultithreadingDemo extends Thread {
 ```
 
 In the `main()` method, replace `multithreading.thread.isAlive()` with `multithreading.isAlive()` and then we can get the same output as using the first method.
+
+The advantages of the first method are:
+
+1. the encapsulation leads to less overhead
+
+2. the task could be sent to web, but `Thread` is not serializable

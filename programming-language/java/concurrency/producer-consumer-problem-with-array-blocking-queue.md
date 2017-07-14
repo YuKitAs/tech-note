@@ -22,7 +22,7 @@ public class Message {
 }
 ```
 
-The producer class will create messages and put them in the queue.
+The producer will create messages and put them in the queue.
 
 ```java
 public class Producer implements Runnable {
@@ -57,7 +57,7 @@ public class Producer implements Runnable {
 }
 ```
 
-The consumer class will take messages from the queue and terminate when it receives the exit message.
+The consumer will take messages from the queue and terminate when it receives the exit message.
 
 ```java
 public class Consumer implements Runnable {
@@ -82,7 +82,7 @@ public class Consumer implements Runnable {
 }
 ```
 
-The service class is to create a ArrayBlockingQueue with fixed size, which will be shared with producer and consumer threads.
+The service is used to create an ArrayBlockingQueue with fixed size, which will be shared with producer and consumer threads.
 
 ```java
 public class ProducerConsumerService {

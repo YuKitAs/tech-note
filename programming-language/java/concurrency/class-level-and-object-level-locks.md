@@ -15,7 +15,7 @@ public class Demo {
     public synchronized void method2() {}
 }
 ```
-Or
+equivalent to 
 
 ```java
 public class Demo {

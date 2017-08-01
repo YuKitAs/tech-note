@@ -76,6 +76,6 @@
   This is a square.
   ```
   
-**Compared with Abstract Factory design pattern:**
+**Compared with [Abstract Factory](https://github.com/YuKitAs/tech-note/blob/master/design-patterns/variants-patterns/abstract-factory-example.md) design pattern:**
 
 Abstract Factory is often implemented with Factory Methods.

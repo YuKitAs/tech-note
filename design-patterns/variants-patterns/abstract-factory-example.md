@@ -148,3 +148,7 @@
   American pizza: thick crust + cheese topping
   Italian pizza: thin crust + salami topping
   ```
+  
+**Compared with [Strategy](https://github.com/YuKitAs/tech-note/blob/master/design-patterns/variants-patterns/strategy-example.md) design pattern:**
+  
+Abstract Factory is a creational pattern used to create objects of a specific type, while Strategy is an operational pattern used to perform an operation in a particular way.

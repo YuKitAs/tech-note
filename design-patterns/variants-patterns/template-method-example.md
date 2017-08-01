@@ -39,6 +39,8 @@
   }
   ```
   
+Here `start()` and `end()` are called "hook" methods (Einschubmethode) which work as placeholders.
+  
 **Demo:**
 
   ```java

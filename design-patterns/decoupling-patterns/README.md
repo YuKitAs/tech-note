@@ -22,4 +22,6 @@ The Mediator pattern defines an object that encapsulates how a set of objects in
 
 In Observer pattern an object (subject) maintains a list of its dependents (observers) and notifies them automatically of any state changes.
 
-* Proxy (Stellvertreter)
+* __Proxy (Stellvertreter)__:
+
+A Proxy is a wrapper or agent object that is being called by the client to access the real serving object behind the scenes.

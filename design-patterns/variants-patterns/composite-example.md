@@ -1,5 +1,7 @@
 # Composite example
 
+Fügt Objekte zu Baumstrukturen zusammen, um Hierarchien zu repräsentieren. Einheitliche Behandlung von Objekten wie Aggregaten.
+
 ![composite](../class-diagrams/composite.png)
 
 **Participants:**

@@ -1,5 +1,9 @@
 # Command example
 
+Kapselt einen Befehl als Objekt.
+
+_Charakteristisch_: Methode `führeAus()` des Befehlsobjekts.
+
 ![command](../class-diagrams/command.png)
 
 **Participants:**

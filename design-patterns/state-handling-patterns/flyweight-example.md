@@ -1,5 +1,11 @@
 # Flyweight example
 
+Objekte kleinster Granularität werden gemeinsam genutzt, um große Mengen von ihnen effizient speichern zu können.
+
+Intrinsischer Zustand: für alle Exemplare gemeinsam (unabhängig vom Einsatzkontext), wird in der Fliegengewicht-Instanz gespeichert
+
+Extrinsischer Zustand: für jedes Exemplar unterschiedlich, wird in externer Datenstruktur gespeichert, nur im Verwendungskontext des Fliegengewichts bekannt
+
 ![flyweight](../class-diagrams/flyweight.png)
 
 **Participants:**

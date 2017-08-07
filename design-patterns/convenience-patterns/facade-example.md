@@ -1,5 +1,7 @@
 # Facade example
 
+Bietet eine einheitliche Schnittstelle zu einer Menge von Schnittstellen eines Subsystems. Vereinfacht die Benutzung eines komplexen Subsystems und entkoppelt das Subsystem von den Klienten und anderen Subsystemen.
+
 **Participants:**
 
 * Facade: knows which Subsystem classes are responsible for a request; delegates client request to appropriate Subsystem objects.

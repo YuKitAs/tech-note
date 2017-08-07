@@ -1,5 +1,7 @@
 # Singleton example
 
+Bearbeiten den Zustand von Objekten, unabhängig von deren Zweck.
+
 **Participant:**
 
 * Singleton: defines an Instance operation that lets clients access its unique instance.

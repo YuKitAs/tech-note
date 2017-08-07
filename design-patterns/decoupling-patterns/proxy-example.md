@@ -1,5 +1,7 @@
 # Proxy example
 
+Kontrolliert den Zugriff auf ein Objekt.
+
 ![proxy](../class-diagrams/proxy.png)
 
 **Participants:**
@@ -81,6 +83,6 @@
   Displaying: test-image.jpg
   ```
   
-**Compared with Adapter design pattern:** 
+**Compared with [Adapter](https://github.com/YuKitAs/tech-note/blob/master/design-patterns/decoupling-patterns/adapter-example.md) design pattern:** 
 
 An Adapter provides a different interface to the object it adapts, a Proxy provides the same interface as its subject.

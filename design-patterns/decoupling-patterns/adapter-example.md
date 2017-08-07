@@ -1,5 +1,9 @@
 # Adapter example
 
+Passt die Schnittstelle einer Klasse an eine andere Schnittstelle an -> Zusammenarbeit inkompatibler Klassen
+
+Anwendung: Wiederverwendung einer existierenden Klasse
+
 ![adapter](../class-diagrams/adapter.png)
 
 **Participants:**
@@ -14,21 +18,6 @@
   ```java
   public interface Sorter {
     int[] sort(int[] numbers);
-  }
-  ```
-  
-**Client:**
-
-  ```java
-  public class Main {
-    public static void main(String[] args) {
-      int[] numbers = {4, 2, 1, 3};
-      Sorter s = new SorterAdapter();
-      int[] sortedNumbers = s.sort(numbers);
-      for (int i : sortedNumbers) {
-          System.out.print(i + " ");
-      }
-    }
   }
   ```
   
@@ -58,6 +47,21 @@
       List<Integer> sortedNumbers = new IntegerSorter(numbers).sort();
       int[] result = sortedNumbers.stream().mapToInt(i -> i).toArray();
       return result;
+    }
+  }
+  ```
+  
+**Client:**
+
+  ```java
+  public class Main {
+    public static void main(String[] args) {
+      int[] numbers = {4, 2, 1, 3};
+      Sorter s = new SorterAdapter();
+      int[] sortedNumbers = s.sort(numbers);
+      for (int i : sortedNumbers) {
+          System.out.print(i + " ");
+      }
     }
   }
   ```

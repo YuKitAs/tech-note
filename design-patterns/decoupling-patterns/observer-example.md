@@ -102,7 +102,7 @@ _Nachteil_: Aufwand der Aktualisierung nicht bekannt.
   public class Main {
     public static void main(String[] args) {
       Observable observable = new ObservableValue();
-      new ValueObserver(observable);
+      new ValueObserver(observable); // attached observer to observable
       observable.setValue(60);
       observable.setValue(100);
     }

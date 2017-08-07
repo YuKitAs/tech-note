@@ -1,5 +1,9 @@
 # Mediator example
 
+Definiert ein Objekt, welches das Zusammenspiel mehrerer Objekte kapselt.
+
+_Anwendung_: Wenn komplexe Interaktionen zwischen Objekten vorliegen und Wiederverwendbarkeit erschweren.
+
 ![mediator](../class-diagrams/mediator.png)
 
 **Participants:**

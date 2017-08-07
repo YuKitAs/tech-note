@@ -18,6 +18,8 @@ The Iterator pattern is used to traverse a container and access the container's 
 
 The Mediator pattern defines an object that encapsulates how a set of objects interact.
 
-* Observer (Beobachter)
+* __Observer (Beobachter)__:
+
+In Observer pattern an object (subject) maintains a list of its dependents (observers) and notifies them automatically of any state changes.
 
 * Proxy (Stellvertreter)

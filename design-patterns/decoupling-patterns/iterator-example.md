@@ -1,5 +1,9 @@
 # Iterator example
 
+Ermöglicht den sequentiellen Zugriff auf Elemente eines zusammengesetzten Objekts, ohne die interne Repräsentation offenzulegen und bietet eine einheitliche Schnittstelle zur Traversierung unterschiedlichen Strukturen (polymorphe Iteration).
+
+Iterator ist robust, d.h. jeder Iterator enthält eine eigene "Laufvariable".
+
 ![iterator](../class-diagrams/iterator.png)
 
 **Participants:**

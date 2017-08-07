@@ -1,5 +1,9 @@
 # Master/Worker example
 
+Auftraggeber verteilt Arbeit an identische Arbeiter (Auftragnehmer) und berechnet das Endergebnis aus den zurückgelieferten Teilergebnissen.
+
+_Zweck_: Teile & Herrsche, Parallelisierung
+
 **Participants:**
 
 * Master: responsible for creating and launching active Worker objects.

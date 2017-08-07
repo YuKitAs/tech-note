@@ -19,7 +19,9 @@ The Decorator pattern allows new behavior to be added to an individual object, w
 
 The Factory Method pattern is used to deal with the problem of creating objects without having to specify the exact class of the object that will be created. 
 
-* Strategy (Strategie)
+* __Strategy (Strategie)__:
+
+The Strategy pattern is a behavioural design pattern that enables to select an algorithm at runtime. 
 
 * __Template Method (Schablonenmethode)__:
 

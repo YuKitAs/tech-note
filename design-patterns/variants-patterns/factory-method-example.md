@@ -1,5 +1,9 @@
 # Factory Method example
 
+Definiert eine Klassenschnittstelle mit Operationen zum Erzeugen eines Objekts, aber lässt Unterklassen entscheiden, von welcher Klasse das zu erzeugende Objekt ist.
+
+_Anwendung_: Klasse kennt Objekte, die sie erzeugt, nicht im Voraus.
+
 **Participants:**
 
 * Product: defines the interface of objects the factory method creates.

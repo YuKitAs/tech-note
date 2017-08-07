@@ -18,4 +18,6 @@ The Prototype pattern is used when the type of objects to create is determined b
 
 The Singleton pattern restricts the instantiation of a class to one object. This is useful when exactly one object is needed to coordinate actions across the system.
 
-* State (Zustand)
+* __State (Zustand)__:
+
+The State pattern implements a state machine in an object-oriented way. 

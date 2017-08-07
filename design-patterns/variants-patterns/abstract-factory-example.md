@@ -1,5 +1,9 @@
 # Abstract Factory example
 
+Schnittstelle zum Erzeugen einer Familie verwandter Objekte, ohne konkrete Klassen zu benennen.
+
+_Anwendung_: Wenn eine Familie von aufeinander abgestimmten Objekten verwendet werden muss.
+
 ![abstract-factory](../class-diagrams/abstract-factory.png)
 
 **Participants:**

@@ -1,5 +1,9 @@
 # Prototype example
 
+Objekterzeugung durch Verwendung und Klonen eines typischen Exemplars.
+
+Zweck: Vermeidet z.B. Klassenhierarchie von Fabriken, die parallel zur Klassenhierarchie der Produkte verläuft.
+
 ![prototype](../class-diagrams/prototype.png)
 
 **Participants:**
@@ -71,7 +75,7 @@
 
     public static Shape getShape(Integer id) {
       Shape cachedShape = shapes.get(id);
-      return (Shape) cachedShape.clone();
+      return (Shape) `.clone();
     }
 
     public static void loadCache() {

@@ -10,7 +10,9 @@ A Flyweight is an object that minimizes memory usage by sharing as much data as 
 
 The Memento pattern provides the ability to restore an object to its previous state (undo via rollback).
 
-* Prototype (Prototyp)
+* __Prototype (Prototyp)__:
+
+The Prototype pattern is used when the type of objects to create is determined by a prototypical instance, which is cloned to produce new objects.
 
 * Singleton (Einzelstück)
 

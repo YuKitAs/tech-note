@@ -15,7 +15,9 @@ The Composite pattern describes a group of objects that is treated the same way 
 
 The Decorator pattern allows new behavior to be added to an individual object, without affecting the behavior of other objects from the same class.
 
-* Factory Method (Fabrikmethode)
+* __Factory Method (Fabrikmethode)__:
+
+The Factory Method pattern is used to deal with the problem of creating objects without having to specify the exact class of the object that will be created. 
 
 * Strategy (Strategie)
 

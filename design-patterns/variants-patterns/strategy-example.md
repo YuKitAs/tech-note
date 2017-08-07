@@ -1,5 +1,9 @@
 # Strategy example
 
+Definiert eine Familie von Algorithmen, kapselt sie und macht sie austauschbar.
+
+_Anwendung_: Viele verwandte Klassen, die sich nur in ihrem Verhalten unterscheiden; unterschiedliche Verhaltensweisen für eine Klasse.
+
 ![strategy](../class-diagrams/strategy.png)
 
 **Participans:**

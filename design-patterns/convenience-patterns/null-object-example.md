@@ -1,5 +1,7 @@
 # Null Object example
 
+Stellvertreter eines Objekts mit gleicher Schnittstelle, der nichts tut. Vermeidet unnötige null-Prüfungen.
+
 **Participants:**
 
 * AbstractObject: specifies various operations to be done.

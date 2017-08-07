@@ -1,5 +1,9 @@
 # Memento example
 
+Externalisiert eine Momentaufnahme des internen Zustands eines Objekts (ohne die Implementierungsdetails offenzulegen), sodass das Objekt später in diesen Zustand zurückversetzt werden kann.
+
+_Beispiel_: Speicherung von Spielständen
+
 ![memento](../class-diagrams/memento.png)
 
 **Participants:**

@@ -4,6 +4,8 @@ Definiert ein Objekt, welches das Zusammenspiel mehrerer Objekte kapselt.
 
 _Anwendung_: Wenn komplexe Interaktionen zwischen Objekten vorliegen und Wiederverwendbarkeit erschweren.
 
+_Beispiel_: Zusammengesetzte GUI-Komponenten
+
 ![mediator](../class-diagrams/mediator.png)
 
 **Participants:**

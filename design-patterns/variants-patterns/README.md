@@ -7,7 +7,9 @@ Einheitlichkeit, Vermeidung von Redundanz
 
 The Abstract Factory pattern provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes.
 
-* Composite (Kompositum)
+* __Composite (Kompositum)__:
+
+The Composite pattern describes a group of objects that is treated the same way as a single instance of the same type of object. The intent of a composite is to "compose" objects into tree structures to represent part-whole hierarchies.
 
 * Decorator (Dekorierer)
 

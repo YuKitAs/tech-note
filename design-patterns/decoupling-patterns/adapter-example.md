@@ -1,8 +1,8 @@
 # Adapter example
 
-Passt die Schnittstelle einer Klasse an eine andere Schnittstelle an -> Zusammenarbeit inkompatibler Klassen
+Passt die Schnittstelle einer Klasse an eine andere Schnittstelle an &rarr; Zusammenarbeit inkompatibler Klassen
 
-Anwendung: Wiederverwendung einer existierenden Klasse
+_Anwendung_: Wiederverwendung einer existierenden Klasse
 
 ![adapter](../class-diagrams/adapter.png)
 

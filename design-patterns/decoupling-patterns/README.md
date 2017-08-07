@@ -14,7 +14,9 @@ The Bridge pattern decouples an abstraction from its implementation so that the 
 
 The Iterator pattern is used to traverse a container and access the container's elements.
 
-* Mediator (Vermittler)
+* __Mediator (Vermittler)__:
+
+The Mediator pattern defines an object that encapsulates how a set of objects interact.
 
 * Observer (Beobachter)
 

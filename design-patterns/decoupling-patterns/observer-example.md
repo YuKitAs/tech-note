@@ -4,7 +4,7 @@ Definiert eine 1:n-Abhängigkeit zwischen Objekten, sodass die Zustandsänderung
 
 _Anwendung_: Benachrichtigung von Objekten, ohne etwas über diese zu wissen.
 
-_Nachteile_: Aufwand der Aktualisierung nicht bekannt.
+_Nachteil_: Aufwand der Aktualisierung nicht bekannt.
 
 ![observer](../class-diagrams/observer.png)
 

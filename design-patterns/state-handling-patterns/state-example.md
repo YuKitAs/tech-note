@@ -1,5 +1,7 @@
 # State example
 
+Ändert das Verhalten eines Objekts, wenn sich dessen interner Zustand ändert.
+
 ![state](../class-diagrams/state.png)
 
 **Participants:**

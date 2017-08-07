@@ -1,5 +1,11 @@
 # Observer example
 
+Definiert eine 1:n-Abhängigkeit zwischen Objekten, sodass die Zustandsänderung eines Objekts dazu führt, dass alle abhängigen Objekte benachrichtigt und automatisch aktualisiert werden.
+
+_Anwendung_: Benachrichtigung von Objekten, ohne etwas über diese zu wissen.
+
+_Nachteile_: Aufwand der Aktualisierung nicht bekannt.
+
 ![observer](../class-diagrams/observer.png)
 
 ![observer-interaction](../class-diagrams/observer-interaction.png)

@@ -1,5 +1,9 @@
 # Bridge example
 
+Entkoppelt Abstraktion von ihrer Implementierung, sodass beide unabhängig voneinander variiert werden können.
+
+_Anwendung_: Vermeidung dauerhafter Verbindung zwischen Abstraktion und ihrer Implementierung, Erweiterbarkeit sowohl von Abstraktion als auch Implementierung durch Unterklassenbildung, Nutzung einer Implementierung von mehreren Objekten aus.
+
 ![bridge](../class-diagrams/bridge.png)
 
 **Participants:**
@@ -86,3 +90,8 @@
   Circle is black
   Circle is white
   ```
+  
+**Compared with [Adapter](https://github.com/YuKitAs/tech-note/blob/master/design-patterns/decoupling-patterns/adapter-example.md) design pattern:**
+
+The Bridge pattern is often implemented using the Object Adapter pattern.
+

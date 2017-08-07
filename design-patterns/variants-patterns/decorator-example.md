@@ -93,4 +93,4 @@ Fügt dynamisch neue Funktionalität zu einem Objekt hinzu, kann Subjektschnitts
   
 **Compared with [Proxy](https://github.com/YuKitAs/tech-note/blob/master/design-patterns/decoupling-patterns/proxy-example.md) design pattern:**
 
-Decorator get reference for decorated object (its delegatee, usually through constructor), while A Proxy might create the delegatee himself, or have it injected.
+Decorator always gets reference for decorated object (its delegatee, usually through constructor), while a Proxy might create the delegatee himself, or have it injected.

@@ -11,7 +11,9 @@ The Abstract Factory pattern provides a way to encapsulate a group of individual
 
 The Composite pattern describes a group of objects that is treated the same way as a single instance of the same type of object. The intent of a composite is to "compose" objects into tree structures to represent part-whole hierarchies.
 
-* Decorator (Dekorierer)
+* __Decorator (Dekorierer)__:
+
+The Decorator pattern allows new behavior to be added to an individual object, without affecting the behavior of other objects from the same class.
 
 * Factory Method (Fabrikmethode)
 

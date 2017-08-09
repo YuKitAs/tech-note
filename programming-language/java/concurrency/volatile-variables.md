@@ -2,7 +2,7 @@
 
 `volatile` keyword guarantees the value of the volatile variable will be read from main memory instead of from thread's local cache. It means, threads will automatically see the most up-to-date value for volatile variables.
 
-Volatile variables can be used to provide thread safety. A typical example is:
+Volatile variables can be used to provide `thread safety`. A typical example is:
 
 ```java
 volatile int i = 0;

@@ -26,7 +26,7 @@ public class SemaphoreDemo {
     public synchronized void release() throws InterruptedException {
         while (tickets == capacity) wait();
 
-        tickets--;
+        tickets++;
         notifyAll();
     }
 }

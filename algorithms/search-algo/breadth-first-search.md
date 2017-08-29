@@ -15,19 +15,19 @@ Function bfs(s : NodeId):
 
 ```
 Procedure doBFS(G)  
-// for disconnected, undirected graphs
+/* for disconnected, undirected graphs */
     foreach v ∈ V do
         if v is not marked then
             bfs(v)
 
 Procedure doBFS(G)
-// for disconnected, directed graphs
+/* for disconnected, directed graphs */
     b: Array of {0, 1}
     foreach v ∈ V do
         b[v] := 1
-    forach (u, v) ∈ E do
+    foreach (u, v) ∈ E do
         b[v] := 0
-    // all the roots are marked
+    /* all the roots are now marked */
     foreach v ∈ V and b[v] = 1 do
         dfs(v)
 ```

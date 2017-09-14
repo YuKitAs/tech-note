@@ -29,5 +29,5 @@ Procedure doBFS(G)
         b[v] := 0
     /* all the roots are now marked */
     foreach v ∈ V and b[v] = 1 do
-        dfs(v)
+        bfs(v)
 ```

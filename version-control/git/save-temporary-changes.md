@@ -2,7 +2,7 @@
 
 1. `git stash`
 
-    Used to save uncommitted changes. They can be listed with `git stash list`.
+    Used to save uncommitted changes (in already added files). They can be listed with `git stash list`.
 
 2. `git pull --rebase`.
 

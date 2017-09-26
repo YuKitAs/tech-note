@@ -2,10 +2,10 @@
 
 This note is an extension of [Basic Usage of app-route](https://github.com/YuKitAs/tech-note/blob/master/programming-language/javascript/polymer/polymer2/basic-usage-of-app-route.md). It's the cleanest way that I've tried so far to add subroute path to the route path, say, `'/page1/subpage1'`.
 
-After creating a new element named `subpage1-view`, I added a `paper-button` in `page1-view` to get access to the subpage:
+After creating a new element named `subpage1-view`, I added a `paper-button` in `page1-view` to get access to this subpage:
 
 ```javascript
-<a href="/page1/page1-subpage1">
+<a href="/page1/subpage1">
     <paper-button raised>Subpage One</paper-button>
 </a>
 ```

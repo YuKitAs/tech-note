@@ -40,8 +40,8 @@ It has an observer `_pageChanged`, which will be implemented later to import `pa
 I've also added two `paper-buttons` with anchor tags:
 
 ```javascript
-<a href="page1"><paper-button raised>Page One</paper-button></a>
-<a href="page2"><paper-button raised>Page Two</paper-button></a>
+<a href="/page1"><paper-button raised>Page One</paper-button></a>
+<a href="/page2"><paper-button raised>Page Two</paper-button></a>
 ```
 
 When one of the buttons is clicked, the URL will change, the `route` object will be generated or updated and passed to `app-route` (`route.page` would be like `'/page1'` or `'/page2'`), then the `routeData` will be updated as mentioned above (`routeData.page` would be like `"page1"` or `"page2"`), so we need to define an observer for `routeData` to get the current `routeData.page` value:

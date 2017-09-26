@@ -9,7 +9,7 @@ After creating a new element named `subpage1-view`, I added a `paper-button` in 
     <paper-button raised>Subpage One</paper-button>
 </a>
 ```
-Then we should add a new `app-route` in the main page for subroute, and add the `tail` attribute to the former `app-route` for route as follows:
+Then we should add a new `app-route` in the main page for subroute, and add the `tail` attribute to the former `app-route` for route:
 
 ```javascript
 <app-route
@@ -29,7 +29,7 @@ The usage of the `active` attribute in `app-route` for subroute is a little tric
 
 Next, add `<subpage1-view name="subpage1"></subpage1-view>` into `iron-pages` so that it can be selected to show.
 
-Plus, we have to modify our observer by passing an extra parameter `subrouteData.subpage` to it:
+The following steps are not official but work fine. Modify our observer by passing an extra parameter `subrouteData.subpage` to it:
 
 ```javascript
 static get observers() {

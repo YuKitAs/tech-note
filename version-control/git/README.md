@@ -1,3 +1,3 @@
 # Git
 
-![](../master/version-control/git/git.png?raw=true)
+![](../../../master/version-control/git/git.png)

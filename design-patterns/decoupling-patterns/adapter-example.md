@@ -4,7 +4,7 @@ Passt die Schnittstelle einer Klasse an eine andere Schnittstelle an &rarr; Zusa
 
 _Anwendung_: Wiederverwendung einer existierenden Klasse
 
-Class adpater:
+Class adpater (with multiple inheritance):
 
 ![adapter](../class-diagrams/adapter.png)
 

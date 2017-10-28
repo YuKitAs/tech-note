@@ -1,6 +1,6 @@
 # Proxy example
 
-Kontrolliert den Zugriff auf ein Objekt.
+Kontrolliert den Zugriff auf ein Objekt mit Hilfe eines vorgelagerten Stellvertreterobjekts.
 
 ![proxy](../class-diagrams/proxy.png)
 

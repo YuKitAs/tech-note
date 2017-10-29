@@ -2,7 +2,7 @@
 
 Kapselt eine Operation auf Elementen einer Struktur als ein Objekt.
 
-Zweck: Definition einer neuen Operation auf Klassen, ohne diese Klassen zu verändern.
+_Zweck_: Definition einer neuen Operation auf Klassen, ohne diese Klassen zu verändern.
 
 ![visitor](../class-diagrams/visitor.png)
 

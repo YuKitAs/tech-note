@@ -57,10 +57,10 @@ Fügt dynamisch neue Funktionalität zu einem Objekt hinzu, kann Subjektschnitts
     @Override
     public void draw() {
       decoratedShape.draw();
-      setBorderColor(decoratedShape);
+      setBorderColor();
     }
 
-    private void setBorderColor(Shape decoratedShape) {
+    private void setBorderColor() {
       System.out.println("Border color: Red");
     }
   }

@@ -6,7 +6,7 @@ Fügt Objekte zu Baumstrukturen zusammen, um Hierarchien zu repräsentieren. Ein
 
 **Participants:**
 
-* Component: declares the interface for objects in the composition; implements default behavior for the interface common to all classes.
+* Component: declares the interface for objects in the composition; implements default behavior for the interface common to all classes; child object of composite.
 * Leaf: represents leaf objects in the composition; defines behavior for primitive objects in the composition.
 * Composite: defines behavior for components having children; stores child components; implements child-related operations in the Component interface.
 * Client: manipulates objects in the composition through the Component interface.

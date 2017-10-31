@@ -13,28 +13,28 @@ _Zweck_: Teile & Herrsche, Parallelisierung
 
   ```java
   public class Master {
-    private static final int WORKER_COUNT = 5;
-    private Worker[] workers = new Worker[WORKER_COUNT];
+      private static final int WORKER_COUNT = 5;
+      private Worker[] workers = new Worker[WORKER_COUNT];
 
-    public void run() {
-      for (int i = 0; i < WORKER_COUNT; i++) {
-        workers[i] = new Worker();
+      public void run() {
+          for (int i = 0; i < WORKER_COUNT; i++) {
+              workers[i] = new Worker();
+          }
+
+          Arrays.stream(workers).forEach(worker -> worker.start());
+
+          Arrays.stream(workers).forEach(worker -> {
+              try {
+                  worker.join();
+              } catch (InterruptedException e) {
+                  e.printStackTrace();
+              } finally {
+                  System.out.println(worker.getName() + " has died.");
+              }
+          });
+
+          System.out.println("The master will now die...");
       }
-
-      Arrays.stream(workers).forEach(w -> w.start());
-
-      Arrays.stream(workers).forEach(w -> {
-        try {
-            w.join();
-        } catch (InterruptedException e) {
-            System.err.println(e.getMessage());
-        } finally {
-            System.out.println(w.getName() + " has died.");
-        }
-      });
-
-      System.out.println("The master will now die...");
-    }
   }
   ```
   
@@ -42,26 +42,27 @@ _Zweck_: Teile & Herrsche, Parallelisierung
 
   ```java
   public class Worker extends Thread {
-    private Boolean done = false;
+      private Boolean done = false;
 
-    public void halt() {
-      done = true;
-    }
-
-    protected Boolean task() {
-      return true;
-    }
-
-    public void run() {
-      while (!done) {
-          done = task();
+      public void halt() {
+          done = true;
       }
 
-      try {
-          Thread.sleep(1000);
-      } catch (Exception e) {
+      protected Boolean task() {
+          return true;
       }
-    }
+
+      public void run() {
+          while (!done) {
+              done = task();
+          }
+
+          try {
+              Thread.sleep(1000);
+          } catch (InterruptedException e) {
+              e.printStackTrace();
+          }
+      }
   }
   ```
   
@@ -69,9 +70,9 @@ _Zweck_: Teile & Herrsche, Parallelisierung
 
   ```java
   public class Main {
-    public static void main(String[] args) {
-      new Master().run();
-    }
+      public static void main(String[] args) {
+          new Master().run();
+      }
   }
   ```
   

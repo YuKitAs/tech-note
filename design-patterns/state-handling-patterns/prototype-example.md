@@ -68,14 +68,12 @@ Zweck: Vermeidet z.B. Klassenhierarchie von Fabriken, die parallel zur Klassenhi
 **Client:**
 
   ```java
-  import java.util.Hashtable;
-
   public class ShapeCache {
     private static Hashtable<Integer, Shape> shapes = new Hashtable<>();
 
     public static Shape getShape(Integer id) {
       Shape cachedShape = shapes.get(id);
-      return (Shape) `.clone();
+      return (Shape) cachedShape.clone();
     }
 
     public static void loadCache() {

@@ -60,25 +60,25 @@ _Charakteristisch_: Methode `führeAus()`oder eng. `execute()` des Befehlsobjekt
 
 **Receiver:**
 
-    ```java
-    public class Item {
-        private String name;
-        private int quantity;
+  ```java
+  public class Item {
+      private String name;
+      private int quantity;
 
-        public Item(String name, int quantity) {
+      public Item(String name, int quantity) {
           this.name = name;
           this.quantity = quantity;
-        }
+      }
 
-        public void buy() {
+      public void buy() {
           System.out.println("Buy [Name: " + name + ", Quantity: " + quantity + "]");
-        }
+      }
 
-        public void sell() {
+      public void sell() {
           System.out.println("Sell [Name: " + name + ", Quantity: " + quantity + "]");
-        }
-    }
-    ```
+      }
+  }
+  ```
 
 **Invoker:**
 

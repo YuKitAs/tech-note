@@ -43,10 +43,10 @@ Stellvertreter eines Objekts mit gleicher Schnittstelle, der nichts tut. Vermeid
 **NullObject:**
 
   ```java
-  public class AnonymousUser extends User {
+  public class PhantomUser extends User {
     @Override
     public String getName() {
-      return "Anonym";
+      return "Phantom";
     }
 
     @Override
@@ -69,7 +69,7 @@ Stellvertreter eines Objekts mit gleicher Schnittstelle, der nichts tut. Vermeid
         }
       }
 
-      return new AnonymousUser();
+      return new PhantomUser();
     }
   }
   ```
@@ -80,7 +80,7 @@ Stellvertreter eines Objekts mit gleicher Schnittstelle, der nichts tut. Vermeid
       User user1 = UserNameBook.getUser("Anton");
       User user2 = UserNameBook.getUser("Berta");
       User user3 = UserNameBook.getUser("Charlotte");
-      User user4 = UserNameBook.getUser("Pikachu");
+      User user4 = UserNameBook.getUser("Mimikyu");
 
       System.out.println(user1.getName());
       System.out.println(user2.getName());
@@ -96,5 +96,5 @@ Stellvertreter eines Objekts mit gleicher Schnittstelle, der nichts tut. Vermeid
   Anton
   Berta
   Charlotte
-  Anonym
+  Phantom
   ```

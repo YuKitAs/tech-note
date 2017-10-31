@@ -102,15 +102,12 @@ _Charakteristisch_: Methode `führeAus()`oder eng. `execute()` des Befehlsobjekt
   ```java
   public class Main {
       public static void main(String[] args) {
-          Item itemToBuy = new Item("Quafe", 500);
-          Item itemToSell = new Item("Carbon", 1000);
-
-          BuyItem buyItemOrder = new BuyItem(itemToBuy);
-          SellItem sellItemOrder = new SellItem(itemToSell);
+          BuyItem buy = new BuyItem(new Item("Quafe", 500));
+          SellItem sell = new SellItem(new Item("Carbon", 1000));
 
           Player player = new Player();
-          player.takeOrder(buyItemOrder);
-          player.takeOrder(sellItemOrder);
+          player.takeOrder(buy);
+          player.takeOrder(sell);
 
           player.placeOrders();
       }

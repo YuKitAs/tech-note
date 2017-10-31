@@ -43,7 +43,7 @@ Stellvertreter eines Objekts mit gleicher Schnittstelle, der nichts tut. Vermeid
 **NullObject:**
 
   ```java
-  public class NullUser extends User {
+  public class AnonymousUser extends User {
     @Override
     public String getName() {
       return "Anonym";
@@ -69,7 +69,7 @@ Stellvertreter eines Objekts mit gleicher Schnittstelle, der nichts tut. Vermeid
         }
       }
 
-      return new NullUser();
+      return new AnonymousUser();
     }
   }
   ```

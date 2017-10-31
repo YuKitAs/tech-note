@@ -2,6 +2,8 @@
 
 Bearbeiten den Zustand von Objekten, unabhängig von deren Zweck.
 
+![singleton](../class-diagrams/singleton.png)
+
 **Participant:**
 
 * Singleton: defines an Instance operation that lets clients access its unique instance.
@@ -36,7 +38,7 @@ Bearbeiten den Zustand von Objekten, unabhängig von deren Zweck.
     }
   }
   ```
-  
+
 **Demo:**
 
   ```
@@ -55,7 +57,7 @@ Bearbeiten den Zustand von Objekten, unabhängig von deren Zweck.
     }
   }
   ```
-  
+
 **Output:**
 
   ```

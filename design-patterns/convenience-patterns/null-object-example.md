@@ -12,84 +12,82 @@ Stellvertreter eines Objekts mit gleicher Schnittstelle, der nichts tut. Vermeid
 
   ```java
   public abstract class User {
-    protected String name;
+      protected String name;
 
-    public abstract String getName();
+      public abstract String getName();
 
-    public abstract boolean isNull();
+      public abstract boolean isNull();
   }
   ```
-  
+
 **RealObject:**
 
   ```java
   public class RealUser extends User {
-    public RealUser(String name) {
-      this.name = name;
-    }
+      public RealUser(String name) {
+          this.name = name;
+      }
 
-    @Override
-    public String getName() {
-      return name;
-    }
+      @Override
+      public String getName() {
+          return name;
+      }
 
-    @Override
-    public boolean isNull() {
-      return false;
-    }
+      @Override
+      public boolean isNull() {
+          return false;
+      }
   }
   ```
-  
+
 **NullObject:**
 
   ```java
-  public class PhantomUser extends User {
-    @Override
-    public String getName() {
-      return "Phantom";
-    }
+  public class NullUser extends User {
+      @Override
+      public String getName() {
+          return "Phantom";
+      }
 
-    @Override
-    public boolean isNull() {
-      return true;
-    }
+      @Override
+      public boolean isNull() {
+          return true;
+      }
   }
   ```
-  
+
 **Demo:**
 
   ```java
   public class UserNameBook {
-    public static final String[] names = {"Anton", "Berta", "Charlotte"};
+      private static final String[] names = {"Anton", "Berta", "Charlotte"};
 
-    public static User getUser(String name) {
-      for (int i = 0; i < names.length; i++) {
-        if (names[i].equalsIgnoreCase(name)) {
-          return new RealUser(name);
-        }
+      public static User getUser(String name) {
+          if (Arrays.asList(names).contains(name)) {
+              return new RealUser(name);
+          }
+
+          return new NullUser();
       }
-
-      return new PhantomUser();
-    }
   }
   ```
 
   ```java
   public class Main {
-    public static void main(String[] args) {
-      User user1 = UserNameBook.getUser("Anton");
-      User user2 = UserNameBook.getUser("Berta");
-      User user3 = UserNameBook.getUser("Charlotte");
-      User user4 = UserNameBook.getUser("Mimikyu");
+      public static void main(String[] args) {
+          User user1 = UserNameBook.getUser("Anton");
+          User user2 = UserNameBook.getUser("Berta");
+          User user3 = UserNameBook.getUser("Charlotte");
+          User user4 = UserNameBook.getUser("Mimikyu");
 
-      System.out.println(user1.getName());
-      System.out.println(user2.getName());
-      System.out.println(user3.getName());
-      System.out.println(user4.getName());
-    }
+          System.out.println(user1.getName());
+          System.out.println(user2.getName());
+          System.out.println(user3.getName());
+          System.out.println(user4.getName());
+      }
   }
   ```
-  
+
 **Output:**
 
   ```

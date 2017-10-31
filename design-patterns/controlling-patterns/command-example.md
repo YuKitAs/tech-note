@@ -2,7 +2,7 @@
 
 Kapselt einen Befehl als Objekt.
 
-_Charakteristisch_: Methode `führeAus()` des Befehlsobjekts.
+_Charakteristisch_: Methode `führeAus()`oder eng. `execute()` des Befehlsobjekts.
 
 ![command](../class-diagrams/command.png)
 
@@ -18,105 +18,108 @@ _Charakteristisch_: Methode `führeAus()` des Befehlsobjekts.
 
   ```java
   public abstract class Order {
-    protected Item quafe;
+      protected Item item;
 
-    public Order(Item quafe) {
-      this.quafe = quafe;
-    }
+      public Order(Item item) {
+          this.item = item;
+      }
 
-    abstract void execute();
+      abstract void execute();
   }
   ```
-  
+
 **ConcreteCommandA:**
 
   ```java
   public class BuyItem extends Order {
-    public BuyItem(Item quafe) {
-      super(quafe);
-    }
+      public BuyItem(Item item) {
+          super(item);
+      }
 
-    @Override
-    public void execute() {
-      quafe.buy();
-    }
+      @Override
+      void execute() {
+          item.buy();
+      }
   }
   ```
-  
+
 **ConcreteCommandB:**
 
   ```java
   public class SellItem extends Order {
-    public SellItem(Item quafe) {
-      super(quafe);
-    }
+      public SellItem(Item item) {
+          super(item);
+      }
 
-    @Override
-    public void execute() {
-      quafe.sell();
-    }
+      @Override
+      void execute() {
+          item.sell();
+      }
   }
   ```
-  
+
+**Receiver:**
+
+    ```java
+    public class Item {
+        private String name;
+        private int quantity;
+
+        public Item(String name, int quantity) {
+          this.name = name;
+          this.quantity = quantity;
+        }
+
+        public void buy() {
+          System.out.println("Buy [Name: " + name + ", Quantity: " + quantity + "]");
+        }
+
+        public void sell() {
+          System.out.println("Sell [Name: " + name + ", Quantity: " + quantity + "]");
+        }
+    }
+    ```
+
 **Invoker:**
 
   ```java
-  import java.util.ArrayList;
-  import java.util.List;
-
   public class Player {
-    private List<Order> orderList = new ArrayList<>();
+      private List<Order> orderList = new ArrayList<>();
 
-    public void takeOrder(Order order) {
-      orderList.add(order);
-    }
+      public void takeOrder(Order order) {
+          orderList.add(order);
+      }
 
-    public void placeOrders() {
-      orderList.forEach(order -> order.execute());
-      orderList.clear();
-    }
+      public void placeOrders() {
+          orderList.forEach(order -> order.execute());
+          orderList.clear();
+      }
   }
   ```
-  
-**Receiver:**
 
-  ```java
-  public class Item {
-    private String name = "Quafe";
-    private int quantity = 100;
-
-    public void buy() {
-      System.out.println("Item [Name: " + name + ", Quantity: " + quantity + "] bought.");
-    }
-
-    public void sell() {
-      System.out.println("Item [Name: " + name + ", Quantity: " + quantity + "] sold.");
-    }
-  }
-  ```
-  
 **Demo:**
 
   ```java
   public class Main {
-    public static void main(String[] args) {
-      Item quafe = new Item();
+      public static void main(String[] args) {
+          Item itemToBuy = new Item("Quafe", 500);
+          Item itemToSell = new Item("Carbon", 1000);
 
-      BuyItem buyItemOrder = new BuyItem(quafe);
-      SellItem sellItemOrder = new SellItem(quafe);
+          BuyItem buyItemOrder = new BuyItem(itemToBuy);
+          SellItem sellItemOrder = new SellItem(itemToSell);
 
-      Player player = new Player();
-      player.takeOrder(buyItemOrder);
-      player.takeOrder(sellItemOrder);
+          Player player = new Player();
+          player.takeOrder(buyItemOrder);
+          player.takeOrder(sellItemOrder);
 
-      player.placeOrders();
-    }
+          player.placeOrders();
+      }
   }
   ```
-  
+
 **Output:**
 
   ```
-  Item [Name: Quafe, Quantity: 100] bought.
-  Item [Name: Quafe, Quantity: 100] sold.
+  Buy [Name: Quafe, Quantity: 500]
+  Sell [Name: Carbon, Quantity: 1000]
   ```

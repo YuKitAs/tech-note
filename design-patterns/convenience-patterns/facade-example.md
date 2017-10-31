@@ -7,53 +7,70 @@ Bietet eine einheitliche Schnittstelle zu einer Menge von Schnittstellen eines S
 * Facade: knows which Subsystem classes are responsible for a request; delegates client request to appropriate Subsystem objects.
 * Subsystem classes: implements Subsystem functionality; handle work assigned by the Facade object.
 
-**Facade:**
-
-  ```java
-  public class ShapeDrawer {
-    private Shape circle;
-
-    public ShapeDrawer() {
-      circle = new Circle();
-    }
-
-    public void drawCircle() {
-      circle.draw();
-    }
-  }
-  ```
-  
 **Subsystem classes:**
 
   ```java
   public interface Shape {
-    void draw();
+      void draw();
   }
   ```
-  
+
   ```java
   public class Circle implements Shape {
-    @Override
-    public void draw() {
-      System.out.println("This is a circle.");
-    }
+      @Override
+      public void draw() {
+          System.out.println("Drawing circle...");
+      }
   }
   ```
-  
+
+  ```java
+  public class Square implements Shape {
+      @Override
+      public void draw() {
+          System.out.println("Drawing square...");
+      }
+  }
+  ```
+
+**Facade:**
+
+  ```java
+  public class ShapeDrawer {
+      private Shape circle;
+      private Shape square;
+
+      public ShapeDrawer() {
+          circle = new Circle();
+          square = new Square();
+      }
+
+      public void drawCircle() {
+          circle.draw();
+      }
+
+      public void drawSquare() {
+          square.draw();
+      }
+  }
+  ```
+
 **Demo:**
 
   ```java
   public class Main {
-    public static void main(String[] args) {
-      ShapeDrawer shapeDrawer = new ShapeDrawer();
+      public static void main(String[] args) {
+          ShapeDrawer shapeDrawer = new ShapeDrawer();
 
-      shapeDrawer.drawCircle();
-    }
+          shapeDrawer.drawCircle();
+          shapeDrawer.drawSquare();
+      }
   }
   ```
-  
+
 **Output:**
 
   ```
-  This is a circle.
+  Drawing circle...
+  Drawing square...
   ```

@@ -22,90 +22,100 @@ Extrinsischer Zustand: für jedes Exemplar unterschiedlich, wird in externer Dat
     void draw();
   }
   ```
-  
+
 **ConcreteFlyweight:**
 
   ```java
   public class Circle implements Shape {
-    private int x;
+      private int x;
+      private int y;
+      private int radius;
+      private String color;
 
-    private int y;
+      public Circle(String color) {
+          this.color = color;
+      }
 
-    private int radius;
+      public void setX(int x) {
+          this.x = x;
+      }
 
-    public Circle() {
-    }
+      public void setY(int y) {
+          this.y = y;
+      }
 
-    public void setX(int x) {
-      this.x = x;
-    }
+      public void setRadius(int radius) {
+          this.radius = radius;
+      }
 
-    public void setY(int y) {
-      this.y = y;
-    }
-
-    public void setRadius(int radius) {
-      this.radius = radius;
-    }
-
-    @Override
-    public void draw() {
-      System.out.println("x: " + x + ", y: " + y);
-      System.out.println("radius: " + radius);
-    }
+      @Override
+      public void draw() {
+          System.out.println("Drawing circle at [x: " + x + ", y: " + y + "], radius: " + radius + ", color: " + color);
+      }
   }
   ```
-  
+
 **FlyweightFactory:**
 
   ```java
-  import java.util.ArrayList;
-  import java.util.HashMap;
-  import java.util.List;
-
   public class ShapeFactory {
-    public static Shape getCircle() {
-      System.out.println("Drawing circle...");
+      private static final HashMap<String, Shape> circleMap = new HashMap<>();
 
-      return new Circle();
-    }
+      public static Shape getCircle(String color) {
+          Circle circle = (Circle) circleMap.get(color);
+
+          if (circle == null) {
+              circle = new Circle(color);
+              circleMap.put(color, circle);
+              System.out.println("Creating circle of color: " + color);
+          }
+
+          return circle;
+      }
   }
   ```
-  
+
 **Demo:**
 
   ```java
-  public class Main {
-    public static void main(String[] args) {
-      for (int i = 0; i < 5; i++) {
-        Circle circle = (Circle) ShapeFactory.getCircle();
-        
-        circle.setX((int) (Math.random() * 100));
-        circle.setY((int) (Math.random() * 100));
-        circle.setRadius((int) (Math.random() * 100 + 1));
-        
-        circle.draw();
+  public class FlyWeightDemo {
+      private static final String colors[] = {"Red", "Green", "Blue"};
+
+      public static void main(String[] args) {
+          for (int i = 0; i < 5; i++) {
+              Circle circle = (Circle) ShapeFactory.getCircle(getRandomColor());
+
+              circle.setX(getRandomNumber());
+              circle.setY(getRandomNumber());
+              circle.setRadius(getRandomNumber() + 1);
+
+              circle.draw();
+          }
       }
-    }
+
+      private static String getRandomColor() {
+          return colors[(int) (Math.random() * colors.length)];
+      }
+
+      private static int getRandomNumber() {
+          return (int) (Math.random() * 100);
+      }
   }
   ```
-  
+
 **Output:**
 
   ```
-  Drawing circle...
-  x: 30, y: 21
-  radius: 59
-  Drawing circle...
-  x: 53, y: 55
-  radius: 58
-  Drawing circle...
-  x: 1, y: 81
-  radius: 63
-  Drawing circle...
-  x: 0, y: 62
-  radius: 3
-  Drawing circle...
-  x: 43, y: 38
-  radius: 70
+  Creating circle of color: Green
+  Drawing circle at [x: 28, y: 25], radius: 23, color: Green
+
+  Creating circle of color: Red
+  Drawing circle at [x: 61, y: 84], radius: 42, color: Red
+
+  Creating circle of color: Blue
+  Drawing circle at [x: 75, y: 44], radius: 2, color: Blue
+
+  Drawing circle at [x: 69, y: 34], radius: 89, color: Green
+
+  Drawing circle at [x: 59, y: 30], radius: 39, color: Red
   ```

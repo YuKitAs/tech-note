@@ -1,4 +1,4 @@
-# Wait And Notify
+# Wait and Notify
 
 ### wait
 `wait()` method is called to suspend the current thread, it has three variants. The invocation of `wait()` will not return until any other thread has called `notify()` or `notifyAll()` on the object. The current thread suspended by `wait(long timeout)` will also be awakened when a specified amount of time has elapsed. The current thread suspended by `wait(long timeout, int nanos)` will also be awakened when some other thread interrupts it.

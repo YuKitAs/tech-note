@@ -1,6 +1,6 @@
 # Producer-Consumer Problem With ArrayBlockingQueue
 
-Here is an example for the implementation of Producer-Consumer Problem using java ArrayBlockingQueue. The two most important methods for BlockingQueue are `put()` and `take()`.
+Here is an example for the implementation of Producer-Consumer Problem using java [ArrayBlockingQueue](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ArrayBlockingQueue.html). `ArrayBlockingQueue` is a bounded, blocking queue that stores the elements internally in an array. Two most important methods for BlockingQueue are `put()` and `take()`.
 
 `put(E e)` is used to insert an element to the queue. If the queue is full, it will wait until there is space available.
 

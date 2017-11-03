@@ -1,6 +1,6 @@
 # Producer-Consumer Problem with Wait and Notify
 
-Here is an example for the implementation of Producer-Consumer Problem using `wait()` and `notifyAll()` instead of `BlockingQueue`.
+Here is an example for the implementation of Producer-Consumer Problem using [wait and notify](https://github.com/YuKitAs/tech-note/blob/master/programming-language/java/concurrency/wait-and-notify.md) instead of `BlockingQueue`.
 
 The object class `Message` is just the same as in [this example](https://github.com/YuKitAs/tech-note/blob/master/programming-language/java/concurrency/producer-consumer-problem-with-array-blocking-queue.md).
 

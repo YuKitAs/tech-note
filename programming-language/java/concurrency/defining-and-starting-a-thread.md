@@ -1,18 +1,18 @@
-# Multithreading Implementation
+# Defining and Starting a Thread
 
 There are 2 ways to create and run threads.
 
 ### Method 1: Creation by implementing `Runnable` Interface
 
-We create a class that initializes and starts a thread in the constructor. The task of this thread is to print five numbers in sequence, which is defined in the `run()` method. 
+We create a class that initializes and starts a thread in the constructor. The task of this thread is to print five numbers in sequence, which is defined in the `run()` method.
 
 The `run()` method will be executed after `start()` is called. The `start()` method will return as soon as the thread is started, it won't wait until the `run()` method is finished.
 
 ```java
-public class MultithreadingDemo implements Runnable {
+public class MyRunnable implements Runnable {
     Thread thread;
 
-    MultithreadingDemo() {
+    MyRunnable() {
         thread = new Thread(this, "Runnable child thread");
         System.out.println(thread + " created.");
         thread.start();
@@ -38,10 +38,10 @@ Then we initialize a child thread in the `main()` method so it'll be started and
 ```java
 public class RunnableDemo {
     public static void main(String[] args) {
-        MultithreadingDemo multithreading = new MultithreadingDemo();
+        MyRunnable myRunnable = new MyRunnable();
 
         try {
-            while (multithreading.thread.isAlive()) {
+            while (myRunnable.thread.isAlive()) {
                 System.out.println("Main thread is alive.");
                 Thread.sleep(1500);
             }
@@ -76,8 +76,8 @@ Main thread is finished.
 This time we will create a child thread directly, so we use `start()` in the constructor.
 
 ```java
-public class MultithreadingDemo extends Thread {
-    MultithreadingDemo() {
+public class MyThread extends Thread {
+    MyThread() {
         super("Runnable child thread");
         System.out.println(this + " created.");
         start();
@@ -98,7 +98,7 @@ public class MultithreadingDemo extends Thread {
 }
 ```
 
-In the `main()` method, replace `multithreading.thread.isAlive()` with `multithreading.isAlive()` and then we can get the same output as using the first method.
+In the `main()` method, replace `MyRunnable myRunnable = new MyRunnable();` with `MyThread myThread = new MyThread()` and replace `myRunnable.thread.isAlive()` with `myThread.isAlive()`, then we can get the same output as using the first method.
 
 The advantages of the first method are:
 

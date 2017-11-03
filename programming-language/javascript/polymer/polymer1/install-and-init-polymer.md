@@ -1,4 +1,4 @@
-# Install And Init Polymer
+# Install and Init Polymer
 
 `npm` is required so make sure an active LTS version of [Node.js](https://nodejs.org/en/) is installed.
 

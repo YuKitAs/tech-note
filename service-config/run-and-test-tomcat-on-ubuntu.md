@@ -1,4 +1,4 @@
-# Run And Test Tomcat on Ubuntu
+# Run and Test Tomcat on Ubuntu
 
 The Tomcat server is started automatically on Ubuntu, to restart or stop Tomcat use the following commands:
 

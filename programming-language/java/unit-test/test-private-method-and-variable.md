@@ -1,4 +1,4 @@
-# Test Private Method And Variable
+# Test Private Method and Variable
 
 Suppose we have to access a private method or variable but it's not allowed to change the code (eg. increase the visibility), using reflection is actually the most practical way.
 

@@ -82,18 +82,15 @@ public class Consumer implements Runnable {
 }
 ```
 
-The service is used to create an ArrayBlockingQueue with fixed size, which will be shared with producer and consumer threads.
+The service is used to create an ArrayBlockingQueue with fixed size, which will be shared with `Producer` and `Consumer` threads.
 
 ```java
 public class ProducerConsumerService {
     public static void main(String[] args) {
         BlockingQueue<Message> queue = new ArrayBlockingQueue<Message>(10);
 
-        Producer producer = new Producer(queue);
-        Consumer consumer = new Consumer(queue);
-
-        new Thread(producer).start();
-        new Thread(consumer).start();
+        new Thread(new Producer(queue)).start();
+        new Thread(new Consumer(queue)).start();
 
         System.out.println("Producer and Consumer have been started.");
     }

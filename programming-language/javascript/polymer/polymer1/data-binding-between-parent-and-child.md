@@ -1,4 +1,4 @@
-# Data Binding Between Parent And Child
+# Data Binding Between Parent and Child
 
 Suppose we have defined a child element with a two-way data binding:
 

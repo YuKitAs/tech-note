@@ -1,4 +1,4 @@
-# Install And Use Polymer Elements
+# Install and Use Polymer Elements
 
 The recommended way to install Polymer elements is through [Bower](https://bower.io/). When we install a new component, Bower makes sure its dependencies are installed as well.
 

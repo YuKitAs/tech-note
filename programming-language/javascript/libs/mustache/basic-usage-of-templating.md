@@ -2,7 +2,7 @@
 
 [mustache.js](https://github.com/janl/mustache.js/) is a popular JavaScript templating engine. I'll show you a simple example on how to use it. The latest version can be accessed through `https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js`.
 
-Basically we need to define two variables: a `view` object and a `template` string. `view` object contains the data we want to render, `template` contains any number of mustache tags:
+Basically we need to define two variables: a `view` object and a `template` string. `view` object contains the data and code we want to render, `template` contains any number of mustache tags:
 
 ```javascript
 var data = {

@@ -11,7 +11,7 @@ var data = {
           {"name": "Raichu", "move": "Thunder", "power": 100}
       ],
       "enemy": {
-          "name":"Magikarp"
+          "name": "Magikarp"
       }
     }
 

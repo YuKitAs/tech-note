@@ -2,7 +2,7 @@
 
 A common question in JavaScript is the difference between `==` and `===`.
 
-Actually, `==` is an **equality operator** and `===` is an **identity operator**. That means, when using `===`, the types of two variables must be the same, but if they are not, `==` will do necessary type conversions. For example, the following conditions will all be considered to be true:
+Actually, `==` is an **equality operator** and `===` is an **identity operator**. That means, when using `===`, the types of two variables must be the same, but if they are not, `==` will do necessary type conversions. For example, the following conditions will all be true:
 
 ```javascript
 '0' == 0

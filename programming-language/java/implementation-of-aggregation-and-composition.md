@@ -1,10 +1,10 @@
 # Implementation of Aggregation and Composition
 
-Aggregation and composition are two special [associations](https://en.wikipedia.org/wiki/Association_(object-oriented_programming). Composition is stronger than aggragation. These relationships can be illustrated by the following UML diagram (assuming every person can/should only have one name):
+Aggregation and composition are two special [associations](https://en.wikipedia.org/wiki/Association_(object-oriented_programming)). Composition is stronger than aggragation. These relationships can be illustrated by the following UML diagram (assuming every person can/should only have one name):
 
 ![](https://github.com/YuKitAs/tech-note/blob/master/assets/association.png)
 
-The implementation in Java is normally with some kind of `Collection`, `ArrayList` for example.
+The implementations in Java are usually with some kind of `Collection`, `ArrayList` for example.
 
 Aggregation between `Company` and `Person` (1:N) and composition between `Person` and `Name` (1:1):
 

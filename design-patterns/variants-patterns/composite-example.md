@@ -15,114 +15,126 @@ Fügt Objekte zu Baumstrukturen zusammen, um Hierarchien zu repräsentieren. Ein
 
   ```java
   public abstract class Employee {
-    abstract void add(Employee employee);
+      abstract void add(Employee employee);
 
-    abstract List<Employee> getSubordinates();
+      abstract String getName();
 
-    abstract String getName();
+      abstract String getEntryYear();
 
-    void print() {
-      System.out.println("Employee: " + getName());
-    }
+      void print() {
+          System.out.println("Name: " + getName() + ", Year of Entry: " + getEntryYear());
+      }
   }
   ```
-  
+
 **Leaf:**
 
   ```java
   public class Developer extends Employee {
-    private String name;
+      private final String name;
+      private final String entryYear;
 
-    public Developer(String name) {
-      this.name = name;
-    }
+      public Developer(String name, String entryYear) {
+          this.name = name;
+          this.entryYear = entryYear;
+      }
 
-    @Override
-    public void add(Employee employee) {
-      // a leaf has no children
-    }
+      @Override
+      public void add(Employee employee) {
+          // a leaf has no children
+      }
 
-    @Override
-    public List<Employee> getSubordinates() {
-      return null;
-    }
+      @Override
+      public String getName() {
+          return name;
+      }
 
-    @Override
-    public String getName() {
-      return name;
-    }
+      @Override
+      public String getEntryYear() {
+          return entryYear;
+      }
   }
   ```
-  
+
 **Composite:**
 
   ```java
   public class Manager extends Employee {
-    private String name;
-    private List<Employee> employees;
+      private final String name;
+      private final String entryYear;
+      private List<Employee> employees;
 
-    public Manager(String name) {
-      this.name = name;
-      employees = new ArrayList<>();
-    }
+      public Manager(String name, String entryYear) {
+          this.name = name;
+          this.entryYear = entryYear;
+          employees = new ArrayList<>();
+      }
 
-    @Override
-    public void add(Employee employee) {
-      employees.add(employee);
-    }
+      @Override
+      public void add(Employee employee) {
+          employees.add(employee);
+      }
 
-    @Override
-    public List<Employee> getSubordinates() {
-      return employees;
-    }
+      @Override
+      public String getName() {
+          return name;
+      }
 
-    @Override
-    public String getName() {
-      return name;
-    }
+      @Override
+      public String getEntryYear() {
+          return entryYear;
+      }
+
+      @Override
+      public void print() {
+          System.out.println("Name: " + getName() + ", Year of Entry: " + getEntryYear());
+
+          // use iterator in composite to execute the common operation of the children.
+          Iterator<Employee> employeeIterator = employees.iterator();
+          while (employeeIterator.hasNext()) {
+              employeeIterator.next().print();
+          }
+      }
   }
   ```
-  
+
 **Demo:**
 
   ```java
   public class Main {
-    public static void main(String[] args) {
-      Manager generalManager = new Manager("Michael");
-      Employee manager = new Manager("Phillip");
-      Employee developer1 = new Developer("Peter");
-      Employee developer2 = new Developer("Angela");
-      Employee developer3 = new Developer("Johannes");
+      public static void main(String[] args) {
+          Employee generalManager = new Manager("Michael", "2004");
+          Employee manager = new Manager("Phillip", "2006");
+          Employee developer1 = new Developer("Peter", "2012");
+          Employee developer2 = new Developer("Angela", "2014");
+          Employee developer3 = new Developer("Johan", "2016");
 
-      generalManager.add(manager);
-      generalManager.add(developer1);
-      manager.add(developer2);
-      manager.add(developer3);
+          generalManager.add(manager);
+          generalManager.add(developer1);
+          manager.add(developer2);
+          manager.add(developer3);
 
-      generalManager.print();
-
-      for (Employee emp : generalManager.getSubordinates()) {
-        System.out.print("  ");
-        emp.print();
-
-        if (emp.getSubordinates() == null) {
-        } else {
-          emp.getSubordinates().forEach(e -> {
-            System.out.print("    ");
-            e.print();
-          });
-        }
-      }
+          generalManager.print();
     }
   }
   ```
-  
+
+The actual hierarchical structure is defined as follows:
+
+  ```
+        Michael
+        /     \
+    Phillip  Peter
+    /    \
+ Angela Johan
+  ```
+
 **Output:**
 
   ```
-  Employee: Michael
-    Employee: Phillip
-      Employee: Angela
-      Employee: Johannes
-    Employee: Peter
+  Name: Michael, Year of Entry: 2004
+  Name: Phillip, Year of Entry: 2006
+  Name: Angela, Year of Entry: 2014
+  Name: Johan, Year of Entry: 2016
+  Name: Peter, Year of Entry: 2012
   ```

@@ -21,6 +21,7 @@ Fügt Objekte zu Baumstrukturen zusammen, um Hierarchien zu repräsentieren. Ein
 
       abstract String getEntryYear();
 
+      // common operation
       void print() {
           System.out.println("Name: " + getName() + ", Year of Entry: " + getEntryYear());
       }

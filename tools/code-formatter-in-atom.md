@@ -1,6 +1,6 @@
 # Code Formatter in Atom
 
-Suggested packages (`Edit -> Preferences -> Install`):
+Suggested packages to install (`Edit` > `Preferences` > `Install`):
 
 * prettier-atom
 * linter

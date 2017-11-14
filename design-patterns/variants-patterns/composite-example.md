@@ -2,6 +2,8 @@
 
 Fügt Objekte zu Baumstrukturen zusammen, um Hierarchien zu repräsentieren. Einheitliche Behandlung von Objekten wie Aggregaten.
 
+*Anwendungen*: zusammengefügte Graphik-Objekte, Swing JComponent
+
 ![composite](../class-diagrams/composite.png)
 
 **Participants:**

@@ -2,7 +2,7 @@
 
 Kontrolliert den Zugriff auf ein Objekt mit Hilfe eines vorgelagerten Stellvertreterobjekts.
 
-*Anwendungen*: remote proxy, virtual proxy
+*Anwendungen*: remote proxy, virtual proxy, firewall
 
 ![proxy](../class-diagrams/proxy.png)
 

@@ -38,4 +38,4 @@ public void testOrderSendsMailIfUnfilled() {
 
 **Mock**
 
-Mocks are part of the test, we have to set our expectations and then verify if the correct methods have been invoked in the mock. A widely used Java mocking framework is Mockito.
+Mocks are part of the test, we have to set our expectations and then verify if the correct methods have been invoked in the mock. They are used for *behavior verification*. A widely used Java mocking framework is Mockito.

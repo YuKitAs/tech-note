@@ -18,6 +18,7 @@ public class MyRunnable implements Runnable {
         thread.start();
     }
 
+    @Override
     public void run() {
         try {
             for (int i = 0; i < 5; i++) {
@@ -83,6 +84,7 @@ public class MyThread extends Thread {
         start();
     }
 
+    @Override
     public void run() {
         try {
             for (int i = 0; i < 5; i++) {

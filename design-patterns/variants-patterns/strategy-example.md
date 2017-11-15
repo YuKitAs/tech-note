@@ -78,3 +78,7 @@ _Anwendung_: Viele verwandte Klassen, die sich nur in ihrem Verhalten unterschei
   2 + 3 = 5
   2 * 3 = 6
   ```
+
+**Compared with [Bridge](https://github.com/YuKitAs/tech-note/blob/master/design-patterns/decoupling-patterns/bridge-example.md) design pattern:**
+
+Strategy is a behavior pattern and Bridge is meant for structure. The coupling between the context and the strategies is tighter than the coupling between the abstraction and the implementation in the Bridge.

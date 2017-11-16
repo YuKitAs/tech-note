@@ -14,7 +14,7 @@ test('Item lengths should be equal', function(done) {
       items = element.shadowRoot.querySelector('#el');
       assert.equal(element.items.length, items.length);
       
-	  done();
+      done();
     });
   });
 )};

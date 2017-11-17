@@ -7,7 +7,7 @@ In addition, global variables defined with `let` won't be added as properties on
 `const` is also block-scoped like `let`, but the value of a `const` can't be reassigned or redeclared. According to documentation:
 
 ```
-The const declaration creates a read-only reference to a value. It does not mean the value it holds is   
-immutable, just that the variable identifier cannot be reassigned. For instance, in the case where the   
-content is an object, this means the object's contents (e.g., its parameters) can be altered.
+The const declaration creates a read-only reference to a value. It does not mean the value it holds  
+is immutable, just that the variable identifier cannot be reassigned. For instance, in the case where  
+the content is an object, this means the object's contents (e.g., its parameters) can be altered.
 ```

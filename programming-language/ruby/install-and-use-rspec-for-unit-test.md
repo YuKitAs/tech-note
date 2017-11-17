@@ -22,7 +22,13 @@ $ bundle install
 
 Now `rake`, `rspec` and `rubocop` will be installed.
 
-4. Run
+4. Create a `.rspec` file with the following content:
+
+```
+--require spec_helper
+```
+
+5. Run
 
 ```console
 $ rspec --init
@@ -30,9 +36,9 @@ $ rspec --init
 
 Now a `spec` directory with a `spec_helper.rb` file will be created.
 
-5. Create test files in the `spec` directory.
+6. Create test files in the `spec` directory.
 
-6. At the beginning of the test file, require the file containing the class we want to test with `require_relative 'path/to/filename'`, and the tests can be written like:
+7. At the beginning of the test file, require the file containing the class we want to test with `require_relative 'path/to/filename'`, and the tests can be written like:
 
 ```ruby
 RSpec.describe AnyClass do

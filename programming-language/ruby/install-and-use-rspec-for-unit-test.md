@@ -47,3 +47,9 @@ RSpec.describe AnyClass do
 =end
 end
 ```
+
+8. Run tests:
+
+```console
+$ rspec test
+```

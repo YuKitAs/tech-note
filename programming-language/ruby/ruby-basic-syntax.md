@@ -38,9 +38,19 @@ end
 
 5. How to loop?
 
+With `each`:
 ```ruby
 def greetAll(names)
   names.each do |name|
+    puts "Hello #{name}!"
+  end
+end
+```
+
+With `for`:
+```ruby
+def greetAll(names)
+  for name in names do
     puts "Hello #{name}!"
   end
 end

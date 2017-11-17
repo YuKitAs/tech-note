@@ -104,7 +104,7 @@ Hello Pikachu!
 See 7.
 ```
 
-9. How to extends a class?
+9. How to extend a class?
 
 ```ruby
 class Nager
@@ -126,7 +126,7 @@ class Squirrel < Nager
 end
 ```
 
-10. How to call the constructor from the parent class?
+10. How to call the constructor of the super class?
 
 ```ruby
 class Squirrel < Nager

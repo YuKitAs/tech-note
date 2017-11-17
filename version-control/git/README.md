@@ -1,3 +1,3 @@
 # Git
 
-![](../../../master/version-control/git/git.png)
+![](https://github.com/YuKitAs/tech-note/tree/master/assets/git.png)

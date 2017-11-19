@@ -2,14 +2,13 @@
 
 In Ruby, `%w[foo bar baz qux]` and `%W[foo bar baz qux]` are shortcuts for an array of String `['foo', 'bar', 'baz', 'qux']` without using quotes and commas.
 
-The difference between `%w` and `%W` is that `%W` supports `\n` (line break) like in double quotes. For example, `puts %w[foo\n bar]` will output
+The difference between `%w` and `%W` is that `%W` supports `\n` (line break) like in double quotes. For example, `puts %w[foo\nbar]` will output
 
 ```
-foo\n
-bar
+foo\nbar
 ```
 
-And `puts %W[foo\n bar]` will output
+and `puts %W[foo\nbar]` will output
 
 ```
 foo

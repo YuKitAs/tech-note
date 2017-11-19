@@ -36,7 +36,7 @@ $ rspec --init
 
 Now a `spec` directory with a `spec_helper.rb` file will be created.
 
-6. Create test files in the `spec` directory.
+6. Create a test file named `*_spec.rb` in the `spec` directory, 
 
 7. At the beginning of the test file, require the file containing the class we want to test with `require_relative 'path/to/filename'`, and the tests can be written like:
 

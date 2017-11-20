@@ -1,4 +1,4 @@
-# Save Temporary changes
+# Save Temporary Changes
 
 1. `git stash`
 

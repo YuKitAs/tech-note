@@ -36,6 +36,12 @@ GET /<indexname>?pretty
 GET /<index-name>/<doc-name>/<ID>?pretty
 ```
 
+* List all documents of an index
+
+```console
+GET /<indexname>/_search?pretty
+```
+
 * Delete an index or a document
 
 ```console

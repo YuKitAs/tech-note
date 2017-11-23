@@ -68,3 +68,14 @@ POST /<index-name>/<doc-name>/<ID>/_update?pretty
 ```
 
 What Elasticsearch will do here is delete the old doc and index a new one.
+
+4. Configuration:
+
+To enable CORS, add the following lines in `config/elasticsearch.yml`:
+
+```yml
+http.cors.allow-origin: "*"
+http.cors.enabled: true
+
+node.master: true
+```

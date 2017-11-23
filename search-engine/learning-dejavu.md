@@ -1,6 +1,6 @@
 # Learning Dejavu
 
-Unlike Kibana, which uses server-side page-rendering techniques, Dejavu can build a Web UI with client-side rendering. 
+Unlike Kibana, which uses server-side page-rendering techniques, [Dejavu](https://github.com/appbaseio/dejavu) can build a Web UI with client-side rendering. 
 
 Features:
 

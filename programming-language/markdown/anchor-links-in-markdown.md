@@ -6,4 +6,4 @@ In Markdown each heading is automatically generated with an anchor in front of i
 * [Hello World](#hello-world)
 ```
 
-so that it links to `https://github.com/YuKitAs/repository-name#hello-world`.
+so that it will link to `https://github.com/YuKitAs/repository-name#hello-world`.

@@ -38,4 +38,49 @@ PUT twitter/doc/tweet-1
 }
 ```
 
+In this way we would get the following response by using `GET twitter/_search`:
+
+```text
+{
+  "took": 0,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 2,
+    "max_score": 1,
+    "hits": [
+      {
+        "_index": "twitter",
+        "_type": "doc",
+        "_id": "user-1",
+        "_score": 1,
+        "_source": {
+          "type": "user",
+          "name": "John Doe",
+          "user_name": "john_doe",
+          "email": "john.doe@kimchy.com"
+        }
+      },
+      {
+        "_index": "twitter",
+        "_type": "doc",
+        "_id": "tweet-1",
+        "_score": 1,
+        "_source": {
+          "type": "tweet",
+          "user_name": "john_doe",
+          "tweeted_at": "2017-11-28",
+          "content": "Ich bin wieder da."
+        }
+      }
+    ]
+  }
+}
+```
+
 More reference: [Removal of mapping types](https://www.elastic.co/guide/en/elasticsearch/reference/current/removal-of-types.html), elastic.

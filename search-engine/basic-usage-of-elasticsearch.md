@@ -1,5 +1,7 @@
 # Basic Usage of Elasticsearch
 
+Elasticsearch: built over [Lucene](https://lucene.apache.org/core/) and provides a JSON based REST API to refer to Lucene features, and provides a distributed system on top of Lucene.
+
 1. Download and install [Elasticsearch]( https://www.elastic.co/de/products/elasticsearch ) and [Kibana](https://www.elastic.co/de/products/kibana)
 
 2. In Kibana, open `Dev Tools > Console` to use Kibana's Console UI

@@ -14,7 +14,7 @@
     $ git remote add origin https://github.com/YuKitAs/[new-repo-name].git
     ```
 
-4. Push changes in the local repo to GitHub:
+4. Push changes in the local repo to GitHub (remember to commit local changes and/or pull from the new repo before if necessary):
 
     ```console
     $ git push origin master

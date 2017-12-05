@@ -19,5 +19,5 @@ The `aria-label` attribute is used to define a string that indicates the current
 
 
 More references: 
-* [ARIA in HTML](https://www.w3.org/TR/html-aria/), W3C
+* [ARIA in HTML](https://www.w3.org/TR/html-aria/), W3C.
 * [Using ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques), MDN web docs.

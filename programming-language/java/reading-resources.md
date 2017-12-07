@@ -15,14 +15,21 @@ src/
 If we want to read a file from the `main/resources` folder, we can use 
 
 ```java
-URL url = getClass().getResource("explicit/path/to/filename");
-File res = new File(url.getPath());
+URL url = getClass().getResource("/filename");
 ```
 
-Or with the help of `ClassLoader` which considers the location of the `filename` is the root:
+The leading slash indicates the root `main/resources`. `Class.getResource()` can also accept a `filename` which located relative to the package of the class.
+
+Another possibility is to use `ClassLoader` which considers the location of the `filename` is the root:
 
 ```java
 URL url = getClass().getClassLoader().getResource("filename");
 ```
 
 If calling from static method, use `ClassName.class` instead of `getClass()`.
+
+When `url` is not null, we can get the file as follows:
+
+```java
+File res = new File(url.getPath());
+```

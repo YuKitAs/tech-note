@@ -18,7 +18,7 @@ If we want to read a file from the `main/resources` folder, we can use
 URL url = getClass().getResource("/filename");
 ```
 
-The leading slash indicates the root `main/resources`. `Class.getResource()` can also accept a `filename` which is located relative to the package of the class.
+The leading slash indicates the root `main/resources`. `Class.getResource()` can also accept a `filename` which is located relatively to the package of the class.
 
 Another possibility is to use `ClassLoader` which considers the location of the `filename` is the root:
 

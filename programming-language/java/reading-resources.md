@@ -8,7 +8,7 @@ src/
     java/
 	resources/
   test/
-    jave/
+    java/
 	resources/
 ```
 
@@ -19,11 +19,10 @@ URL url = getClass().getResource("explicit/path/to/filename");
 File res = new File(url.getPath());
 ```
 
-Or with the help of `ClassLoader` which considers the location of the filename is the root:
+Or with the help of `ClassLoader` which considers the location of the `filename` is the root:
 
 ```java
 URL url = getClass().getClassLoader().getResource("filename");
-File res = new File(url.getPath());
 ```
 
 If calling from static method, use `ClassName.class` instead of `getClass()`.

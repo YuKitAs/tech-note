@@ -19,7 +19,7 @@ URL url = getClass().getResource("explicit/path/to/filename");
 File res = new File(url.getPath());
 ```
 
-Or with the help of `classLoader` which considers the location of the filename is the root:
+Or with the help of `ClassLoader` which considers the location of the filename is the root:
 
 ```java
 URL url = getClass().getClassLoader().getResource("filename");

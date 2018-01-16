@@ -31,3 +31,6 @@ $ sudo service mongod restart
 ```console
 $ mongo
 ```
+
+
+For detailed commands see documentation: [mongo Shell Quick Reference](https://docs.mongodb.com/manual/reference/mongo-shell/)

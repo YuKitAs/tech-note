@@ -33,4 +33,4 @@ $ mongo
 ```
 
 
-For detailed commands see documentation: [mongo Shell Quick Reference](https://docs.mongodb.com/manual/reference/mongo-shell/)
+* For detailed commands see documentation: [mongo Shell Quick Reference](https://docs.mongodb.com/manual/reference/mongo-shell/)

@@ -1,4 +1,4 @@
-# Mount Shared Folder on VirtualBox
+# Create Shared Folder in VirtualBox
 
 Two simple steps need to be done in order to share files between host and guest.
 

@@ -11,19 +11,21 @@ Elasticsearch: built over [Lucene](https://lucene.apache.org/core/) and provides
 * List all indices
 
 ```console
-GET /_cat/indices?v
+GET /_cat/indices
 ```
+
+Append `?v` to show headers.
 
 * Create a new index
 
 ```console
-PUT /<index-name>?pretty
+PUT /<index-name>
 ```
 
 * Index a document with an ID
 
 ```console
-PUT /<index-name>/<doc-name>/<ID>?pretty
+PUT /<index-name>/<doc-name>/<ID>
 {
   "_comment": "request body should not be empty"
 }
@@ -34,27 +36,29 @@ If an ID is not explicit specified, use `POST` instead of `PUT` here. Elasticsea
 * List an index or a document
 
 ```console
-GET /<indexname>?pretty
-GET /<index-name>/<doc-name>/<ID>?pretty
+GET /<indexname>
+GET /<index-name>/<doc-name>/<ID>
 ```
+
+Append `?pretty` to return pretty formatted JSON.
 
 * List all documents of an index
 
 ```console
-GET /<indexname>/_search?pretty
+GET /<indexname>/_search
 ```
 
 * Delete an index or a document
 
 ```console
-DELETE /<indexname>?pretty
-DELETE /<index-name>/<doc-name>/<ID>?pretty
+DELETE /<indexname>
+DELETE /<index-name>/<doc-name>/<ID>
 ```
 
 * Replace an indexed document (i.e. reindex)
 
 ```console
-PUT /<index-name>/<doc-name>/<ID>?pretty
+PUT /<index-name>/<doc-name>/<ID>
 {
   "_comment": "some updated information"
 }
@@ -63,7 +67,7 @@ PUT /<index-name>/<doc-name>/<ID>?pretty
 * Update an indexed document
 
 ```console
-POST /<index-name>/<doc-name>/<ID>/_update?pretty
+POST /<index-name>/<doc-name>/<ID>/_update
 {
   "_comment": "some other updated information"
 }

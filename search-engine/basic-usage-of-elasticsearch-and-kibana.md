@@ -1,4 +1,4 @@
-# Basic Usage of Elasticsearch
+# Basic Usage of Elasticsearch and Kibana
 
 Elasticsearch: built over [Lucene](https://lucene.apache.org/core/) and provides a JSON based REST API to refer to Lucene features, and provides a distributed system on top of Lucene.
 
@@ -8,7 +8,7 @@ This tutorial shows how to work with Elasticsearch 6.2, may not be valid for low
 
 2. In Kibana, open `Dev Tools > Console` to use Kibana's Console UI
 
-3. The following are basic commands used in Kibana, they can also be used with `curl`:
+3. The following are basic commands used in Kibana. They can also be used with `curl`. At the top-right corner of Kibana's console there is an option `Copy as cURL`.
 
   * List all indices
 

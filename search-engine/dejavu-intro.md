@@ -1,4 +1,4 @@
-# Learning Dejavu
+# Dejavu Intro
 
 Unlike Kibana, which uses server-side page-rendering techniques, [Dejavu](https://github.com/appbaseio/dejavu) (built with React v15.6.0) can build a Web UI with client-side rendering. 
 

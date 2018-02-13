@@ -8,12 +8,12 @@ This tutorial shows how to work with Elasticsearch 6.2, may not be valid for low
 
 2. In Kibana, open `Dev Tools > Console` to use Kibana's Console UI
 
-3. Basic commands:
+3. The following are basic commands used in Kibana, they can also be used with `curl`:
 
   * List all indices
 
     ```console
-    GET /_cat/indices
+    GET _cat/indices
     ```
 
     Append `?v` to show headers.
@@ -21,13 +21,13 @@ This tutorial shows how to work with Elasticsearch 6.2, may not be valid for low
   * Create a new index
 
     ```console
-    PUT /<index-name>
+    PUT <index-name>
     ```
 
   * Index a document with an ID
 
     ```console
-    PUT /<index-name>/<doc-name>/<ID>
+    PUT <index-name>/<doc-name>/<ID>
     {
       "_comment": "request body should not be empty"
     }
@@ -38,8 +38,8 @@ This tutorial shows how to work with Elasticsearch 6.2, may not be valid for low
   * List an index or a document
 
     ```console
-    GET /<indexname>
-    GET /<index-name>/<doc-name>/<ID>
+    GET <indexname>
+    GET <index-name>/<doc-name>/<ID>
     ```
 
     Append `?pretty` to return pretty formatted JSON.
@@ -47,20 +47,20 @@ This tutorial shows how to work with Elasticsearch 6.2, may not be valid for low
   * List all documents of an index
 
     ```console
-    GET /<indexname>/_search
+    GET <indexname>/_search
     ```
 
   * Delete an index or a document
 
     ```console
-    DELETE /<indexname>
-    DELETE /<index-name>/<doc-name>/<ID>
+    DELETE <indexname>
+    DELETE <index-name>/<doc-name>/<ID>
     ```
 
   * Replace an indexed document (i.e. reindex)
 
     ```console
-    PUT /<index-name>/<doc-name>/<ID>
+    PUT <index-name>/<doc-name>/<ID>
     {
       "_comment": "some updated information"
     }
@@ -77,16 +77,16 @@ This tutorial shows how to work with Elasticsearch 6.2, may not be valid for low
 
     What Elasticsearch will do here is delete the old doc and index a new one.
 
-  *  Add new mappings to an existing index
-
+  * Add new mappings to an existing index
+    
     ```console
     PUT <index-name>/_mapping/doc
     {
-        "properties": {
-          "some_new_mapping_field": {
-            "type": "some_mapping_type"
-          }
+      "properties": {
+        "some_new_mapping_field": {
+          "type": "some_mapping_type"
         }
+      }
     }
     ```
 

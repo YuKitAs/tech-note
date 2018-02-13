@@ -1,4 +1,4 @@
-# Learning ElasticHQ
+# ElasticHQ Intro
 
 [ElasticHQ](https://github.com/royrusso/elasticsearch-HQ) is a Web UI for ElasticSearch instances and clusters.
 

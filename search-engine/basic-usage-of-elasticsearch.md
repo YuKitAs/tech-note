@@ -80,7 +80,7 @@ This tutorial shows how to work with Elasticsearch 6.2, may not be valid for low
   * Add new mappings to an existing index
     
     ```console
-    PUT <index-name>/_mapping/doc
+    PUT <index-name>/_mapping/<doc-name>
     {
       "properties": {
         "some_new_mapping_field": {

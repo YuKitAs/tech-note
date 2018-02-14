@@ -1,4 +1,4 @@
-# Set up Virtual Environment
+# Setup Virtual Environment
 
 [Virtualenv](https://virtualenv.pypa.io/en/stable/) is a tool to create isolated python environment.
 

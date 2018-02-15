@@ -30,11 +30,11 @@ Besides using search query, there are three ways to add field filters.
 
 3. Click `Add a filter`. Either search filter values or build filter by editing Query DSL manually, the latter allows logical query operators.
 
-![](https://www.elastic.co/guide/en/kibana/current/images/PositiveFilter.jpg) Positive Filter button: "filter for this value", equivalent to `is` operator.
+![](https://www.elastic.co/guide/en/kibana/current/images/PositiveFilter.jpg) **Positive Filter** button: "filter for this value", equivalent to `is` operator.
 
-![](https://www.elastic.co/guide/en/kibana/current/images/NegativeFilter.jpg) Negative Filter: "filter out this value", equivalent to `is not` operator.
+![](https://www.elastic.co/guide/en/kibana/current/images/NegativeFilter.jpg) **Negative Filter** button: "filter out this value", equivalent to `is not` operator.
 
-![](https://www.elastic.co/guide/en/kibana/current/images/ExistsButton.jpg) Exists button: "filter for field present".
+![](https://www.elastic.co/guide/en/kibana/current/images/ExistsButton.jpg) **Exists** button: "filter for field present".
 
 ## Visualize
 

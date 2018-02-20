@@ -21,7 +21,7 @@ After configured an index pattern, we can find all the data of a selected index 
 
 In the query bar, JSON-based [Elasticsearch Query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html) and [Lucene query syntax](https://www.elastic.co/guide/en/kibana/current/lucene-query.html) are supported to search data. For example, we can search with `DB: 132 OR DB: 085 OR DB: 062`.
 
-The new query language [Kuery](https://www.elastic.co/guide/en/kibana/current/kuery-query.html) which is built for kibana can also be enabled for searching, but it's just an experimental functionality so far.
+The new query language [Kuery](https://www.elastic.co/guide/en/kibana/current/kuery-query.html) which is built for kibana can also be enabled for searching, but it's just an experimental functionality so far. In order to use Kuery we should edit the option in `Management > Advanced Settings > search:queryLanguage:switcher:enable` to `true`.
 
 A string without double quotation marks would be used to match any documents containing one of the words in the string. For example, the string query `test client` equals to `"test" OR "client"`.
 

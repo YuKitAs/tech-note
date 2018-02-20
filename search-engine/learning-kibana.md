@@ -7,6 +7,8 @@
 * [Timelion](#timelion)
 * [Dev Tools](#dev-tools)
 
+Current version: 6.2.1
+
 ## Index Patterns
 
 In order to use Kibana, at least one index pattern should be configured. An index pattern is a string with optional wildcards that match multiple indices, for example `index_*`. Create index pattern in `Management > Index Patterns`.
@@ -17,23 +19,43 @@ After configured an index pattern, we can find all the data of a selected index 
 
 ### Query bar
 
-In the query bar, JSON-based [Elasticsearch Query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html) and [Lucene query syntax](https://www.elastic.co/guide/en/kibana/current/lucene-query.html) are supported to search data.
+In the query bar, JSON-based [Elasticsearch Query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html) and [Lucene query syntax](https://www.elastic.co/guide/en/kibana/current/lucene-query.html) are supported to search data. For example, we can search with `DB: 132 OR DB: 085 OR DB: 062`.
 
-The new query language [Kuery](https://www.elastic.co/guide/en/kibana/current/kuery-query.html) which is built for kibana can also be enabled for searching, but it's just an experimental functionality so far by Elasticsearch 6.2.
+The new query language [Kuery](https://www.elastic.co/guide/en/kibana/current/kuery-query.html) which is built for kibana can also be enabled for searching, but it's just an experimental functionality so far.
 
 A string without double quotation marks would be used to match any documents containing one of the words in the string. For example, the string query `test client` equals to `"test" OR "client"`.
 
 Leave blank for matching all.
 
+### Selected fields
+
+In the lists on the left side, top 5 values for each field will be shown. Every field added from `Available Fields` to `Selected Fields` will be displayed as a column in the document table.
+
+![](https://github.com/YuKitAs/tech-note/blob/master/search-engine/screenshots/kibana-field-list.png)
+
 ### Filtering by field values
 
 Besides using search query, there are three ways to add field filters.
 
-1. Expand a document in the document table and click the filter button right to the field name with a certain value.
+1. Expand a document in the document table and click the filter button right to the field names.
 
-2. Add from `Available Fields` list. Only top 5 values for each field will be shown. Every field in the `Selected Fields` list will be displayed as a column in the document table.
+2. Add from `Available Fields` or `Selected Fields` list by clicking the filter button.
 
-3. Click `Add a filter` to either search filter values or build filter by editing Query DSL manually, the latter allows logical query operators.
+3. Click `Add a filter` to choose a field, an operator and a value, or more advanced, build filter by editing Query DSL manually, this way allows us to use logical query operators, for example
+
+```json
+{
+  "query": {
+    "query_string": {
+      "default_field": "*",
+      "query": "DB: 132 OR DB: 085 OR DB: 062",
+      "analyze_wildcard": true
+    }
+  }
+}
+```
+
+Filter buttons mentioned above:
 
 ![](https://www.elastic.co/guide/en/kibana/current/images/PositiveFilter.jpg) **Positive Filter** button: "filter for this value", equivalent to `is` operator.
 
@@ -44,6 +66,13 @@ Besides using search query, there are three ways to add field filters.
 ## Visualize
 
 Fields can be directly visualized from the fields list in `Discover`, or in `Visualize` from a new search or a saved search. A visualization with link to a saved search can be saved and exported as CSV or JSON. The saved visualizations can be managed in `Management > Saved Objects > Visualizations`.
+
+The following is a visualization created from saved search with query string `DB: 132 OR DB: 085 OR DB: 062`:
+
+![](https://github.com/YuKitAs/tech-note/blob/master/search-engine/screenshots/kibana-visualization-example.png)
+
+Y-Axis: Count, X-Axis: DB, Split Series: GROUP
+
 
 ## Dashboard
 

@@ -26,7 +26,7 @@ Besides using search query, there are three ways to add field filters.
 
 1. Expand a document in the document table and click the filter button right to the field name with a certain value.
 
-2. Add from `Available Lields` list. Only top 5 values for each field will be shown. Every field in the `Selected Fields` list will be displayed as a column in the document table.
+2. Add from `Available fields` list. Only top 5 values for each field will be shown. Every field in the `Selected Fields` list will be displayed as a column in the document table.
 
 3. Click `Add a filter`. Either search filter values or build filter by editing Query DSL manually, the latter allows logical query operators.
 

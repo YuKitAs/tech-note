@@ -4,7 +4,7 @@
 * [Discover](#discover)
 * [Visualize](#visualize)
 * [Dashboard](#dashboard)
-* [Timelion](#timeliion)
+* [Timelion](#timelion)
 * [Dev Tools](#dev-tools)
 
 ## Index Patterns

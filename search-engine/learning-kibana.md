@@ -67,7 +67,7 @@ Filter buttons mentioned above:
 
 Fields can be directly visualized from the fields list in `Discover`, or in `Visualize` from a new search or a saved search. A visualization with link to a saved search can be saved and exported as CSV or JSON. The saved visualizations can be managed in `Management > Saved Objects > Visualizations`.
 
-The following is a visualization created from saved search with query string `DB: 132 OR DB: 085 OR DB: 062`:
+The following is a visualization created from the above saved search:
 
 ![](https://github.com/YuKitAs/tech-note/blob/master/search-engine/screenshots/kibana-visualization-example.PNG)
 

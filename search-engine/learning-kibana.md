@@ -31,7 +31,7 @@ Leave blank for matching all.
 
 In the lists on the left side, top 5 values for each field will be shown. Every field added from `Available Fields` to `Selected Fields` will be displayed as a column in the document table.
 
-![](https://github.com/YuKitAs/tech-note/blob/master/search-engine/screenshots/kibana-field-list.png)
+![](https://github.com/YuKitAs/tech-note/blob/master/search-engine/screenshots/kibana-field-list.PNG)
 
 ### Filtering by field values
 
@@ -69,9 +69,9 @@ Fields can be directly visualized from the fields list in `Discover`, or in `Vis
 
 The following is a visualization created from saved search with query string `DB: 132 OR DB: 085 OR DB: 062`:
 
-![](https://github.com/YuKitAs/tech-note/blob/master/search-engine/screenshots/kibana-visualization-example.png)
+![](https://github.com/YuKitAs/tech-note/blob/master/search-engine/screenshots/kibana-visualization-example.PNG)
 
-Y-Axis: Count, X-Axis: DB, Split Series: GROUP
+_Y-Axis: Count, X-Axis: DB, Split Series: GROUP_
 
 
 ## Dashboard

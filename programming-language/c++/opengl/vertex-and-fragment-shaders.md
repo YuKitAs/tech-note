@@ -17,9 +17,9 @@ out vec2 tex_coord;
 
 void main(void)
 {
-	tex_coord = TEXCOORD;
-	gl_Position = MVP * vec4(POSITION, 1.0);
-	color = 0.5 * POSITION + vec3(0.5, 0.5, 0.5);
+    tex_coord = TEXCOORD;
+    gl_Position = MVP * vec4(POSITION, 1.0);
+    color = 0.5 * POSITION + vec3(0.5, 0.5, 0.5);
 }
 ```
 
@@ -35,6 +35,6 @@ out vec4 frag_color;
 
 void main(void)
 {
-	frag_color = vec4(color, 1.0);
+    frag_color = vec4(color, 1.0);
 }
 ```

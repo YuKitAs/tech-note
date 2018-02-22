@@ -10,7 +10,7 @@ Table of Contents
 * [Discover](#discover)
   * [Query bar](#query-bar)
   * [Selected fields](#selected-fields)
-  * [Filtering by field values](#filtering by field values)
+  * [Filtering by field values](#filtering-by-field-values)
 * [Visualize](#visualize)
 * [Dashboard](#dashboard)
 * [Timelion](#timelion)

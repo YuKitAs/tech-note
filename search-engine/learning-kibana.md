@@ -1,13 +1,20 @@
 # Learning Kibana
 
+> Kibana is an open source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch indices.
+
+Current version: 6.2.1
+
+Table of Contents
+
 * [Index Patterns](#index-patterns)
 * [Discover](#discover)
+  * [Query bar](#query-bar)
+  * [Selected fields](#selected-fields)
+  * [Filtering by field values](#filtering by field values)
 * [Visualize](#visualize)
 * [Dashboard](#dashboard)
 * [Timelion](#timelion)
 * [Dev Tools](#dev-tools)
-
-Current version: 6.2.1
 
 ## Index Patterns
 
@@ -19,13 +26,21 @@ After configured an index pattern, we can find all the data of a selected index 
 
 ### Query bar
 
-In the query bar, JSON-based [Elasticsearch Query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html) and [Lucene query syntax](https://www.elastic.co/guide/en/kibana/current/lucene-query.html) are supported to search data. For example, we can search with `DB: 132 OR DB: 085 OR DB: 062`.
+#### Query string
 
-The new query language [Kuery](https://www.elastic.co/guide/en/kibana/current/kuery-query.html) which is built for kibana can also be enabled for searching, but it's just an experimental functionality so far. In order to use Kuery we should edit the option in `Management > Advanced Settings > search:queryLanguage:switcher:enable` to `true`.
+In the query bar, JSON-based [Elasticsearch Query DSL](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html) and [Lucene query syntax](https://www.elastic.co/guide/en/kibana/current/lucene-query.html) are supported to search data. For example, we can search with `DB: 132 OR DB: 085 OR DB: 062`.
 
 A string without double quotation marks would be used to match any documents containing one of the words in the string. For example, the string query `test client` equals to `"test" OR "client"`.
 
 Leave blank for matching all.
+
+#### Kuery
+
+The brand-new query language [Kuery](https://www.elastic.co/guide/en/kibana/current/kuery-query.html) (KQL) which is built for kibana can also be enabled for searching, but it's just an experimental functionality so far and still under development.
+
+ In order to use Kuery we need to set the option in `Management > Advanced Settings > search:queryLanguage:switcher:enable` to `true` and choose `kuery` on the right side of the query bar.
+
+Kueries are built with functions that have alias. For example, function `is` takes a field name and a value as parameters, like `is("DB", 132)`, the alias is `:`, so it does the same thing as `DB:132` (unlike Lucene, there shouldn't be any whitespace behind `:`).
 
 ### Selected fields
 
@@ -84,4 +99,4 @@ Timelion is a tool for time series analysis from [Metricbeat](https://www.elasti
 
 ## Dev Tools
 
-For basic usage of composing requests in `Dev Tools` see this [note](https://github.com/YuKitAs/tech-note/blob/master/search-engine/basic-usage-of-elasticsearch-and-kibana.md). Multiple requests are supported.
+In Kibana's console here we can iteract with Elasticsearch indices. For basic usage of composing requests see this [note](https://github.com/YuKitAs/tech-note/blob/master/search-engine/basic-usage-of-elasticsearch-and-kibana.md). Multiple requests are supported.

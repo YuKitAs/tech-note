@@ -92,6 +92,7 @@ filter {
     }
 }
 ```
+The `%{COMBINEDAPACHELOG}` pattern structures Apache log lines using a specific schema with fields `clientip`, `ident`, `auth` and so on.
 
 Elastic filter plugins are listed [here](https://www.elastic.co/guide/en/logstash/6.2/filter-plugins.html).
 

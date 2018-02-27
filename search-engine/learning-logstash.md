@@ -7,9 +7,9 @@ Table of Contents
 * [Introduction](#introduction)
   * [Logstash](#logstash)
   * [Beats](#beats)
-* [Configuring Logstash and Filebeat](configuring-logstash-and-filebeat)
-* [Using Filter Plugins](using-filter-plugins)
-* [Indexing Data into Elasticsearch](indexing-data-into-elasticsearch)
+* [Configuring Logstash and Filebeat](#configuring-logstash-and-filebeat)
+* [Using Filter Plugins](#using-filter-plugins)
+* [Indexing Data into Elasticsearch](#indexing-data-into-elasticsearch)
 
 ## Introduction
 ### Logstash
@@ -41,7 +41,7 @@ In the command line, start Filebeat by running:
 $ ./filebeat -e -c filebeat.yml -d "publish"
 ```
 
-Then we can configure Logstash for Filebeat Input by creating a configuration pipeline (such as `logstash.conf`) in the home directory of Logstash, the layout is like:
+Then we configure Logstash by creating a configuration pipeline (eg. `logstash.conf`) in the home directory of Logstash, the layout is like:
 
 ```
 input {
@@ -63,7 +63,7 @@ beats {
 
 Otherwise, we can use `stdin {}` or specify path to the log file.
 
-In the `output` section, we can either print the output to console using `stdout { codec => rubydebug }` or write to Elasticsearch.
+In the `output` section, we can either print to console using `stdout { codec => rubydebug }` or write to Elasticsearch.
 
 Run the following command to test the configuration:
 

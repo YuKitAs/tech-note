@@ -45,3 +45,16 @@ void main(void)
     frag_color = vec4(color, 1.0);
 }
 ```
+
+Read texture with sampler{1,2,3}D in fragment shader:
+
+```cpp
+uniform sampler2D sam;
+in vec2 texCoord;
+
+out vec4 frag_color:
+
+void main() {
+    frag_color = texture(sam, texCoord);
+}
+```

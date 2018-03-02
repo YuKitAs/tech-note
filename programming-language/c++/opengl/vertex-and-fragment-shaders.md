@@ -2,7 +2,7 @@
 
 The following are examples of simple vertex shader and fragment shader using [GLSL](https://www.opengl.org/sdk/docs/tutorials/ClockworkCoders/glsl_overview.php)（OpenGL Shader Language).
 
-Input variables for vertex shader are vertex position and normal in model space. Output variables are vertex position and interpolated normal in world space.
+Input variables for vertex shader are vertex position and normal in object space. Output variables are vertex position and interpolated normal in world space.
 
 ```glsl
 #version 330 // same as #version 330 core
@@ -11,8 +11,8 @@ layout(location = 0) in vec3 POSITION;
 layout(location = 1) in vec3 NORMAL;
 
 uniform mat4 MVP; // model-view-projection matrix
-uniform mat4 M; // transformation matrix for vertices from model to world space
-uniform mat4 N; // transformation matrix for normals from model to world space
+uniform mat4 M; // transformation matrix for vertices from object to world space
+uniform mat4 N; // transformation matrix for normals from object to world space
 
 out vec3 world_position;
 out vec3 world_normal_interpolated;

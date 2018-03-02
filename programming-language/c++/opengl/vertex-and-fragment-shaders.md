@@ -49,12 +49,13 @@ void main(void)
 Read texture with sampler{1,2,3}D in fragment shader:
 
 ```glsl
-uniform sampler2D sam;
 in vec2 texCoord;
+
+uniform sampler2D sam;
 
 out vec4 frag_color:
 
 void main() {
-    frag_color = texture(sam, texCoord);
+    frag_color = texture(sam, texCoord); // if frag_color is vec3 then frag_color = texture(sam, texCoord).rgb
 }
 ```

@@ -26,18 +26,22 @@ void main(void)
 }
 ```
 
-Input variables for fragment shader are interpolated vertex color and texture coordinates from vertex shader. Output variable is the final color of the fragment.
+Input variables for fragment shader are vertex position and interpolated normal in world space from vertex shader. Output variable is the final color of the fragment.
 
 ```cpp
 #version 330
 
-in vec3 color;
-in vec2 tex_coord;
+in vec3 world_position;
+in vec3 world_normal_interpolated;
 
 out vec4 frag_color;
 
 void main(void)
 {
+    vec3 world_normal = normalize(world_normal_interpolated);
+    
+    vec3 color = 0.5 * world_normal + vec3(0.5, 0.5, 0.5);
+    
     frag_color = vec4(color, 1.0);
 }
 ```

@@ -19,7 +19,7 @@ out vec3 world_normal_interpolated;
 
 void main(void)
 {
-    gl_Position = MVP * vec4(POSITION, 1.0); // transform vertex position into projection coordinate
+    gl_Position = MVP * vec4(POSITION, 1.0); // build-in variable: vertex position in clip space
     
     world_position = vec3(M * vec4(POSITION, 1.0));
     world_normal_interpolated = N * NORMAL;

@@ -4,7 +4,7 @@ The following are examples of simple vertex shader and fragment shader using [GL
 
 Input variables for vertex shader are vertex position and normal in model space. Output variables are vertex position and interpolated normal in world space.
 
-```cpp
+```glsl
 #version 330 // same as #version 330 core
 
 layout(location = 0) in vec3 POSITION;
@@ -28,7 +28,7 @@ void main(void)
 
 Input variables for fragment shader are vertex position and interpolated normal in world space from vertex shader. Output variable is the final color of the fragment.
 
-```cpp
+```glsl
 #version 330
 
 in vec3 world_position;
@@ -48,7 +48,7 @@ void main(void)
 
 Read texture with sampler{1,2,3}D in fragment shader:
 
-```cpp
+```glsl
 uniform sampler2D sam;
 in vec2 texCoord;
 

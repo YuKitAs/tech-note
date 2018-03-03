@@ -6,7 +6,7 @@ When a ray from the camera/eye hits a surface, it can generate three types of ne
 
 A ray can be described as a vector function of t: **r**(t) = **e** + t**d**. **e** is the start position of the ray (for primary rays, position of the camera/eye) and **d** is the normalized direction vector.
 
-We generate rays from the camera to the middle of each pixel on the screen. The center of screen is at the origin of the uvw-coordinate used by the camera. The left, right, top and bottom boundaries of the screen are given as l, r, t and b. Every `(u, v)` position on the screen that each ray hits, starting from the top-left `(l, t)`, is computed as follows:
+We generate rays from the camera to the middle of each pixel on the screen. The center of screen is at the origin of the *uvw*-coordinate used by the camera. The left, right, top and bottom boundaries of the screen are given as l, r, t and b. Every `(u, v)` position on the screen that each ray hits, starting from the top-left `(l, t)`, is computed as follows:
 
 ```cpp
 for (float y = 0; y < SCREEN_H; y++) {
@@ -36,7 +36,7 @@ for (each object) {
 }
 ```
 
-The ray-triangle intersection can be determined with the help of the [barycentric coordinate](https://en.wikipedia.org/wiki/Barycentric_coordinate_system). We can also compute intersection with ray marching and distance fields, see the implementation [here]().
+The ray-triangle intersection can be determined with the help of the [barycentric coordinate](https://en.wikipedia.org/wiki/Barycentric_coordinate_system). We can also compute intersection with ray marching and distance fields, see the implementation [here](https://github.com/YuKitAs/tech-note/blob/master/computer-graphics/find-intersection-with-ray-marching.md).
 
 ## Shading
 
@@ -49,17 +49,18 @@ For lighting we will use the [Phong reflection model](https://en.wikipedia.org/w
 Suppose we already have structs like `Material`, `Intersection` and `PointLight` with all the information that we need.
 
 ```cpp
+// ambient term
+vec3 I = i.material->k_a * l.intensity;
+
 // shadow ray
 vec3 L = l.pos - i.pos;
 float dist2Light = length(l);
 
+// check if the intersection is in the shadwow (pseudocode)
 for (each object) {
   t = intersect(object, i.pos, L);
   if (t > 0 && t < dist2Light)  return I;
 }
-
-// ambient term
-vec3 I = i.material->k_a * l.intensity;
 
 float NdotL = dot(i.n, normalize(L));
 // for point source in reality, the intensity of light decreases as the distance grows
@@ -78,7 +79,7 @@ if (NdotL > 0) {
 }
 ```
 
-Lighting calculation with different normals are called different shadings, like Flat shading, Gouraud shading and Phong shading. The comparison between the implementation of Gouraud shading and Phong shading can be found [here]().
+Lighting calculation with different normals are called different shadings, like Flat shading, Gouraud shading and Phong shading. The comparison between the implementation of Gouraud shading and Phong shading can be found [here](https://github.com/YuKitAs/tech-note/blob/master/programming-language/c%2B%2B/opengl/gouraud-and-phong-shading.md).
 
 ## Tracing Secondary Rays
 

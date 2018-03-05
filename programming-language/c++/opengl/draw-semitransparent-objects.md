@@ -18,7 +18,7 @@ glDisable(GL_BLEND);
 // Draw opaque objects in any order. if (color.a < 1.0) discard;
 
 glEnable(GL_BLEND);
-glBendFunc(sfactor, dfactor);
+glBlendFunc(sfactor, dfactor);
 
 glDepthMask(GL_FALSE);
 

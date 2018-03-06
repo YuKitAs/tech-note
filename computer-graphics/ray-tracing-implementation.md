@@ -1,6 +1,6 @@
 # Ray Tracing Implementation
 
-When a ray from the camera/eye hits a surface, it can generate three types of new rays: reflection, refraction and shadow rays. Basically, a ray tracing process consists of four steps: ray generation, ray casting (ray intersection), shading and tracing secondary rays such as reflection and transmission.
+When a ray from the camera/eye hits a surface, it can generate three types of new rays: reflection, refraction and shadow rays. Basically, a ray tracing process consists of three steps: ray generation, ray casting (ray intersection) and shading.  Some processes like Whitted-style ray tracing check secondary rays.
 
 ## Ray Generation
 

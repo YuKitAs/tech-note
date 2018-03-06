@@ -42,7 +42,7 @@ The ray-triangle intersection can be determined with the help of the [barycentri
 
 In the shading step we calculate lighting and shadow for a found intersection `i` (i != NULL) with a point light source `l`.
 
-At first, we will check whether the intersection is in the shadow, which means there is at least one other object between the intersection and the light source. In this case we don't calculate the lighting for it.
+At first, we will check whether the intersection is in the shadow, which means there is at least one other object between the intersection and the light source. In that case we don't calculate the lighting for it.
 
 For lighting we will use the [Phong reflection model](https://en.wikipedia.org/wiki/Phong_reflection_model) to calculate the ambient term, diffuse term and specular term.
 
@@ -79,7 +79,7 @@ if (NdotL > 0) {
 }
 ```
 
-Lighting calculation with different normals are called different shadings, like Flat shading, Gouraud shading and Phong shading. The comparison between the implementation of Gouraud shading and Phong shading can be found [here](https://github.com/YuKitAs/tech-note/blob/master/programming-language/c%2B%2B/opengl/gouraud-and-phong-shading.md).
+Lighting can be calculated using different kind of normals, which are called different shading methods, like Flat shading, Gouraud shading and Phong shading. The implementation of Gouraud shading and Phong shading can be found [here](https://github.com/YuKitAs/tech-note/blob/master/programming-language/c%2B%2B/opengl/gouraud-and-phong-shading.md).
 
 ## Tracing Secondary Rays
 

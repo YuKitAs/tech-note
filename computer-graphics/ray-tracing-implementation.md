@@ -79,11 +79,11 @@ if (NdotL > 0) {
 }
 ```
 
-Lighting can be calculated using different kind of normals, which are called different shading methods, like Flat shading, Gouraud shading and Phong shading. The implementation of Gouraud shading and Phong shading can be found [here](https://github.com/YuKitAs/tech-note/blob/master/programming-language/c%2B%2B/opengl/gouraud-and-phong-shading.md).
+Lighting can be calculated using different kinds of normals, which are called different shading methods, like Flat shading, Gouraud shading and Phong shading. The implementation of Gouraud shading and Phong shading can be found [here](https://github.com/YuKitAs/tech-note/blob/master/programming-language/c%2B%2B/opengl/gouraud-and-phong-shading.md).
 
 ## Tracing Secondary Rays
 
-Whitted-style ray tracing is a recursive algorithm used to determine the summed light intensity (color) of the surface.
+As mentioned above, Whitted-style ray tracing is a recursive algorithm used to determine the summed light intensity (color) of the surface.
 
 Pseudocode:
 

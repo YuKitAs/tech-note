@@ -140,7 +140,7 @@ class Squirrel < Nager
   end
 end
 
-pachirisu = Squirrel.new()
+pachirisu = Squirrel.new
 puts pachirisu.name + " eats " + pachirisu.eat
 ```
 

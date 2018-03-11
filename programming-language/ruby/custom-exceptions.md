@@ -1,6 +1,12 @@
 # Custom Exceptions
 
-Custom exceptions in Ruby should extent `StandardException`. The most common way to raise an exception is to use `raise(CustomError, "this is an error message")`, the second string parameter is optional.
+Custom exceptions in Ruby should extent `StandardException`. The most common way to raise an exception is to use
+
+```ruby
+raise(CustomError, "this is an error message")
+```
+
+The second string parameter is optional.
 
 Since `raise` also receives exception objects, we can write an exception class in order to raise a custom exception with argument:
 
@@ -29,10 +35,4 @@ Our custom error message will be output to the console:
 
 ```console
 invalid amount: -1 (AmountError)
-```
-
-Unit test for raising an exception:
-
-```ruby
-expect(validate(-1)).to(raise_error(AmountError).with_message("invalid amount: -1"))
 ```

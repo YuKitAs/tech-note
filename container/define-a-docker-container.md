@@ -1,4 +1,4 @@
-Define a Docker Container
+# Define a Docker Container
 
 The following tutorial shows how to create a portable Python app with Docker.
 
@@ -33,7 +33,7 @@ CMD ["python", "app.py"]
 
 4. In `requirements.txt`, add two libraries `Flask` and `Redis`.
 
-5. The `app.py` is defined like this:
+5. The content of `app.py` is like this:
 
 ```python
 from flask import Flask
@@ -62,18 +62,18 @@ if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80)
 ```
 
-6. After having `Dockerfile`, `app.py` and `requirements.txt` in the project root, run the build command with to create a Docker image with a tag:
+6. After having `Dockerfile`, `app.py` and `requirements.txt` in the project root, run the `build` command to create a Docker image with a tag:
 
 ```console
 $ docker build -t helloworld .
 ```
 
-Without specifying a tag the name of the image would be `<none>`, then we can only access it with image ID.
+Without tagging the image name would be `<none>`, we can only access it with image ID (use `docker image ls` to check image ID).
 
-7. Map our machine's port 4000 to the container's published port 80 and run the app:
+7. Map machine's port 4000 to the container's published port 80 and run the app:
 
 ```console
 $ docker run -p 4000:80 helloworld
 ```
 
-8. Go to `http://localhost:4000` in a browser or use `curl http://localhost:4000` to view the content defined by the `app.py`.
+8. Go to `http://localhost:4000` in a browser or use `curl http://localhost:4000` to view the app.

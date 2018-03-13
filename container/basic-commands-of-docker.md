@@ -28,13 +28,33 @@ $ docker image ls
 Execute a Docker image:
 
 ```console
-$ docker run <image-id|image-name>
+$ docker run <image-ID|image-name>
 ```
 
 Remove a Docker image:
 
 ```console
-$ docker rmi <image-id|image-name>
+$ docker rmi <image-ID>
+```
+
+Remove all Docker images:
+
+```console
+$ docker rmi $(docker images -q)
+```
+
+`-q` means only displaying IDs.
+
+List running Docker containers:
+
+```console
+$ docker container ls
+```
+
+or
+
+```console
+$ docker ps
 ```
 
 List all Docker containers:
@@ -43,8 +63,20 @@ List all Docker containers:
 $ docker container ls --all
 ```
 
+or
+
+```console
+$ docker ps -a
+```
+
 Remove a Docker container:
 
 ```console
-$ docker rm <container-id>
+$ docker rm <container-ID>
+```
+
+Remove all Docker containers:
+
+```console
+$ docker rm $(docker ps -aq)
 ```

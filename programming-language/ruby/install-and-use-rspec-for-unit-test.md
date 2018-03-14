@@ -14,7 +14,7 @@ Prerequisites: `rake`, `rspec` and `rubocop` (installation tutorial in `README.m
   $ rspec --init
   ```
 
-  Now a new directory called `spec` with a `spec_helper.rb` file will be created.
+  Now a new directory called `spec` will be created with a `spec_helper.rb` file inside.
 
 3. Create a test file called `<class_name>_spec.rb` in the `spec` directory.
 
@@ -24,7 +24,7 @@ Prerequisites: `rake`, `rspec` and `rubocop` (installation tutorial in `README.m
   require "path/to/class_name"
   ```
   
-5. The test part:
+5. Write the test part:
 
   ```ruby
   RSpec.describe ClassName do
@@ -40,5 +40,5 @@ Prerequisites: `rake`, `rspec` and `rubocop` (installation tutorial in `README.m
   $ rspec spec
   ```
   
-  Use `rake test` can also run the RuboCop.
+  Instead, using `rake test` can also run RuboCop after running RSpec.
 

@@ -10,7 +10,7 @@ In Ruby, there are some interesting facts about the relationship between `Class`
   Object.superclass #=> BasicObject
   ```
 
-  From above we can see, `Class` and `Module` are both `Object`, and `Class` is a kind of `Module` with methods `new`, `allocate` and `superclass`.
+  From above we can see, `Class` and `Module` are both `Object`, and `Class` is a kind of `Module`.
 
 2. `Class`, `Module` and `Object` are all instances of `Class`.
 
@@ -23,6 +23,6 @@ Object.class #=> Class
 3. The concepts and usages of `Class` and `Module` are quite similar. It's recommend to use `Module` when we want our code to be mixed (`include`) somewhere else or need specific namespace. Use `Class` when we want our code to be instantialized or inherited.
 
 
-Reference:
+## Reference
 
-* Metaprogramming Ruby 2, Paolo Perrota, 2010
+* Paolo Perrota (2010). *Metaprogramming Ruby 2*.

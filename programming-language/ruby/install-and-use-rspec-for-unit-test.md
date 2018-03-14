@@ -1,55 +1,44 @@
 # Install and Use RSpec for Unit Test
 
-1. Install `rubygems` and `bundler` with `apt-get`.
+Prerequisites: `rake`, `rspec` and `rubocop` (installation tutorial in `README.md`)
 
-2. Create a `Gemfile` under project with the following content:
+1. Create a `.rspec` file in the project root with the following content:
 
-```
-source 'https://rubygems.org'
+  ```
+  --require spec_helper
+  ```
 
-group :test do
-  gem 'rake'
-  gem 'rspec'
-  gem 'rubocop'
-end
-```
+2. Initialize `rspec` by running
 
-3. Run
+  ```console
+  $ rspec --init
+  ```
 
-```console
-$ bundle install
-```
+  Now a new directory called `spec` with a `spec_helper.rb` file will be created.
 
-Now `rake`, `rspec` and `rubocop` will be installed.
+3. Create a test file called `<class_name>_spec.rb` in the `spec` directory.
 
-4. Create a `.rspec` file with the following content:
+4. At the beginning of the test file, require the file containing the class to be tested:
 
-```
---require spec_helper
-```
+  ```ruby
+  require "path/to/class_name"
+  ```
+  
+5. The test part:
 
-5. Run
+  ```ruby
+  RSpec.describe ClassName do
+    =begin
+    test methods
+    =end
+  end
+  ```
 
-```console
-$ rspec --init
-```
+6. Run tests:
 
-Now a `spec` directory with a `spec_helper.rb` file will be created.
+  ```console
+  $ rspec spec
+  ```
+  
+  Use `rake test` can also run the RuboCop.
 
-6. Create a test file named `*_spec.rb` in the `spec` directory, 
-
-7. At the beginning of the test file, require the file containing the class we want to test with `require_relative 'path/to/filename'`, and the tests can be written like:
-
-```ruby
-RSpec.describe AnyClass do
-=begin
-  test methods
-=end
-end
-```
-
-8. Run tests:
-
-```console
-$ rspec spec
-```

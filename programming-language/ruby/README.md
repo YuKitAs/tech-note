@@ -6,22 +6,31 @@
 * rubocop-auto-correct
 
 ## Gems
-1. Install Bundler using Gem 
-```console
-$ gem install bundler
-```
 
-2. Create `Gemfile` with the following content in the project root:
+1. Install RubyGems:
 
-```
-source 'https://rubygems.org'
-gem "rake"
-gem "rspec"
-gem "rubocop"
-```
+  ```console
+  sudo apt install rubygems
+  ```
 
-3. Install required gems using Bundler:
+2. Install Bundler using Gem:
 
-```console
-$ bundle install
-```
+  ```console
+  $ gem install bundler
+  ```
+
+3. Create `Gemfile` with the following content in the project root:
+
+  ```
+  source 'https://rubygems.org'
+
+  gem "rake"
+  gem "rspec"
+  gem "rubocop"
+  ```
+
+4. Install required gems using Bundler:
+
+  ```console
+  $ bundle install
+  ```

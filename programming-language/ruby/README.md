@@ -10,7 +10,7 @@
 1. Install RubyGems:
 
   ```console
-  sudo apt install rubygems
+  $ sudo apt install rubygems
   ```
 
 2. Install Bundler using Gem:

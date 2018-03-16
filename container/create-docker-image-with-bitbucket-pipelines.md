@@ -22,7 +22,7 @@ artifactes:
   - build/**
 ```
 
-We need a `Dockerfile` for creating a Docker image. The content could be something like:
+Then we need a `Dockerfile` for creating a Docker image. The content could be something like:
 
 ```Dockerfile
 FROM debian:stable
@@ -50,4 +50,4 @@ pipelines:
           - docker
 ```
 
-If we want to push the image to Docker Hub we can add `docker login` and `docker push` commands before and after `docker build`.
+To push the image to Docker Hub we can add `docker login` and `docker push` commands before and after `docker build`.

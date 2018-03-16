@@ -1,6 +1,6 @@
 # Add an Existing Project to GitHub
 
-1. Create a new repo on GitHub.
+1. Create a new repo on GitHub (without README.md and LICENSE)
 
 2. Initialize the local project as a Git repo:
 
@@ -14,8 +14,8 @@
     $ git remote add origin https://github.com/YuKitAs/[new-repo-name].git
     ```
 
-4. Push changes in the local repo to GitHub (remember to commit local changes and/or pull from the new repo before if necessary):
+4. Push changes in the local repo to GitHub (commit local changes or stash local changes and pull from the new repo before if necessary):
 
     ```console
-    $ git push origin master
+    $ git push -u origin master
     ```

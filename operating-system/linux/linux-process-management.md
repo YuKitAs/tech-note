@@ -1,6 +1,6 @@
 # Linux Process Management
 
-* `ps`: list all the processes running on the system with PIDs
+* `ps`: list current active processes with PIDs
 
 * `jobs`: list all the processes that the current shell is managing with job numbers
 

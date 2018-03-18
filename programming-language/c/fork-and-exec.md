@@ -5,6 +5,10 @@ When we use a shell to run an external program in the background, the shell need
 The following example shows how to use `fork()` and `exec()`. The `execute()` function returns either an error code or the exit status of the child process:
 
 ```c
+#include <unistd.h> // for fork()
+#include <sys/wait.h> // for waitpid()
+#include <stdlib.h> // for exit()
+
 int execute(char **argv) {
   int child_pid;
   int status;

@@ -1,8 +1,26 @@
 # Interact with Data Model
 
-When the controller action receives the request, it will ask the model to fetch data from the database. The model then returns data to the controller action and the controller action passes the data on to the view. The view renders the page as HTML. Then the controller sends the HTML back to the browser.
-
 ## Reading data
+
+### Steps
+
+1. User input a URL in the browser
+
+2. By entering Enter, the browser sends a `GET` request to server
+
+3. The router maps the URL to the corresponding controller action to handle the request
+
+4. The controller action receives the request and asks the model to fetch data from the database
+
+5. The model returns data to the controller action
+
+6. The controller action passes the data on to the view
+
+7. The view renders the page as HTML
+
+8. The controller sends the HTML back to the browser
+
+### Implementation example
 
 1. Create a new model:
 
@@ -54,7 +72,7 @@ When the controller action receives the request, it will ask the model to fetch 
   get '/messages' => 'messages#index'
   ```
 
-8. In `app/views/messages/index.html.erb`, add something like:
+8. In `app/views/messages/index.html.erb`, add some ERB web templating like:
 
   ```erb
   <div class="messages">
@@ -70,3 +88,60 @@ When the controller action receives the request, it will ask the model to fetch 
     </div>
   </div>
   ```
+
+## Creating data
+
+### Implementation example
+
+1. Create a route that maps request `GET /messages/new` to `Messages` controller's `new` action, and request `POST messages` to `Messages` controller's `create` action:
+
+  ```ruby
+  get '/messages/new' => 'messages#new'
+  post 'messages' => 'messages#create'
+  ```
+
+2. Add `new` and `create` actions in `Message` controller:
+
+  ```ruby
+  def new
+    @message = Message.new
+  end
+
+  def create
+    @message = Message.new(message_params)
+    if @message.save
+      redirect_to '/messages'
+    else
+      render 'new'
+    end
+  end
+  ```
+
+3.  Add a private method `message_params`:
+
+  ```ruby
+  private
+    def message_params
+      params.require(:message).permit(:content)
+    end
+  ```
+
+4. In the view page `app/views/new.html.erb`, add the following content to display a form for new messages with a submit button:
+
+```erb
+<%= form_for(@message) do |f| %>  
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Create" %>
+  </div>
+<% end %>
+```
+
+5. In `index.html.erb`, use `link_to` to create a link to `/messages/new`:
+
+```erb
+<%= link_to 'New Message', "messages/new" %>
+```

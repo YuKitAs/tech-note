@@ -13,7 +13,7 @@ $ docker --version
 $ docker info
 ```
 
-* Show Docker status:
+* Show Docker daemon status:
 
 ```console
 $ sudo service docker status
@@ -96,3 +96,9 @@ $ docker ps -aq | xargs docker rm
 ```
 
 Add `--no-trunc` parameter to only remove stopped containers.
+
+* Run a command in a running container:
+
+```console
+$ docker exec <container-ID> <command>
+```

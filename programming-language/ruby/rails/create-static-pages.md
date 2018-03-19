@@ -36,7 +36,7 @@
   get 'hello' => 'pages#home'
   ```
 
-5. Next, we create a file called `home.html.erb` under `app/view/pages` with some HTML content like:
+5. Next, we create a file called `home.html.erb` under `app/views/pages` with some HTML content like:
 
   ```html
   <div class="main">

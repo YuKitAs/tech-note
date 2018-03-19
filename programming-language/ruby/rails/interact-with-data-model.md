@@ -64,7 +64,7 @@
   end
   ```
 
-  Since `MessageController` inherits `ApplicationController`, the standard controller action `index` is used to list all messages by retrieving all messages from the database and storing them in `@messages`, which will be passed on to the view.
+  Since `MessageController` inherits `ApplicationController`, the [standard controller action](https://www.codecademy.com/articles/standard-controller-actions) `index` is used to list all messages by retrieving all messages from the database and storing them in `@messages`, which will be passed on to the view.
 
 7. Setup `routes.rb`:
 
@@ -72,19 +72,17 @@
   get '/messages' => 'messages#index'
   ```
 
-8. In `app/views/messages/index.html.erb`, add some ERB web templating like:
+8. In `app/views/messages/index.html.erb`, add HTML elements for message contents and timestamps with [ERB templating language](http://ruby-doc.org/stdlib-2.5.0/libdoc/erb/rdoc/ERB.html) like:
 
   ```erb
   <div class="messages">
     <div class="container">
-
       <% @messages.each do |message| %>
       <div class="message">
         <p class="content"><%= message.content %></p>
         <p class="time"><%= message.created_at %></p>
       </div>
       <% end %>
-
     </div>
   </div>
   ```

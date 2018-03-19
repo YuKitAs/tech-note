@@ -16,7 +16,7 @@
   $ rails generate controller Pages
   ```
 
-  A new file called `pages_controller.rb` will be generated under `hello-world/app/controllers` with the following definition:
+  Some new files related to `Pages` controller will be created. The most important file is `pages_controller.rb` in `app/controllers` with the following content:
 
   ```ruby
   class PagesController < ApplicationController
@@ -30,7 +30,7 @@
   end
   ```
 
-4. In `configs/routes.rb` we can make the router match to controller actions. For example, adding the following line means, the router should match `GET /hello` request to `pages` controller's `home` action:
+4. In `configs/routes.rb` we can make the router match to controller actions. For example, adding the following line means, the router should match `GET /hello` request to `Pages` controller's `home` action:
 
   ```ruby
   get 'hello' => 'pages#home'

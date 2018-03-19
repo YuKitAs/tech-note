@@ -39,11 +39,16 @@
 5. Next, we create a file called `home.html.erb` under `app/views/pages` with some HTML content like:
 
   ```html
-  <div class="main">
-    <h1>Hello world!</h1>
-  </div>
+  <div class="main">Hello world!</div>
   ```
 
-  The CSS/SCSS files are in `app/assets/stylesheets`.
+6. A SCSS file for `Pages` controller is created in `app/assets/stylesheets/pages.scss`, so we can customize the styles here:
+
+ ```css
+ .main {
+   text-align: center;
+   font-size: 30px;
+ }
+ ```
 
 6. Run `rails server` and open `localhost:3000/hello` in browser to check the `home` page we just created. 

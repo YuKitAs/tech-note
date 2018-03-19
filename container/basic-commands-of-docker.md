@@ -1,104 +1,104 @@
 # Basic Commands of Docker
 
-* List all Docker commands:
+* **List all Docker commands**:
 
-```console
-$ docker
-```
+  ```console
+  $ docker
+  ```
 
-* Show Docker version and info:
+* **Show Docker version and info**:
 
-```console
-$ docker --version
-$ docker info
-```
+  ```console
+  $ docker --version
+  $ docker info
+  ```
 
-* Show Docker daemon status:
+* **Show Docker daemon status**:
 
-```console
-$ sudo service docker status
-```
+  ```console
+  $ sudo service docker status
+  ```
 
-* List all Docker images:
+* **List all Docker images**:
 
-```console
-$ docker image ls
-```
+  ```console
+  $ docker image ls
+  ```
 
-* Execute a Docker image:
+* **Execute a Docker image**:
 
-```console
-$ docker run <image-ID|image-name>
-```
+  ```console
+  $ docker run <image-ID|image-name>
+  ```
 
-* Remove a Docker image:
+* **Remove a Docker image**:
 
-```console
-$ docker rmi <image-ID>
-```
+  ```console
+  $ docker rmi <image-ID>
+  ```
 
-* Remove all Docker images:
+* **Remove all Docker images**:
 
-```console
-$ docker rmi $(docker images -q)
-```
+  ```console
+  $ docker rmi $(docker images -q)
+  ```
 
-`-q` means only displaying IDs.
+  `-q` means only displaying IDs.
 
-or 
+  or 
 
-```console
-$ docker images -q | xargs docker rmi
-```
+  ```console
+  $ docker images -q | xargs docker rmi
+  ```
 
-Add `--filter dangling=true` to only remove dangling/untagged images.
+  Add `--filter dangling=true` to only remove dangling/untagged images.
 
-* List running Docker containers:
+* **List running Docker containers**:
 
-```console
-$ docker container ls
-```
+  ```console
+  $ docker container ls
+  ```
 
-or
+  or
 
-```console
-$ docker ps
-```
+  ```console
+  $ docker ps
+  ```
 
-* List all Docker containers:
+* **List all Docker containers**:
 
-```console
-$ docker container ls --all
-```
+  ```console
+  $ docker container ls --all
+  ```
 
-or
+  or
 
-```console
-$ docker ps -a
-```
+  ```console
+  $ docker ps -a
+  ```
 
-* Remove a Docker container:
+* **Remove a Docker container**:
 
-```console
-$ docker rm <container-ID>
-```
+  ```console
+  $ docker rm <container-ID>
+  ```
 
-* Remove all Docker containers:
+* **Remove all Docker containers**:
 
-```console
-$ docker rm $(docker ps -aq)
-```
+  ```console
+  $ docker rm $(docker ps -aq)
+  ```
 
-or
+  or
 
-```console
-$ docker ps -aq | xargs docker rm
-```
+  ```console
+  $ docker ps -aq | xargs docker rm
+  ```
 
-Add `--no-trunc` parameter to only remove stopped containers.
+  Add `--no-trunc` parameter to only remove stopped containers.
 
-* Run a command in a running container:
+* **Run a command in a running container**:
 
-```console
-$ docker exec <container-ID> <command>
-```
+  ```console
+  $ docker exec <container-ID> <command>
+  ```

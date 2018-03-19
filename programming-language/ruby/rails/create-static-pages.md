@@ -1,5 +1,7 @@
 # Create Static Pages
 
+This is a tutorial for creating a static page in Ruby on Rails without using models.
+
 1. Create a new Ruby on Rails app:
 
   ```console

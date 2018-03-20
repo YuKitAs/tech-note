@@ -32,7 +32,7 @@ This is a tutorial for creating a static page in Ruby on Rails without using mod
   end
   ```
 
-4. In `configs/routes.rb` we can make the router match to controller actions. For example, adding the following line means, the router should match `GET /hello` request to `Pages` controller's `home` action:
+4. In `config/routes.rb` we can make the router match to controller actions. For example, adding the following line means, the router should match `GET /hello` request to `Pages` controller's `home` action:
 
   ```ruby
   get 'hello' => 'pages#home'

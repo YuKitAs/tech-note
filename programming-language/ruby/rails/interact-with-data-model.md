@@ -6,7 +6,7 @@ Table of Contents
 * [Reading data](#reading-data)
   * [Listing all messages](#listing-all-messages)
   * [Showing a message](#showing-a-message)
-* [Updating data](updating-data)
+* [Updating data](#updating-data)
 * Deleting data
 
 ## Creating data

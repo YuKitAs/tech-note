@@ -57,4 +57,4 @@ This is a tutorial for creating a static page in Ruby on Rails without using mod
  }
  ```
 
-6. Run `rails server` and open `localhost:3000/hello` in browser to check the `home` page we just created. 
+6. Run `rails server` and open `localhost:3000/hello` in browser to check the `home` page that we created. If we have specified the root, just use `localhost:3000` to get the same page.

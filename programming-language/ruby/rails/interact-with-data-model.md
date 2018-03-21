@@ -178,7 +178,7 @@ We may want to navigate to a page with URL like `/messages/<id>` displaying a sp
     <p class="time"><%= @message.created_at %></p>
   </div>
 
-  <%= link_to 'Back', articles_path %>
+  <%= link_to 'Back', messages_path %>
   ```
 
 3. Add a link to `show` page in `app/views/messages/index.html.erb` after each message:
@@ -200,7 +200,7 @@ We may want to navigate to a page with URL like `/messages/<id>` displaying a sp
 2. Create a `edit` page called `app/views/messages/edit.html.erb` with contents like:
 
   ```erb
-  <h1>Edit article</h1>
+  <h1>Edit message</h1>
 
   <%= form_with(model: @message, local: true) do |form| %>
     <div class="field">

@@ -11,8 +11,6 @@ Table of Contents
 
 ## Creating data
 
-### Implementation example
-
 1. Create a new model:
 
   ```console
@@ -45,12 +43,13 @@ Table of Contents
   $ rails generate controller Messages
   ``` 
 
-5. Create a route in `config/routes.rb` that maps request `GET /messages/new` to `Messages` controller's `new` action, and request `POST messages` to `Messages` controller's `create` action:
+5. We don't need to create a route that maps request `GET /messages/new` to `Messages` controller's `new` action. Instead, we can add a `messages` resource in `config/routes.rb` as follows:
 
   ```ruby
-  get 'messages/new' => 'messages#new'
-  post 'messages' => 'messages#create'
+  resources :messages
   ```
+  
+  Now, if we run `rails routes`, we'll see that Rails has automatically defined routes for all the standard RESTful actions.
 
 6. Add `new` and `create` actions in `Message` controller:
 
@@ -96,6 +95,7 @@ Table of Contents
     </div>
   <% end %>
   ```
+  The `messages_path` helper passed to `url` tells Rails to point the form to the URI Pattern associated with the `messages` prefix, and the form will send a POST request to that route by default.
 
 9. In `index.html.erb`, use `link_to` to create a link to `/messages/new`:
 
@@ -123,9 +123,7 @@ Table of Contents
 
 8. The controller sends the HTML back to the browser
 
-### Implementation example
-
-#### Listing all messages
+### Listing all messages
 
 1. Run `rake db:seed` to seed the database with sample data from `db/seeds.rb`.
 
@@ -160,7 +158,7 @@ Table of Contents
   </div>
   ```
 
-#### Showing a message
+### Showing a message
 
 We may want to navigate to a page with URL like `/messages/<id>` displaying a specific message, then we need to find the message by its id.
 
@@ -189,7 +187,7 @@ We may want to navigate to a page with URL like `/messages/<id>` displaying a sp
   <%= link_to 'Show', message_path(message) %>
   ```
 
-### Updating data
+## Updating data
 
 1. Add an `edit` action into `messages_controller.rb`, by editing we also need to find the message by its id just like `show` action:
 
@@ -235,7 +233,7 @@ We may want to navigate to a page with URL like `/messages/<id>` displaying a sp
 
 4. Add a link `<%= link_to 'Edit', edit_article_path(article) %>` in `index.html.erb` and `<%= link_to 'Edit', edit_article_path(@article) %>` in `show.html.erb`.
 
-### Deleting data
+## Deleting data
 
 1. Add a `destroy` action:
 
@@ -255,4 +253,16 @@ We may want to navigate to a page with URL like `/messages/<id>` displaying a sp
   ```
   
   By this way Rails will prompt a confirm dialog and then submit the link with method `delete`. This is done via the JavaScript file `rails-ujs` which is automatically included in `app/views/layouts/application.html.erb`. 
+  
+Conventionally, the order of the actions in `messages_controller.rb` defined above would be like this:
+
+```ruby
+def index; end
+def show; end
+def new; end
+def edit; end
+def create; end
+def update; end
+def destroy; end
+```
 

@@ -15,7 +15,7 @@ This is a tutorial for creating a static page in Ruby on Rails without using mod
 3. Create a controller called `Pages`:
 
   ```console
-  $ rails generate controller Pages <action>
+  $ rails generate controller Pages [action]
   ```
 
   Some new files related to `Pages` controller will be created by Rails. If we apend an action e.g. `home` when we generate the controller, then Rails will also create a route `get 'pages/home'` (see next step).

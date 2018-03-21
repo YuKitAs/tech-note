@@ -25,7 +25,7 @@
 1. Create a new model:
 
   ```console
-  $ rails generate model Message <attributes>
+  $ rails generate model Message [attributes]
   ```
 
   A model file called `message.rb` will be created in `app/models` which represents a table in the database.

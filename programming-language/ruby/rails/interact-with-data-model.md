@@ -231,7 +231,7 @@ We may want to navigate to a page with URL like `/messages/<id>` displaying a sp
   end
   ```
 
-4. Add a link `<%= link_to 'Edit', edit_article_path(article) %>` in `index.html.erb` and `<%= link_to 'Edit', edit_article_path(@article) %>` in `show.html.erb`.
+4. Add a link `<%= link_to 'Edit', edit_message_path(message) %>` in `index.html.erb` and `<%= link_to 'Edit', edit_message_path(@message) %>` in `show.html.erb`.
 
 ## Deleting data
 

@@ -86,7 +86,7 @@ Table of Contents
 8. Create a view page `app/views/messages/new.html.erb`, add the following content to display a form for new messages, which consists of a text area and a submit button labeled "Create":
 
   ```erb
-  <%= form_for(@message) do |f| %>  
+  <%= form_with(scope: @message, url: messages_path, local: true) do |f| %>  
     <div class="field">
       <%= f.label :message %><br>
       <%= f.text_area :content %>
@@ -215,7 +215,9 @@ We may want to navigate to a page with URL like `/messages/<id>` displaying a sp
   <% end %>
   ```
 
-We can see the `edit` page and the `new` page share the same code for displaying the form. But this time we pass `model: @message` to `form_with`, it would cause the helper to fill in the form with the fields of the `message` object.
+  We can see the `edit` page and the `new` page share the same code for displaying the form. But here we pass `model: @message` to `form_with`, it would cause the helper to fill in the form with the fields of the `message` object. 
+
+  Actually, we can use [partials](http://guides.rubyonrails.org/layouts_and_rendering.html#using-partials) to clean up the duplication by creating a new file `app/views/messages/_form.html.erb` and replace the duplicated part with `<%= render 'form' %>`.
 
 3. Add an `update` action into `messages_controller.rb`:
 
@@ -234,3 +236,21 @@ We can see the `edit` page and the `new` page share the same code for displaying
 4. Add a link `<%= link_to 'Edit', edit_article_path(article) %>` in `index.html.erb` and `<%= link_to 'Edit', edit_article_path(@article) %>` in `show.html.erb`.
 
 ### Deleting data
+
+1. Add a `destroy` action:
+
+  ```ruby
+  def destroy
+    @message = Message.find(params[:id])
+    @message.destroy
+
+    redirect_to messages_path
+  end
+  ```
+
+2. Add a link in `index.html.erb`:
+
+  ```erb
+  <%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %>
+  ```
+

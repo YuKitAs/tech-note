@@ -85,23 +85,23 @@ Table of Contents
 
 8. Create a view page `app/views/messages/new.html.erb`, add the following content to display a form for new messages, which consists of a text area and a submit button labeled "Create":
 
-```erb
-<%= form_for(@message) do |f| %>  
-  <div class="field">
-    <%= f.label :message %><br>
-    <%= f.text_area :content %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Create" %>
-  </div>
-<% end %>
-```
+  ```erb
+  <%= form_for(@message) do |f| %>  
+    <div class="field">
+      <%= f.label :message %><br>
+      <%= f.text_area :content %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Create" %>
+    </div>
+  <% end %>
+  ```
 
 9. In `index.html.erb`, use `link_to` to create a link to `/messages/new`:
 
-```erb
-<%= link_to 'New Message', "messages/new" %>
-```
+  ```erb
+  <%= link_to 'New Message', "messages/new" %>
+  ```
 
 ## Reading data
 
@@ -162,24 +162,32 @@ Table of Contents
 
 #### Showing a message
 
-We may want to navigate to a page like `/messages/<id>` displaying a specific message, then we need to find the message by its id.
+We may want to navigate to a page with URL like `/messages/<id>` displaying a specific message, then we need to find the message by its id.
 
 1. Add a `show` action in `messages_controller.rb`:
 
-```ruby
-def show
-  @message = Message.find(params[:id])
-end
-```
+  ```ruby
+  def show
+    @message = Message.find(params[:id])
+  end
+  ```
 
 2. Create a new file `app/views/messages/show.html.erb` and add something like:
 
-```ruby
-<div class="message">
-  <p class="content"><%= @message.content %></p>
-  <p class="time"><%= @message.created_at %></p>
-</div>
-```
+  ```ruby
+  <div class="message">
+    <p class="content"><%= @message.content %></p>
+    <p class="time"><%= @message.created_at %></p>
+  </div>
+
+  <%= link_to 'Back', articles_path %>
+  ```
+
+3. Add a link to `show` page in `app/views/messages/index.html.erb` after each message:
+
+  ```erb
+  <%= link_to 'Show', message_path(message) %>
+  ```
 
 ### Updating data
 

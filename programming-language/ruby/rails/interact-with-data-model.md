@@ -46,7 +46,7 @@
 
   We can add `t.text :content` in order to create a text column `content`. It can also be done in the last step by appending `content:text`.
 
-3. Run `rake db:migrate` to update the database with the new data model.
+3. Run `rake db:migrate` to update the database with the new data model (the `change` method will be called).
 
 4. Run `rake db:seed` to seed the database with sample data from `db/seeds.rb`.
 

@@ -7,7 +7,7 @@ Table of Contents
   * [Listing all messages](#listing-all-messages)
   * [Showing a message](#showing-a-message)
 * [Updating data](#updating-data)
-* Deleting data
+* [Deleting data](#deleting-data)
 
 ## Creating data
 
@@ -251,6 +251,8 @@ We may want to navigate to a page with URL like `/messages/<id>` displaying a sp
 2. Add a link in `index.html.erb`:
 
   ```erb
-  <%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Destroy', messages_path(message), method: :delete, data: { confirm: 'Are you sure?' } %>
   ```
+  
+  By this way Rails will prompt a confirm dialog and then submit the link with method `delete`. This is done via the JavaScript file `rails-ujs` which is automatically included in `app/views/layouts/application.html.erb`. 
 

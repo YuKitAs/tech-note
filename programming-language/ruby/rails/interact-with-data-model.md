@@ -50,13 +50,13 @@
 
 4. Run `rake db:seed` to seed the database with sample data from `db/seeds.rb`.
 
-5. Create a new controller called `Messages`:
+5. Create a new controller called `Messages` with an `index` action:
 
   ```console
-  $ rails generate controller Messages
+  $ rails generate controller Messages index
   ```
 
-6. Add an `index` action in `app/controllers/messages_controller.rb`:
+6. In `app/controllers/messages_controller.rb`, implement the `index` method as follows:
 
   ```ruby
   def index
@@ -66,10 +66,10 @@
 
   Since `MessageController` inherits `ApplicationController`, the [standard controller action](https://www.codecademy.com/articles/standard-controller-actions) `index` is used to list all messages by retrieving all messages from the database and storing them in `@messages`, which will be passed on to the view.
 
-7. Setup `routes.rb`:
+7. In `config/routes.rb`, Rails has created a route `get 'messages/index'`. We could also modify it like:
 
   ```ruby
-  get '/messages' => 'messages#index'
+  get 'messages' => 'messages#index'
   ```
 
 8. In `app/views/messages/index.html.erb`, add HTML elements for message contents and timestamps with [ERB templating language](http://ruby-doc.org/stdlib-2.5.0/libdoc/erb/rdoc/ERB.html) like:
@@ -94,7 +94,7 @@
 1. Create a route that maps request `GET /messages/new` to `Messages` controller's `new` action, and request `POST messages` to `Messages` controller's `create` action:
 
   ```ruby
-  get '/messages/new' => 'messages#new'
+  get 'messages/new' => 'messages#new'
   post 'messages' => 'messages#create'
   ```
 

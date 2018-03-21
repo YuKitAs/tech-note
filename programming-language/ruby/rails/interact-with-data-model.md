@@ -120,7 +120,9 @@
 
   ```ruby
   private
+    # this method is made private to make sure it can't be called outside its intended context
     def message_params
+      # allow and require the content parameter for valid use of creating message
       params.require(:message).permit(:content)
     end
   ```

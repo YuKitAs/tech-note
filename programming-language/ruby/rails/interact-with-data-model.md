@@ -123,6 +123,8 @@
       params.require(:message).permit(:content)
     end
   ```
+  
+  The `params` method returns an `ActionController::Parameters` object.
 
 4. In the view page `app/views/new.html.erb`, add the following content to display a form for new messages with a submit button:
 

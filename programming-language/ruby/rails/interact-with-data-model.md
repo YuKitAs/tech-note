@@ -6,7 +6,7 @@ Table of Contents
 * [Reading data](#reading-data)
   * [Listing all messages](#listing-all-messages)
   * [Showing a message](#showing-a-message)
-* Updating data
+* [Updating data](updating-data)
 * Deleting data
 
 ## Creating data
@@ -191,5 +191,46 @@ We may want to navigate to a page with URL like `/messages/<id>` displaying a sp
 
 ### Updating data
 
+1. Add an `edit` action into `messages_controller.rb`, by editing we also need to find the message by its id just like `show` action:
+
+  ```ruby
+  def edit
+    @message = Message.find(params[:id])
+  end
+  ```
+  
+2. Create a `edit` page called `app/views/messages/edit.html.erb` with contents like:
+
+  ```erb
+  <h1>Edit article</h1>
+
+  <%= form_with(model: @message, local: true) do |form| %>
+    <div class="field">
+      <%= f.label :message %><br>
+      <%= f.text_area :content %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Create" %>
+    </div>
+  <% end %>
+  ```
+
+We can see the `edit` page and the `new` page share the same code for displaying the form. But this time we pass `model: @message` to `form_with`, it would cause the helper to fill in the form with the fields of the `message` object.
+
+3. Add an `update` action into `messages_controller.rb`:
+
+  ```ruby
+  def update
+    @message = Message.find(params[:id])
+
+    if @message.update(message_params)
+      redirect_to @message
+    else
+      render 'edit'
+    end
+  end
+  ```
+
+4. Add a link `<%= link_to 'Edit', edit_article_path(article) %>` in `index.html.erb` and `<%= link_to 'Edit', edit_article_path(@article) %>` in `show.html.erb`.
 
 ### Deleting data

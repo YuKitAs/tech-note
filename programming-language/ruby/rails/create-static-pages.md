@@ -18,7 +18,7 @@ This is a tutorial for creating a static page in Ruby on Rails without using mod
   $ rails generate controller Pages <action>
   ```
 
-  Some new files related to `Pages` controller will be created by Rails. If we apend an action e.g. `index` when we generate the controller, then Rails will also create a route `get 'pages/index'` (this will be explained in the next step).
+  Some new files related to `Pages` controller will be created by Rails. If we apend an action e.g. `home` when we generate the controller, then Rails will also create a route `get 'pages/home'` (see next step).
   
   The most important file is `pages_controller.rb` in `app/controllers` with the following content:
 
@@ -34,11 +34,13 @@ This is a tutorial for creating a static page in Ruby on Rails without using mod
   end
   ```
 
-4. In `config/routes.rb` we can make the router match to controller actions. For example, adding the following line means, the router should match `GET /hello` request to `Pages` controller's `home` action:
+4. In `config/routes.rb`, we tell the router how to match requests to controller actions. As mentioned above, Rails would have created a route `get 'pages/home'`, which means using URL `/pages/home` will hit `Pages` controller's `home` action. If we want to use an arbitrary request string, we can modify the route like:
 
   ```ruby
   get 'hello' => 'pages#home'
   ```
+  
+  Moreover, we can also specify the root of the application as the `home` page (see next step) by adding `root 'pages#home'`.
 
 5. Next, we create a file called `home.html.erb` under `app/views/pages` with some HTML content like:
 

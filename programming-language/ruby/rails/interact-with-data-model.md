@@ -25,7 +25,7 @@
 1. Create a new model:
 
   ```console
-  $ rails generate model Message
+  $ rails generate model Message <attributes>
   ```
 
   A model file called `message.rb` will be created in `app/models` which represents a table in the database.
@@ -44,7 +44,7 @@
 
   `t.timestamps` is a Rails command that creates two default columns `created_at` and `updated_at` in the `message` table.
 
-  We can add something like `t.text :content` in order to create a text column `content`.
+  We can add `t.text :content` in order to create a text column `content`. It can also be done in the last step by appending `content:text`.
 
 3. Run `rake db:migrate` to update the database with the new data model.
 

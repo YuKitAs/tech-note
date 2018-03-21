@@ -107,6 +107,7 @@
 
   def create
     @message = Message.new(message_params)
+    # save the Message model to database
     if @message.save
       redirect_to '/messages'
     else

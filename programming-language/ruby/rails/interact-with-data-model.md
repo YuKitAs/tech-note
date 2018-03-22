@@ -142,10 +142,10 @@ Table of Contents
   ```erb
   <div class="messages">
     <div class="container">
-      <% @messages.each do |message| %>
+      <% @messages.each do |msg| %>
       <div class="message">
-        <p class="content"><%= message.content %></p>
-        <p class="time"><%= message.created_at %></p>
+        <p class="content"><%= msg.content %></p>
+        <p class="time"><%= msg.created_at %></p>
       </div>
       <% end %>
     </div>
@@ -178,7 +178,7 @@ We may want to navigate to a page with URL like `/messages/<id>` displaying a sp
 3. Add a link to `show` page in `app/views/messages/index.html.erb` after each message:
 
   ```erb
-  <%= link_to 'Show', message_path(message) %>
+  <%= link_to 'Show', message_path(msg) %>
   ```
 
 ## Updating data
@@ -251,12 +251,12 @@ We may want to navigate to a page with URL like `/messages/<id>` displaying a sp
 Conventionally, the order of the actions in `messages_controller.rb` defined above would be like this:
 
 ```ruby
-def index; end
-def show; end
-def new; end
-def edit; end
-def create; end
-def update; end
-def destroy; end
+messages#index
+messages#show
+messages#new
+messages#edit
+messages#create
+messages#update
+messages#destroy
 ```
 

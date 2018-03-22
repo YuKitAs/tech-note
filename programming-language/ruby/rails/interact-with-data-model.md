@@ -137,13 +137,7 @@ Table of Contents
 
   Since `MessageController` inherits `ApplicationController`, the [standard controller action](https://www.codecademy.com/articles/standard-controller-actions) `index` is used to list all messages by retrieving all messages from the database and storing them in `@messages`, which will be passed on to the view.
 
-3. In `routes.rb`, add a new route for `Messages` controller's `index` action:
-
-  ```ruby
-  get 'messages' => 'messages#index'
-  ```
-
-4. In `app/views/messages/index.html.erb`, use [ERB templating language](http://ruby-doc.org/stdlib-2.5.0/libdoc/erb/rdoc/ERB.html) to display the contents and timestamp for each message:
+3. In `app/views/messages/index.html.erb`, use [ERB templating language](http://ruby-doc.org/stdlib-2.5.0/libdoc/erb/rdoc/ERB.html) to display the contents and timestamp for each message:
 
   ```erb
   <div class="messages">

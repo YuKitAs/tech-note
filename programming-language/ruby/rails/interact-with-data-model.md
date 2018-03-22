@@ -104,6 +104,8 @@ Table of Contents
   <%= link_to 'New Message', "messages/new" %>
   ```
 
+<div style="text-align: right">Top</div>
+
 ## Reading data
 
 ### Steps

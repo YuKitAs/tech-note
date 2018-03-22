@@ -44,10 +44,13 @@ pipelines:
           - build/**
     - step:
         name: Docker create image
+        trigger: manual
         script:
           - docker build -t test-app .
         services:
           - docker
 ```
 
-To push the image to Docker Hub we can add `docker login` and `docker push` commands before and after `docker build`.
+If not set `trigger: manual`, the step will run automatically and cost bitbucket build minutes, which is unnecessary. But the first step cannot be manual.
+
+To push the image to a Docker registry we need to add `docker login` and `docker push` commands before and after `docker build` with information for the registry.

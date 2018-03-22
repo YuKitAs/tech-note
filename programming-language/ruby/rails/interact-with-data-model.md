@@ -8,6 +8,7 @@ Table of Contents
   * [Showing a message](#showing-a-message)
 * [Updating data](#updating-data)
 * [Deleting data](#deleting-data)
+* [Standard actions](#standard-actions)
 
 ## Creating data
 
@@ -196,7 +197,7 @@ We may want to navigate to a page with URL like `/messages/<id>` displaying a sp
   ```erb
   <h1>Edit message</h1>
 
-  <%= form_with(model: @message, local: true) do |form| %>
+  <%= form_with(model: @message, local: true) do |f| %>
     <div class="field">
       <%= f.label :message %><br>
       <%= f.text_area :content %>
@@ -225,7 +226,7 @@ We may want to navigate to a page with URL like `/messages/<id>` displaying a sp
   end
   ```
 
-4. Add a link `<%= link_to 'Edit', edit_message_path(message) %>` in `index.html.erb` and `<%= link_to 'Edit', edit_message_path(@message) %>` in `show.html.erb`.
+4. Add a link `<%= link_to 'Edit', edit_message_path(msg) %>` in `index.html.erb` and `<%= link_to 'Edit', edit_message_path(@message) %>` in `show.html.erb`.
 
 ## Deleting data
 
@@ -243,11 +244,13 @@ We may want to navigate to a page with URL like `/messages/<id>` displaying a sp
 2. Add a link in `index.html.erb`:
 
   ```erb
-  <%= link_to 'Destroy', messages_path(message), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Delete', message_path(msg), method: :delete, data: { confirm: 'Are you sure?' } %>
   ```
   
   By this way Rails will prompt a confirm dialog and then submit the link with method `delete`. This is done via the JavaScript file `rails-ujs` which is automatically included in `app/views/layouts/application.html.erb`. 
-  
+
+## Standard actions
+
 Conventionally, the order of the actions in `messages_controller.rb` defined above would be like this:
 
 ```ruby

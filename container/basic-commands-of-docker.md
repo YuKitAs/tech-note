@@ -24,6 +24,12 @@
   ```console
   $ docker image ls
   ```
+  
+  or
+  
+  ```console
+  $ docker images
+  ```
 
 * **Execute a Docker image**:
 

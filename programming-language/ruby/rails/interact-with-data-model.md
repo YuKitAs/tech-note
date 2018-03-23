@@ -263,3 +263,4 @@ messages#update
 messages#destroy
 ```
 
+If we append these actions when generating the controller, Rails will create all the view files under `app/views`.

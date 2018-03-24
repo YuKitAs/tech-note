@@ -1,6 +1,6 @@
 # Interact with Data Model
 
-Tutorial of creating a Rails 5 app with MVC architecture.
+Tutorial of creating a Rails 5 app with MVC architecture. [Here](https://github.com/YuKitAs/rails-rest-api) is a demo project for Rails 5 REST API.
 
 Table of Contents
 

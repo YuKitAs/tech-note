@@ -102,9 +102,29 @@
   ```
 
   Add `--no-trunc` parameter to only remove stopped containers.
+  
+* **Build and run a container with services defined in** `docker-compose.yml`:
+
+  ```console
+  $ docker-compose up
+  ```
+  
+  Add `-d` to make containers run in the background.
+  
+* **Stop all running containers**:
+
+  ```console
+  $ docker-compose down
+  ```
 
 * **Run a command in a running container**:
 
   ```console
-  $ docker exec <container-ID> <command>
+  $ docker exec <container-ID|container-name> <command>
+  ```
+
+* **Enter a container as root**: 
+
+  ```console
+  $ docker exec -it <container-ID|container-name> bash
   ```

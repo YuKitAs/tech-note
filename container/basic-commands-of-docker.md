@@ -111,7 +111,7 @@
   
   Add `-d` to make containers run in the background.
   
-* **Stop all running containers**:
+* **Stop containers and remove containers, networks, volumes and images created with** `docker-compose`:
 
   ```console
   $ docker-compose down
@@ -123,8 +123,10 @@
   $ docker exec <container-ID|container-name> <command>
   ```
 
-* **Enter a container as root**: 
+* **Enter a running container as root**: 
 
   ```console
   $ docker exec -it <container-ID|container-name> bash
   ```
+
+* **Exit a container**: `ctrl + p` and then `ctrl + q`

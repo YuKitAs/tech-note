@@ -36,6 +36,12 @@
   ```console
   $ docker run <image-ID|image-name>
   ```
+  
+* **Enter a Docker image and run commands interactively**:
+
+  ```console
+  $ docker run -it <image-ID|image-name> bash
+  ```
 
 * **Remove a Docker image**:
 
@@ -117,7 +123,7 @@
   $ docker-compose down
   ```
 
-* **Run a command in a running container**:
+* **Run commands in a running container**:
 
   ```console
   $ docker exec <container-ID|container-name> <command>

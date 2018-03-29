@@ -89,6 +89,12 @@
   $ docker ps -a
   ```
 
+* **Stop a Docker container**:
+
+  ```console
+  $ docker stop <container-ID>
+  ```
+
 * **Remove a Docker container**:
 
   ```console

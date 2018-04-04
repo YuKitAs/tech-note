@@ -30,4 +30,4 @@ exec: "hg": executable file not found in $PATH
 
 It means we need to install Mercurial revision control system first. Install Mercurial with `apt install mercurial` and run `hg version` to verify installation.
 
-After successfully downloaded the package, if we want to run the Go package as a standalone executable, we can use `go build <go-package>` to create an executable in the current directory or use `go install <go-package>` to create an executable in `$GOPATH/bin`.
+After successfully downloaded the package, if we want to run it as a standalone executable, we can use `go build <go-package>` to create an executable in the current directory, or use `go install <go-package>` to create an executable in `$GOPATH/bin`.

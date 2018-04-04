@@ -12,16 +12,22 @@
   export PATH="$PATH:$GOROOT/bin:$GOPATH:bin"
   ```
 
-  `GOROOT` specifies where Go is installed. `GOPATH` specifies the location of workspace, so we can create a empty folder like `$HOME/.go`.
+  `GOROOT` specifies where Go is installed. `GOPATH` specifies the location of workspace, here we create an empty directory called `$HOME/.go` to be used as `GOPATH`. The default `GOPATH` is `$HOME/go`.
 
 4. Restart the terminal or run `source ~/.profile`. Then use `echo $PATH` to check whether the environment variables are set correctly.
 
 5. Verify installation by running `go version` and `go env`.
 
-When using `go get` to fetch some packages, there will be an error:
+## Use Go Packages
+
+`go get <go-package>` is used to download packages and save them under `$GOPATH/src`.
+
+When using `go get` to fetch some packages, we might see an error:
 
 ```console
 exec: "hg": executable file not found in $PATH
 ```
 
 It means we need to install Mercurial revision control system first. Install Mercurial with `apt install mercurial` and run `hg version` to verify installation.
+
+After successfully downloaded the package, if we want to run the Go package as a standalone executable, we can use `go build <go-package>` to create an executable in the current directory or use `go install <go-package>` to create an executable in `$GOPATH/bin`.

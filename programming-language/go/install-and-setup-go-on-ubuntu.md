@@ -16,4 +16,12 @@
 
 4. Restart the terminal or run `source ~/.profile`. Then use `echo $PATH` to check whether the environment variables are set correctly.
 
-4. Verify installation by running `go version` and `go env`.
+5. Verify installation by running `go version` and `go env`.
+
+When using `go get` to fetch some packages, there will be an error:
+
+```console
+exec: "hg": executable file not found in $PATH
+```
+
+It means we need to install Mercurial revision control system first. Install Mercurial with `apt install mercurial` and run `hg version` to verify installation.

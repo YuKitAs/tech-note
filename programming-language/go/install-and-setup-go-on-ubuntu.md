@@ -1,6 +1,6 @@
 # Install and Setup Go on Ubuntu
 
-1. After `apt update` and `apt upgrade`, download the latest version from the [official website](https://golang.org/dl/).
+1. After `apt update` and `apt upgrade`, download the latest Go release from the [official website](https://golang.org/dl/).
 
 2. Extract the files with `tar -xvf` and move the `go` folder into `/opt`.
 

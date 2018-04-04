@@ -14,6 +14,6 @@
 
   `GOROOT` specifies where Go is installed. `GOPATH` specifies the location of workspace, so we can create a empty folder like `$HOME/.go`.
 
-4. Restart the terminal and use `echo $PATH` to check whether the environment variables are set correctly.
+4. Restart the terminal or run `source ~/.profile`. Then use `echo $PATH` to check whether the environment variables are set correctly.
 
 4. Verify installation by running `go version` and `go env`.

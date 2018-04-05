@@ -1,6 +1,6 @@
 # Read Command Line Arguments
 
-To pass command-line arguments to a bash script using one of the most common formats as follows:
+To pass required command-line arguments to a bash script using one of the most common formats (key and value separated by space) as follows:
 
 ```console
 ./script -u <username> -p <password> -d <data>
@@ -32,8 +32,8 @@ do
     shift
     DATA="$1"
     ;;
-    *)
-    echo "Wrong argument: $1"
+    *) # unknown arguments
+    echo "Wrong option: $1"
     usage
     ;;
   esac

@@ -3,18 +3,18 @@
 To pass command-line arguments to a bash script using one of the most common formats as follows:
 
 ```console
-script -u <username> -p <password> -d <data>
+./script -u <username> -p <password> -d <data>
 ```
 
 We can write the script like this:
 
-```shell
+```bash
 usage()
 {
-  echo "Usage: script -u <username> -p <password> -d <data>" >&2
-  echo "       * Option -u, --username:   Username         " >&2
-  echo "       * Option -p, --password:   Password         " >&2
-  echo "       * Option -d, --data:       Data             " >&2
+  echo "Usage: ./script -u <username> -p <password> -d <data>" >&2
+  echo "       * Option -u, --username:   Username           " >&2
+  echo "       * Option -p, --password:   Password           " >&2
+  echo "       * Option -d, --data:       Data               " >&2
 }
 
 while [[ $# -gt 0 ]]

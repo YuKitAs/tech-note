@@ -1,5 +1,7 @@
 # Read Command Line Arguments
 
+## Run an Executable with Arguments
+
 To pass required command-line arguments to a bash script using one of the most common formats (key and value separated by space) as follows:
 
 ```console
@@ -21,7 +23,7 @@ while [[ $# -gt 0 ]]
 do
   case $1 in
     -u | --username)
-    shift 
+    shift
     USER="$1"
     ;;
     -p | --password)
@@ -43,4 +45,23 @@ done
 echo USER=$USER
 echo PASSWORD=$PASSWORD
 echo DATA=$DATA
+```
+
+## Prompt for User Input
+
+```bash
+while true; do
+  read -p "Confirm? (y/n) " answer
+  case $answer in
+      y|Y)
+      # do something
+      break;;
+      n|N)
+      # do something
+      break;;
+      *)
+      echo "Please answer with (y/n)"
+      ;;
+  esac
+done
 ```

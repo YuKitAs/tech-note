@@ -65,3 +65,13 @@ end
 
 pikachu.move #=> "Thunderbolt!"
 ```
+
+## `instance_exec`
+
+`instance_exec` is similar to `instance_eval`, but it allows you to pass argument to the block:
+
+```ruby
+pikachu.instance_exec(80) { |pt| move.concat(" Damage: #{pt}") } #=> "Thunderbolt! Damage: 80"
+```
+
+When we want to access variables defined outside the scope of the `self` object, we can use `instance_exec` instead of `instance_eval` to get these variables.

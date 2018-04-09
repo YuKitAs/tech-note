@@ -21,5 +21,5 @@ show collections
 **Show all documents in a collection**:
 
 ```shell
-<db_name>.<collection_name>.find()
+db.<collection_name>.find()
 ```

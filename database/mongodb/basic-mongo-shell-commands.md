@@ -1,5 +1,17 @@
 # Basic Mongo Shell Commands
 
+**Enter Mongodb**:
+
+```console
+$ mongo
+```
+
+**Leave Mongodb**:
+
+```shell
+exit
+```
+
 **Show all databases**:
 
 ```shell
@@ -23,3 +35,7 @@ show collections
 ```shell
 db.<collection_name>.find()
 ```
+
+## Reference
+
+* [Mongo Shell Quick Reference](https://docs.mongodb.com/manual/reference/mongo-shell/)

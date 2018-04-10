@@ -1,6 +1,6 @@
-# Rails 5 Rest API Setup
+# Rails 5 API Setup
 
-Run the following commad to initialize an API project:
+Run the following commad to initialize an API-only application:
 
 ```console
 $ rails new <project-name> --api

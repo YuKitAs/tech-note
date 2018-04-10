@@ -97,7 +97,7 @@ Hello Yuka!
 Hello Pichu!
 Hello Pikachu!
 ```
-Notice that `attr_accessor` automatically sets up getters and setters for the variables, while `attr_reader` only sets up getters and `attr_reader` only setters.
+`attr_*` methods are defined in the `Module` class and called Class Macro. Notice that `attr_accessor` automatically sets up getters and setters for the variables, while `attr_reader` only sets up getters and `attr_reader` only setters.
 
 8. How to define a class constructor?
 

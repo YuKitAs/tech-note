@@ -11,5 +11,5 @@ $ gradle wrapper [--gradle-version <version>]
 Run `gradlew` to execute Gradle tasks (make sure the script is executable):
 
 ```console
-./gradlew <command>
+$ ./gradlew <command>
 ```

@@ -9,6 +9,8 @@ inc = Proc.new { |x| x + 1 }
 inc.call(42) # => 43
 ```
 
+By the way, `yield` is a syntax sugar to hide `Proc#call`. The called method can execute the block passed to it by using `yield`.
+
 Using `lambda`:
 
 ```ruby

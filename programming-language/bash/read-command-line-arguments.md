@@ -1,14 +1,18 @@
 # Read Command Line Arguments
 
-## Run an Executable with Arguments
-
 To pass required command-line arguments to a bash script using one of the most common formats (key and value separated by space) as follows:
+
+```console
+./script --username <username> --password <password> --data <data>
+```
+
+or
 
 ```console
 ./script -u <username> -p <password> -d <data>
 ```
 
-We can write the script like this:
+We can write the script with a usage message like this:
 
 ```bash
 usage()
@@ -45,23 +49,4 @@ done
 echo USER=$USER
 echo PASSWORD=$PASSWORD
 echo DATA=$DATA
-```
-
-## Prompt for User Input
-
-```bash
-while true; do
-  read -p "Confirm? (y/n) " answer
-  case $answer in
-      y|Y)
-      # do something
-      break;;
-      n|N)
-      # do something
-      break;;
-      *)
-      echo "Please answer with (y/n)"
-      ;;
-  esac
-done
 ```

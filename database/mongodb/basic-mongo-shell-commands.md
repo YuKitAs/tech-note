@@ -30,10 +30,22 @@ use <db_name>
 show collections
 ```
 
+**Create a collection**:
+
+```shell
+db.createCollection("<collection_name>")
+```
+
 **Show all documents in a collection**:
 
 ```shell
 db.<collection_name>.find()
+```
+
+**Insert a document to a collection**:
+
+```shell
+db.<collection_name>.insert({ <field>: <value> })
 ```
 
 ## Reference

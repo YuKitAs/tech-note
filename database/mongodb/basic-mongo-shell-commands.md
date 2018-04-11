@@ -48,6 +48,13 @@ db.<collection_name>.find()
 db.<collection_name>.insert({ <field>: <value> })
 ```
 
+**Delete document(s)**:
+
+```shell
+db.<collection_name>.deleteOne({ <field>: <value> })
+db.<collection_name>.deleteMany({ <field>: <value> })
+```
+
 ## Reference
 
 * [Mongo Shell Quick Reference](https://docs.mongodb.com/manual/reference/mongo-shell/)

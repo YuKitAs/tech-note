@@ -88,6 +88,12 @@
   ```console
   $ docker ps -a
   ```
+  
+* **Run a Docker container**:
+
+   ```console
+   $ docker container start <container-ID>
+   ```
 
 * **Stop a Docker container**:
 

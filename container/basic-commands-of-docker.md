@@ -148,3 +148,9 @@
   ```
 
 * **Exit a container**: `ctrl + p` and then `ctrl + q`
+
+* **Copy files from host into container**:
+
+  ```console
+  $ docker cp <file> <container-ID>:/path/to/<file>
+  ```

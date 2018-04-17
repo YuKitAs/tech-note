@@ -178,7 +178,24 @@ Mongoid is a Ruby ODM (Object-Document-Mapper) framework for MongoDB in Ruby.
           max_pool_size: 1
   ```
 
-4. After posting the first document, `my_database` will be created in MongoDB automatically.
+4. A Mongoid model is defined like:
+
+  ```ruby
+  class Article
+    include Mongoid::Document
+    field :_id, type: String
+    field :title, type: String
+    field :content, type: String
+  end
+  ```
+
+5. Run the rake task to generate indexes on MongoDB:
+
+  ```console
+  $ rake db:mongoid:create_indexes
+  ```
+
+6. After posting the first document, `my_database` will be created in MongoDB automatically.
 
 ## Reference
 

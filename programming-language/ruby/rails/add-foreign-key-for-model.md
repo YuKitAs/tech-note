@@ -1,6 +1,6 @@
 # Add Foreign Key for Model
 
-In Rails 5, generating a child model with attribute `parent_model:references` will automatically set up the foreign key in the child table. We can find the following definition in the child migration:
+In Rails 5 with a SQL database, generating a child model with attribute `parent_model:references` will automatically set up the foreign key in the child table. We can find the following definition in the child migration:
 
 ```ruby
 t.references :parent_model, foreign_key: true

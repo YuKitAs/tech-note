@@ -48,11 +48,13 @@ db.<collection_name>.find()
 db.<collection_name>.insert({ <field>: <value> })
 ```
 
-**Delete document(s)**:
+**Delete document(s) by a given condition**:
 
 ```shell
 db.<collection_name>.deleteOne({ <field>: <value> })
 db.<collection_name>.deleteMany({ <field>: <value> })
+# Delete all documents
+db.<collection_name>.deleteMany({})
 ```
 
 ## Reference

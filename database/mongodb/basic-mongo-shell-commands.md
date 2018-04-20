@@ -36,6 +36,12 @@ show collections
 db.createCollection("<collection_name>")
 ```
 
+**Delete a collection**:
+
+```shell
+db.<collection_name>.drop()
+```
+
 **Show all documents in a collection**:
 
 ```shell
@@ -53,8 +59,9 @@ db.<collection_name>.insert({ <field>: <value> })
 ```shell
 db.<collection_name>.deleteOne({ <field>: <value> })
 db.<collection_name>.deleteMany({ <field>: <value> })
-# Delete all documents
+# Delete all documents in a collection
 db.<collection_name>.deleteMany({})
+db.<collection_name>.remove({})
 ```
 
 ## Reference

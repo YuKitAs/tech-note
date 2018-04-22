@@ -34,3 +34,14 @@
   ```console
   $ bundle install
   ```
+  
+5. (Optional) Add the following content into `Rakefile` in order to run `rspec spec` and `rubocop` with `rake test` command:
+
+  ```ruby
+  task(default: [:test])
+
+  task :test do
+    sh "rspec spec"
+    sh "rubocop"
+  end
+  ```

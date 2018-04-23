@@ -36,9 +36,13 @@ Prerequisites: `rake`, `rspec` and `rubocop` (installation tutorial in `README.m
 
   ```ruby
   RSpec.describe ClassName do
-    =begin
-    test methods
-    =end
+    before :each do
+      # do something
+    end
+
+    it 'does something correctly' do
+      # test methods and expectations
+    end
   end
   ```
 

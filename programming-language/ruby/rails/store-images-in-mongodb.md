@@ -1,4 +1,4 @@
-# Store Image in MongoDB
+# Store Images in MongoDB
 
 On the Internet there are some famous gems used to upload files for Rails, like `carrierwave` or `paperclip`. Actually, for images smaller than 10 MB we can store them directy as binary data in MongoDB without installing any gem.
 
@@ -17,7 +17,7 @@ Use `curl` to post a local image with `-F` or `--form` option and specify the pa
 $ curl -X POST -F 'image=@/home/path/to/image_file.jpg' localhost:3000/images
 ```
 
-In the way the local image file will be stored as an instance of `ActionDispatch::Http::UploadedFile` (the temporary file can be found in `/tmp`). So we need to convert it to `BSON:Binary` and store it in the `content` field.
+In this way the local image file will be stored as an instance of `ActionDispatch::Http::UploadedFile` (the temporary file can be found in `/tmp`). So we need to convert it to `BSON:Binary` and store it in the `content` field.
 
 With the following code in the controller's `create` action we can save the image into Mongoid:
 

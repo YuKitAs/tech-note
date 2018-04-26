@@ -10,7 +10,7 @@ If we are going to use RSpec instead of the default test framework, add `-T`.
 
 If we are going to use a NoSQL database, add `--skip-active-record`.
 
-Generate model, controller and resources:
+Generate model, controller, resources in routes and specs:
 
 ```console
 $ rails g scaffold <model-name>

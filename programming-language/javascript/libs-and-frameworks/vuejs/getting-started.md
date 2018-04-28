@@ -5,6 +5,7 @@ The first impression: it looks similar to Polymer - take a look at the simple ex
 ```html
 <html>
 <head>
+    <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 

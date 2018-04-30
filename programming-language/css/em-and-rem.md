@@ -1,4 +1,4 @@
-`em` and `rem`
+# `em` and `rem`
 
 Unlike `px`, `em` and `rem` are both relative units that are frequently used for scalable layouts. `em` is relative to the font-size of the element, `rem` ("Root EM") is relative to the font-size of the root element.
 

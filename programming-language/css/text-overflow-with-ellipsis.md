@@ -1,6 +1,6 @@
 # Text Overflow with Ellipsis
 
-The following are two different cases, single line text and a paragraph:
+The following are two different cases, single-line text and a paragraph:
 
 ```html
 <div>Hello world!</div>
@@ -9,7 +9,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor arcu sed
 </p>
 ```
 
-To limit the single line text within a certain width ending with ellipsis (`...`) is easy as pie:
+To limit the single-line text within a certain width ending with ellipsis (`...`) is easy as pie:
 
 ```css
 div {

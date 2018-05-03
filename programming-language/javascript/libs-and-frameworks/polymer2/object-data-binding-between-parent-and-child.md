@@ -1,19 +1,21 @@
 # Object Data Binding Between Parent And Child
 
-If we have an object property in a parent element, how can we bind this property with all the subproperties to its child element? Now I've defined a `pokemon` property with two subproperties `name` and `color`:
+The following example shows how to bind the `Object` property with all the subproperties between a parent element and its child. 
+
+Now I've defined a property `pokemon` with two subproperties `name` and `color`:
 
 ```javascript
 static get properties() {
    return {
        pokemon: {
            type: Object,
-           value: {"name": "pikachu", "color": "yellow"}
+           value: {"name": "Pikachu", "color": "Yellow"}
        }
    }
 }
 ```
 
-In the child element, we need to define the property, which we want to bind, as follows:
+In the child element, a property `kumpel` which we want to bind with `pokemon` is defined as follows:
 
 ```javascript
 static get properties() {
@@ -26,20 +28,34 @@ static get properties() {
 }
 ```
 
-I used a `paper-button` in child element to log the value of `kumpel`:
+Here I used a `paper-button` in the child element to log the value of `kumpel`:
 
-```javascript
+```html
 <template>
-    <paper-button raised on-tap="_changeKumpel">Kumpel ändern</paper-button>
+    <paper-button raised on-tap="_showKumpel">Kumpel anzeigen</paper-button>
 </template>
 
 <script>
-    _changeKumpel() {
+    _showKumpel() {
         console.log(this.kumpel.color + " " +  this.kumpel.name);
     }
 </script>
 ```
 
-After both properties are defined, we bind `pokemon` to `kumpel` using `<child-el kumpel="{{pokemon}}"></child-el>`, and when we click the `Kumpel ändern` button, we can get the `"yellow pikachu"` console output, which means the entire `pokemon` property is bound to `kumpel`.
+In the parent element, bind `pokemon` to `kumpel` of the child element like:
 
-If we want to change the value of a subproperty of `pokemon`, we can use like `this.set('pokemon.color', 'blue')`, the `set` method will make an observable change to a subproperty. Now when we click the `Kumpel ändern` button, `"blue pikachu"` will be logged.
+```html
+<child-el kumpel="{{pokemon}}"></child-el>
+```
+
+When we click the `Kumpel anzeigen` button, we can get `"Yellow Pikachu"` as console output.
+
+More important is, if we want to change the value of a subproperty of `pokemon`, we must use the `set` method to make an observable change to a subproperty like:
+
+```javascript
+this.set('pokemon.color', 'blue');
+```
+
+## Reference
+
+* [Set a property or subproperty by path](https://www.polymer-project.org/2.0/docs/devguide/model-data#set-path)

@@ -18,12 +18,12 @@ with the following styling (in order to illustrate the effect):
 
 ```css
 .header {
-	height: 50px;
-	background-color: black;
+  height: 50px;
+  background-color: black;
 }
 
 .title {
-	color: white;
+  color: white;
 }
 ```
 
@@ -35,25 +35,25 @@ If we know the heights of both parent and child elements and they are fixed, we 
 
 1. calculate the paddings around the title:
 
-  ```css
-  .title {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  ```
+```css
+.title {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+```
 2. use relative position with calculated margin:
 
-  ```css
-  .header {
-  	position: relative;
-  }
+```css
+.header {
+  position: relative;
+}
 
-  .title {
-  	position: absolute;
-    top: 50%;
-    margin-top: -10px;
-  }
-  ```
+.title {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+}
+```
 
 ## Using flexbox
 
@@ -61,7 +61,7 @@ For child elements with unknown/unfixed heights, it's more convenient to use fle
 
 ```css
 .header {
-	display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }

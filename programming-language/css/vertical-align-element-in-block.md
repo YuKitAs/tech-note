@@ -1,12 +1,12 @@
 # Vertical Align Element in Block
 
-The CSS property `vertical-align` sounds a little misleading, it actually only specifies the vertical alignment of a inline element like:
+The CSS property `vertical-align` sounds a little misleading, it actually only specifies the vertical alignment of an inline element like:
 
 ```html
 <div>Hello <span>World</span></div>
 ```
 
-What I usually want is to vertical align an element in block like:
+What I usually want is to vertically align an element in block like:
 
 ```html
 <div class="header">
@@ -14,7 +14,7 @@ What I usually want is to vertical align an element in block like:
 </div>
 ```
 
-with the following styling:
+with the following styling (in order to illustrate the effect):
 
 ```css
 .header {
@@ -31,7 +31,7 @@ There are several tricks to vertically center the title in the header.
 
 ## Calculating padding/margin manually
 
-If we know the heights of both elements and they are fixed, we can
+If we know the heights of both parent and child elements and they are fixed, we can
 
 1. calculate the paddings around the title:
 
@@ -41,7 +41,7 @@ If we know the heights of both elements and they are fixed, we can
     padding-bottom: 15px;
   }
   ```
-2. or use relative position with calculated margin:
+2. use relative position with calculated margin:
 
   ```css
   .header {
@@ -57,7 +57,7 @@ If we know the heights of both elements and they are fixed, we can
 
 ## Using flexbox
 
-For child elements with unknown heights, it's more convenient to use flexbox:
+For child elements with unknown/unfixed heights, it's more convenient to use flexbox:
 
 ```css
 .header {

@@ -13,7 +13,7 @@ The following are equivalent examples to sum up 1 to 10:
 
 As is shown, if we don't specify an initial value explicitly, the first element of collection will be used as the initial value.
 
-With help of `reduce`, we can e.g. iterate over an array and select elements by a given condition more efficiently. In the following example, a block is passed on each accumulator value:
+We can iterate over an array and select elements by a given condition. In the following example, a block is passed on each accumulator value with an empty array as the initial value:
 
 ```ruby
 players = [{ name: "foo", level: 6 }, { name: "bar", level: 11 }, { name: "baz", level: 8 }, { name: "qux", level: 12 }]
@@ -23,4 +23,22 @@ players.reduce([]) do |names, player|
   names
 end
 # => ["bar", "qux"]
+```
+
+It's equivalent to:
+
+```ruby
+names = []
+players.each do |player|
+  names << player[:name] if player[:level] >= 10
+end
+
+names
+# => ["bar", "qux"]
+```
+
+More efficient than using `select` and `map` which would loop over the array twice:
+
+```ruby
+players.select { |player| player[:level] >= 10 }.map { |player| player[:name] } # => ["bar", "qux"]
 ```

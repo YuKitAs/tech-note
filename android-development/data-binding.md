@@ -32,10 +32,11 @@ Usage:
   </layout>
   ```
 
-4. Run `gradle build`, a binding class called `ActivitySampleBinding` will be generated in `path/to/app/build/generated/source/apt/debug/edu/kit/fridget/databinding`.
+4. Run `gradle build`, a binding class called `ActivitySampleBinding` will be generated in `path/to/app/build/generated/source/apt/debug/<package>/databinding`.
 
 5. In the activity class, we can use `DataBindingUtil` to define the binding:
 
   ```java
   ActivitySampleBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_sample);
+  binding.setSample(Sample.new(...));
   ```

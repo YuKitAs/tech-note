@@ -48,6 +48,12 @@ db.<collection_name>.drop()
 db.<collection_name>.find()
 ```
 
+**Show all documents in a collection prettily**:
+
+```shell
+db.<collection_name>.find().pretty()
+```
+
 **Insert a document to a collection**:
 
 ```shell

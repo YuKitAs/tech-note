@@ -1,4 +1,4 @@
-Vaadin ComboBox with Item Template
+# Vaadin ComboBox with Item Template
 
 [Vaadin ComboBox](https://www.webcomponents.org/element/vaadin/vaadin-combo-box/elements/vaadin-combo-box) is an element of the [Vaadin Components](https://vaadin.com/components) combining with an input field and a dropdown list.
 

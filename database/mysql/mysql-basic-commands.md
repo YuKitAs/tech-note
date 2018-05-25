@@ -19,3 +19,9 @@ Login as root:
 ```console
 $ mysql -u root -p
 ```
+
+Create a new user with all rights:
+
+```console
+$ GRANT ALL PRIVILEGES ON *.* TO '<username>'@'localhost' IDENTIFIED BY '<password>';
+```

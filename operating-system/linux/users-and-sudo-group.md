@@ -1,4 +1,4 @@
-# User and `sudo` Group
+# Users and `sudo` Group
 
 In order for a user to run `sudo` (get `root` privileges to execute some commands without being `root`), the user must belong to the `sudo` group. 
 

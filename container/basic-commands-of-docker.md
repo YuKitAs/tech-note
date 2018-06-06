@@ -141,13 +141,13 @@
   $ docker exec <container-ID|container-name> <command>
   ```
 
-* **Enter a running container as root**: 
+* **Enter a running container as root (start an interactive Bash session)**: 
 
   ```console
   $ docker exec -it <container-ID|container-name> bash
   ```
 
-* **Exit a container**: `ctrl + p` and then `ctrl + q`
+* **Exit a container (the Bash session)**: `exit`
 
 * **Copy files from host into container**:
 

@@ -2,7 +2,7 @@
 
 Prerequisite: [npm](https://www.npmjs.com/get-npm), [Yarn](https://yarnpkg.com/en/docs/install#debian-stable), [Vue CLI](https://cli.vuejs.org/)
 
-1. Initialize a Vue.js probject:
+1. Initialize a Vue.js project:
 
   ```console
   $ vue init webpack <project-name>

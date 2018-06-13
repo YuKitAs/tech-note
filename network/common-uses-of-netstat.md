@@ -2,7 +2,7 @@
 
 ## List port connections
 
-The following command can be used to list all the TCP port connections (for UDP ports just use the socket option `-u` or `--udp` in the same way):
+The following command can be used to list all the TCP port connections (for UDP ports just use the socket option `-u` or `--udp`, the same below):
 
 ```console
 $ netstat -ant
@@ -23,10 +23,6 @@ $ netstat -lt
 ```
 
 ## Check a specific port
-
-``` console
-$ netstat -lt | grep <port>
-```
 
 To check the process(es) listening to a specific port:
 

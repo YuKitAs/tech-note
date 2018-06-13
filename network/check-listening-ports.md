@@ -19,4 +19,10 @@ or just run:
 $ netstat -lt
 ```
 
+Check a specific port:
+
+``` console
+$ netstat -lt | grep <port>
+```
+
 For UDP ports just change the socket option `-t` or `--tcp` to `-u` or `--udp`.

@@ -14,10 +14,12 @@ Using `su - root` we will be at the home directory of the `root` with a `root` e
 root@my-pc:~#
 ```
 
-But using `su root` we will still be in the same directory, but just looks like being `root`:
+But using `su root` we will still be in the same directory, just looking like being `root`:
 
 ```console
 root@my-pc:/home/yukitas/my-dir#
 ```
 
-When a `root` account is enabled with a password, `su - root` can be shortened to `su -` and `su root` to `su`. When there is no root password on some default installation, invoking `su` may fail (it's OS-dependent).
+When a `root` account is enabled with a password, `su - root` can be shortened to `su -` and `su root` to `su`. When there is no `root` password on some default installation, invoking `su` may fail (it's OS-dependent).
+
+Plus, `su --` has nothing to do with `su -` as `--` is a flag that will be interpreted by most programs as "do nothing", so it's nothing else but `su`.

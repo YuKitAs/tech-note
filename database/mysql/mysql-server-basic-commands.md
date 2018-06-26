@@ -1,4 +1,4 @@
-# MySQL Basic Commands
+# MySQL Server Basic Commands
 
 Start/stop/restart MySQL Server:
 

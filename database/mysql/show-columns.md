@@ -1,4 +1,4 @@
-# Show Column Data Type
+# Show Columns
 
 * Show columns including `Field`, `Type`, `Null`, `Key`, `Default`, `Extra`:
 

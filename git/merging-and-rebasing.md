@@ -22,6 +22,8 @@ $ git checkout <new-branch>
 $ git rebase -i master
 ```
 
+A list of commits will be shown in a text editor. We can then change the `pick` command and/or reorder the commits as we want.
+
 ## Reference
 
 * [The Golden Rule of Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing), Bitbucket.

@@ -24,6 +24,8 @@ $ git rebase -i master
 
 A list of commits will be shown in a text editor. We can then change the `pick` command and/or reorder the commits as we want.
 
-## Reference
+## References
 
 * [The Golden Rule of Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing), Bitbucket.
+
+* [Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing), Git Documentation.

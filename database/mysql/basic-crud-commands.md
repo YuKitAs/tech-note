@@ -29,6 +29,6 @@ If we intend to truncate a table that is referenced in a foreign key constraint,
 
 ```console
 mysql> SET FOREIGN_KEY_CHECKS = 0;
-/* truncating operations */
+/* truncation operations */
 mysql> SET FOREIGN_KEY_CHECKS = 1;
 ```

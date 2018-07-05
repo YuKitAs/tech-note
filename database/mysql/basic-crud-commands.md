@@ -18,3 +18,17 @@ Delete a record from table:
 ```console
 mysql> DELETE FROM table_name WHERE condition;
 ```
+
+Delete all records from a table:
+
+```console
+mysql> TRUNCATE TABLE table_name;
+```
+
+If we intend to truncate a table that is referenced in a foreign key constraint, we can disable the constraint temporarily like:
+
+```console
+mysql> SET FOREIGN_KEY_CHECKS = 0;
+/* truncating operations */
+mysql> SET FOREIGN_KEY_CHECKS = 1;
+```

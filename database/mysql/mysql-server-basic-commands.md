@@ -3,15 +3,15 @@
 Start/stop/restart MySQL Server:
 
 ```console
-$ service mysql start
-$ service mysql stop
-$ service mysql restart
+# service mysql start
+# service mysql stop
+# service mysql restart
 ```
 
 Check server status:
 
 ```console
-$ service mysql status
+# service mysql status
 ```
 
 Login as root (and use a database):

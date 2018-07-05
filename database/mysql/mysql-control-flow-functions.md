@@ -2,7 +2,7 @@
 
 `CASE` statement is used to apply a conditional construct:
 
-```console
+```sql
 SELECT
 CASE
 WHEN expr_condition1 THEN result1
@@ -15,12 +15,14 @@ FROM sometable;
 
 `IF()` function returns a value based on `TRUE` or `FALSE` condition.
 It takes 3 expressions. If `expr_condition` is `TRUE`, non zero and not `NULL`, `expr_true` will be returned, otherwise `expr_false` will be returned:
-```console
+
+```sql
 SELECT IF(expr_condition, expr_true, expr_false) FROM sometable;
 ```
 
 `IFNULL()` function takes 2 expressions. `expr1` will be returned if it's not `NULL`, otherwise `expr2` will be returned:
-```console
+
+```sql
 SELECT IFNULL(expr1, expr2) FROM sometable;
 ```
 

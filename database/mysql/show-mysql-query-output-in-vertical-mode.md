@@ -4,6 +4,6 @@ When `sometable` has too many fields it will be hard to line up column titles wi
 
 Then we can display the output in vertical mode using `\G` to execute the query instead of `;`:
 
-```console
+```sql
 mysql> SELECT * FROM sometable \G
 ```

@@ -14,20 +14,20 @@ Check server status:
 $ service mysql status
 ```
 
-Login as root:
+Login as root (and use a database):
 
 ```console
-$ mysql -u root -p
+$ mysql -u root -p[password] [db_name]
 ```
 
 Create a new user:
 
-```console
-$ mysql> CREATE USER <username>@localhost IDENTIFIED BY <password>;
+```sql
+mysql> CREATE USER <username>@localhost IDENTIFIED BY <password>;
 ```
 
 Grant a user with all rights:
 
-```console
-$ mysql> GRANT ALL PRIVILEGES ON *.* TO <username>@localhost IDENTIFIED BY <password>;
+```sql
+mysql> GRANT ALL PRIVILEGES ON *.* TO <username>@localhost IDENTIFIED BY <password>;
 ```

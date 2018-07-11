@@ -6,7 +6,7 @@
 
 * [Start an Activity from a Notification](https://developer.android.com/training/notify-user/navigation)
 
-## MVVM architecture with [Retrofit](http://square.github.io/retrofit/)
+## MVVM architecture with Retrofit
 
 * [Implementing a ViewModel with LiveData](https://developer.android.com/topic/libraries/architecture/viewmodel): including sharing data between fragments
 

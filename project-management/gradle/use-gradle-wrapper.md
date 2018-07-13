@@ -13,3 +13,9 @@ Run `gradlew` to execute Gradle tasks (make sure the script is executable):
 ```console
 $ ./gradlew <command>
 ```
+
+Upgrade Gradle with Gradle Wrapper:
+
+```console
+$ ./gradlew wrapper --gradle-version=<version> --distribution-type=bin
+```

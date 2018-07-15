@@ -1,6 +1,6 @@
 # Integrate Coveralls
 
-To use [coveralls-gradle-plugin](https://github.com/kt3k/coveralls-gradle-plugin) with `JaCoCo` plugin for my Gradle project, the following steps should be followed.
+The following steps are used to integrate [coveralls-gradle-plugin](https://github.com/kt3k/coveralls-gradle-plugin) with [JaCoCo plugin](https://docs.gradle.org/current/userguide/jacoco_plugin.html) for my Gradle project:
 
 1. Add the plugins into `build.gradle`:
 
@@ -18,7 +18,7 @@ To use [coveralls-gradle-plugin](https://github.com/kt3k/coveralls-gradle-plugin
   }
   ```
 
-2. In `.travis.yml`, after running the scripts for test:
+2. In `.travis.yml`, after running the script(s) for test:
 
   ```yaml
   after_success:

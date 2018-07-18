@@ -1,6 +1,6 @@
 # Use Bash in VS Code Terminal
 
-Powershell is used as the default integrated terminal in Visual Studio Code on Windows. To use Bash, open "Settings" or search "User Settings"("Benutzereinstellungen"), add the following line into the right panel to overwrite the default path of Powershell:
+Powershell is used as the default integrated terminal in Visual Studio Code on Windows. To use Bash, choose `File > Preferences > Settings`, add the following line into the right "User Settings"("Benutzereinstellungen") panel to overwrite the default path of Powershell:
 
 ```json
 {

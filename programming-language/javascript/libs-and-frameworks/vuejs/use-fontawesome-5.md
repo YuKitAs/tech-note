@@ -8,7 +8,7 @@ $ yarn add @fortawesome/free-solid-svg-icons
 $ yarn add @fortawesome/vue-fontawesome
 ```
 
-Next, we need to import components from these packages. For example, we want to use the solid style icons from [Font Awesome](https://fontawesome.com/icons?d=gallery&s=solid) with `class="fas fa-frog"` and `class="fas fa-kiwi-bird"`, we should add it in `main.js` of a Vue project configured with `vue-cli` like:
+Next, we need to import components from these packages. For example, we want to use the solid style icons from [Font Awesome](https://fontawesome.com/icons?d=gallery&s=solid) with `class="fas fa-frog"` and `class="fas fa-kiwi-bird"`, we should import and add them explicitly in `main.js` of a Vue project configured with `vue-cli` like:
 
 ```javascript
 import Vue from 'vue'

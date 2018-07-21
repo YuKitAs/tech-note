@@ -42,3 +42,7 @@ export default {
 }
 </script>
 ```
+
+## Reference
+
+* [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome/blob/master/README.md)

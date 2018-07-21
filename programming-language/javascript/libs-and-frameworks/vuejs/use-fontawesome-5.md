@@ -8,16 +8,16 @@ $ yarn add @fortawesome/free-solid-svg-icons
 $ yarn add @fortawesome/vue-fontawesome
 ```
 
-Next, we need to import components from these packages in a Vue project configured with `vue-cli`. For example, we want to use a solid style icon from [Font Awesome](https://fontawesome.com/icons?d=gallery&s=solid) with `class="fas fa-kiwi-bird"`, we should add it in `main.js` like:
+Next, we need to import components from these packages. For example, we want to use the solid style icons from [Font Awesome](https://fontawesome.com/icons?d=gallery&s=solid) with `class="fas fa-frog"` and `class="fas fa-kiwi-bird"`, we should add it in `main.js` of a Vue project configured with `vue-cli` like:
 
 ```javascript
 import Vue from 'vue'
 import App from './App'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faKiwiBird } from '@fortawesome/free-solid-svg-icons'
+import { faFrog, faKiwiBird } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faKiwiBird)
+library.add(faFrog, faKiwiBird)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
@@ -28,10 +28,11 @@ new Vue({
 })
 ```
 
-And in the `vue` file where we want to use the icon:
+And in the `vue` file where we want to use the icons:
 
 ```vue
 <template>
+  <font-awesome-icon icon="frog"/>
   <font-awesome-icon icon="kiwi-bird"/>
 </template>
 

@@ -32,8 +32,8 @@ And in the `vue` file where we want to use the icons:
 
 ```vue
 <template>
-  <font-awesome-icon icon="frog"/>
-  <font-awesome-icon icon="kiwi-bird"/>
+  <font-awesome-icon icon="frog" fixed-width/>
+  <font-awesome-icon icon="kiwi-bird" fixed-width/>
 </template>
 
 <script>
@@ -42,6 +42,8 @@ export default {
 }
 </script>
 ```
+
+`fixed-width` can make the icons have the same width, it's useful when the icons are placed in a list. 
 
 ## Reference
 

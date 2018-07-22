@@ -1,6 +1,6 @@
 # Get Contributors Data
 
-Use the following command to get the contributors list with additions, deletions and commit counts based on weeks with the help of GitHub REST API, and save into JSON file:
+Use the following command to get the contributors list with additions, deletions and commit counts based on weeks with the help of [GitHub REST API](https://developer.github.com/v3/repos/statistics/), and save into JSON file:
 
 ```console
 $ curl -XGET https://api.github.com/repos/{owner}/{repo}/stats/contributors > contributors-data.json

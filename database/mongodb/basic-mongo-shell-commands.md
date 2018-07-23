@@ -18,7 +18,7 @@ exit
 show dbs
 ```
 
-**Use a database**:
+**Use a database (if the database does not exist, it will be created and used automatically)**:
 
 ```shell
 use <db_name>

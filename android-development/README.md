@@ -6,6 +6,8 @@
 
 * [Start an Activity from a Notification](https://developer.android.com/training/notify-user/navigation)
 
+* [Android Build Process](https://developer.android.com/studio/build/#build-process)
+
 ## MVVM architecture with Retrofit
 
 * [Implementing a ViewModel with LiveData](https://developer.android.com/topic/libraries/architecture/viewmodel): including sharing data between fragments

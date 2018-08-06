@@ -17,6 +17,8 @@
     port: 8080
   ```
 
+  *Mind here the `docker-mysql` is the name of the MySQL image we are going to run in the next step.*
+
 2. Run the MySQL image pulled from [DockerHub](https://hub.docker.com/_/mysql/) with corresponding environment configuration:
 
   ```console

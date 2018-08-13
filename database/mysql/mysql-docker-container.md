@@ -24,11 +24,7 @@
   $ docker exec -it <mysql-container-name> mysql -u root -p
   ```
 
-  Enter the password and we should be in the MySQL command line client like:
-
-  ```console
-  mysql>
-  ```
+  Enter the password and we should be in the MySQL command line client.
   
   Or we can directly execute the database without entering the container like:
   

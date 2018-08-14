@@ -154,3 +154,11 @@
   ```console
   $ docker cp <file> <container-ID>:/path/to/<file>
   ```
+  
+* **Output logs for a running container**:
+
+  ```console
+  $ docker logs -f <container-ID>
+  ```
+  
+  `-f` means following logs.

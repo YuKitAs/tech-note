@@ -1,5 +1,7 @@
 # Basic Commands of Docker
 
+## Common
+
 * **List all Docker commands**:
 
   ```console
@@ -18,6 +20,8 @@
   ```console
   $ sudo service docker status
   ```
+  
+## Image
 
 * **List all Docker images**:
 
@@ -64,6 +68,8 @@
   ```
 
   Add `--filter dangling=true` to only remove dangling/untagged images.
+
+## Container
 
 * **List running Docker containers**:
 

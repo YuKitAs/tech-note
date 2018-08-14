@@ -67,7 +67,7 @@
   $ docker images -q | xargs docker rmi
   ```
 
-  Add `--filter dangling=true` to only remove dangling/untagged images.
+  Add `-f dangling=true` to only remove dangling/untagged images.
 
 ## Container
 

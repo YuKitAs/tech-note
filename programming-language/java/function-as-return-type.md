@@ -17,7 +17,9 @@ static final Function<Integer, Integer> doubleFunction = new Function<Integer, I
   };
 ```
 
-A practical reason why returning a function instead of calling it directly is that we want to bind certain arguments to the function without declaring them as private fields and should never care about them ever after. For example, we have the following method, which is used to return the value found in one of the maps or `-1`:
+A practical reason why returning a function instead of calling it directly is that we want to bind certain arguments to the function without declaring them as member variables and should never care about them ever after. 
+
+For example, we have the following method, which is used to return the value found in one of the maps or `-1`:
 
 ```java
 static Integer findValue(String key, Map<String, Integer> map1, Map<String, Integer> map2) {
@@ -46,5 +48,5 @@ Once initialized `findValueFunction` with two maps, we can use it by simply prov
 
 ```java
 Function<String, Integer> findValueFunction = findValueFunction(map1, map2);
-System.out.println(findValueFunction.apply("keyword"));
+findValueFunction.apply("keyword");
 ```

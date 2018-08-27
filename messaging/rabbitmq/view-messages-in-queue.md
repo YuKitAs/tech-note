@@ -19,10 +19,10 @@
 
 2. Install `rabbitmqadmin` tool:
 
-  Open `http://localhost:15672/cli/rabbitmqadmin`, copy the whole script into `/usr/local/bin/rabbitmqadmin.py` and make it executable
+  Open `http://localhost:15672/cli/rabbitmqadmin`, copy the whole script into `/usr/local/bin/rabbitmqadmin` and make it executable
 
 3. Run the following command to view the message in a queue:
 
   ```console
-  $ python rabbitmqadmin get queue=<queue-name>
+  $ rabbitmqadmin get queue=<queue-name>
   ```

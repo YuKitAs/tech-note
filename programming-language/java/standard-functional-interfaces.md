@@ -1,8 +1,8 @@
 # Standard Functional Interfaces
 
-Definition: a functional interface is an interface that contains only one abstract method (and possibly multiple default methods). They are annotated with `@FunctionalInterface`.
+Definition: a functional interface is an interface that contains only one abstract method (and possibly multiple default methods). They are (and should be) annotated with `@FunctionalInterface`.
 
-Since Java 8, there are some useful standard built-in functional interfaces like `Consumer<T>`, `Supplier<T>`, `Function<T,R>` and `BiFunction<T,U,R>` (see [more](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)).
+Since Java 8, there are some useful standard built-in functional interfaces provided in `java.util.function` like `Consumer<T>`, `Supplier<T>`, `Function<T,R>` and `BiFunction<T,U,R>` (see [more](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)).
 
 The six basic functional interfaces are summarized below:
 

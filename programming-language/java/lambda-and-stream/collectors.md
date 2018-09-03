@@ -20,11 +20,7 @@ Output:
 `toMap()` can take two functions which map a stream element to a key and a value, for example:
 
 ```java
-List<String> strings = new ArrayList<>();
-strings.add("custom");
-strings.add("random");
-strings.add("word");
-strings.add("generator");
+List<String> strings = List.of("custom", "random", "word", "generator"); // since Java 9
 
 Map<String, Integer> words = strings.stream().collect(Collectors.toMap(Function.identity(), String::length));
 words.forEach((k, v) -> System.out.println(k + ": " + v));

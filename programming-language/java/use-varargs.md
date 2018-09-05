@@ -5,7 +5,7 @@ Varargs are short for variable arguments. Varargs methods accept an arbitrary nu
 There are two rules for varargs:
 
 1. Each method can have only one varargs parameter
-2. The varargs paramter must be the last parameter
+2. The varargs parameter must be the last parameter
 
 If we want to pass at least one argument using varargs, the recommended way is to declare the method with the first argument like:
 
@@ -21,4 +21,4 @@ static int min(int firstArg, int... remainingArgs) {
 }
 ```
 
-It's recommended because if we only pass a single varargs parameter and when the method is invoked with no parameter, it won't fail at compile time.
+It's recommended because if we only pass a single varargs parameter and when the method is invoked with no parameter, it wouldn't immediately fail at compile time.

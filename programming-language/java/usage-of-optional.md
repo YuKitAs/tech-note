@@ -1,5 +1,9 @@
 # Usage of `Optional`
 
+`Optional<T>` represents an immutable container that can hold either a single non-null `T` reference or nothing. Instead of returning `null` or throwing an exception, we could return `Optional<E>` with a non-null value.
+
+## `Optional` methods
+
 If using `Optional` like this:
 
 ```java
@@ -59,7 +63,7 @@ String value = Optional.ofNullable(str).orElse("default");
 System.out.println(value); // default
 ```
 
-`orElseGet()`: similar to `orElse()` but returns a default value produced by a supplying function:
+`orElseGet()`: similar to `orElse()` but returns a default value produced by a `Supplier<T>`:
 
 ```java
 String str = null;
@@ -73,3 +77,4 @@ So the point is to replace `isPresent()` and `get()` with `ifPresent()` or `orEl
 Optional<String> str = Optional.ofNullable(getNullableString());
 str.ifPresent(this::doSomething);
 ```
+

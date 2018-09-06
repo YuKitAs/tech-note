@@ -20,4 +20,4 @@ for (int i = 0; i < n; i++) {
 System.out.println(sb.toString());
 ```
 
-The latter method would run apparently faster. The reason is that strings are immutable, when two strings are concatenated, both strings will be copied. Therefore, using `+=` in the former method results in time complexity `O(n^2)`, the performance will get much worse as the number of loop grows. In the contrary, `StringBuilder` can hold an entire string and only requires linear time, it can also be preallocated with an appropriate size instead of the default size, in order to eliminate the need for automatic growth.
+The latter method would run apparently faster. The reason is that strings are immutable, when two strings are concatenated, both strings will be copied. Therefore, using `+=` in the former method results in time complexity `O(n^2)`, the performance will get much worse as the number of loops grows. In the contrary, `StringBuilder` can hold an entire string and only requires linear time, it can also be preallocated with an appropriate size instead of the default size, in order to eliminate the need for automatic growth.

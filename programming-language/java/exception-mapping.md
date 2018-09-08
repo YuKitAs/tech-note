@@ -1,6 +1,6 @@
 # Exception Mapping
 
-In the Java world, `RuntimeException` stands for exceptions that would be thrown during the runtime of the JVM. They are so-called unchecked exceptions that don't need to be declared. Unlike checked exceptions which are generally used for recoverable conditions, unchecked exceptions should be used to indicate programming errors.
+In the Java world, `RuntimeException` stands for exceptions that would be thrown during the runtime of the JVM. They are so-called unchecked exceptions that don't need to be declared. Unlike checked exceptions which are generally used for recoverable conditions (the method caller should handle the exception), unchecked exceptions should be used to indicate programming errors.
 
 In some occasions where we don't want to deal with a checked exception, we can also map it to an unchecked exception.
 
@@ -31,3 +31,5 @@ try {
     throw CustomException.forInterrupted(e);
 }
 ```
+
+However, if additional information like error message is not necessary, we can only return an empty `Optional` of the desired type to avoid throwing a checked exception.

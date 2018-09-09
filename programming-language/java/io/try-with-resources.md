@@ -38,7 +38,7 @@ static void copyResource(String src, String dst) throws IOException {
 }
 ```
 
-Because `FileInputStream` and `FileOutputStream` have implemented the interface `AutoClosable`, they will be closed regardless of whether the `try` statement finishes normally or not.
+`FileInputStream` and `FileOutputStream` have implemented the interface [`AutoCloseable`](https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html), they will be automatically closed regardless of whether the `try` statement finishes normally or not, when they are declared as resources.
 
 Instead of using nested `try` blocks, multiple resources can be declared in one `try`-with-resources statement separated by semicolon:
 

@@ -6,7 +6,7 @@ In some occasions where we don't want to deal with a checked exception, we can a
 
 In the following example, the checked exception class `InterruptedException` will be wrapped into a subclass of `RuntimeException` with customized error message.
 
-Firstly, define a `CustomException` class which extends `RuntimeException`:
+Firstly, create a `CustomException` class which extends `RuntimeException`, define a static constructor and pass the `InterruptedException` as the `cause` parameter:
 
 ```java
 public class CustomException extends RuntimeException {

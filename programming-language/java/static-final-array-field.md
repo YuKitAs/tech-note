@@ -2,7 +2,7 @@
 
 In Java, a non-empty array is mutable, that means, if a class has a public static final array field or an accessor that returns a reference to such a private array field, the contents of the array can be modified. There are two ways to fix the potential security problem.
 
-1. Returns a copy of the private array:
+1. Returning a copy of the private array:
 
   ```java
   private static final Foo[] ARRAY_VALUES = { ... };
@@ -11,7 +11,7 @@ In Java, a non-empty array is mutable, that means, if a class has a public stati
   }
   ```
 
-2. Converting the private array filed to a public immutable list:
+2. Converting the private array filed to a public immutable list field:
 
   ```java
   private static final Foo[] ARRAY_VALUES = { ... };

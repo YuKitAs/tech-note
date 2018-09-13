@@ -12,6 +12,6 @@ To define an immutable class, the following rules should be obeyed:
 
 4. All fields are private.
 
-5. Exclusive access to any mutable components (e.g. make defensive copies).
+5. Exclusive access to any mutable objects (e.g. make defensive copies instead of the real instances).
 
 The major disadvantage of immutable classes is the potential performance problem because for each distinct value a new object will be created. Sometimes, in order to achieve satisfactory performance, the public mutable companion class is preferable, e.g. using `StringBuilder` instead of `String` (see [note](https://github.com/YuKitAs/tech-note/blob/master/programming-language/java/string-concatenation.md)).

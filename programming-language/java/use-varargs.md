@@ -22,3 +22,5 @@ static int min(int firstArg, int... remainingArgs) {
 ```
 
 It's recommended because if we only pass a single varargs parameter and when the method is invoked with no parameter, it wouldn't immediately fail at compile time.
+
+However, it could be unsafe to combine generics and varargs. For example, the generic varargs parameter `List<String>... stringLists` can be stored into a generic array (`Object[] objects = stringLists`), which is illegal, without compiler error. Otherwise, if the method with a varargs parameter of a generic type (e.g. `List<E>`) or parameterized type (e.g. `List<String>`) is ensured to be typesafe, use the `@SafeVarargs` annotation to suppress warnings.

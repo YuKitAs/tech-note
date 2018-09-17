@@ -16,7 +16,7 @@ Personal experience on installing Xubuntu 18.04 on Windows 10:
 
 * Restart the computer and interrupt the booting sequence to enter BIOS setup.
 
-*  Choose `Boot -> Priority Order`, move `USB CD` to the first position over the default hard drive.
+*  Choose `Boot -> Boot Priority Order`, move `USB CD`, `USB HDD` and `USB FDD` to the higher position over the default hard drive `Windows Boot Manager`.
 
 * Save and exit BIOS setup.
 

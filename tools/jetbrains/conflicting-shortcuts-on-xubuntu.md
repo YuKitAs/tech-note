@@ -7,7 +7,7 @@ The following are some shortcuts I need to edit or remove on Xubuntu:
 | Shortcut | IDE usage | OS usage | What to do |
 | -------- | --------- | -------- | ------------- |
 | `Ctrl+Alt+L` | Reformat code | Lock screen | Remove in `Settings > Keyboard > Application Shortcuts` |
-| `Alt+Insert` | Generate code | Add a new workspace | Change to `Ctrl+Alt+Insert` in `Settings > Window Manager > Keyboard` |
+| `Alt+Insert` | Generate code | Add a new workspace | Change to `Alt+Super+Insert` in `Settings > Window Manager > Keyboard` |
 | `Ctrl+F12` | Open file structure popup | Workspace 12 | Remove in `Settings > Window Manager > Keyboard` |
 
 ## Reference

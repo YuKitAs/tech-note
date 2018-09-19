@@ -2,7 +2,7 @@
 
 [Virtualenv](https://virtualenv.pypa.io/en/stable/) is a tool to create isolated python environment.
 
-Installation and usage:
+## Installation
 
 1. Install `virtualenv`:
 
@@ -25,7 +25,9 @@ Installation and usage:
   $ virtualenv -p $(which python3) env
   ```
 
-4. In the project root directory, use the following command to activate the virtual environment:
+## Usage
+
+1. In the project root directory, use the following command to activate the virtual environment:
 
   ```console
   $ . env/bin/activate
@@ -37,7 +39,7 @@ Installation and usage:
   (env) yukitas@computer:path/to/project$
   ```
 
-5. In the virtual environment, check if the python3 interpreter is successfully set:
+2. In the virtual environment, check if the python3 interpreter is successfully set:
 
   ```console
   $ python --version
@@ -45,8 +47,14 @@ Installation and usage:
 
   It should be `Python 3.*` when outside the environment it's `Python 2.7.*` with the same command.
 
-6. To leave the virtual environment, run:
+3. To leave the virtual environment, run:
 
   ```console
   $ deactivate
   ```
+
+## Configuration in PyCharm
+
+1. Go to `File -> Settings`, search for `Project Interpreter`.
+
+2. Add a new interpreter by selecting `Existing environment`.

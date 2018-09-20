@@ -14,4 +14,4 @@
 
 5. Unselect `Only Show Current Language` and search for `Google Pinyin`.
 
-6. Use `Ctrl+Space` to switch between input methods.
+6. By default, `Ctrl+Space` or `L_Shift` is used to trigger input method, `Ctrl+Shift` to scroll between input methods.

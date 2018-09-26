@@ -8,12 +8,12 @@ Prerequisite: [npm](https://www.npmjs.com/get-npm), [Yarn](https://yarnpkg.com/e
   $ vue init webpack <project-name>
   ```
 
-2. Add `electron` dependency using `yarn`:
+2. In the project root, add `electron` dependency using `yarn`:
 
   ```console
   $ yarn add -D electron
   ```
-
+  
 3. Write a `main.js` as the entry point for Electron:
 
   ```javascript

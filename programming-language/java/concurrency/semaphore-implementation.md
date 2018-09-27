@@ -1,6 +1,6 @@
 # Semaphore Implementation
 
-Semaphore is a thread synchronization construct that can be used to send signals between threads. Since Java 5 there is a semaphore implementation in package `java.util.concurrent`.
+Semaphore is another synchronization mechanism like monitor, but at lower level. It's a thread synchronization construct that can be used to send signals between threads. Since Java 5, a semaphore implementation is provided in package `java.util.concurrent`.
 
  Below is an example of a semaphore with an upper bound (capacity).
 

@@ -15,4 +15,8 @@ byte[] bytes = str.getBytes();
 
 By default, the converted byte array will be in `UTF-8` format. Other encodings can also be specified as parameter of `getBytes()`, which would throw `UnsupportedEncodingException` though.
 
-Here we should notice, the lengths of the character "A" and "C" are both 1 byte (8 bits), while each of the characters "êñü" has a length of 2 bytes (16 bits), so the length of the byte array would be 8 in this case.
+Here we should notice, the lengths of the character "A" and "C" are both 1 byte (8 bits), while each of the characters "êñü" has a length of 2 bytes (16 bits), so the length of the byte array would be 8 in this case, while the length of the String is 6.
+
+## Reference
+
+* [Byte Encodings and Strings](https://docs.oracle.com/javase/tutorial/i18n/text/string.html), The Java™ Tutorials for JDK 8, Oracle.

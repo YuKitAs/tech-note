@@ -6,9 +6,9 @@ Personal experience on installing Xubuntu 18.04 on Windows 10:
 
 * Download a proper release image from the [official site](http://ftp.uni-kl.de/pub/linux/ubuntu-dvd/xubuntu/releases/18.04/release/).
 
-* Install a `usb-creator` package to create a startup disk using the image (`usb-creator-gtk` for GNOME and `usb-creator-kde` for KDE).
+* If no `usb-creator` package is installed, install one to create a startup disk using the image (`usb-creator-gtk` for GNOME and `usb-creator-kde` for KDE).
 
-* Insert a USB, choose the proper image and the device.
+* Insert a USB, choose the proper source disc image and the disk to use, then `Make Startup Disk`.
 
 2. Change boot priority order on Windows 10
 

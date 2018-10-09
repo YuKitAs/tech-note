@@ -4,7 +4,7 @@ There are four states of links:
 
 * `a:link`: normal, unvisited
 * `a:visited`: visited
-* `a:hover`: mouse hover
+* `a:hover`: mouse over
 * `a:active`: pressed
 
 So we can change the default color accordingly like:

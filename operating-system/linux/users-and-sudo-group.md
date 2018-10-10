@@ -16,6 +16,13 @@ The following command is used to check which groups the current user belongs to:
 $ groups
 ```
 
+Re-evaluate group members:
+
+```console
+$ su - $USER
+$ id
+```
+
 ## List all users in `sudo` group
 
 ```console

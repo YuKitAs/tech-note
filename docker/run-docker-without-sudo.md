@@ -1,6 +1,6 @@
 # Run Docker Without `sudo`
 
-The Docker daemon always run as the `root` user, the other users can only access it using `sudo`. If running `docker-compose` without `sudo`, it won't be able to connect to the Docker daemon due to permission problem. To avoid using `sudo` to execute `docker` command every time, we can add the user to a `docker` Unix group.
+The Docker daemon always runs as the `root` user, the other users can only access it using `sudo`. If running `docker-compose` without `sudo`, it won't be able to connect to the Docker daemon due to permission problem. To avoid using `sudo` to execute `docker` command every time, we can add the user to a `docker` Unix group.
 
 1. Check if the `docker` group already exists:
 

@@ -7,9 +7,9 @@ List<String> stringList = new ArrayList<>();
 String[] stringArray = stringList.toArray(new String[stringList.size()]);
 ```
 
-Using `toArray()` without the typed Array, an `Object[]` will be created rather than `String[]`.
+Because using `toArray()` without the typed Array, an `Object[]` will be created rather than `String[]`.
 
-Due to performance reason, it's now preferable to use an empty array instead with either of the following ways:
+However, due to performance reason, it's now preferable to use an empty array instead with either of the following ways:
 
 ```java
 // the first one is suggested by IntelliJ

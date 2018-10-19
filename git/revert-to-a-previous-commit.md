@@ -20,7 +20,7 @@ In some situations like a branch is accidentally deleted, so that commit logs ca
 
 ## Soft reset
 
-To undo commits but keep the change, e.g. committed to a false branch.
+To undo commits but keep the changes e.g. when committed to a false branch.
 
 In a similar way:
 

@@ -30,4 +30,4 @@ To check the process(es) listening to a specific port:
 $ netstat -tulpn | grep <port>
 ```
 
-
+* To kill all the processes associated with the port: `# fuser -k 8000/tcp`

@@ -1,12 +1,12 @@
 # Git Branch Basics
 
-* Create a new branch and switch to it:
+* Create a new branch (track a remote branch) and switch to it:
 
 ```console
 $ git checkout -b <new-branch>
 ```
 
-* Delete a merged branch:
+* Delete a (merged) branch:
 
 ```console
 $ git branch -d <branch-name>

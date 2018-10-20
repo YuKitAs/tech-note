@@ -69,7 +69,7 @@ There are several tricks to vertically center the title in the header.
 
 ## Vertical align text in button
 
-Another related topic. Vertically aligning text in button can be achieved by setting the line-height to the same value of the button height, like:
+Another relevant topic. Vertically aligning text in button can be achieved by setting the line-height to the same value of the button height, like:
 
 ```css
 .button {

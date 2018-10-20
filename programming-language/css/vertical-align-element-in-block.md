@@ -29,40 +29,52 @@ with the following styling (in order to illustrate the effect):
 
 There are several tricks to vertically center the title in the header.
 
-## Calculating padding/margin manually
+**1. Calculating padding/margin manually**
 
-If we know the heights of both parent and child elements and they are fixed, we can
+  If we know the heights of both parent and child elements and they are fixed, we can
 
-1. calculate the paddings around the title:
+  1.1 calculate the paddings around the title:
+
+  ```css
+  .title {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  ```
+  1.2 use relative position with calculated margin:
+
+  ```css
+  .header {
+    position: relative;
+  }
+
+  .title {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+  }
+  ```
+
+**2. Using flexbox**
+
+  For child elements with unknown/unfixed heights, it's more convenient to use flexbox:
+
+  ```css
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  ```
+
+## Vertical align text in button
+
+Another related topic. Vertically aligning text in button can be achieved by setting the line-height to the same value of the button height, like:
 
 ```css
-.title {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-```
-2. use relative position with calculated margin:
-
-```css
-.header {
-  position: relative;
-}
-
-.title {
-  position: absolute;
-  top: 50%;
-  margin-top: -10px;
-}
-```
-
-## Using flexbox
-
-For child elements with unknown/unfixed heights, it's more convenient to use flexbox:
-
-```css
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.button {
+  width: 30px;
+  height: 15px;
+  line-height: 15px;
 }
 ```

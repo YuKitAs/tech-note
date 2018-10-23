@@ -6,10 +6,16 @@
 $ git checkout -b <new-branch>
 ```
 
-* Delete a (merged) branch:
+* Delete a fully merged branch:
 
 ```console
 $ git branch -d <branch-name>
+```
+
+* Delete a (not fully merged) branch:
+
+```console
+$ git branch -D <branch-name>
 ```
 
 * Push to a branch:

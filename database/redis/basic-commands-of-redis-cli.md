@@ -3,7 +3,13 @@
 * **List all keys**:
 
 ```
-keys *
+KEYS *
+```
+
+* **Delete all keys**:
+
+```
+FLUSHALL
 ```
 
 * **Set a simple key-value pair**:
@@ -28,6 +34,12 @@ HSET <key> <field1> <value1> <field2> <value2> ...
 
 ```
 HGET <key> <field>
+```
+
+* **Get values of multiple fields by key**:
+
+```
+HMGET <key> <field1> <field2> ...
 ```
 
 * **Get all fields/values by key:**

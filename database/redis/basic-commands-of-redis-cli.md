@@ -28,6 +28,7 @@ GET <key>
 
 ```
 HSET <key> <field1> <value1> <field2> <value2> ...
+HMSET <key> <field1> <value1> <field2> <value2> ...
 ```
 
 * **Get the value of a single field**:

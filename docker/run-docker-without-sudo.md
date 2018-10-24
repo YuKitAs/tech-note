@@ -20,7 +20,7 @@ The Docker daemon always runs as the `root` user, the other users can only acces
   $ sudo usermod -aG docker $USER
   ```
 
-3. Log out and log in, or re-evaluate the group members from inside the shell (see [note](https://github.com/YuKitAs/tech-note/blob/master/operating-system/linux/users-and-sudo-group.md))
+3. Log out and log in, or re-evaluate the group members from inside the shell (see [note](https://github.com/YuKitAs/tech-note/blob/master/operating-system/linux/administration/users-and-sudo-group.md))
 
 4. Run the `hello-world` image to verify:
 

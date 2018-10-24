@@ -27,3 +27,9 @@ The Docker daemon always runs as the `root` user, the other users can only acces
   ```console
   $ docker run hello-world
   ```
+
+In addition, granting user the access to the socket of docker `/var/run/docker.sock` can make user directly get root-equivalent privileges:
+
+```console
+# setfacl -m user:$USER:rw /var/run/docker.sock
+```

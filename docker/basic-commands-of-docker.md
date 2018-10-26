@@ -21,7 +21,7 @@
   $ sudo service docker status
   ```
   
-## Image
+## Docker Image
 
 * **List all Docker images**:
 
@@ -69,7 +69,7 @@
 
   Add `-f dangling=true` to only remove dangling/untagged images.
 
-## Container
+## Docker Container
 
 * **List running Docker containers**:
 
@@ -119,26 +119,10 @@
   $ docker rm $(docker ps -aq)
   ```
 
-  or
+ * **Remove all stopped containers**:
 
   ```console
-  $ docker ps -aq | xargs docker rm
-  ```
-
-  Add `--no-trunc` parameter to only remove stopped containers.
-  
-* **Build and run a container with services defined in** `docker-compose.yml`:
-
-  ```console
-  $ docker-compose up
-  ```
-  
-  Add `-d` to make containers run in the background.
-  
-* **Stop containers and remove containers, networks, volumes and images created with** `docker-compose`:
-
-  ```console
-  $ docker-compose down
+  $ docker ps -aq --no-trunc -f status=exited | xargs docker rm
   ```
 
 * **Run commands in a running container**:
@@ -168,3 +152,20 @@
   ```
   
   `-f` means following logs.
+
+## Docker Compose
+
+* **Build and run a container with services defined in** `docker-compose.yml`:
+
+  ```console
+  $ docker-compose up
+  ```
+  
+  Add `-d` to make containers run in the background.
+  
+* **Stop containers and remove containers, networks, volumes and images created with** `docker-compose`:
+
+  ```console
+  $ docker-compose down
+  ```
+

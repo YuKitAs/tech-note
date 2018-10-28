@@ -27,8 +27,8 @@
 
 8. Under `Source Code Management`, choose `Git` and enter the Git repo URL (\*.git) with credentials.
 
-9. Under `Build Triggers (Build-Auslöser)`, choose `GitHub hook trigger for GITScm polling`. Save.
+9. Under `Build Triggers (Build-Auslöser)`, choose `GitHub hook trigger for GITScm polling` and save.
 
 10. On GitHub, go to `Settings > Developer settings`, generate a new personal access token.
 
-11. Go to `Manage Jenkins > Configure System`, add a `GitHub Server` with `https://api.github.com` as default `API URL`. Add credentials, copy the access token as `Secret text` and click `Test connection`. If verified, select `Manage hooks` and save.
+11. Go to `Manage Jenkins > Configure System`, add a `GitHub Server` with `https://api.github.com` as default `API URL`. Add credentials, copy the access token as `Secret text` and click `Test connection`. If verified, select `Manage hooks` and save. The webhook in GitHub should have been configured by Jenkins automatically.

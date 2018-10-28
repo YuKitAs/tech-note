@@ -55,8 +55,8 @@ HMGET <key> <field1> <field2> ...
 HGETALL <key>
 ```
 
-* **Switch to another database (0-15)**:
+* **Switch to another database (0-15 by default)**:
 
 ```
-SELECT <index>
+SELECT <db_id>
 ```

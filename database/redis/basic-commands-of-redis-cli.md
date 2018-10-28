@@ -6,7 +6,13 @@
 KEYS *
 ```
 
-* **Delete all keys**:
+* **Delete all keys in current database**:
+
+```
+FLUSHDB
+```
+
+* **Delete all keys in all databases**:
 
 ```
 FLUSHALL
@@ -24,27 +30,33 @@ SET <key> <value>
 GET <key>
 ```
 
-* **Set a hash with multiple fields and values**:
+* **Set a hash with multiple fields and values:**
 
 ```
 HSET <key> <field1> <value1> <field2> <value2> ...
 HMSET <key> <field1> <value1> <field2> <value2> ...
 ```
 
-* **Get the value of a single field**:
+* **Get the value of a single field:**
 
 ```
 HGET <key> <field>
 ```
 
-* **Get values of multiple fields by key**:
+* **Get values of multiple fields by key:**
 
 ```
 HMGET <key> <field1> <field2> ...
 ```
 
-* **Get all fields/values by key:**
+* **Get all fields/values by key**:
 
 ```
 HGETALL <key>
+```
+
+* **Switch to another database (0-15)**:
+
+```
+SELECT <index>
 ```

@@ -11,8 +11,8 @@ $ git tag <tagname>
 * Create an annotated tag with a message:
 
 ```console
-$ git tag -a <tagname> -m <message>
-$ git tag -m <message> <tagname>
+$ git tag -a <tagname> -m "<message>"
+$ git tag -m "<message>" <tagname>
 ```
 
 * Overwrite the message of an existing tag:

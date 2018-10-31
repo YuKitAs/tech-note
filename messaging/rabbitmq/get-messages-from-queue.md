@@ -1,4 +1,4 @@
-# View Messages in Queue
+# Get Messages from Queue
 
 1. Enable management plugins:
 
@@ -21,7 +21,7 @@
 
   Open `http://localhost:15672/cli/rabbitmqadmin`, copy the whole script into `/usr/local/bin/rabbitmqadmin` and make it executable
 
-3. Run the following command to view the message in a queue:
+3. Run the following command to get messages from a queue, but pay attention, this is a destructive action:
 
   ```console
   $ rabbitmqadmin get queue=<queue-name>

@@ -5,20 +5,20 @@ Tagging is often used to mark release points as being important, e.g. `v1.0`.
 * Create a (lightweight) tag:
 
 ```console
-$ git tag <tagname>
+$ git tag <tag-name>
 ```
 
 * Create an annotated tag with a message:
 
 ```console
-$ git tag -a <tagname> -m "<message>"
-$ git tag -m "<message>" <tagname>
+$ git tag -a <tag-name> -m "<message>"
+$ git tag -m "<message>" <tag-name>
 ```
 
 * Overwrite the message of an existing tag:
 
 ```console
-$ git tag <tagname> <tagname>^{} -f -m "<new-message>"
+$ git tag <tag-name> <tag-name>^{} -f -m "<new-message>"
 ```
 
 * List all available tags:
@@ -48,5 +48,5 @@ $ git checkout <tag-name>
 * Push a tag explicitly (By default, `git push` won't transfer tags to remote servers):
 
 ```console
-$ git push origin <tagname>
+$ git push origin <tag-name>
 ```

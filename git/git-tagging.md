@@ -15,6 +15,12 @@ $ git tag -a <tagname> -m <message>
 $ git tag -m <message> <tagname>
 ```
 
+* Overwrite the message of an existing tag:
+
+```console
+$ git tag <tagname> <tagname>^{} -f -m "<new-message>"
+```
+
 * List all available tags:
 
 ```console

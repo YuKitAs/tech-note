@@ -47,3 +47,10 @@ $ git branch -m <new-name>
 ```console
 $ git push origin :<old-name> <new-name>
 ```
+
+* Checkout a unmerged branch:
+
+```console
+$ git fetch origin
+$ git checkout -b <branch-name>
+```

@@ -1,6 +1,8 @@
-# Profile-specific Properties
+# Application Property Files
 
-By default, `SpringApplication` loads properties from `application.properties` or `application.yml` file in a [config location](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config-application-property-files). Custom config file names or locations can be defined as Spring environment properties using command-line args like:
+Normally `SpringApplication` loads properties from `application.properties` or `application.yml` file in a [config location](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config-application-property-files), e.g. in `src/main/resources/`, `project-root/config/` `project-root/`, `src/main/java/config/` or `src/main/java/`.
+
+Custom config file names or locations can be defined as Spring environment properties using command-line args like:
 
 ```console
 $ java -jar sample.jar --spring.config.name=sample-config
@@ -15,7 +17,7 @@ Profile-specific properties have a higher priority than application properties a
 $ java -jar sample.jar --spring.profiles.active=default,dev
 ```
 
-In IntelliJ Ultimate edition, it can be specified in the run configuration.
+In IntelliJ Ultimate Edition, the active profiles can be specified in the run configuration.
 
 ## Reference
 

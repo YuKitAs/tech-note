@@ -48,7 +48,7 @@ $ git branch -m <new-name>
 $ git push origin :<old-name> <new-name>
 ```
 
-* Checkout a unmerged branch:
+* Checkout an unmerged branch (for review):
 
 ```console
 $ git fetch origin

@@ -7,13 +7,15 @@ $ java -jar sample.jar --spring.config.name=sample-config
 $ java -jar sample.jar --spring.config.location=classpath:/custom1.properties,classpath:/custom2.properties
 ```
 
-If the location is a directory, it should look like `classpath:custom-config/`. These will override the default file names and locations. 
+If the location is a directory, it should look like `classpath:custom-config/`. These will override the default file names and locations.
 
-Profile-specific properties have a higher priority than application properties and can be defined by following the naming convention `application-{profile}.properties`. We can choose which property to use by specifying active profiles. For example, to load `application-default.properties` and `application-dev.properties`:
+Profile-specific properties have a higher priority than application properties and can be defined by following the naming convention `application-{profile}.properties`. We can choose which property to use by specifying active profiles. For example, to load `application-default.properties` and `application-dev.properties` using command-line args like:
 
 ```console
 $ java -jar sample.jar --spring.profiles.active=default,dev
 ```
+
+In IntelliJ Ultimate edition, it can be specified in the run configuration.
 
 ## Reference
 

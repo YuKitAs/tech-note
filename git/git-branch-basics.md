@@ -52,5 +52,5 @@ $ git push origin :<old-name> <new-name>
 
 ```console
 $ git fetch origin
-$ git checkout -b <branch-name>
+$ git checkout -b <branch-name> origin/<branch-name>
 ```

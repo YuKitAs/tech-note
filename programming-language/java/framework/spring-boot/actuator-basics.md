@@ -20,3 +20,7 @@ info.app.version=0.0.1
 ```
 
 Then we can see the responses by calling `localhost:9000/info` and `localhost:9000/health` after starting the app.
+
+## Reference
+
+* [Monitoring and Management over HTTP](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-monitoring.html), Spring Boot Documentation.

@@ -20,4 +20,4 @@ div {
 }
 ```
 
-By this way we can easily apply some font families to special characters.
+By this way it's easy to apply desired font families to special characters.

@@ -47,7 +47,7 @@ Optional<String> opt = Optional.ofNullable(str);
 System.out.println(opt); // Optional.empty
 ```
 
-`ifPresent()`: if the value inside the `Optional` object is present, takes a consumer function to do something with the value:
+`ifPresent()`: if the value inside the `Optional` object is present, takes a `Consumer` function to do something with the value:
 
 ```java
 String str = "meh";
@@ -71,10 +71,33 @@ String value = Optional.ofNullable(str).orElseGet(this::getDefaultValue);
 System.out.println(value); // default
 ```
 
-So the point is to replace `isPresent()` and `get()` with `ifPresent()` or `orElse()`/`orElseGet()`. Refactor the bad example mentioned above:
+So the point is to replace `isPresent()` and `get()` with `ifPresent()` or `orElse()`/`orElseGet()`. The example mentioned above can thus be refactored like this:
 
 ```java
 Optional<String> str = Optional.ofNullable(getNullableString());
-str.ifPresent(this::doSomething);
+str.ifPresent(this::doSomethingWithStr);
 ```
 
+The `Consumer` function looks like:
+
+```java
+void doSomethingWithStr(String str) {
+  // ...
+}
+```
+
+Since Java 9, there is a new method `ifPresentOrElse​()` which takes an extra `Runnable` (takes no parameter and returns void) to execute when the value is not present, like:
+
+```java
+str.ifPresentOrElse(this::doSomethingWithStr, this::doSomethingElse);
+```
+
+The `Runnable` function looks like:
+
+```java
+void doSomethingElse() {
+  // ...
+}
+```
+
+Notice that an empty list is a non-null value, so when implementing something like `CrudRepository`, it's useless to define `Optional<List<String>>` as the return type, because the list value will always be present even if nothing is found.

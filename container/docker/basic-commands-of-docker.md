@@ -15,37 +15,39 @@
   $ docker info
   ```
 
-* **Show Docker daemon status**:
+* **Show usage of a Docker command**:
 
   ```console
-  $ sudo service docker status
+  $ docker <command> --help
   ```
-  
+
 ## Docker Image
+
+* **Build a Docker image (for the current project)**:
+
+  ```console
+  $ docker build -f <path/to/Dockerfile> -t <image-tag> .
+  ```
 
 * **List all Docker images**:
 
   ```console
-  $ docker image ls
-  ```
-  
-  or
-  
-  ```console
   $ docker images
   ```
 
-* **Execute a Docker image**:
+* **Run a Docker image in a new container**:
 
   ```console
   $ docker run <image-ID|image-name>
   ```
-  
-* **Enter a Docker image and run commands interactively**:
+
+* **Run a Docker image and enter the newly created container**:
 
   ```console
   $ docker run -it <image-ID|image-name> bash
   ```
+
+  `-it` means interactively.
 
 * **Remove a Docker image**:
 
@@ -61,7 +63,7 @@
 
   `-q` means only displaying IDs.
 
-  or 
+  or
 
   ```console
   $ docker images -q | xargs docker rmi
@@ -74,37 +76,31 @@
 * **List running Docker containers**:
 
   ```console
-  $ docker container ls
-  ```
-
-  or
-
-  ```console
   $ docker ps
   ```
 
 * **List all Docker containers**:
 
   ```console
-  $ docker container ls --all
-  ```
-
-  or
-
-  ```console
   $ docker ps -a
   ```
-  
-* **Run a Docker container**:
+
+* **Start a Docker container**:
 
    ```console
-   $ docker container start <container-ID>
+   $ docker start <container-ID|container-name>
    ```
 
 * **Stop a Docker container**:
 
   ```console
-  $ docker stop <container-ID>
+  $ docker stop <container-ID|container-name>
+  ```
+
+* **Stop all containers**:
+
+  ```console
+  $ docker stop $(docker ps -aq)
   ```
 
 * **Remove a Docker container**:
@@ -119,19 +115,19 @@
   $ docker rm $(docker ps -aq)
   ```
 
- * **Remove all stopped containers**:
+* **Remove all stopped containers**:
 
   ```console
   $ docker ps -aq --no-trunc -f status=exited | xargs docker rm
   ```
 
-* **Run commands in a running container**:
+* **Execute commands in a running container**:
 
   ```console
   $ docker exec <container-ID|container-name> <command>
   ```
 
-* **Enter a running container as root (start an interactive Bash session)**: 
+* **Enter a running container as root (start an interactive Bash session)**:
 
   ```console
   $ docker exec -it <container-ID|container-name> bash
@@ -144,14 +140,23 @@
   ```console
   $ docker cp <file> <container-ID>:/path/to/<file>
   ```
-  
+
 * **Output logs for a running container**:
 
   ```console
   $ docker logs -f <container-ID>
   ```
-  
+
   `-f` means following logs.
+
+
+* **Show IP address of a Docker container**:
+
+  ```console
+  $ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container-ID|container-name>
+  ```
+
+  `-f` is short for `--format`.
 
 ## Docker Compose
 
@@ -160,12 +165,11 @@
   ```console
   $ docker-compose up
   ```
-  
+
   Add `-d` to make containers run in the background.
-  
+
 * **Stop containers and remove containers, networks, volumes and images created with** `docker-compose`:
 
   ```console
   $ docker-compose down
   ```
-

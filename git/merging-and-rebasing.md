@@ -19,6 +19,8 @@ The major difference is, `merge` won't change the existing branches, here the `n
 
 If we want the project history to be as clean as possible, it's better to use `rebase` instead of `merge`.
 
+Since `git pull` is equivalent to `git fetch` + `git merge`, when we have some local commits, if we pull a remote master branch without `--rebase`, what we are doing is actually merging the local branch into the master, and this merge commit will be logged. If it's not wanted, we should always add `--rebase` in such a case.
+
 ## Interactive Rebasing
 
 Futhermore, we can also use `rebase` to clean up a messy history before merging `new-branch` into `master` by adding the `-i` option:

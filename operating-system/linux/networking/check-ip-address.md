@@ -10,12 +10,7 @@ $ ip addr show
 
 ## IP address for the host
 
-The following commands can be used to check the IP address of `localhost`:
-
-```console
-$ host localhost
-$ hostname -i
-```
+The IP address of `localhost` can be checked with `host localhost` or just `ping localhost`, usually it's `127.0.0.1`.
 
 To list all IP addresses for the host:
 
@@ -23,6 +18,10 @@ To list all IP addresses for the host:
 $ hostname -I
 ```
 
+## Ethernet interface IPv4 address
+
+This IPv4 address (usually `192.168.*.*`) will be listed by `hostname -I` mentioned above. It can also be easily found in network connection information of the computer.
+
 ## Public IP address
 
-The public IP address can be found "everywhere", for example search "ip" on Google or simply use `curl ifconfig.me` to print it on the console.
+The public IP address can be found "everywhere". For example, search "ip" on Google or use `curl ifconfig.co` to check the IPv6 address, use `curl ifconfig.me` to get the IPv4 address and so on.

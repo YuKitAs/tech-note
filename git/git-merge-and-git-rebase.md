@@ -1,6 +1,6 @@
-# Merging and Rebasing
+# `git-merge` and `git-rebase`
 
-Both `git rebase` and `git merge` can be used to integrate changes from one branch into another. For example, to merge a new branch into the `master` branch:
+Both `git rebase` and `git merge` can be used to integrate changes from one branch into another. For example, usual ways to merge a new branch into the `master` branch:
 
 **Merging**
 ```console
@@ -19,7 +19,7 @@ $ git pull
 $ git rebase master
 ```
 
-The major difference is, `merge` won't change the existing branches, while `rebase` will remove the entire new branch to `master`.
+A major difference is, `merge` won't change the existing branches, while `rebase` will remove the entire new branch to `master`.
 
 If we want the project history to be as clean as possible, it's better to use `rebase` instead of `merge`.
 

@@ -1,6 +1,6 @@
 # Unable to create `index.lock`
 
-For the error when trying to excute a `git` command:
+For the error when trying to execute a `git` command:
 
 ```
 Another git process seems to be running in this repository, e.g.

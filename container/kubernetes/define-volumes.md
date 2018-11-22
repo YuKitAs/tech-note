@@ -2,8 +2,6 @@
 
 In the Pod manifest, define all the volumes that can be accessed by containers in a `spec.volumes` section, and in the container definition, define the volumes that are mounted into a particular container, like:
 
- like:
-
 ```yaml
 metadata:
   name: foo

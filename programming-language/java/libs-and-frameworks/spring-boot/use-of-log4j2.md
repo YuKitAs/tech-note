@@ -1,6 +1,6 @@
 # Use of Log4j2
 
-1. Exclude the default logging of Spring Boot and add Log4j2 dependency e.g. into `pom.xml` in a Maven project:
+1. Exclude the default logging of Spring Boot and add Log4j2 dependency e.g. into `pom.xml` of a Maven project:
 
   ```xml
   <dependency>
@@ -19,13 +19,13 @@
   </dependency>
   ```
 
-2. We can use the default configuration file provided by Spring Boot for Log4j2 specifying it in `application.properties` as follows:
+2. We can use the default configuration file provided by Spring Boot for Log4j2 by specifying it in `application.properties` as follows:
 
   ```properties
   logging.config=classpath:org/springframework/boot/logging/log4j2/log4j2.xml
   ```
 
-  Or, we can create a custom configuration file prefixed with `log4j2` (like `log4j2-*.xml`, `log4j2-*.yaml` or `log4j2-*.json`) in `src/main/resources`, change the path in `applictaion.properties` and define `Properties`, `Appenders` and `Loggers` something like:
+  Or, create a custom configuration file prefixed with `log4j2` (like `log4j2-*.xml`, `log4j2-*.yaml` or `log4j2-*.json`) in `src/main/resources`. Change the path in `applictaion.properties` and define `Properties`, `Appenders` and `Loggers` something like:
 
   ```xml
   <?xml version="1.0" encoding="UTF-8"?>
@@ -59,10 +59,10 @@
   </Configuration>
   ```
 
-3. In the class that needs to log, initialize the logger as follows:
+3. In the class that needs logging, initialize the logger as follows:
 
   ```java
   private static final Logger logger = LogManager.getLogger(ClassName.class);
   ```
 
-4. Use different log levels with `logger.debug()`, `logger.info()`, `logger.warn()`, `logger.trace()`, `logger.error()` and `logger.fatal()`.
+4. Different log levels can be used with `logger.debug()`, `logger.info()`, `logger.warn()`, `logger.trace()`, `logger.error()` and `logger.fatal()`.

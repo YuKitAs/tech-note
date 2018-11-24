@@ -12,10 +12,10 @@ containers:
           port: 9000
         initialDelaySeconds: ...
         timeoutSeconds: ...
-        periodSeconds: ..
-        failureThreshold: ...
+        periodSeconds: N
+        failureThreshold: M
 ```
 
-Containers that fail liveness checks will be restarted.
+The check will be executed every N seconds via a HTTP GET request to /health on port 9000. Containers that fail M successive liveness checks will be restarted.
 
-Besides, there are _readiness checks_ which check whether a container is ready to serve user requests and readiness probes are configured similarly to liveness probes. Containers that fail readiness checks will be removed from service load balancers.
+Besides, there are _readiness checks_ which check whether a container is ready to serve user requests and readiness probes are configured similarly to liveness probes.  Containers that fail readiness checks will be considered not ready and removed from service load balancers, in order to implement graceful shutdown when the server is overloaded or sick and thus can no longer receive traffic.

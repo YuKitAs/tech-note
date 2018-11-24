@@ -47,7 +47,7 @@ $ kubectl get pods <pod-name> -o yaml
 **Find a set of Pods for a ReplicaSet**:
 
 ```console
-$ kubectl get pods -l app=helloworld,version=1
+$ kubectl get pods -l <selectors>
 ```
 
 ## Reference

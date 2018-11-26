@@ -41,7 +41,7 @@ $ kubectl describe rs <rs-name>
 **Find a ReplicaSet from a Pod**:
 
 ```console
-$ kubectl get pods <pod-name> -o yaml
+$ kubectl get pod/<pod-name> -o yaml
 ```
 
 **Find a set of Pods for a ReplicaSet**:

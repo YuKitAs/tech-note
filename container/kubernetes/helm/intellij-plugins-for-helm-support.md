@@ -1,6 +1,6 @@
 # IntelliJ Plugins for Helm Support
 
-In order to resolve Helm resource templates properly, the following requirements must be fulfilled:
+In order to resolve Helm resource templates properly and to profit from some convenient features, the following requirements must be fulfilled:
 
 * IntelliJ IDEA Ultimate >= 2018.3
 

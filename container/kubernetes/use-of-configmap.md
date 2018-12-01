@@ -8,10 +8,22 @@ $ kubectl create configmap <configmap-name> \
 --from-literal=<param-key>=<param-value>
 ```
 
+The equivalent YAML (`kubectl get configmaps <configmap-name> -o yaml`) is:
+
+```yaml
+apiVersion: v1
+data:
+  <param-key>: <param-value>
+  <config-file>: |
+    # Content of the config-file
+kind: ConfigMap
+metadata:
+  name: <configmap-name>
+  ...
+```
+
 There are three ways to use a ConfigMap:
 
 1. Filesystem: create a new volume inside the Pod and point at the ConfigMap to mount.
-
 2. Environment variables
-
 3. Command-line arguments

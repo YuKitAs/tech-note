@@ -25,5 +25,43 @@ metadata:
 There are three ways to use a ConfigMap:
 
 1. Filesystem: create a new volume inside the Pod and point at the ConfigMap to mount.
-2. Environment variables
-3. Command-line arguments
+
+  ```yaml
+  spec:
+    containers:
+      - name: ...
+        volumeMounts:
+          - name: <config-volume-name>
+          mountPath: ...
+    volumes:
+      - name: <config-volume-name>
+        configMap:
+          name: <configmap-name>
+  ```
+
+2. Environment variables: dynamically set the value of an environment variable.
+
+  ```yaml
+  spec:
+    containers:
+      - name: ...
+        env:
+          - name: <ENV_VAR_1>
+            valueFrom:
+              configMapKeyRef:
+                name: <configmap-name>
+                key: <param-key>
+          - name: <ENV_VAR_2>
+            valueFrom:
+              secretKeyRef:
+                ...
+  ```
+
+3. Command-line arguments: dynamically create command-line arguments build on enviroenment variables.
+
+  ```yaml
+  spec:
+    containers:
+      - name: ...
+        command: [ "/bin/sh", "-c", "echo ${ENV_VAR_1}" ]
+  ```

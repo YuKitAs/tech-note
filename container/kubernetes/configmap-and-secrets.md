@@ -1,4 +1,6 @@
-# Use of ConfigMap
+# ConfigMap and Secrets
+
+## ConfigMap
 
 A ConfigMap in Kubernetes can be regarded as a set of key/value pairs used when defining the environment or command-line for the containers. It can be created with a config file on disk:
 
@@ -32,7 +34,7 @@ There are three ways to use a ConfigMap:
       - name: ...
         volumeMounts:
           - name: <config-volume-name>
-          mountPath: ...
+            mountPath: ...
     volumes:
       - name: <config-volume-name>
         configMap:
@@ -65,3 +67,29 @@ There are three ways to use a ConfigMap:
       - name: ...
         command: [ "/bin/sh", "-c", "echo ${ENV_VAR_1}" ]
   ```
+
+## Secrets
+
+Generally, Secrets are configuration data that are sensitive, like passwords and private tokens, they are exposed to the Pods via explicit declaration in Pod manifest and the Kubernetes API.
+
+Similarly as ConfigMap, Secrets data can be used with the Secrets volumes like:
+
+```yaml
+spec:
+  containers:
+    - name: ...
+      volumeMounts:
+        - name: <secret-volume-name>
+          mountPath: ...
+          readOnly: true
+  volumes:
+    - name: <secret-volume-name>
+      secret:
+        secretName: <secret-name>
+  imagePullSecrets:
+    - name: regsecret
+```
+
+Or with environment variables as mentioned above.
+
+The `imagePullSecrets` field in the configuration file specifies that Kubernetes should get the credentials from a Secret named `regsecret`.

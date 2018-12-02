@@ -1,6 +1,6 @@
 # Deployment Strategies
 
-A Kubernetes Deployment instruct the Kubernetes master how to create and update application instances onto individual Nodes in the cluster. A Deployment object can be easily created with `kubectl run`.
+A Kubernetes Deployment instruct the Kubernetes master how to create and update application instances onto individual Nodes in the cluster. A Deployment object can be easily created with `kubectl run` or with `kubectl apply` based on a YAML file.
 
 To achieve a self-healing system, it supports the following two rollout strategies:
 

@@ -247,16 +247,18 @@ The following are some general aspects only.
   To test a simple function:
 
   ```go
+  package sum
+  
   func Sum(x, y int) int {
     return x + y
   }
   ```
 
-  Name a test package as `<package_name>_test.go`, import the `testing` package and the package to be tested:
+  Name a test package `sum_test.go`, import the `testing` package and the `sum` package:
 
   ```go
   func TestSum(t *testing.T) {
-    result := Sum(2, 3)
+    result := sum.Sum(2, 3)
     if result == 5 {
       t.Logf("Sum: %d", result)
     } else {

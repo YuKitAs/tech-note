@@ -162,7 +162,7 @@ The following are some general aspects only.
   }
   ```
 
-  The method names are capitalized because they will be exported instead of the struct.
+  The method names are capitalized because they will be exported.
 
   Then in the `main` package, import the `pet` package and create a `pet` instance:
 
@@ -195,7 +195,7 @@ The following are some general aspects only.
   }
   ```
 
-  Then the child can be instantialized and is able to access the fields of the parent:
+  Then the child can be instantialized and is able to access the fields and methods of the parent:
 
   ```go
   myPet := MyPet {
@@ -256,7 +256,7 @@ The following are some general aspects only.
 
   ```go
   func TestSum(t *testing.T) {
-    result := sum.Sum(2, 3)
+    result := Sum(2, 3)
     if result == 5 {
       t.Logf("Sum: %d", result)
     } else {
@@ -267,7 +267,7 @@ The following are some general aspects only.
 
   Notice there is no assertion, non-failing information can be logged on debug level.
 
-  Run the following command to execute all the tests in the current directroy:
+  Run the following command to execute all the tests in the current directroy (logs will only be output in verbose mode):
 
   ```console
   $ go test -v

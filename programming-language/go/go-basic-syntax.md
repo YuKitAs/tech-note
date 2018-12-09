@@ -213,16 +213,16 @@ The following are some general aspects only.
 
   ```go
   type Pet interface {
-  	Info()
+    Info()
   }
 
   type MyPet struct {
-  	Description string
+    Description string
   }
 
   // This means MyPet implements the interface Pet without using any keyword
   func (myPet MyPet) Info() {
-  	fmt.Println(myPet.Description)
+    fmt.Println(myPet.Description)
   }
   ```
 

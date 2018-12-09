@@ -252,6 +252,8 @@ The following are some general aspects only.
     }
   }
   ```
+  
+  A nil error denotes success and a non-nil error denotes failure.
 
   Output:
 

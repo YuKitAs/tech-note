@@ -173,7 +173,7 @@ The following are some general aspects only.
   }
   ```
 
-9. How to extend a class?
+9. How to extend a class and how to implement an interface?
 
   A type can't be simply extended in another package. Type embedding is something similar to inheritance in the Go world.
 
@@ -207,6 +207,23 @@ The following are some general aspects only.
   }
 
   fmt.Printf("%s is a %d-year-old %s.\n", myPet.Name, myPet.Age, myPet.Species)
+  ```
+
+  An interface is implemented implicitly like:
+
+  ```go
+  type Pet interface {
+  	Info()
+  }
+
+  type MyPet struct {
+  	Description string
+  }
+
+  // This means MyPet implements the interface Pet without using any keyword
+  func (myPet MyPet) Info() {
+  	fmt.Println(myPet.Description)
+  }
   ```
 
 10. How to call the constructor of the super class?
@@ -248,7 +265,7 @@ The following are some general aspects only.
 
   ```go
   package sum
-  
+
   func Sum(x, y int) int {
     return x + y
   }
@@ -276,7 +293,7 @@ The following are some general aspects only.
   ```
 
   Output:
-  
+
   ```
   === RUN   TestSum
   --- PASS: TestSum (0.00s)

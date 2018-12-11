@@ -50,3 +50,9 @@ $ git checkout <tag-name>
 ```console
 $ git push origin <tag-name>
 ```
+
+* Delete a tag:
+
+```console
+$ git tag --delete <tag-name>
+```

@@ -5,7 +5,7 @@ Prerequisite: [npm](https://www.npmjs.com/get-npm), [Yarn](https://yarnpkg.com/e
 1. Initialize a Vue.js project:
 
   ```console
-  $ vue init webpack <project-name>
+  $ vue create <project-name>
   ```
 
 2. In the project root, add `electron` dependency using `yarn`:
@@ -50,6 +50,6 @@ Prerequisite: [npm](https://www.npmjs.com/get-npm), [Yarn](https://yarnpkg.com/e
 5. Start the test server:
 
   ```console
-  $ yarn dev
+  $ yarn serve
   $ yarn electron
   ```

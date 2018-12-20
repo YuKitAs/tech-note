@@ -1,6 +1,6 @@
 # Create and Remove Start Menu Entries
 
-In `~/.local/share/applications`, create a `*.desktop` file with the following basic meta data:
+On Xubuntu, start menu entries are `*.desktop` files stored in `~/.local/share/applications` with the following basic meta data:
 
 ```
 [Desktop Entry]
@@ -11,7 +11,7 @@ Terminal=false
 Type=Application
 ```
 
-To create a desktop shortcut launcher, we can copy this file into `~/Desktop`. However, if the desktop shortcut is deleted, we need to remove the entry from start menu by deleting the corresponding `*.desktop` file in `~/.local/share/applications`.
+To create a desktop shortcut launcher, just make this file executable and copy it into `~/Desktop`.
 
 ## Reference
 

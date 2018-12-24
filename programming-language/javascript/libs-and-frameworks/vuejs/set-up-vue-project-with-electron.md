@@ -30,20 +30,17 @@ Prerequisite: [npm](https://www.npmjs.com/get-npm), [Yarn](https://yarnpkg.com/e
   app.on('ready', createWindow)
   ```
 
-4. Edit `package.json` like:
+4. Edit `package.json`, add two lines like:
 
 
   ```diff
   +  "main": "main.js",
      "scripts": {
-       "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-  -    "start": "npm run dev",
+       "serve": "vue-cli-service serve",
   +    "electron": "electron . dev",
-       "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
-       "e2e": "node test/e2e/runner.js",
-       "test": "npm run unit && npm run e2e",
-       "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-       "build": "node build/build.js"
+       "build": "vue-cli-service build",
+       "lint": "vue-cli-service lint",
+       "test:unit": "vue-cli-service test:unit"
      }
   ```
 

@@ -1,6 +1,8 @@
 # Use of Log4j2
 
-1. Exclude the default logging of Spring Boot and add Log4j2 dependency e.g. into `pom.xml` of a Maven project:
+1. Exclude the default logging of Spring Boot and add Log4j2 dependency.
+
+  In `pom.xml` of Maven project:
 
   ```xml
   <dependency>
@@ -17,6 +19,20 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-log4j2</artifactId>
   </dependency>
+  ```
+  
+  In `build.gradle` of Gradle project:
+  
+  ```groovy
+  configurations {
+    implementation.exclude module: 'spring-boot-starter-logging'
+  }
+  
+  dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-log4j2')
+    ...
+  }
   ```
 
 2. We can use the default configuration file provided by Spring Boot for Log4j2 by specifying it in `application.properties` as follows:

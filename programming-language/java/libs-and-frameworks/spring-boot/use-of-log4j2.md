@@ -59,7 +59,7 @@
   </Configuration>
   ```
 
-3. In the class that needs logging, initialize the logger as follows:
+3. In the class that needs logging, initialize the logger as follows (import `Logger` and `LogManager` from `org.apache.logging.log4j`):
 
   ```java
   private static final Logger logger = LogManager.getLogger(ClassName.class);

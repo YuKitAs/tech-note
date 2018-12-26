@@ -65,4 +65,4 @@
   private static final Logger logger = LogManager.getLogger(ClassName.class);
   ```
 
-4. Different log levels can be used with `logger.debug()`, `logger.info()`, `logger.warn()`, `logger.trace()`, `logger.error()` and `logger.fatal()`.
+4. Different log levels can be used with `logger.trace()`, `logger.debug()`, `logger.info()`, `logger.warn()`, `logger.error()` and `logger.fatal()`.

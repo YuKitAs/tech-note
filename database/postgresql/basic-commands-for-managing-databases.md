@@ -18,8 +18,14 @@
   postgres=# \c <db_name>
   ```
 
-* **List tables**:
+* **List all tables in the current database**:
 
   ```console
   postgres=# \dt
+  ```
+
+* **Describe a table**:
+
+  ```console
+  postgres=# \d <table_name>
   ```

@@ -55,4 +55,4 @@
   $ git checkout -b <branch-name> origin/<branch-name>
   ```
 
-For merging and rebasing see [note](https://github.com/YuKitAs/tech-note/blob/master/git/git-merge-and-git-rebase.md).
+For merging and rebasing see [note](https://github.com/YuKitAs/tech-note/blob/master/version-control/git/git-merge-and-git-rebase.md).

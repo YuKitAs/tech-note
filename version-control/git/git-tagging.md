@@ -51,7 +51,13 @@ $ git checkout <tag-name>
 $ git push origin <tag-name>
 ```
 
-* Delete a tag:
+* Delete a remote tag:
+
+```console
+$ git push --delete origin <tag-name>
+```
+
+* Delete a local tag:
 
 ```console
 $ git tag --delete <tag-name>

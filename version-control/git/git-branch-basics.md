@@ -1,5 +1,7 @@
 # Git Branch Basics
 
+For merging and rebasing see [note](https://github.com/YuKitAs/tech-note/blob/master/version-control/git/git-merge-and-git-rebase.md).
+
 * Create a new branch (track a remote branch) and switch to it:
 
   ```console
@@ -55,4 +57,8 @@
   $ git checkout -b <branch-name> origin/<branch-name>
   ```
 
-For merging and rebasing see [note](https://github.com/YuKitAs/tech-note/blob/master/version-control/git/git-merge-and-git-rebase.md).
+* Compare another branch with the current branch:
+
+  ```console
+  $ git diff <another-branch>...
+  ```

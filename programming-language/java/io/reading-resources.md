@@ -20,7 +20,7 @@ URL url = getClass().getResource("/filename");
 
 The leading slash indicates the root `main/resources`. `Class.getResource()` can also accept a `filename` which is located relatively to the package of the class.
 
-Another possibility is to use [`ClassLoader`]((https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html) which considers the location of the `filename` is the root:
+Another possibility is to use [`ClassLoader`](https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html) which considers the location of the `filename` as the root:
 
 ```java
 URL url = getClass().getClassLoader().getResource("filename");

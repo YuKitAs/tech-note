@@ -5,19 +5,19 @@ The Docker daemon always runs as the `root` user, the other users can only acces
 1. Check if the `docker` group already exists:
 
   ```console
-  $ cat /etc/group | grep docker:
+  # grep docker /etc/group
   ```
 
   If not, create it:
 
   ```console
-  $ sudo groupadd docker
+  # groupadd docker
   ```
 
 2. Add the current user to the `docker` group:
 
   ```console
-  $ sudo usermod -aG docker $USER
+  # usermod -aG docker $USER
   ```
 
 3. Log out and log in, or re-evaluate the group members from inside the shell (see [note](https://github.com/YuKitAs/tech-note/blob/master/operating-system/linux/administration/users-and-sudo-group.md))

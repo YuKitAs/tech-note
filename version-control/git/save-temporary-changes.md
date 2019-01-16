@@ -23,4 +23,14 @@
   ```
   The difference between `apply` and `pop` is whether the changes would be kept in stash or removed.
 
-  All the stash entries can be removed with `stash clear`, a single stash entry can be removed with `git drop [stash-entry]`.
+All the stash entries can be removed with 
+
+```console
+$ git stash clear
+```
+  
+A single stash entry can be removed with 
+
+```console
+$ git drop [stash-entry]
+```

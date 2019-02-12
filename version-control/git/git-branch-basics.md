@@ -8,13 +8,13 @@ For merging and rebasing see [note](https://github.com/YuKitAs/tech-note/blob/ma
   $ git checkout -b <new-branch>
   ```
 
-* Delete a fully merged branch:
+* Delete a fully merged branch locally:
 
   ```console
   $ git branch -d <branch-name>
   ```
 
-* Delete a (not fully merged) branch:
+* Delete a (not fully merged) branch locally:
 
   ```console
   $ git branch -D <branch-name>
@@ -61,4 +61,10 @@ For merging and rebasing see [note](https://github.com/YuKitAs/tech-note/blob/ma
 
   ```console
   $ git diff <another-branch>...
+  ```
+  
+* List all remote branches:
+
+  ```console
+  $ git branch -r
   ```

@@ -50,11 +50,11 @@ For merging and rebasing see [note](https://github.com/YuKitAs/tech-note/blob/ma
   $ git push origin :<old-name> <new-name>
   ```
 
-* Checkout an unmerged branch (for review):
+* Checkout a remote branch:
 
   ```console
   $ git fetch origin
-  $ git checkout -b <branch-name> origin/<branch-name>
+  $ git checkout <branch-name>
   ```
 
 * Compare another branch with the current branch:

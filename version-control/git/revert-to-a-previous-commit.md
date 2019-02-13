@@ -4,19 +4,21 @@
 
 To give up committed changes and revert to a previous commit.
 
-Copy the unwanted commit hash from `git log` and then run:
+Copy the commit hash that should be kept from `git log` and then run:
 
 ```console
 $ git reset --hard <commit>
 ```
 
+The HEAD will be reset to this commit, means all the commits after this one will be gone.
+
 Undo the most recent commit:
 
 ```console
-$ git reset --hard HEAD~1
+$ git reset --hard HEAD~
 ```
 
-`~1` means up one level in the hierarchy.
+`HEAD~` is shorthand for `HEAD~1`, pointing to the previous commit of the most recent one.
 
 In some situations like a branch is accidentally deleted, so that commit logs can not be accessed by `git log`, use `git reflog` to check all the local actions instead, and then do `git reset` as mentioned above.
 
@@ -33,5 +35,5 @@ $ git reset --soft <commit>
 Undo the most recent commit:
 
 ```console
-$ git reset HEAD~1
+$ git reset HEAD~
 ```

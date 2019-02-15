@@ -5,6 +5,14 @@ Git has three configuration levels: local (repository-specific settings), global
 We can use `--local | --global | --system` flag to set the configuration for a specific level like:
 
 ```console
-$ git config --global user.name "YuKitAs"
+$ git config --global user.name YuKitAs
 $ git config --global user.email YuKitAs@example.com
+```
+
+Then the following content will be added/updated in `~/.gitconfig`:
+
+```
+[user]
+	email = YuKitAs@example.com
+	name = YuKitAs
 ```

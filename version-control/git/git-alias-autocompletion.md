@@ -17,8 +17,8 @@ When defined aliases for Git like `alias gco='git checkout'`, the auto-completio
   __git_complete <git_alias> _git<_command>
   ```
 
-2. Source `~/.bashrc`. Then we can checkout a branch by auto-completing the branch name with Git alias:
+2. Source `~/.bashrc`. Try auto-completion with Git alias:
 
   ```console
-  $ gco <tab>
+  $ gco <tab><tab>
   ```

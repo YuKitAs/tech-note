@@ -70,6 +70,12 @@
   ```
 
   Add `-f dangling=true` to only remove dangling/untagged images.
+  
+* **Show history of a Docker image**:
+
+  ```console
+  $ docker history <image-ID|image-name>
+  ```
 
 ## Docker Container
 

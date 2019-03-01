@@ -1,4 +1,4 @@
-# Save Temporary Changes
+# Save Temporary Changes with `git-stash`
 
 1. To save uncommitted local changes:
   
@@ -35,7 +35,7 @@
   A single stash entry can be removed with 
 
   ```console
-  $ git drop [stash-entry]
+  $ git stash drop [stash-entry]
   ```
   
   So actually, `stash pop` is the combination of `stash apply` and `stash drop`. 

@@ -31,7 +31,7 @@
   ALTER USER <username> WITH <PERMISSION1> <PERMISSION2> ...;
   ```
   
-  For Grafana:
+  For [Grafana](http://docs.grafana.org/features/datasources/postgres):
   
   ```sql
   GRANT SELECT ON <table> TO <username>;

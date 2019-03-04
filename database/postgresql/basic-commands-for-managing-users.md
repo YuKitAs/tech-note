@@ -30,6 +30,12 @@
   ```sql
   ALTER USER <username> WITH <PERMISSION1> <PERMISSION2> ...;
   ```
+  
+  For Grafana:
+  
+  ```sql
+  GRANT SELECT ON <table> TO <username>;
+  ```
 
 * **Revoke permissions**:
 

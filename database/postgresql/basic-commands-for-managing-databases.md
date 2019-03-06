@@ -1,21 +1,33 @@
 # Basic Commands for Managing Databases
 
-* **Create a database for a user**:
-
-  ```sql
-  CREATE DATABASE <db_name> OWNER <username>;
-  ```
-
 * **Connect to a database as a user from shell with `psql`**:
 
   ```console
   $ psql <db_name> <username>
   ```
 
+* **Create a database for a user**:
+
+  ```sql
+  postgres=# CREATE DATABASE <db_name> OWNER <username>;
+  ```
+  
+* **List all databases**:
+
+  ```console
+  postgres=# \l
+  ```
+
 * **Switch to another database as current user**:
 
   ```console
   postgres=# \c <db_name>
+  ```
+  
+* **Switch to another database as another user**:
+
+  ```console
+  postgres=# \c <db_name> <username>
   ```
 
 * **List all tables in the current database**:

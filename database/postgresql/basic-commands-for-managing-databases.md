@@ -8,7 +8,7 @@
 
 * **Create a database for a user**:
 
-  ```sql
+  ```console
   postgres=# CREATE DATABASE <db_name> OWNER <username>;
   ```
   

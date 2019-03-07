@@ -10,6 +10,8 @@ UPDATE <table_name> SET <col_name> = <col_name> + {'new-value-1', 'new-value-2'}
 
 ## Filter by element in set
 
+Primary-key columns supported only.
+
 ```sql
 SELECT <col_name> FROM <table_name> WHERE <col_name> CONTAINS 'value';
 ```

@@ -26,7 +26,7 @@ For merging and rebasing see [note](https://github.com/YuKitAs/tech-note/blob/ma
   $ git push -u origin <branch-name>
   ```
 
-* Push to the current branch:
+* Push to the current branch (only when the HEAD is pointing to the last commit in the current branch):
 
   ```console
   $ git push -u origin HEAD

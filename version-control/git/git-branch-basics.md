@@ -20,17 +20,21 @@ For merging and rebasing see [note](https://github.com/YuKitAs/tech-note/blob/ma
   $ git branch -D <branch-name>
   ```
 
-* Push to a branch:
+* Push to a remote branch:
 
   ```console
   $ git push -u origin <branch-name>
   ```
 
-* Push to the current branch (only when the HEAD is pointing to the last commit in the current branch):
+  `-u` is shorthand for `--set-upstream`, which will set up an upstream reference and only needs to be specified once for the first time. Ever after, `git push` can be used to push to `origin/<current-branch-name>` automatically.
+
+* Push to a remote branch from the current branch:
 
   ```console
   $ git push -u origin HEAD
   ```
+
+  `HEAD` should be used only when the HEAD is pointing to the last commit in the current branch (check with `git log`).
 
 * Rename a branch:
 
@@ -53,7 +57,7 @@ For merging and rebasing see [note](https://github.com/YuKitAs/tech-note/blob/ma
 * Checkout a remote branch:
 
   ```console
-  $ git fetch origin
+  $ git fetch <remote>
   $ git checkout <branch-name>
   ```
 
@@ -62,7 +66,7 @@ For merging and rebasing see [note](https://github.com/YuKitAs/tech-note/blob/ma
   ```console
   $ git diff <another-branch>...
   ```
-  
+
 * List all remote branches:
 
   ```console

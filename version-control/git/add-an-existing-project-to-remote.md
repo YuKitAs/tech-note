@@ -8,13 +8,13 @@
     $ git init
     ```
 
-    Or for an existing Git repo, change the current remote name with:
+    As the default name of the remote repo is "origin", if the local project is already an existing Git repo and we don't want to reinitialize it, we need to change the current remote name to avoid conflict later, e.g. rename it as "old-origin":
 
     ```console
     $ git remote rename origin old-origin
     ```
 
-3. Add the remote repo URL to new remote, for example:
+3. Add the remote repo URL to remote `origin`:
 
     ```console
     $ git remote add origin <new-repo>.git

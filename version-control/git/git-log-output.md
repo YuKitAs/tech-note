@@ -14,13 +14,19 @@ Some useful commands to adjust the output of Git logs.
   $ git log --stat
   ```
 
+* Show graphical representation of the commit history:
+
+  ```console
+  $ git log --graph
+  ```
+
 * Show brief commit in one line (with format `<hash> <message>`):
 
   ```console
   $ git log --oneline
   ```
 
-  It would be useful to combine with the graph to achieve a clearer view:
+  It would be useful to combine with the graph to achieve a condensed view:
 
   ```console
   $ git log --oneline --graph

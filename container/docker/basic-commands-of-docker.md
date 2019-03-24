@@ -126,6 +126,10 @@
   ```console
   $ docker ps -aq --no-trunc -f status=exited | xargs docker rm
   ```
+  
+  ```console
+  $ docker container prune
+  ```
 
 * **Execute commands in a running container**:
 

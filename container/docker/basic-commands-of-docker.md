@@ -139,12 +139,16 @@
   $ docker exec -it <container-ID|container-name> bash
   ```
 
-* **Exit a container (the Bash session)**: `exit`
-
 * **Copy files from host into container**:
 
   ```console
-  $ docker cp <file> <container-ID>:/path/to/<file>
+  $ docker cp /path/to/file <container-ID>:/path/to/file
+  ```
+  
+* **Copy files from container to host**:
+
+  ```console
+  $ docker cp <container-ID>:/path/to/file /path/to/file
   ```
 
 * **Output logs for a running container**:

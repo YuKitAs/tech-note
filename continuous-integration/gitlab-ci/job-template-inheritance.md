@@ -20,7 +20,7 @@ job2:
     - script2
 ```
 
-Since GitLab 11.3 `extends` is introduced to replace the YAML anchors:
+Since GitLab 11.3 [`extends`](https://docs.gitlab.com/ee/ci/yaml/#extends) is introduced to replace the YAML anchors:
 
 ```yaml
 .job_template:

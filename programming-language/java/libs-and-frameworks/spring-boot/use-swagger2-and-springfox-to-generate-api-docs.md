@@ -51,6 +51,15 @@
   }
   ```
 
+  With `UiConfigurationBuilder`, we can actually configure more properties to meet special needs. For example:
+
+  ```java
+  return UiConfigurationBuilder.builder()
+        .docExpansion(DocExpansion.LIST)
+        .operationsSorter(OperationsSorter.METHOD)
+        .defaultModelsExpandDepth(-1).build();
+  ```
+
 3. Add annotations in the controller class, like:
 
   ```java

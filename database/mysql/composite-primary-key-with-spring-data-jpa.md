@@ -47,7 +47,7 @@ This note is basically about how to store and retrieve such data with Spring Boo
 
   ```java
   Optional<MyEntity> findByMyCompositeKeyKey1AndMyCompositeKeyKey2AndMyCompositeKeyKey3(
-  String key1, String key2, String key3);
+          String key1, String key2, String key3);
   ```
 
 According to the definitions above, the table `my_entities` in MySQL would look like this:

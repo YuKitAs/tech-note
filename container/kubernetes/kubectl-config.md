@@ -36,6 +36,12 @@ export KUBECONFIG=~/.kube/kubeconfig-context:~/.kube/kubeconfig-staging:~/.kube/
 source <(kubectl completion bash)
 ```
 
+If an alias is set for `kubectl`, add the following config to use Bash completion:
+
+```
+complete -o default -F __start_kubectl <kubectl_alias>
+```
+
 The `kubeconfig-context` file only selects the current active context, i.e. the (cluster, user, namespace) combination. We can check it with
 
 ```console

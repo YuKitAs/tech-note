@@ -23,6 +23,14 @@ $ su - $USER
 $ id
 ```
 
+## List all local users
+
+```console
+$ cat /etc/passwd
+```
+
+The output, e.g. `root:x:0:0:root:/root:/bin/bash` contains information about user ID, group ID, full name of the user, user home directory and login shell.
+
 ## List all users in `sudo` group
 
 ```console

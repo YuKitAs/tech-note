@@ -10,7 +10,6 @@ integers.forEach(System.out::println);
 ```
 
 Output:
-
 ```
 3
 7
@@ -27,7 +26,6 @@ words.forEach((k, v) -> System.out.println(k + ": " + v));
 ```
 
 Output:
-
 ```
 random: 6
 custom: 6
@@ -43,9 +41,20 @@ groupedWords.forEach((k, v) -> System.out.println(k + ": " + v));
 ```
 
 Output:
-
 ```
 4: [word]
 6: [random, custom]
 9: [generator]
+```
+
+`partitioningBy()` can take a predicate and split the elements into `Map<Boolean, List<T>>`:
+
+```java
+Map<Boolean, List<String>> partitionedStrings = strings.stream().collect(Collectors.partitioningBy(s -> s.length() < 5));
+System.out.println(partitionedStrings.get(true));
+```
+
+Outout:
+```
+[word]
 ```

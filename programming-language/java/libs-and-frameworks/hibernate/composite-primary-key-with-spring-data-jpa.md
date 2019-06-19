@@ -1,38 +1,34 @@
 # Composite Primary Key with Spring Data JPA
 
-In MySQL, multiple primary keys can be combined to identify an entity.
-This note is basically about how to store and retrieve such data with Spring Boot and Spring Data JPA.
+A composite key consists of multiple primary keys that can be combined to identify an entity.
 
-1. Create an Embeddable class for the Composite Key, which has to implement `Serializable`:
+This note is basically about how to store and retrieve such data with Spring Boot and Spring Data JPA. There are two different ways to specify composite keys.
+
+## Using `@Embeddable`
+1. Create an Embeddable class which has to implement `Serializable`:
 
   ```java
   @Embeddable
   public class MyCompositeKey implements Serializable {
-      @NotNull
       @Column(name = "key_one")
       private String key1;
 
-      @NotNull
       @Column(name = "key_two")
       private String key2;
-
-      @NotNull
-      @Column(name = "key_three")
-      private String key3;
 
       /*
       The rest omitted for simplicity
       */
   ```
 
-2. Create the Entity class like:
+2. Create the Entity class containing `@EmbeddedId` instead of `@Id`:
 
   ```java
   @Entity
   @Table(name = "my_entities")
   public class MyEntity {
       @EmbeddedId
-      private final MyCompositeKey myCompositeKey;
+      private MyCompositeKey myCompositeKey;
 
       @Nullable
       private String description;
@@ -46,8 +42,36 @@ This note is basically about how to store and retrieve such data with Spring Boo
 3. In the Repository interface, we have to explicitly write the method like:
 
   ```java
-  Optional<MyEntity> findByMyCompositeKeyKey1AndMyCompositeKeyKey2AndMyCompositeKeyKey3(
-          String key1, String key2, String key3);
+  Optional<MyEntity> findByMyCompositeKeyKey1AndMyCompositeKeyKey2(
+          String key1, String key2);
+  ```
+
+## Using `@IdClass`
+
+1. Create the composite key class as above without the `@Embeddable` annotation.
+
+2. In the Entity class, mark every primary key field with `@Id`:
+
+  ```java
+  @Entity
+  @Table(name = "my_entities")
+  @IdClass(MyCompositeKey.class)
+  public class MyEntity {
+      @Id
+      @Column(name = "key_one")
+      private String key1;
+
+      @Id
+      @Column(name = "key_two")
+      private String key2;
+
+      @Nullable
+      private String description;
+
+      /*
+      The rest omitted for simplicity
+      */
+  }
   ```
 
 According to the definitions above, the table `my_entities` in MySQL would look like this:

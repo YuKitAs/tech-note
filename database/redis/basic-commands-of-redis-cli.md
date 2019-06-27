@@ -24,10 +24,22 @@ FLUSHALL
 SET <key> <value>
 ```
 
-* **Get value by key**:
+* **Check the type of value a key maps to**:
+
+```
+TYPE <key>
+```
+
+* **Get string value by key**:
 
 ```
 GET <key>
+```
+
+* **Get set value by key**:
+
+```
+SMEMBERS <key>
 ```
 
 * **Set a hash with multiple fields and values:**

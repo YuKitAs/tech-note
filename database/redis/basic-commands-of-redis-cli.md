@@ -72,3 +72,9 @@ HGETALL <key>
 ```
 SELECT <db_id>
 ```
+
+* **Get the size (cardinality) of a set**:
+
+```
+SCARD <key>
+```

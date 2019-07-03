@@ -1,6 +1,6 @@
 # Spring Value Annotation
 
-The `@Value` annotation is used to inject values to fields in Beans. The values can be read from external configurations.
+The `@Value` annotation is used to inject values to fields in Beans. The values can be read from default property sources (incl. properties/YAML files, environment variables and system properties) or external configurations by using `@@PropertySource`.
 
 ## Simple Values
 
@@ -82,7 +82,7 @@ private String name;
 
 ## Default values
 
-If the property name cannot be found in property source, incl. properties/YAML files, environment variables and system properties, default values can be set as follows:
+If the property name cannot be found in property source, default values can be set as follows:
 
 ```java
 @Value("${whatever.string:}")

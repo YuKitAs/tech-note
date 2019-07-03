@@ -28,22 +28,7 @@ public class DemoProperties {
 }
 ```
 
-A `@Configuration` or `@Component` annotation here is used to make this class as a bean so that we can inject it into any other class with `@Autowired`. Just for illustrative purpose:
+A `@Configuration` or `@Component` annotation here is used to make this class as a bean so that we can inject it into any other class with `@Autowired`.
 
-```java
-@RestController
-@RequestMapping("/")
-public class DemoController {
-    private final DemoProperties properties;
 
-    @Autowired
-    public DemoController(DemoProperties properties) {
-        this.properties = properties;
-    }
-
-    @GetMapping
-    public String getSecrets() {
-        return properties.getProp();
-    }
-}
-```
+Other ways to read values from propery sources see note [Spring Value Annotation](https://github.com/YuKitAs/tech-note/blob/master/programming-language/java/libs-and-frameworks/spring-boot/spring-value-annotation.md).

@@ -84,3 +84,9 @@ SCARD <key>
 ```
 MEMORY USAGE <key>
 ```
+
+* **Check expiration of a key**:
+
+```
+TTL <key>
+```

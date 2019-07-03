@@ -24,7 +24,7 @@ public String getName() {
 
 ## Array Values
 
-To read an array value, it's only possible use the following formats.
+To read an array value, it's only possible to use the following formats.
 
 In `application.properties`:
 
@@ -32,7 +32,7 @@ In `application.properties`:
 user.roles=A,B,C
 ```
 
-instead of
+*instead of*
 
 ```properties
 user.roles[0]=A
@@ -54,7 +54,7 @@ user:
   roles: A,B,C
 ```
 
-instead of
+*instead of*
 
 ```yaml
 user:
@@ -82,7 +82,7 @@ private String name;
 
 ## Default values
 
-If the property name cannot be found in property source, default values can be set as follows:
+If the property name cannot be found in any property source, default values can be set as follows:
 
 ```java
 @Value("${whatever.string:}")

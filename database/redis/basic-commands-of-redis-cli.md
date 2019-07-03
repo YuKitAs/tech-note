@@ -78,3 +78,9 @@ SELECT <db_id>
 ```
 SCARD <key>
 ```
+
+* **Check memory usage of a stored value**:
+
+```
+MEMORY USAGE <key>
+```

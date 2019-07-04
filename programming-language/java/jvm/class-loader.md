@@ -2,7 +2,7 @@
 
 The JVM uses a ClassLoader to load Java classes at runtime.
 
-## Architecture
+## Hierarchy
 
 1. Bootstrap class loader, root class loader, load Java core API classes
 2. System class loader, load application-specific classes

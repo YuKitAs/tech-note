@@ -35,7 +35,7 @@ $ curl -u <username>:<password>
 Display verbose logging:
 
 ```console
-$ curl -v http://localhost
+$ curl -v localhost:8080
 ```
 
 Use `-I` or `--head` option to get the document info like:
@@ -74,3 +74,23 @@ strict-transport-security: max-age=15724800
 ```
 
 Use `-o <file>` to write the output to a file.
+
+### Advanced
+
+To send a request repeatedly for a given number of times, e.g. 3 times:
+
+```console
+$ curl localhost:8080?[1-3]
+```
+
+If there are path variables in the URL, append it with a dummy query key like:
+
+```console
+$ curl localhost:8080?val=42&dummy=[1-3]
+```
+
+To send requests continuously over a given internal, an option is to use `watch`:
+
+```console
+$ watch -n <sec> curl localhost:8080
+```

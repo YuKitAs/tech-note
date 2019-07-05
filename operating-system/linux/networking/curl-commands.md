@@ -83,7 +83,7 @@ To send a request repeatedly for a given number of times, e.g. 3 times:
 $ curl localhost:8080?[1-3]
 ```
 
-If there are path variables in the URL, append it with a dummy query key like:
+If there are query parameters in the URL, append it with a dummy query key like:
 
 ```console
 $ curl localhost:8080?val=42&dummy=[1-3]

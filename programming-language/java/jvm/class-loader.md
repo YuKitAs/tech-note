@@ -11,7 +11,7 @@ root class loader written in native code, load Java core API classes in `<JAVA_H
 load code in `<JAVA_HOME>/jre/lib/ext` or other specified extension directory.
 
 3. System class loader:
-load application-specific classes in class path
+load application-specific classes in class path.
 
 4. User-defined custom class loaders:
 load code dynamically at runtime.

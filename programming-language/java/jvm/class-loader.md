@@ -4,9 +4,17 @@ The JVM uses a ClassLoader to load Java classes at runtime.
 
 ## Architecture
 
-1. Bootstrap class loader, root class loader, load Java core API classes
-2. System class loader, load application-specific classes
-3. User-defined class loaders
+1. Bootstrap class loader:
+root class loader written in native code, load Java core API classes in `<JAVA_HOME>/jre/lib`.
+
+2. Extensions class loader:
+load code in `<JAVA_HOME>/jre/lib/ext` or other specified extension directory.
+
+3. System class loader:
+load application-specific classes in class path
+
+4. User-defined custom class loaders:
+load code dynamically at runtime.
 
 ## Algorithm
 1. Check if the class is already loaded

@@ -54,11 +54,13 @@
   }
   ```
 
-5. Build shared library `libHello.so` (on Ubuntu) with `gcc`:
+5. Build shared library `libHello.so` (on Ubuntu in this example) with `gcc`.
 
   ```console
   gcc -shared -fpic -o libHello.so -I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux Main.c
   ```
+
+  `${JAVA_HOME}/include` is where `jni.h` is located.
 
 6. Run Java with explicitly specified library path:
 

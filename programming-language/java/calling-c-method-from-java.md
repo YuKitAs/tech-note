@@ -60,7 +60,7 @@
   gcc -shared -fpic -o libHello.so -I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux Main.c
   ```
 
-  `${JAVA_HOME}/include` is where `jni.h` is located.
+  `${JAVA_HOME}/include` is where `jni.h` is located. The descriptive part in the library name (soname) should map the name in the Java code.
 
 6. Run Java with explicitly specified library path:
 

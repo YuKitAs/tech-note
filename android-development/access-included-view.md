@@ -36,4 +36,4 @@ It will override the id of the TextView, as the included content will become:
     android:layout_height="wrap_content" />
 ```
 
-which means, now the TextView can only be accessed by `R.id.super_text` in this case. It's useful when the same view is included at several places, so they can be distinguished by different ids specified in `<include>`. 
+which means, now the TextView can only be accessed by `R.id.super_text` instead of `R.id.text`. It's useful when the same view is included at several places, so they can be distinguished by different ids specified in `<include>`.

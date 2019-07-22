@@ -35,3 +35,10 @@ kubectl -n <namespace> logs -f pod/<pod-name> <application-container-name>
 ```
 kubectl -n <namespace> get configmaps <pod-name> -o yaml
 ```
+
+**Restart a deployment/pods**:
+
+Since v1.15.0:
+```
+kubectl -n <namespace> rollout restart deployment <deployment-name>
+```

@@ -41,3 +41,16 @@
   ```console
   postgres=# \d <table_name>
   ```
+
+* **Set timezone**:
+
+  ```sql
+  SET TIME ZONE <timezone_name>;
+  SHOW TIMEZONE;
+  ```
+  
+* **List triggers**:
+
+  ```sql
+  SELECT * FROM information_schema.triggers;
+  ```

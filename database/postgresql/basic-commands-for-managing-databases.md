@@ -54,3 +54,8 @@
   ```sql
   SELECT * FROM information_schema.triggers;
   ```
+* **Dump a table**:
+
+  ```console
+  pg_dump -st <table_name> <db_name>
+  ```

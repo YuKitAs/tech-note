@@ -1,4 +1,4 @@
-Java Cloning
+# Java Cloning
 
 The [`clone()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--) method in `java.lang.Object` can create and return a copy of the object. Unlike using the assignment operator, the cloned object will have a new address, so `x.clone() != x` and `x.clone().getClass() == x.getClass()`, which shows the general intent of "copying an object". It's also typical that `x.clone().equals(x)` will be true, but none of these is an absolute requirement for implementing `clone()`.
 

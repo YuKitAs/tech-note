@@ -24,3 +24,19 @@
   ```
 
   A quick and dirty way is, of course, to change the permission of the file (`666` or `a+rw`).
+
+5. Place new library files in `arduino-1.8.9/libraries`, for example:
+
+  ```
+  arduino-1.8.9/libraries/Cool_Library/
+  ├── keywords.txt
+  ├── CoolLibrary.cpp
+  ├── CoolLibrary.h
+  └── README.md
+  ```
+
+  Then the the header file can directly be included like
+
+  ```
+  #include <CoolLibrary.h>
+  ```

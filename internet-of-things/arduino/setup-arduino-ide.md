@@ -14,3 +14,13 @@
   ```console
   sudo chown $USER arduino-arduinoide.desktop
   ```
+
+3. Connect Arduino, open Arduino IDE, make sure the board and the serial port are selected correctly in `Tools > Board` and `Tools > Port`.
+
+4. Select an example from `File > Examples` for test. On uploading code, it may show an error about serial port permission, because `/dev/ttyACM*` (e.g. `/dev/ttyACM0`) can only be read and written by a special group called `dialout`. The official suggestion is to add our user to this group:
+
+  ```console
+  sudo usermod -a -G dialout $USER
+  ```
+
+  A quick and dirty way is, of course, to change the permission of the file (`666` or `a+rw`).

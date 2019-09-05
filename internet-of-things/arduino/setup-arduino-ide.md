@@ -1,6 +1,6 @@
 # Setup Arduino IDE
 
-1. Download the latest Arduino IDE from [official site](https://www.arduino.cc/en/Main/Software).
+1. Download the latest Arduino IDE from the [official site](https://www.arduino.cc/en/Main/Software).
 
 2. Take ARDUINO 1.8.9 on Ubuntu 18.04 for example. In the root of the extracted directory `arduino-1.8.9`, run `./install.sh`. The following warning can be ignored (might have been removed in a newer release):
 
@@ -35,7 +35,7 @@
   └── README.md
   ```
 
-  Then the the header file can directly be included like
+  Then the header file can directly be included like
 
   ```
   #include <CoolLibrary.h>

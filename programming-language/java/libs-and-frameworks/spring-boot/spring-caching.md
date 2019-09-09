@@ -10,11 +10,9 @@ With the following example, we can track whether the response is retrieved from 
 @SpringBootApplication
 @EnableCaching
 public class DemoApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-
 }
 
 @Cacheable("messages")
@@ -90,5 +88,5 @@ public class CaffeineCacheConfig {
 It can be enabled with `spring.cache.type=simple`. This caching strategy doesn't allow time-based eviction. We need to use `@CacheEvict` with cache name to evict an entry from the cache, when a specific method is called, like a method for updating or deleting an entity.
 
 
-### Reference
+## Reference
 * [Spring Boot Features - Caching](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-caching.html)

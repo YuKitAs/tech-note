@@ -10,9 +10,9 @@ With the following example, we can track whether the response is retrieved from 
 @SpringBootApplication
 @EnableCaching
 public class DemoApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
 }
 
 @Cacheable("messages")

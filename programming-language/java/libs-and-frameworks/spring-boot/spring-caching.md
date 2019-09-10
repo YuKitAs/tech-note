@@ -56,6 +56,8 @@ Add the following dependencies:
 </dependency>
 ```
 
+If `spring-boot-starter-data-redis` has been installed  it could have contained an older version (< 2.8.0) of `caffeine`, which might lead to dependency conflicts, as Maven will take the version nearer in the dependency tree. 
+
 According to the [official docs](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-caching.html#boot-features-caching-provider-caffeine), it's sufficient to configure properties as follows:
 
 ```properties

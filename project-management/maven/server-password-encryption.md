@@ -1,4 +1,4 @@
-# Password Encryption
+# Server Password Encryption
 
 In order not to specify server password in plaintext in `~/.m2/settings.xml`, we need to use a master password to encrypt the server password. The master password can be generated using the following command:
 

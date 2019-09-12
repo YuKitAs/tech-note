@@ -21,3 +21,11 @@
   ```
   SELECT "<tag1-key>", "<tag2-key>", "<field1-key>" FROM "<measurement>" [WHERE "<field1-key>" condition]
   ```
+
+* Delete data/measurement:
+
+  ```
+  DELETE FROM <measurement> [WHERE <tag-key>="<tag-value>"]
+  DELETE FROM <measurement> [WHERE time condition]
+  DROP <measurement>
+  ```

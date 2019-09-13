@@ -38,7 +38,7 @@
   $ ssh -L 3000:localhost:3000 pi@<rpi-ip>
   ```
 
-4. Configure dashboard
+5. Configure dashboard
 
   Select datasource `InfluxDB`, HTTP connection URL `localhost:8086`, database `db`, measurement `db_measurement` and field `value`.
 
@@ -47,3 +47,4 @@
   ```
   q:"SELECT mean("value") FROM "db" WHERE time >= now() - 1h GROUP BY time(10s) fill(null)"
   ```
+  

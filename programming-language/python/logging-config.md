@@ -1,6 +1,6 @@
 # Logging Config
 
-* Import the `logging` module
+* Import the `logging` module:
 
   ```python
   import logging
@@ -47,3 +47,7 @@
   2019-09-15 23:00:00,437 - root - INFO - Jackdaws love my big sphinx of quartz.
   2019-09-15 23:00:00,438 - myapp - WARNING - Jail zesty vixen who grabbed pay from quack.
   ```
+
+## Reference
+
+* [Python Logging Cookbook](https://docs.python.org/3/howto/logging-cookbook.html#formatting-styles)

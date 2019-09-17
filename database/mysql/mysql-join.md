@@ -8,7 +8,9 @@ In standard SQL, the different types of JOINs are:
 4. **FULL (OUTER) JOIN**: returns all records that match in either left or right table
 5. **CROSS JOIN**: returns a Cartesian product of two tables (no `ON` clause)
 
-In MySQL, **JOIN** is syntactically equivalent to **INNER JOIN** and **CROSS JOIN**, they can replace each other. If `WHERE` clause is used with **CROSS JOIN**, it functions like an **INNER JOIN** with `ON` clause.
+If `WHERE` clause is used with **CROSS JOIN**, it functions like an **INNER JOIN** with `ON` clause.
+
+In MySQL, **JOIN** is syntactically equivalent to **INNER JOIN** and **CROSS JOIN**, they can replace each other. 
 
 ## Reference
 

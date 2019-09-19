@@ -1,6 +1,6 @@
 # Declare Constants
 
-Since Kotlin has no `static` keyword, there are basically two ways to declare constant in Kotlin.
+Since Kotlin has no `static` keyword, there are basically two ways to declare constants in Kotlin.
 
 1. Local constants on the top-level of the class file:
 

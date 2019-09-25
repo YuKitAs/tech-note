@@ -3,13 +3,13 @@
 For a project with Maven standard directory layout
 
 ```
-src/
-  main/
-    java/
-	resources/
-  test/
-    java/
-	resources/
+src
+├── main
+│   ├── java
+│   └── resources
+└── test
+    ├── java
+    └── resources
 ```
 
 If we want to read a file from the `main/resources` folder, we can use

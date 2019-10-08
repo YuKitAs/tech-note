@@ -72,3 +72,13 @@ For merging and rebasing see [note](https://github.com/YuKitAs/tech-note/blob/ma
   ```console
   $ git branch -r
   ```
+  
+* Show currently checked out branch:
+
+  ```console
+  $ git branch | grep \* | cut -d ' ' -f2
+  ```
+  Or
+  ```console
+  $ git rev-parse --abbrev-ref HEAD
+  ```

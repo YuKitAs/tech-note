@@ -54,11 +54,20 @@ $ git push origin <tag-name>
 * Delete a remote tag:
 
 ```console
-$ git push --delete origin <tag-name>
+$ git push -d origin <tag-name>
 ```
 
 * Delete a local tag:
 
 ```console
-$ git tag --delete <tag-name>
+$ git tag -d <tag-name>
+```
+
+* Rename a tag:
+
+```console
+$ git tag <new-tag-name> <old-tag-name>
+$ git tag -d <old-tag-name>
+$ git push origin :refs/tags/<old-tag-name>
+$ git push --tags
 ```

@@ -45,10 +45,22 @@ $ git show <tag-name>
 $ git checkout <tag-name>
 ```
 
-* Push a tag explicitly (By default, `git push` won't transfer tags to remote servers):
+* Push all tags (by default, `git push` won't transfer tags to remote servers):
+
+```console
+$ git push --tags
+```
+
+* Push a specific tag:
 
 ```console
 $ git push origin <tag-name>
+```
+
+* Rename a tag:
+
+```console
+$ git tag <new-tag-name> <old-tag-name>
 ```
 
 * Delete a remote tag:
@@ -56,18 +68,13 @@ $ git push origin <tag-name>
 ```console
 $ git push -d origin <tag-name>
 ```
+or
+```console
+$ git push origin :refs/tags/<tag-name>
+```
 
 * Delete a local tag:
 
 ```console
 $ git tag -d <tag-name>
-```
-
-* Rename a tag:
-
-```console
-$ git tag <new-tag-name> <old-tag-name>
-$ git tag -d <old-tag-name>
-$ git push origin :refs/tags/<old-tag-name>
-$ git push --tags
 ```

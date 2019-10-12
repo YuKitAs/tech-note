@@ -2,11 +2,11 @@
 
 ## `git-reset`
 
-Reset current branch HEAD to the specified commit. The default mode is `--mixed`.
+Reset current branch HEAD to the specified state. As opposed to `git add`, it can be used to reverse added files from staging area to working directory. To reverse committed files, there are different modes to choose, like `--soft`, `--mixed` or `--hard`. The default mode is `--mixed`, which means resetting commits and keeping the changes as "Untracked files".
 
 ### Soft reset
 
-To undo commits but keep the changes e.g. when committed to a false branch (but not pushed):
+To undo commits but keep the changes in the staging area as "Changes to be committed":
 
 ```console
 $ git reset --soft <commit>
@@ -36,4 +36,10 @@ Revert some existing commits and generate commits with messages stating which co
 
 ```console
 $ git revert <commit>
+```
+
+Revert commits without generating commit messages:
+
+```console
+$ git revert -n <commit>
 ```

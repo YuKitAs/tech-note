@@ -34,6 +34,6 @@ In some situations like a branch is accidentally deleted, so that commit logs ca
 
 Revert some existing commits and generate commits with messages stating which commits were reverted:
 
-```
+```console
 $ git revert <commit>
 ```

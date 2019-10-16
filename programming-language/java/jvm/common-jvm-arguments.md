@@ -5,7 +5,7 @@
 Minimal and maximal heap size for JVM:
 
 ```console
--Xms2G -Xmx5G
+-Xms256m -Xmx5G
 ```
 
 ## Garbage Collection

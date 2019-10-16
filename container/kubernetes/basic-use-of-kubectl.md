@@ -16,7 +16,19 @@ The `label-key` could be something like `project`, `app` as defined in the metad
 kubectl -n <namespace> describe pod <pod-name>
 ```
 
-**Enter an container in a pod**:
+**Delete a pod**:
+
+```
+kubectl -n <namespace> delete pod <pod-name>
+```
+
+**Delete a pod forcefully without confirmation that the running resource has been terminated**:
+
+```
+kubectl -n <namespace> delete pod <pod-name> --grace-period=0 --force
+```
+
+**Enter a container in a pod**:
 
 ```
 kubectl -n <namespace> exec <pod-name> -it -c <container-name> bash
@@ -24,10 +36,10 @@ kubectl -n <namespace> exec <pod-name> -it -c <container-name> bash
 
 Instead of `bash`, other commands can also be executed directly, e.g. `sh/env`.
 
-**Show logs of an application**:
+**Show logs of a container**:
 
 ```
-kubectl -n <namespace> logs -f pod/<pod-name> <application-container-name>
+kubectl -n <namespace> logs -f <pod-name> <container-name>
 ```
 
 **Output configmaps of a pod in `yaml` format**:

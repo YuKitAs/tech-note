@@ -8,7 +8,7 @@ kubectl -n <namespace> get pod [-l <label-key>=<label-value>]
 
 The `label-key` could be something like `project`, `app` as defined in the metadata for a project.
 
-Add `-w` (wait) to follow the creation and termination status of the pods.
+Add `-w|--watch` to follow the creation and termination status of the pods.
 
 **Show details of a pod**:
 

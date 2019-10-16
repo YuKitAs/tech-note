@@ -22,7 +22,7 @@ kubectl -n <namespace> describe pod <pod-name>
 kubectl -n <namespace> delete pod <pod-name>
 ```
 
-**Delete a pod forcefully without confirmation that the running resource has been terminated**:
+**Delete a pod forcefully without confirmation that the running pod has been terminated**:
 
 ```
 kubectl -n <namespace> delete pod <pod-name> --grace-period=0 --force

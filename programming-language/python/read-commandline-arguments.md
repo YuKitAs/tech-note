@@ -1,5 +1,17 @@
 # Read Command-line Arguments
 
+## `sys`
+
+With the `sys` module, a list of command line arguments can be read by position. The first argument is the name of the script itself.
+
+```python
+import sys
+
+print sys.argv[1]
+```
+
+## `argparse`
+
 With the help of the build-in [`argparse`](https://docs.python.org/3/howto/argparse.html) module, a Python3 script can read command-line arguments like:
 
 ```console

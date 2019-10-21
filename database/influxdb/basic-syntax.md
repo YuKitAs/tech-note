@@ -8,7 +8,7 @@
   USE <db>
   ```
 
-* Insert a new data point:
+* Insert a new data point (no space after `,`):
 
   ```
   INSERT <measurement>,<tag1-key>=<tag1-value>,<tag2-key>=<tag2-value> <field1-key>=<field1-value> [unix-nano-timestamp]

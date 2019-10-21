@@ -33,6 +33,12 @@
   ```python
   logger = logging.getLogger('myapp')
   ```
+  
+* Set logging level (the default logging level is `WARNING`):
+
+  ```python
+  logger.setLevel(logging.DEBUG)
+  ```
 
 * Logging example:
 

@@ -37,6 +37,8 @@ Set the starting/maximal size of the permanent generation:
 Log GC activity:
 
 ```console
+-XX:-PrintGC
+-XX:+PrintHeapAtGC
 -XX:+UseGCLogFileRotation
 -XX:NumberOfGCLogFiles=10
 -XX:GCLogFileSize=50M

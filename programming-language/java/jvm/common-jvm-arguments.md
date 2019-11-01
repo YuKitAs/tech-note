@@ -15,8 +15,23 @@ Declare a GC implementation:
 ```console
 -XX:+UseSerialGC
 -XX:+UseParallelGC
+-XX:+UseParallelOldGC
 -XX:+USeParNewGC
 -XX:+UseG1GC
+-XX:+UseConcMarkSweepGC
+```
+
+Set the size of the young generation:
+
+```console
+-Xmn1m
+```
+
+Set the starting/maximal size of the permanent generation:
+
+```console
+-XX:PermSize=20m
+-XX:MaxPermSize=20m
 ```
 
 Log GC activity:

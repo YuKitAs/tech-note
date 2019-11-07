@@ -1,5 +1,7 @@
 # Common JVM Arguments
 
+There are three kinds of options: standard options beginning with `-`, non-standard options beginning with `-X` (Java HotSpot VM specific), and developer options beginning with `-XX` (not stable).
+
 ## Heap Memory
 
 Minimal and maximal heap size for JVM:
@@ -37,9 +39,9 @@ Set the starting/maximal size of the permanent generation:
 Log GC activity:
 
 ```console
--XX:-PrintGC
--XX:-PrintGCDetails
--XX:-PrintGCDateStamps
+-XX:+PrintGC
+-XX:+PrintGCDetails
+-XX:+PrintGCDateStamps
 -XX:+PrintHeapAtGC
 -XX:+UseGCLogFileRotation
 -XX:NumberOfGCLogFiles=10

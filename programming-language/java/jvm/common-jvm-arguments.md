@@ -38,6 +38,8 @@ Log GC activity:
 
 ```console
 -XX:-PrintGC
+-XX:-PrintGCDetails
+-XX:-PrintGCDateStamps
 -XX:+PrintHeapAtGC
 -XX:+UseGCLogFileRotation
 -XX:NumberOfGCLogFiles=10

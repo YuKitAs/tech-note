@@ -1,6 +1,6 @@
 # Common JVM Arguments
 
-There are three kinds of options: standard options beginning with `-`, non-standard options beginning with `-X` (Java HotSpot VM specific), and developer options beginning with `-XX` (not stable).
+There are three kinds of options: standard options beginning with `-`, non-standard options beginning with `-X` (Java HotSpot VM specific), and developer options beginning with `-XX` (advanced, not stable).
 
 ## Heap Memory
 

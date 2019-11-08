@@ -35,5 +35,7 @@
 * Create a heap dump:
 
   ```console
-  $ jcmd <pid> GC.heap_dump filename=/path/to/file
+  $ jcmd <pid> GC.heap_dump </path/to/file>
   ```
+
+  If not specifying an absolute path, the dump file will be generated in the directory of the application.

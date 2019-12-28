@@ -1,4 +1,6 @@
-# Common `jcmd` Use
+# Use of Common Tools
+
+## `jcmd`
 
 `jcmd` is a utility to send diagnostic commands to the running JVM.
 
@@ -39,3 +41,13 @@
   ```
 
   If not specifying an absolute path, the dump file will be generated in the directory of the application.
+
+## `jps`
+
+`jps` is command to check all the running JVM processes. By default it will list the PID and the simple name of the main class or the name of the running executable, like:
+
+```
+26929 some-project.jar
+24595 Main
+26997 Jps
+```

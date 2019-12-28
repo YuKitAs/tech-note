@@ -25,5 +25,5 @@
 2. Or after packaging the application, run the generated executable with:
 
   ```console
-  $ java -jar target/<artifact-id>-<versoin>-runner.jar
+  $ java -jar target/<artifact-id>-<version>-runner.jar
   ```

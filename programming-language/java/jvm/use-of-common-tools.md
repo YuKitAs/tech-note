@@ -44,10 +44,17 @@
 
 ## `jps`
 
-`jps` is command to check all the running JVM processes. By default it will list the PID and the simple name of the main class or the name of the running executable, like:
+`jps` is a command to check all the instrumented JVM process status. By default it will list the PID and the simple name of the main class or the name of the running executable on the local machine like:
 
-```
+```console
+$ jps
 26929 some-project.jar
 24595 Main
 26997 Jps
 ```
+
+This is an experimental tool.
+
+## Reference
+
+* [JDK Tools and Utilities](https://docs.oracle.com/javase/8/docs/technotes/tools/), Oracle Java Documentation

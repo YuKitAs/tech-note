@@ -11,7 +11,7 @@ By default, failed messages will be immediately requeued to the original queue o
 
 To hold undelivered or failed messages we can declare a Dead-Letter Queue (DLQ). The messages in DLQ can be monitored, recovered or reprocessed in a custom way. Spring AMQP doesn't provide a standard mechanism for dead-lettering.
 
-Normally, the original queue should be declared with arguments `x-dead-letter-exchange` and `x-dead-letter-routing-key` which is the name of the DLQ.
+Normally, the original queue should be declared with arguments `x-dead-letter-exchange` which can be empty to indicate the default exchange and `x-dead-letter-routing-key` which is the name of the DLQ.
 
 ## Scheduled Messaging with [RabbitMQ Delayed Message Plugin](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/)
 

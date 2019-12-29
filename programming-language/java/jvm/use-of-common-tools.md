@@ -42,6 +42,12 @@
 
   If not specifying an absolute path, the dump file will be generated in the directory of the application.
 
+
+## `jconsole`
+
+`jconsole` is a graphical profiling tool for monitoring and managing a local or remote JVM.
+
+
 ## `jps`
 
 `jps` is a command to check all the instrumented JVM process status. By default it will list the PID and the simple name of the main class or the name of the running executable on the local machine like:
@@ -53,7 +59,7 @@ $ jps
 26997 Jps
 ```
 
-This is an experimental tool.
+This is an experimental tool. With the PID we can use other (experimental) tools like `jinfo`, `jmap` and `jstack` for troubleshooting.
 
 ## Reference
 

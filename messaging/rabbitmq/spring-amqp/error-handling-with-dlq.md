@@ -103,5 +103,3 @@ private void publishToDelayed(Event event, Message msg) {
     delayedTemplate.send(new Message(msg.getBody(), props));
 }
 ```
-
-## Message Recovering

@@ -17,7 +17,7 @@ Normally, the original queue should be declared with arguments `x-dead-letter-ex
 
 **Use case**: add delay before each new attempt, route expired messages to DLQ.
 
-**Concept**: declare a delayed exchange (`setDelayed(true)`) and bind it to the original queue. Publish failed messages to the delayed exchange with `x-delay` header and [message TTL](https://www.rabbitmq.com/ttl.html#per-message-ttl). The messages will be delivered to the original queue after `x-delay` milliseconds, and dead lettered after expiration.
+**Concept**: declare a delayed exchange (`setDelayed(true)`) and bind it to the original queue. Publish failed messages to the delayed exchange with `x-delay` header and [message TTL](https://www.rabbitmq.com/ttl.html#per-message-ttl)(`setExpiration(ms)`). The messages will be delivered to the original queue after `x-delay` milliseconds, and dead lettered after expiration.
 
 **Example**: [spring-boot-rabbitmq demo](https://github.com/YuKitAs/spring-boot-rabbitmq/tree/master/src/main/java/yukitas/rabbit/tut6)
 

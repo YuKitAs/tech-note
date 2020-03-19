@@ -24,7 +24,7 @@ import logging
 
   ```python
   logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                      filename='/app.log',
+                      filename='app.log',
                       filemode='w',
                       level='INFO')
   ```

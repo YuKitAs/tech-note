@@ -26,7 +26,7 @@ import logging
   logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                       filename='/app.log',
                       filemode='w',
-                      level='INFO'))
+                      level='INFO')
   ```
 
 The default file mode is `a` (append). The default logging level is `WARNING`.

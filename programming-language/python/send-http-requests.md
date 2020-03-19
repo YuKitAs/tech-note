@@ -1,6 +1,10 @@
 # Send HTTP Requests
 
-Install and import `requests` library.
+Install and import `requests` library:
+
+```python
+import requests
+```
 
 ## Requests
 

@@ -20,6 +20,11 @@ where `params`, `json` (used to be `data`) and `headers` are optional dictionari
 {'key1': 'value1', 'key2': ['value2', 'value3']}
 ```
 
+Example:
+```python
+requests.post('example.com', data=json.dump({'key': 'value'}), headers={'Content-Type': 'application/json'})
+```
+
 ## Responses
 
 * Response status code

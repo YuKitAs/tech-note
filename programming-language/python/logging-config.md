@@ -1,10 +1,12 @@
 # Logging Config
 
-* Import the `logging` module:
+Import the `logging` module:
 
-  ```python
-  import logging
-  ```
+```python
+import logging
+```
+
+## Global config
 
 * Configure logging format:
 
@@ -23,10 +25,14 @@
   ```python
   logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                       filename='/app.log',
-                      filemode='w')
+                      filemode='w',
+                      level='INFO'))
   ```
 
-  The default mode is `a` (append).
+The default file mode is `a` (append). The default logging level is `WARNING`.
+  
+  
+## Logger config
 
 * Define logger:
 
@@ -34,7 +40,7 @@
   logger = logging.getLogger('myapp')
   ```
   
-* Set logging level (the default logging level is `WARNING`):
+* Set logging level:
 
   ```python
   logger.setLevel(logging.DEBUG)

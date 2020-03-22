@@ -1,6 +1,6 @@
 # Deploy Docker App to Heroku
 
-Deploy Docker-based app with `Container Registry` method using Heroku CLI.
+Deploy Docker-based app with `Container Registry` deployment method using Heroku CLI.
 
 1. Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 

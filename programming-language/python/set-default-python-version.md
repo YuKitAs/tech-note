@@ -1,4 +1,4 @@
-# Set Default Version
+# Set Default Python Version
 
 Use `update-alternatives` to set Python version with priorities:
 
@@ -24,6 +24,6 @@ Check currently configured alternatives:
 Check default Python version:
 
 ```console
-$ python --version
+$ python -V
 Python 3.8.2
 ```

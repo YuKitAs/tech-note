@@ -20,6 +20,6 @@ $ ll -tr
 Although `ls` has `-s` (`--size`) option to sort by file size, the directory size it lists is actually the size of the meta information for the directory, so it's more reasonable to use `du` command combined with `sort`. The following commands list the directory/file size in human readable format:
 
 ```console
-$ du -sh * | sort -h
-$ du -sh * | sort -hr
+$ du -sh /path/to/dir/* | sort -h
+$ du -sh /path/to/dir/* | sort -hr # the biggest file first
 ```

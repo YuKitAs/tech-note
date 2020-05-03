@@ -2,7 +2,7 @@
 
 Spring Boot Actuator is used to monitor and manage applications in production. Above all there are two default endpoints `/actuator/info` and `/actuator/health`.
 
-Firstly the `spring-boot-starter-actuator` dependency should be added.
+Firstly the [`spring-boot-starter-actuator`](https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator) dependency should be added.
 
 In property file (e.g. `application.properties`), custom address, port and prefix for management endpoint (instead of `/actuator`) can be specified like:
 

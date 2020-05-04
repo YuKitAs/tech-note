@@ -1,15 +1,15 @@
 # Read File by Lines
 
-Read the first N lines:
+Read the first X lines:
 
 ```console
-$ head -n N <file>
+$ head -n X <file>
 ```
 
-Read the last M lines:
+Read the last X lines:
 
 ```console
-$ tail -n M <file>
+$ tail -n X <file>
 ```
 
 Read starting from line X:

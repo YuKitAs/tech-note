@@ -12,6 +12,12 @@ Read the last M lines:
 $ tail -n M <file>
 ```
 
+Read starting from line X:
+
+```console
+$ tail -n +X <file>
+```
+
 Read from line N to line M (starting at line N):
 
 ```console

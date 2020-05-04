@@ -21,10 +21,16 @@ info.app.description=This is my sample app
 info.app.version=0.0.1
 ```
 
-See details for `/health`:
+Show details for `/health`:
 
 ```properties
 management.endpoint.health.show-details=always
+```
+
+Expose other endpoints:
+
+```properties
+management.endpoints.web.exposure.include=env,loggers,...
 ```
 
 ## Reference

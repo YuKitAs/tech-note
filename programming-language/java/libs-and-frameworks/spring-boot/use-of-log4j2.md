@@ -1,5 +1,7 @@
 # Use of Log4j2
 
+## Basics
+
 1. Exclude the default logging of Spring Boot and add Log4j2 dependency.
 
   In `pom.xml` of Maven project:
@@ -64,3 +66,23 @@
   ```
 
   so that it won't be evaluated when this log level isn't enabled.
+
+## Setting log level dynamically
+
+1. Expose `/loggers` actuator endpoint (see [note](https://github.com/YuKitAs/tech-note/blob/master/programming-language/java/libs-and-frameworks/spring-boot/actuator-basics.md)):
+
+  ```
+  management.endpoints.web.exposure.include=loggers,...
+  ```
+
+2. Call `GET /loggers` to list all loggers and log levels, call `POST /loggers/{logger.name}` to change log level for a logger at runtime, for example:
+
+  ```console
+  $ curl 'http://localhost:8080/actuator/loggers/com.example' -i -X POST \
+      -H 'Content-Type: application/json' \
+      -d '{"configuredLevel":"debug"}'
+  ```
+
+### Reference
+
+* [Spring Boot Actuator Web API Documentation - Loggers](https://docs.spring.io/spring-boot/docs/current/actuator-api/html/#loggers-all)

@@ -17,3 +17,9 @@ Then choose a JDK version:
 ```console
 $ jenv global|local|shell oracle64-10.0.2
 ```
+
+Remove a JDK version:
+
+```console
+$ jenv remove oracle64-10.0.2
+```

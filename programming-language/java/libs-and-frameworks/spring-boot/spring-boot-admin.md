@@ -37,11 +37,9 @@ To use an admin UI for a Spring Boot application.
   @SpringBootApplication
   @EnableAdminServer
   public class Application {
-
-  	public static void main(String[] args) {
-  		SpringApplication.run(Application.class, args);
-  	}
-
+      public static void main(String[] args) {
+          SpringApplication.run(Application.class, args);
+      }
   }
   ```
 

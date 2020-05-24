@@ -14,28 +14,43 @@ The following are some general aspects only.
   }
   ```
 
-2. How to define variables, how to print `Hello + variable`?
+2. How to define variables?
 
   Static type declaration:
 
   ```go
   var name string
   name = "Bonbon"
-  fmt.Println("Hello " + name)
   ```
 
   Dynamic type declaration:
 
   ```go
   name := "Bonbon"
-  fmt.Println("Hello " + name)
   ```
 
-  Constant and formatting:
+  Constant declaration:
 
   ```go
   const NAME string = "Bonbon"
-  fmt.Printf("Hello %s", NAME)
+  ```
+
+2.5 How to print `Hello + variable`?
+
+  ```go
+  fmt.Println("Hello " + name)
+  fmt.Printf("Hello %v\n", name)
+  ```
+  
+  Default format for `%v` is:
+  ```
+  bool:                    %t
+  int, int8 etc.:          %d
+  uint, uint8 etc.:        %d, %#x if printed with %#v
+  float32, complex64, etc: %g
+  string:                  %s
+  chan:                    %p
+  pointer:                 %p
   ```
 
 3. Which data types does Go have?

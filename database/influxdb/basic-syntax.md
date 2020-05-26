@@ -29,3 +29,9 @@
   DELETE FROM <measurement> [WHERE time condition]
   DROP <measurement>
   ```
+ 
+ * Show human readable timestamp instead of epoch:
+
+  ```
+  > precision rfc3339
+  ```

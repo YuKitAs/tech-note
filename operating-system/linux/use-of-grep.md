@@ -1,4 +1,6 @@
-# Grep Multiple Patterns
+# Use of Grep
+
+## Search for Multiple Patterns
 
 To search lines containing `foo` OR `bar`:
 
@@ -14,4 +16,12 @@ To search lines containing `foo` AND `bar` (in any order):
 ```console
 $ grep -E "foo.*bar|bar.*foo" <file>
 $ grep "foo" <file> | grep "bar"
+```
+
+## Show Lines Before and After
+
+To search lines before (`-B`) and after (`-A`) match:
+
+```console
+$ grep -B<num> -A<num> <pattern> <file>
 ```

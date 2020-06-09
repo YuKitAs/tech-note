@@ -16,7 +16,7 @@
 
   where `tags` are indexed and `fields` are not.
 
-* Query data:
+* Query data (use single quotes for tag value):
 
   ```
   SELECT <tag1-key>, <field1-key> FROM <measurement> [WHERE <field1-key> condition AND <tag1-key>='<tag1-value>']
@@ -25,7 +25,7 @@
 * Delete data/measurement:
 
   ```
-  DELETE FROM <measurement> [WHERE <tag-key>="<tag-value>"]
+  DELETE FROM <measurement> [WHERE <tag-key>='<tag-value>']
   DELETE FROM <measurement> [WHERE time condition]
   DROP <measurement>
   ```

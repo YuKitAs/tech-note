@@ -19,7 +19,7 @@
 * Query data:
 
   ```
-  SELECT <tag1-key>, <tag2-key>, <field1-key> FROM <measurement> [WHERE <field1-key> condition]
+  SELECT <tag1-key>, <field1-key> FROM <measurement> [WHERE <field1-key> condition AND <tag1-key>='<tag1-value>']
   ```
 
 * Delete data/measurement:

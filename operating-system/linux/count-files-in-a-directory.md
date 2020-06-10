@@ -1,20 +1,18 @@
 # Count Files in a Directory
 
-To recursively list all files in a directory, we can use `find` with specified type like:
+To count all the files and directories (except `.*`) in the current directory:
 
 ```console
-$ find <dir> -type f
+$ ls -1 | wc -l
 ```
 
-Then we can use `wc -l` (short for `word count lines`) to count newlines.
-
-So the whole command would be:
+To *recursively* list all files in a directory, we can use `find` with specified type `f`:
 
 ```console
 $ find <dir> -type f | wc -l
 ```
 
-If we want to exclude a directory, we can try
+To exclude a directory:
 
 ```console
 $ find <dir> -type f -not -path "./<excluded-dir>/*" | wc -l

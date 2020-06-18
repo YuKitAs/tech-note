@@ -59,8 +59,8 @@
 1. Install InfluxDB Python client:
 
   ```console
-  $ pip install influxdb
-  $ pip install --upgrade influxdb
+  $ pip3 install influxdb
+  $ pip3 install --upgrade influxdb
   ```
 
 2. Create Python script:

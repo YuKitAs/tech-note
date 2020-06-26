@@ -1,6 +1,6 @@
 # Docker Networking
 
-Default Docker network drivers:
+Default Docker network drivers
 
 * `bridge`: usually used when applications run in standalone containers that need to communicate
 
@@ -11,26 +11,34 @@ Default Docker network drivers:
 **List networks**:
 
 ```console
-docker network ls
+$ docker network ls
 ```
 
 **Inspect detailed information of a network**:
 
 ```console
-docker network inspect <container_id>
+$ docker network inspect <network_name>
 ```
 
 **Remove a network**:
 
 ```console
-docker network rm <container_id>
+$ docker network rm <network_name>
 ```
 
 **Remove all unused networks**:
 
 ```console
-docker network prune
+$ docker network prune
 ```
+
+**Create a user-defined network**:
+
+```console
+$ docker network create <network_name>
+```
+
+Containers that use the same network (specified by `--network <network_name>`) can communicate with other with the container name as host name.
 
 ## Reference
 

@@ -1,6 +1,6 @@
 # Use of Camera Module
 
-* Enable the Camera interface in `Preferences > Raspberry Pi Configuration` and reboot
+* Enable the Camera interface in `Preferences > Raspberry Pi Configuration` or use `sudo raspi-config`, and reboot
 
 * Use [`raspistill`](https://www.raspberrypi.org/documentation/usage/camera/raspicam/raspistill.md) to take photos:
 

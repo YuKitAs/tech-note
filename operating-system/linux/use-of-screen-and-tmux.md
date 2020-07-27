@@ -10,3 +10,9 @@ Basic commands:
 |List all sessions|`screen -ls`|`tmux ls`|
 |Reattach|`screen -r <session-id>`|`tmux attach-session -t <session-id>`|
 |Kill detached session|`screen -S <session-id> quit`|`tmux kill-session -t <session-id>`|
+
+Create a named tmux session:
+
+```console
+$ tmux new -s <session_name>
+```

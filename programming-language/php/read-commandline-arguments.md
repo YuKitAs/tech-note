@@ -19,9 +19,9 @@ string(4) "arg1"
 
 ## Parse options
 
-Options: a character (`a-zA-Z0-9`) starting with `-`.
+* Options: a character (`a-zA-Z0-9`) starting with `-`.
 
-Long options: a string starting with `--`.
+* Long options: a string starting with `--`.
 
 Example:
 ```php
@@ -37,7 +37,7 @@ Test:
 php script.php -f foo -v -a --required value --optional=bar --opt
 ```
 
-Example:
+Output:
 ```php
 array(6) {
   ["f"]=>

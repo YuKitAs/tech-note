@@ -54,3 +54,14 @@ try (BufferedReader in = new BufferedReader(new FileReader("input.txt"));
 ```
 
 The output line terminator may be different from the input line terminator, according to the current operating system.
+
+## Data streams
+
+Data streams support I/O of primitive data type values as well as Strings. `DataInputStream` and `DataOutputStream` implement `DataInput` and `DataOutput`, and must be constructed as a wrapper for a byte stream.
+
+One drawback of `DataStreams` is that it uses floating point numbers to represent values, the current way is to use `BigDecimal` type with `ObjectStreams`.
+
+
+## Object streams
+
+Object streams support I/O of objects. `ObjectInputStream` and `ObjectOutputStream` implement `ObjectInput` and `ObjectOutput`, which are subinterfaces of `DataInput` and `DataOutput`.

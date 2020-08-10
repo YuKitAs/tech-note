@@ -12,4 +12,8 @@
   System.out.println(Paths.get("").toAbsolutePath());
   ```
 
-  `Paths.get("")` is calling `FileSystems.getDefault().getPath("")`.
+  which is equivalent to:
+
+  ```java
+  System.out.println(FileSystems.getDefault().getPath("").toAbsolutePath());
+  ```

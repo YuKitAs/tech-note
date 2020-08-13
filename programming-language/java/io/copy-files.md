@@ -65,3 +65,33 @@ One drawback of `DataStreams` is that it uses floating point numbers to represen
 ## Object streams
 
 Object streams support I/O of objects. `ObjectInputStream` and `ObjectOutputStream` implement `ObjectInput` and `ObjectOutput`, which are subinterfaces of `DataInput` and `DataOutput`.
+
+## File I/O (Featuring NIO.2)
+
+### Buffered streams
+
+```java
+Charset charset = StandardCharsets.UTF_8;
+try (BufferedReader reader = Files.newBufferedReader(Paths.get("input.txt"),
+        charset); BufferedWriter writer = Files.newBufferedWriter(Paths.get("output.txt"), charset)) {
+    String line;
+    while ((line = reader.readLine()) != null) {
+        writer.write(line + "\n");
+    }
+} catch (IOException e) {
+    e.printStackTrace();
+}
+```
+
+### Unbuffered streams
+
+```java
+BufferedReader reader = new BufferedReader(
+                new InputStreamReader(Files.newInputStream(Paths.get("input.txt"))));
+OutputStream out = new BufferedOutputStream(
+                Files.newOutputStream(Paths.get("output.txt"), CREATE, APPEND));
+```
+
+### Channel I/O
+
+Channel I/O reads a buffer at a time.

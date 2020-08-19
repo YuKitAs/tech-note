@@ -94,4 +94,46 @@ OutputStream out = new BufferedOutputStream(
 
 ### Channel I/O
 
-Channel I/O reads a buffer at a time.
+`java.nio.channels.Channel` is designed to provide for bulk data transfers to and from NIO buffers. `FileChannel` is an implementation of `SeekableByteChannel` for reading, writing, mapping, and manipulating a file.
+
+Reading from a file with `java.nio.ByteBuffer`:
+
+```java
+Path file = Paths.get("file.txt");
+try (SeekableByteChannel sbc = Files.newByteChannel(file)) {
+    ByteBuffer buf = ByteBuffer.allocate(12);
+
+    // Read the bytes with the proper encoding for this platform.
+    String encoding = System.getProperty("file.encoding");
+    while (sbc.read(buf) > 0) {
+        buf.rewind(); // set position to 0 to read from buffer
+        System.out.print(Charset.forName(encoding).decode(buf));
+        buf.flip(); // set limit to the current position and set position to 0
+    }
+} catch (IOException e) {
+    e.printStackTrace();
+}
+```
+
+Writing (creating and appending) to a file:
+
+```java
+Set<OpenOption> options = new HashSet<>();
+options.add(APPEND);
+options.add(CREATE);
+
+Set<PosixFilePermission> perms = PosixFilePermissions.fromString("rw-r-----");
+FileAttribute<Set<PosixFilePermission>> attr = PosixFilePermissions.asFileAttribute(perms);
+
+String s = "Hello World!";
+byte[] data = s.getBytes();
+ByteBuffer bb = ByteBuffer.wrap(data);
+
+Path file = Paths.get("file.txt");
+
+try (SeekableByteChannel sbc = Files.newByteChannel(file, options, attr)) {
+    sbc.write(bb);
+} catch (IOException e) {
+    e.printStackTrace();
+}
+```

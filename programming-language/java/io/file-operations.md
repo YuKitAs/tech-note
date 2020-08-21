@@ -1,6 +1,6 @@
 # File Operations
 
-## Move/Copy file/directory with copy options
+## Moving/Copying file/directory with copy options
 
 Standard copy options: REPLACE_EXISTING, COPY_ATTRIBUTES, ATOMIC_MOVE
 
@@ -11,7 +11,7 @@ Files.move(source, target, REPLACE_EXISTING, ATOMIC_MOVE);
 Files.copy(source, target, REPLACE_EXISTING, ATOMIC_MOVE, COPY_ATTRIBUTES);
 ```
 
-## Check file/directory
+## Checking file/directory
 
 ### Existence
 
@@ -37,11 +37,39 @@ Files.copy(source, target, REPLACE_EXISTING, ATOMIC_MOVE, COPY_ATTRIBUTES);
   Files.isSameFile(p1, p2);
   ```
 
-## Delete file/directory
+## Deleting file/directory
 
 ```java
 Files.delete(file);
 Files.deleteIfExists(file); // failing silently if file does not exists
+```
+
+## Creating and reading directory
+
+### Creating
+
+```java
+Files.createDirectory(Paths.get("foo")); // mkdir foo
+Files.createDirectories(Paths.get("foo/bar")); // mkdir -p foo/bar
+Files.createTempDirectory(Paths.get("."), "tmp-"); // create a temporary directory with prefix in a specified directory (by default in `/tmp`)
+```
+
+### Listing contents
+
+```java
+try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get("."))) {
+    for (Path file : stream) {
+        System.out.println(file.getFileName());
+    }
+} catch (IOException | DirectoryIteratorException e) {
+    e.printStackTrace();
+}
+```
+
+### Filtering with Glob
+
+```java
+DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get("."), "*.{java,class}");
 ```
 
 ## Reference

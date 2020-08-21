@@ -94,7 +94,7 @@ OutputStream out = new BufferedOutputStream(
 
 ### Channel I/O
 
-`java.nio.channels.Channel` is designed to provide for bulk data transfers to and from NIO buffers. `FileChannel` is an implementation of `SeekableByteChannel` for reading, writing, mapping, and manipulating a file.
+`java.nio.channels.Channel` is designed to provide for bulk data transfers to and from NIO buffers. `FileChannel` is an implementation of `SeekableByteChannel` for reading, writing, mapping, and manipulating a file (from any position).
 
 Reading from a file with `java.nio.ByteBuffer`:
 

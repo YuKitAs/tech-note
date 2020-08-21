@@ -49,8 +49,8 @@ Files.deleteIfExists(file); // failing silently if file does not exists
 ### Creating
 
 ```java
-Files.createDirectory(Paths.get("foo")); // mkdir foo
-Files.createDirectories(Paths.get("foo/bar")); // mkdir -p foo/bar
+Files.createDirectory(Paths.get("foo")); // `mkdir foo`
+Files.createDirectories(Paths.get("foo/bar")); // `mkdir -p foo/bar`
 Files.createTempDirectory(Paths.get("."), "tmp-"); // create a temporary directory with prefix in a specified directory (by default in `/tmp`)
 ```
 
@@ -66,7 +66,7 @@ try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get("."))) {
 }
 ```
 
-### Filtering with Glob
+### Filtering with Glob pattern
 
 ```java
 DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get("."), "*.{java,class}");

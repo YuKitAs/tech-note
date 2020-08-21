@@ -8,7 +8,9 @@ Class level lock assures that only one thread will be able to execute `method1()
 
 Object level lock assures that only one thread will be able to execute `method2()` of a given `Demo` instance. It's used to make instance level thread safe.
 
-The following two examples of how to use class level and object level locks are equivalent:
+The following two examples of how to use class level and object level locks are equivalent.
+
+Synchronized methods:
 
 ```java
 public class Demo {
@@ -19,6 +21,8 @@ public class Demo {
     public synchronized void method2() {}
 }
 ```
+
+Synchronized statements (specify the object to synchronize and can avoid invocations of other objects' methods):
 
 ```java
 public class Demo {

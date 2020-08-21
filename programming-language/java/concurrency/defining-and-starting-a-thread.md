@@ -104,6 +104,6 @@ In the `main()` method, replace `MyRunnable myRunnable = new MyRunnable();` with
 
 The advantages of the first method are:
 
-1. the encapsulation leads to less overhead
+1. the object can extend other class than `Thread`, thus more flexible
 
 2. the task could be sent to web, but `Thread` is not serializable

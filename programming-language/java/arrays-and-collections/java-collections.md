@@ -23,6 +23,6 @@ Concurrent collections (since Java 5) provide better performance than synchroniz
 
 1. `copy-on-write`: store values in an immutable array and create a new array when values need to be changed. For use cases when read operation greatly predominate write operations. Two implementations are `CopyOnWriteArrayList` and `CopyOnWriteArraySet`.
 
-2. `compare-and-swap` (CAS): make a local copy of the variable and calculate the value, compare the value with its copy at the start before updating. Collections using CAS include `ConcurrentLinkedQueue` and `ConcurrentSkipListMap`.
+2. `compare-and-swap` (CAS): make a local copy of the variable and calculate the value, compare the value with its copy at the start before updating. Collections using CAS include `ConcurrentLinkedQueue` and `ConcurrentSkipListMap` (an implementation for `ConcurrentNavigableMap`).
 
 3. using `java.util.concurrent.locks.Lock` (e.g. `ReentrantLock`): a `Lock` is held until its `unlock()` method is called. Collections using this lock include `ConcurrentHashMap` and most of the implementations of `BlockingQueue`.

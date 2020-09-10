@@ -1,8 +1,12 @@
 # JVM Garbage Collectors
 
+
 ## Serial GC
 
 By default in Java SE 5 and 6. Both minor and major garbage collections are done serially using a single virtual CPU and mark-compact collection method.
+
+The mark-compact algorithm: mark reachable objects, a compacting step relocates the marked objects towards the beginning of the heap area.
+
 
 ## Parallel GC
 
@@ -17,6 +21,7 @@ The parallel collector should be used when a lot of work need to be done (applic
 
 Also known as the concurrent low pause collector. Planned to be removed in [JEP 363](https://openjdk.java.net/jeps/363).
 
+
 ## G1 (Garbage-first) GC
 
-Planned to replace CMS. Parallel, concurrent, incrementally compacting, low-pause.
+Planned to replace CMS. Parallel, concurrent, incrementally compacting, low-pause. The default GC since Java 9. Unlike other GCs, G1 splits the heap into many fix-sized small regions, each region assigned to a space. It doesn't have to collect an entire generation, but regions that are full of garbage. G1 performs better with large heaps, when it has too little heap available, a full GC will be performed. It can be configured to not exceed a maximum pause time by `-XX:MaxGCPauseMillis`.

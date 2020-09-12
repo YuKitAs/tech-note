@@ -54,6 +54,13 @@ Files.createDirectories(Paths.get("foo/bar")); // `mkdir -p foo/bar`
 Files.createTempDirectory(Paths.get("."), "tmp-"); // create a temporary directory with prefix in a specified directory (by default in `/tmp`)
 ```
 
+Creating with `mkdir()` and `mkdirs()` that return a boolean:
+
+```java
+new File("foo").mkdir();
+new File("foo/bar").mkdirs();
+```
+
 ### Listing contents
 
 ```java

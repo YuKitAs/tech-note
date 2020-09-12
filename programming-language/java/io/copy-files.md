@@ -64,7 +64,7 @@ One drawback of `DataStreams` is that it uses floating point numbers to represen
 
 ## Object streams
 
-Object streams support I/O of objects. `ObjectInputStream` and `ObjectOutputStream` implement `ObjectInput` and `ObjectOutput`, which are subinterfaces of `DataInput` and `DataOutput`.
+Object streams support I/O of objects. `ObjectInputStream` and `ObjectOutputStream` implement `ObjectInput` and `ObjectOutput`, which are subinterfaces of `DataInput` and `DataOutput`. The object has to be (de)serializable.
 
 ## File I/O (Featuring NIO.2)
 

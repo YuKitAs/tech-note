@@ -8,6 +8,12 @@ For merging and rebasing see [note](https://github.com/YuKitAs/tech-note/blob/ma
   $ git checkout -b <new-branch>
   ```
 
+* Create a new branch from an existing tag and switch to it:
+
+  ```console
+  $ git checkout -b <new-branch> <tag-name>
+  ```
+
 * Delete a fully merged branch locally:
 
   ```console

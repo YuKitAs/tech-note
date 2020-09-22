@@ -46,13 +46,17 @@ public class TestService {
 }
 ```
 
-Once exposed `metrics` and `prometheus` management endpoints with `management.endpoints.web.exposure.include=metrics,prometheus`, we can call `/actuator/metrics` to see all the metrics names and call `/actuator/prometheus` to see the metrics (metrics format in [note](https://github.com/YuKitAs/tech-note/blob/master/monitoring/prometheus-metrics.md)):
+Once exposed `metrics` and `prometheus` management endpoints with `management.endpoints.web.exposure.include=metrics,prometheus`, we can call `/actuator/metrics` to see all the metrics names and  and call `/actuator/prometheus` to see the metrics (metrics format in [note](https://github.com/YuKitAs/tech-note/blob/master/monitoring/prometheus-metrics.md)):
 
 ```
 # HELP test_timer_seconds_max  
 # TYPE test_timer_seconds_max gauge
+test_timer_seconds_max 0.0
 # HELP test_timer_seconds  
 # TYPE test_timer_seconds summary
+test_timer_seconds_count 0.0
+test_timer_seconds_sum 0.0
 # HELP test_counter_total  
 # TYPE test_counter_total counter
+test_counter_total 0.0
 ```

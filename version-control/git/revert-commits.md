@@ -32,14 +32,22 @@ In some situations like a branch is accidentally deleted, so that commit logs ca
 
 ## `git-revert`
 
-Revert some existing commits and generate commits with messages stating which commits were reverted:
+* Revert some existing commits and generate commits with messages stating which commits were reverted:
 
-```console
-$ git revert <commit>
-```
+  ```console
+  $ git revert <commit>
+  ```
 
-Revert commits without generating commit messages:
+* Revert commits without generating commit messages:
 
-```console
-$ git revert -n <commit>
-```
+  ```console
+  $ git revert -n <commit>
+  ```
+
+* Revert merged commits:
+
+  ```console
+  $ git revert -m 1 <merge_commit>
+  ```
+
+  The `-m` option specifies the parent number of the merge commit.

@@ -1,9 +1,15 @@
 # Basic Usage of Crontab
 
-In Ubuntu, the system cron file is `/etc/crontab`, the format is like:
+In Ubuntu, the system cron file is `/etc/crontab`, format is:
+
 ```
-# m h dom mon dow user  command
-  * *  *   *   *  root  /home/yuka/some-script.sh
+# m h dom mon dow  command
+  * *  *   *   *  <command>
+```
+For example, executing a script at 10:00 every weekday:
+
+```
+0 10 * * 1-5 /home/yuka/some-script.sh
 ```
 
 To edit the crontab file to add/remove a cron job:

@@ -48,8 +48,8 @@ System logs:
 $ grep CRON /var/log/syslog
 ```
 
-Redirect output (`stdout` and `stderror`) to a file:
+Add the following after the command to redirect output (`stdout` and `stderror`) to a file:
 
-```console
+```
 <command> > /path/to/cronjob.log 2>&1
 ```

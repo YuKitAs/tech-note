@@ -27,9 +27,9 @@ $ crontab -l
 To start/stop/restart cron jobs:
 
 ```console
-$ service cron start
-$ service cron stop
-$ service cron restart
+# service cron start
+# service cron stop
+# service cron restart
 ```
 
 To remove all cron jobs:
@@ -39,3 +39,17 @@ $ crontab -r
 ```
 
 Use `sudo` to do the same operations for the root crontab.
+
+## Logs
+
+System logs:
+
+```console
+$ grep CRON /var/log/syslog
+```
+
+Redirect output (`stdout` and `stderror`) to a file:
+
+```console
+<command> > /path/to/cronjob.log 2>&1
+```

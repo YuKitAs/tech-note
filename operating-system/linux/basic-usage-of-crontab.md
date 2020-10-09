@@ -40,7 +40,7 @@ $ crontab -r
 
 Use `sudo` to do the same operations for the root crontab.
 
-## Logs
+## Troubleshooting
 
 System logs:
 
@@ -48,8 +48,14 @@ System logs:
 $ grep CRON /var/log/syslog
 ```
 
-Add the following after the command to redirect output (`stdout` and `stderror`) to a file:
+To redirect output (`stdout` and `stderror`) to a file, add the following after the command:
 
 ```
 <command> > /path/to/cronjob.log 2>&1
+```
+
+To open GUI application, set a display at the beginning of the command like:
+
+```
+DISPLAY=:0 /usr/bin/firefox -new-window https://www.google.com/
 ```

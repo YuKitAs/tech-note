@@ -1,14 +1,56 @@
 # Update `npm` and `Node.js`
 
+## Install with [`nvm`](https://github.com/nvm-sh/nvm) (Node Version Manager)
 
-Install Node.js on Ubuntu:
+It's the recommended way to avoid permission errors when installing packages globally.
+
+Download and install `nvm`:
+
+```console
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+```
+
+Source the current profile file or open a new terminal to verify the installation:
+
+```console
+$ nvm -v
+```
+
+Install the latest release of `node` or a specific version:
+
+```console
+$ nvm install node
+$ nvm install 14.14.0
+```
+
+List available `node` versions:
+
+```console
+$ nvm ls-remote
+```
+
+List installed `node` versions:
+
+```console
+$ nvm ls
+```
+
+Use an available `node` version:
+
+```console
+$ nvm use 14.14.0
+```
+
+## Install without `nvm`
+
+Download and install `nodejs`:
 
 ```console
 $ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
 ```
 
-Check the versions of `npm` and `Node.js`:
+Check the versions of `npm` and `node`:
 
 ```console
 $ npm --version

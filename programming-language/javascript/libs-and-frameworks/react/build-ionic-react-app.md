@@ -42,7 +42,7 @@
 
 * Run Android app with Android Studio (>= 3.6):
 
-  1. Add the path to Android Studio (>= 3.6) in `capacitor.config.json` like:
+  1. Add the path to Android Studio in `capacitor.config.json` like:
 
   ```json
   "linuxAndroidStudioPath": "/path/to/android-studio/bin/studio.sh"

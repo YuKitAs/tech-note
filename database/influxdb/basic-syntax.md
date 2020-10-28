@@ -27,7 +27,7 @@
   ```
   DELETE FROM <measurement> [WHERE <tag-key>='<tag-value>']
   DELETE FROM <measurement> [WHERE time condition]
-  DROP <measurement>
+  DROP MEASUREMENT <measurement>
   ```
  
  * Show human readable timestamp instead of epoch:

@@ -17,9 +17,11 @@ $ ll -tr
 
 ## Sort by Directory/File Size (space usage on disk)
 
-Although `ls` has `-s` (`--size`) option to sort by file size, the directory size it lists is actually the size of the meta information for the directory, so it's more reasonable to use `du` command combined with `sort`. The following commands list the directory/file size in human readable format:
+Although `ls` has `-s` (`--size`) option to sort by file size, the directory size it lists is actually the size of the meta information for the directory, so it's more reasonable to use `du -h` command combined with `sort`. The following commands list the directory/file size in human readable format:
 
 ```console
-$ du -sh /path/to/dir/* | sort -h
-$ du -sh /path/to/dir/* | sort -hr # the biggest file first
+$ du -h [/path/to/dir/*] | sort -h # asc
+$ du -h [/path/to/dir/*] | sort -hr # desc
 ```
+
+`-h` for `sort`: compare human readable numbers

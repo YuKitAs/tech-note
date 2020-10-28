@@ -25,3 +25,9 @@ To search lines before (`-B`) and after (`-A`) match:
 ```console
 $ grep -B<num> -A<num> <pattern> <file>
 ```
+
+## Show First Match
+
+```console
+$ grep -m 1 <pattern> <file>
+```

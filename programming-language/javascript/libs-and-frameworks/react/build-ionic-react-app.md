@@ -11,7 +11,20 @@
 2. Create a new project with React components:
 
   ```console
-  $ ionic start <project-name> blank --type=react [--capacitor]
+  $ ionic start <project-name> <template> --type=react [--capacitor]
+  ```
+  
+  Template options for React project:
+  
+  ```
+  name         | description
+  --------------------------------------------------------------------------------------
+  blank        | A blank starter project
+  list         | A starting project with a list
+  my-first-app | An example application that builds a camera with gallery
+  sidemenu     | A starting project with a side menu with navigation in the content area
+  tabs         | A starting project with a simple tabbed interface
+  conference   | A kitchen-sink application that shows off all Ionic has to offer
   ```
 
 3. Run the web app on a local server (by default at `localhost:8100`):

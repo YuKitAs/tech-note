@@ -6,6 +6,7 @@ Create a configuration file `/etc/logrotate.d/example.conf` with the log file pa
 /path/to/custom.log {
   weekly
   rotate 7
+  maxsize 50M
   missingok
   compress
 }

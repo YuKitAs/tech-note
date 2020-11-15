@@ -40,3 +40,5 @@
   ```
   #include <CoolLibrary.h>
   ```
+
+  Libraries can also be installed via `Sketch > Include Library > Manage Libraries`, the installed libraries will be placed in the `libraries` folder of the `Sketchbook location`, which is specified in `File > Preferences`.

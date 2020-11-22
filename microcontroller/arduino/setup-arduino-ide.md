@@ -42,3 +42,11 @@
   ```
 
   Libraries can also be installed via `Sketch > Include Library > Manage Libraries`, the installed libraries will be placed in the `libraries` folder of the `Sketchbook location`, which is specified in `File > Preferences`.
+
+6. Connect Arduino, choose device in `Tools > Board` and port in `Tools > Port`
+
+7. Verify and upload code
+
+## Troubleshooting
+
+In `File > Preferences > Settings > Show verbose output during`, check `upload`.

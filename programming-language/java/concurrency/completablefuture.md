@@ -17,7 +17,7 @@ CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(() -
 System.out.println(completableFuture.get());
 ```
 
-To process the result in another thread than where the `supplyAsync()` task is executed, we can use `thenApplyAsync` (thread from the common pool will be used by default, an optional thread pool can also be specified):
+To process the result in another thread than where the `supplyAsync()` task is executed, we can use `thenApplyAsync()` (thread from the common pool will be used by default, an optional thread pool can also be specified):
 
 ```java
 Executor executor = Executors.newFixedThreadPool(2);

@@ -9,12 +9,20 @@ CompletableFuture<String> completableFuture = new CompletableFuture<>();
 completableFuture.complete("Hello World");
 ```
 
-Static methods like `runAsync()` and `supplyAsync()` allow us to create a `CompletableFuture` from `Runnable` and `Supplier` instances and execute the tasks in a separate thread (thread from the common pool will be used by default, an optional thread pool can also be specified). The result can be processed with (a sequence of) `thenApply()`, `thenAccept()` or `thenRun()`, for example:
+Static methods like `runAsync()` and `supplyAsync()` allow us to create a `CompletableFuture` from `Runnable` and `Supplier` instances, the result can be processed with a sequence of `thenApply()`, `thenAccept()` or `thenRun()`:
 
 ```java
 CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(() -> "World")
         .thenApply(name -> "Hello " + name);
 System.out.println(completableFuture.get());
+```
+
+To process the result in another thread than where the `supplyAsync()` task is executed, we can use `thenApplyAsync` (thread from the common pool will be used by default, an optional thread pool can also be specified):
+
+```java
+Executor executor = Executors.newFixedThreadPool(2);
+CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(() -> "World")
+        .thenApplyAsync(name -> "Hello " + name, executor);
 ```
 
 ## Combine futures

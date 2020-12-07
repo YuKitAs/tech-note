@@ -4,8 +4,14 @@
 
 `rg` will ignore hidden and binary files by default, e.g. `.git`.
 
-A most simple use-case is to search in all files (`uu`) case-insensitively (`-i`):
+A most simple use-case is to search in all files in the current directory case-insensitively (`-i`):
 
 ```console
-$ rg -uu -i <pattern>
+$ rg -i <pattern>
+```
+
+Explicitly exclude some specific directory:
+
+```console
+$ rg -i <pattern> -g '!dir/*'
 ```

@@ -1,5 +1,15 @@
 # Project SDK and Language Level
 
-Open `File > Project Structure...` (or `Ctrl+Alt+Shift+S`), we can change the `Project SDK` and `Project language level` for the current project.
+For IntelliJ IDEA 2020 version.
 
-The default global settings can be found in `File > Other Settings > Default Project Structure...`, these will be applied to newly created projects.
+## SDK home
+
+`File > Project Structure > Platform Settings`, add new SDK and choose home path.
+
+## Project SDK
+
+`File > Project Structure > Project Settings > Project`, choose `Project SDK` and `Project language level` for the current project.
+
+## Java Compiler
+
+`File > Settings > Build, Execution, Deployment > Compiler > Java compiler`, choose `Project bytecode version`.

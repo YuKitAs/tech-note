@@ -1,5 +1,6 @@
 # `CompletableFuture`
 
+
 Since Java 8, `CompletableFuture` has been introduced for asynchronous computation.
 
 The `get()` method used to retrieve the computation result is blocking, it will wait until the future is done, but `CompletableFuture` can also be manually completed like:
@@ -42,4 +43,35 @@ CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(() -
     System.out.println("Something went wrong: " + ex.getMessage());
     return "Unknown";
 });
+```
+
+Java 9 introduced support for delays and timeouts.
+
+## Delay
+
+`delayedExecutor` can be used together with the `completeAsync()` method:
+
+```java
+CompletableFuture<String> completableFuture = new CompletableFuture<String>().completeAsync(
+        () -> "Goodbye World", CompletableFuture.delayedExecutor(3, TimeUnit.SECONDS));
+```
+
+## Timeout handling
+
+Return a default value after a specific timeout:
+
+```java
+CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(() -> {
+    // do something that would cause timeout
+    return "Hello World";
+}).completeOnTimeout("Goodbye World", 1, TimeUnit.MINUTES);
+```
+
+Throw `TimeoutException`:
+
+```java
+CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(() -> {
+    // do something that would cause timeout
+    return "Hello World";
+}).orTimeout(1, TimeUnit.MINUTES);
 ```

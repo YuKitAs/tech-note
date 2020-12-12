@@ -27,3 +27,7 @@ try {
     Sentry.captureException(e);
 }
 ```
+
+## Reference
+
+* [Sentry's integration with Spring Boot](https://docs.sentry.io/platforms/java/guides/spring-boot/)

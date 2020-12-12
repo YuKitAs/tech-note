@@ -14,6 +14,7 @@
 2. Add basic authentication values in a configuration file like `application.properties`:
 
   ```properties
+  spring.security.enabled=true
   spring.security.auth.username=test
   spring.security.auth.password=test
   ```
@@ -25,9 +26,18 @@
   @ConfigurationProperties("spring.security")
   public class SecurityProperties {
       private final Auth auth = new Auth();
+      private boolean enabled = false;
 
       public Auth getAuth() {
           return auth;
+      }
+
+      public boolean isEnabled() {
+          return enabled;
+      }
+
+      public void setEnabled(boolean enabled) {
+          this.enabled = enabled;
       }
 
       public static class Auth {
@@ -68,7 +78,11 @@
 
       @Override
       protected void configure(HttpSecurity http) throws Exception {
-          http.csrf().disable().authorizeRequests().anyRequest().authenticated().and().httpBasic();
+        if (securityProperties.isEnabled()) {
+            http.csrf().disable().authorizeRequests().anyRequest().authenticated().and().httpBasic();
+        } else {
+            http.csrf().disable().authorizeRequests().anyRequest().permitAll();
+        }
       }
 
       @Autowired

@@ -16,3 +16,5 @@ Create a named tmux session:
 ```console
 $ tmux new -s <session_name>
 ```
+
+[`byobu`](https://www.byobu.org/) is another tool built on top of `screen` and `tmux` with some enhancements, it's originally designed for Ubuntu.

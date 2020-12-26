@@ -133,3 +133,5 @@ executor.scheduleWithFixedDelay(() -> imageServer.offer(new Image(new Random().n
     return true;
 }), 0, 1, TimeUnit.SECONDS);
 ```
+
+![](https://github.com/YuKitAs/tech-note/blob/master/assets/flowable.png)

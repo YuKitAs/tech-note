@@ -1,10 +1,12 @@
 # Reactive Streams
 
-Reactive streams is a standard for asynchronous stream processing with non-blocking backpressure.
+[Reactive streams](http://www.reactive-streams.org/) is a standard for asynchronous stream processing with non-blocking backpressure.
 
-Java 9 introduced the [Flow API](https://docs.oracle.com/javase/9/docs/api/java/util/concurrent/Flow.html) which corresponds to the Reactive Streams specification. A Flow processes messages published by a Publisher and that will be consumed by a Subscriber.
+Java 9 introduced the [Flow API](https://docs.oracle.com/javase/9/docs/api/java/util/concurrent/Flow.html) which corresponds to the Reactive Streams specification. It provides 4 interfaces: `Processor<T, R>`, `Publisher<T>`, `Subscriber<T>` and `Subscription`. Messages produced by a Publisher will be consumed by one or more Subscribers. A message is managed by a Subscription.
 
-Example of use of the Flow API:
+Example of use:
+
+Message:
 
 ```java
 public class Image {
@@ -76,7 +78,7 @@ executor.scheduleWithFixedDelay(() -> imageServer.offer(new Image(new Random().n
 
 The example above can also be implemented with `Flowable` of RxJava.
 
-A Processor is both Publisher and Subscriber that transforms messages and submit them to the next Subscriber.
+A Processor is both Publisher and Subscriber that transforms messages and submits them to the next Subscriber.
 
 Example:
 

@@ -39,6 +39,10 @@
 
   * Increase retraction speed
 
+  * Decrease maximum retraction count to 10
+
+  * Set minimum extrusion distance window the same as retraction distance
+
   * Change `Combing Mode` to `Within Infill`
 
   Try with [retraction test print](https://www.thingiverse.com/thing:909901).

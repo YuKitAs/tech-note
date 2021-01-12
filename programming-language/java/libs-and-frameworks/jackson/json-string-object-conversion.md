@@ -6,7 +6,9 @@ JSON String:
 String json = "{\"name\":\"John Doe\",\"age\": 42,\"emails\" : [\"john.doe@gmail.com\", \"doe.john@web.de\"]}";
 ```
 
-## Convert JSON string to arbitrary JSON object using [`org.json`](https://mvnrepository.com/artifact/org.json/json)
+## Convert JSON string to arbitrary JSON object using external library
+
+* [`org.json`](https://mvnrepository.com/artifact/org.json/json):
 
 ```java
 JSONObject jsonObject = new JSONObject(json);
@@ -15,7 +17,18 @@ int age = jsonObject.getInt("age");
 JSONArray emails = jsonObject.getJSONArray("emails");
 ```
 
+* [`json-smart`](https://mvnrepository.com/artifact/net.minidev/json-smart):
+
+```java
+JSONObject jsonObject = (JSONObject) JSONValue.parse(json);
+String name = jsonObject.getAsString("name");
+int age = getAsNumber("age").intValue();
+JSONArray emails = (JSONArray) jsonObject.get("emails");
+```
+
 ## Convert JSON string to Java object using `ObjectMapper`
+
+First of all, the Java class has to have a constructor annotated with `@JsonCreator`:
 
 ```java
 public class User {

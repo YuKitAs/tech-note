@@ -8,7 +8,7 @@ String json = "{\"name\":\"John Doe\",\"age\": 42,\"emails\" : [\"john.doe@gmail
 
 ## Convert JSON string to arbitrary JSON object using external library
 
-* [`org.json`](https://mvnrepository.com/artifact/org.json/json):
+* [`org.json.json`](https://mvnrepository.com/artifact/org.json/json):
 
 ```java
 JSONObject jsonObject = new JSONObject(json);
@@ -17,7 +17,7 @@ int age = jsonObject.getInt("age");
 JSONArray emails = jsonObject.getJSONArray("emails");
 ```
 
-* [`json-smart`](https://mvnrepository.com/artifact/net.minidev/json-smart):
+* [`net.minidev.json-smart`](https://mvnrepository.com/artifact/net.minidev/json-smart):
 
 ```java
 JSONObject jsonObject = (JSONObject) JSONValue.parse(json);

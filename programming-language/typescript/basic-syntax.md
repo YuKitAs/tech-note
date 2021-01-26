@@ -15,9 +15,27 @@
 
 3. Which data types does it have?
 
-  ```
-  string, number, any
-  ```
+  * Build-in primitive types:
+    ```
+    boolean, number, string, bigint, symbol, null, undefined, object
+    ```
+
+  * Other basic types:
+
+    * array (`T[]` or `Array<T>`)
+    * tuple (`T, T]`)
+    * enum
+    * unknown
+    * never
+    * any
+    * void (subtype of `undefined`)
+    * object literal (`{ property: Type }`)
+    * function (`(t: T) => U`)
+
+
+  In Typescript, a set is just a *set of values* that share something in common. A particular value can belong to multiple sets at the same time.
+
+  See [advanced types](https://www.typescriptlang.org/docs/handbook/advanced-types.html).
 
 
 4. How to use `if`?
@@ -59,31 +77,92 @@
   }
   ```
 
-7. How to define a class with attributes and methods?
+7. How to define a class with constructor, attributes and methods?
 
   ```typescript
+  class Pokemon {
+    private name: string;
 
+    constructor(name: string) {
+      this.name = name;
+    }
+
+    greet() {
+      console.log(`Hello, I'm ${this.name}.`);
+    }
+  }
   ```
 
-8. How to define a class constructor?
+8. How to extend a class, call the constructor of the super class, override a method of the super class?
 
   ```typescript
+  class Pikachu extends Pokemon {
+    constructor(name: string) {
+      super(name);
+    }
 
+    greet() {
+      super.greet();
+      console.log("Pika pika!");
+    }
+  }
+
+  let pikapi = new Pikachu("Pikapi");
+  pikapi.greet();
   ```
 
-9. How to extend a class and implement an interface?
+9. How to implement an interface?
+
+  Typescript's type system is structural but not nominal.
 
   ```typescript
+  interface Coordinate {
+    x: number;
+    y: number;
+  }
 
+  interface Address {
+    name: string;
+  }
+
+  function getCoord(coord: Coordinate) {
+    console.log(coord.x + ", " + coord.y);
+  }
+
+  function getAddr(addr: Address) {
+    console.log(addr.name);
+  }
+
+  const myLocation = {
+    x: 2,
+    y: 3,
+    name: 'Somewhere on the earth'
+  };
+
+  getCoord(myLocation); // myLocation implemented Coordinate
+  getAddr(myLocation); // myLocation implemented Address
   ```
 
-10. How to call the constructor of the super class?
+10. How to use libraries?
+
+  Import a module:
 
   ```typescript
-
+  const fastify = require("fastify");
+  const { fastify } = require("fastify");
+  import fastify = require("fastify");
+  import * as Fastify from "fastify";
+  import { fastify, FastifyInstance } from "fastify";
+  import fastify from "fastify";
+  import fastify, { FastifyInstance } from "fastify";
   ```
 
-11. How to use libraries?
+11. How to handle exceptions?
 
-
-12. How to handle exceptions?
+  ```typescript
+  try {
+    throw new Error('Something went wrong');
+  } catch(e) {
+    console.log(e);
+  }
+  ```

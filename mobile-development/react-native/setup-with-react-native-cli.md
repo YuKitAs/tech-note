@@ -54,8 +54,6 @@ $ npx react-native init <ProjectName> [--template react-native-template-typescri
   $ npm run android
   ```
 
-5. In Android Studio, run the app with emulator or a physical device.
-
   If a physical device is connected, make sure it can connect to the development server:
 
   ```console

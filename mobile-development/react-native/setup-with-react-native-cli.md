@@ -5,7 +5,7 @@ Compared to Expo CLI, React Native CLI requires Android Studio or Xcode.
 There's no need to install the `react-native-cli` package globally. Instead, use `npx` to create a new project:
 
 ```console
-$ npx react-native init <ProjectName>
+$ npx react-native init <ProjectName> [--template react-native-template-typescript]
 ```
 
 ## Android

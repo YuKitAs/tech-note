@@ -42,7 +42,7 @@ $ npx react-native init <ProjectName> [--template react-native-template-typescri
   $ npm start
   ```
 
-4. Build Android app:
+4. Build and start Android app:
 
   ```console
   $ npx react-native run-android
@@ -59,3 +59,5 @@ $ npx react-native init <ProjectName> [--template react-native-template-typescri
   ```console
   $ adb reverse tcp:8081 tcp:8081
   ```
+  
+Debugger: http://localhost:8081/debugger-ui/

@@ -19,7 +19,7 @@
 * Query data (use single quotes for tag value):
 
   ```
-  SELECT <tag1-key>, <field1-key> FROM <measurement> [WHERE <field1-key> condition AND <tag1-key>='<tag1-value>']
+  SELECT <tag1-key>, <field1-key> FROM <measurement> [WHERE <field1-key> condition AND <tag1-key>='<tag1-value>'] [ORDER BY time DESC]
   ```
 
 * Delete data/measurement:

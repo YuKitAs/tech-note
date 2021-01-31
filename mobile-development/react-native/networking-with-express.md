@@ -54,7 +54,7 @@ Server:
 
 ```typescript
 app.get('/', (req, res) => {
-  res.sendFile('/path/to/example.png');
+  res.sendFile('/path/to/file');
 });
 ```
 
@@ -77,7 +77,6 @@ export default function App() {
           setFile(URL.createObjectURL(body));
         }}
       />
-      <Image style={{ width: 50, height: 50 }} source={{ uri: file }} />
     </View>
   );
 }

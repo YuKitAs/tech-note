@@ -2,15 +2,15 @@
 
 Tested for Android device only.
 
-## Choose a photo with `react-native-image-picker`
+## Single photo with `react-native-image-picker`
 
-Install [`react-native-image-picker`](https://www.npmjs.com/package/react-native-image-picker) 3.x.
+Install [`react-native-image-picker`](https://www.npmjs.com/package/react-native-image-picker) 3.x and import `launchImageLibrary`:
 
 ```typescript
 import { launchImageLibrary, ImagePickerResponse } from 'react-native-image-picker';
 ```
 
-Get a photo from library and display:
+### Choose a photo
 
 ```typescript
 const [photo, setPhoto] = useState<ImagePickerResponse>();
@@ -24,24 +24,13 @@ function choosePhoto() {
     if (res.uri) {
       setPhoto(res);
     }
-  })
+  });
 }
 ```
 
-```typescript
-<Button
-  title={'Choose photo'}
-  onPress={choosePhoto}
-/>
-{photo && <Image
-  source={{ uri: photo.uri }}
-  style={{ width: 100, height: 100 }}
-/>}
-```
+### Upload a photo
 
-## Upload a photo as `multipart/form-data`
-
-Add necessary information as form data for a `photo` field. Don't specify `headers: 'Content-Type: multipart/form-data'` explicitly, otherwise the boundary info will be missing:
+Add necessary information `uri`, `type` and `name` as form data for a `photo` field. Don't specify `headers: 'Content-Type: multipart/form-data'` explicitly, otherwise the boundary info will be missing:
 
 ```typescript
 async function upload(): Promise<any> {
@@ -68,11 +57,59 @@ async function upload(): Promise<any> {
 }
 ```
 
+### UI components
+
 ```typescript
+<Button
+  title={'Choose photo'}
+  onPress={choosePhoto}
+/>
+{photo && <Image
+  source={{ uri: photo.uri }}
+  style={{ width: 100, height: 100 }}
+/>}
 <Button title={'Upload'} onPress={upload} />
 ```
 
-## Store a photo with `multer`
+## Multiple photos and videos with `react-native-image-crop-picker`
+
+Install [`react-native-image-crop-picker`](https://www.npmjs.com/package/react-native-image-picker) and import `ImagePicker`:
+
+```typescript
+import ImagePicker, { ImageOrVideo } from 'react-native-image-crop-picker';
+```
+
+### Choose multiple photos/videos
+
+```typescript
+const [filesToUpload, setFilesToUpload] = useState<ImageOrVideo[]>([]);
+
+function choosePhoto() {
+  ImagePicker.openPicker({
+    multiple: true
+  }).then(images => {
+    setFilesToUpload(images);
+  });
+}
+```
+
+### Upload multiple photos/videos
+
+```typescript
+async function upload(): Promise<any> {
+  const data = new FormData();
+  filesToUpload.forEach(item => {
+    data.append('photo', {
+      uri: item.path,
+      type: item.mime,
+      name: item.path.substring(item.path.lastIndexOf('/') + 1)
+    });
+  });
+  // the rest is the same
+}  
+```
+
+## Store file(s) with `multer`
 
 On the server side, install [`multer`](https://www.npmjs.com/package/multer) (and `@types/multer`) to handle form data.
 
@@ -94,9 +131,22 @@ const Storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: Storage });
+```
 
+Single photo:
+
+```typescript
 app.post('/upload', upload.single('photo'), (req, res) => {
   console.log(req.file);
+  res.send({ 'message': 'Success' });
+});
+```
+
+Multiple files (with count limit):
+
+```typescript
+app.post('/upload', upload.array('photo', 10), (req, res) => {
+  console.log(req.files);
   res.send({ 'message': 'Success' });
 });
 ```

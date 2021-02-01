@@ -133,7 +133,7 @@ const Storage = multer.diskStorage({
 const upload = multer({ storage: Storage });
 ```
 
-Single photo:
+Single file:
 
 ```typescript
 app.post('/upload', upload.single('photo'), (req, res) => {

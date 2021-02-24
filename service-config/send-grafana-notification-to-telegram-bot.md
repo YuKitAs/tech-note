@@ -21,12 +21,12 @@
 
   * Call `https://api.telegram.org/bot<token>/getUpdates`
 
-2. Send a test request:
+3. Send a test request:
 
   ```
   https://api.telegram.org/bot<token>/sendMessage?chat_id=<chat_id>d&text=test
   ```
 
-3. On Grafana, create a new Notification Channel (`/alerting/notification/new`). Choose `Telegram` as type, enter Bot API Token and Chat ID. Send a test notification.
+4. On Grafana, create a new Notification Channel (`/alerting/notification/new`). Choose `Telegram` as type, enter Bot API Token and Chat ID. Send a test notification.
 
-4. In the Dashboard settings, create a new Alert, define Rule, Conditions, select Notifications etc.
+5. In the Dashboard settings, create a new Alert, define Rule, Conditions, select Notifications etc.

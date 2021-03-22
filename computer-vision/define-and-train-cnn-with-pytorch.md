@@ -1,6 +1,6 @@
 # Define and Train CNN with PyTorch
 
-Define convolutional and maxpooling layers and flatten them to a linear layer:
+Define convolutional and maxpooling layers and flatten them to two linear layers with dropout in between:
 
 ```python
 import torch.nn as nn
@@ -13,12 +13,15 @@ class Net(nn.Module):
         self.pool = nn.MaxPool2d(2, 2)
         self.conv2 = nn.Conv2d(10, 20, 3)
         self.fc1 = nn.Linear(20*5*5, 10)
+        self.fc1_drop = nn.Dropout(p=0.4)
+        self.fc2 = nn.Linear(50, 10)
 
     def forward(self, x):
         x = self.pool(F.relu(self.conv1(x)))
         x = self.pool(F.relu(self.conv2(x)))
         x = F.relu(self.fc1(x))
-        x = F.log_softmax(x, dim=1)
+        x = self.fc1_drop(x)
+        x = self.fc2(x)
         return x
 
 net = Net()
@@ -30,8 +33,8 @@ Loss function and optimizer:
 ```python
 import torch.optim as optim
 
-criterion = nn.NLLLoss()
-optimizer = optim.SGD(net.parameters(), lr=0.001)
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
 ```
 
 Train CNN:
@@ -84,4 +87,17 @@ for batch_i, data in enumerate(test_loader):
         class_total[label] += 1
 
 print('Test Loss: {:.6f}\n'.format(test_loss.numpy()[0]))
+
+for i in range(10):
+    if class_total[i] > 0:
+        print('Test Accuracy of %5s: %2d%% (%2d/%2d)' % (
+            classes[i], 100 * class_correct[i] / class_total[i],
+            np.sum(class_correct[i]), np.sum(class_total[i])))
+    else:
+        print('Test Accuracy of %5s: N/A (no training examples)' % (classes[i]))
+
+
+print('\nTest Accuracy (Overall): %2d%% (%2d/%2d)' % (
+    100. * np.sum(class_correct) / np.sum(class_total),
+    np.sum(class_correct), np.sum(class_total)))
 ```

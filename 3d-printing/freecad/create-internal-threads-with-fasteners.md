@@ -14,4 +14,4 @@
 
 7. In `Part` workbench, select the hole and the screw objects (the order matters) and then make a cut
 
-8. Export the `Cut`
+8. Export the `Cut` and the duplicated screw if necessary

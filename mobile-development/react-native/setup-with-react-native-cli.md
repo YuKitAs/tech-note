@@ -30,7 +30,7 @@ $ npx react-native init <ProjectName> [--template react-native-template-typescri
   export PATH=$PATH:$ANDROID_HOME/platform-tools
   ```
 
-3. Start Metro Bundler:
+3. Start [Metro](https://facebook.github.io/metro/docs/concepts/) (a JavaScript bundler):
 
   ```console
   $ npx react-native start
@@ -54,7 +54,19 @@ $ npx react-native init <ProjectName> [--template react-native-template-typescri
   $ npm run android
   ```
 
-  If a physical device is connected, make sure it can connect to the development server:
+  If running on a physical device, do the following steps first:
+  
+  4.1 Connect the device, get device id and mode id (e.g. `1234:5678`) with `lsusb`
+  
+  4.2 Set device id and mode id in `/etc/udev/rules.d/51-android-usb.rules` with the following line: 
+  
+  ```
+  SUBSYSTEM=="usb", ATTR{idVendor}=="1234", MODE="5678", GROUP="plugdev"
+  ```
+  
+  4.3 Verify connection with `adb devices`
+  
+  4.4 Make sure it can connect to the development server:
 
   ```console
   $ adb reverse tcp:8081 tcp:8081

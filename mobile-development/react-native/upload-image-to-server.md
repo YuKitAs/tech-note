@@ -1,6 +1,6 @@
 # Upload Image to Server
 
-Tested for Android device only.
+Tested on Android device only.
 
 ## Single photo with `react-native-image-picker`
 
@@ -49,7 +49,7 @@ async function upload(): Promise<any> {
       Alert.alert('Upload successful.');
       return response.json();
     }
-  }).then(body => console.log(body);)
+  }).then(body => console.log(body))
     .catch(error => {
       Alert.alert('Upload failed.');
       console.log(error);

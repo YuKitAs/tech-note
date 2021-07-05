@@ -94,6 +94,12 @@ Or with environment variables as mentioned above.
 
 The `imagePullSecrets` field in the configuration file specifies that Kubernetes should get the credentials from a Secret named `regsecret`.
 
+Read an encoded secret with `kubectl`:
+
+```console
+$ kubectl get secret <SECRET_NAME> -o jsonpath="{.data.<KEY>}" | base64 --decode
+```
+
 ## Rollout Deployments with Updated ConfigMaps and Secrets
 
 When ConfigMaps and Secrets injected as configuration files have been changed, if the deployment spec didn't change, the application will still run with the old configurations. In order to update the deployment's annotation section automatically, we need to add the checksum of the ConfigMap or Secret into `spec.template.metadata.annotations` as follows:

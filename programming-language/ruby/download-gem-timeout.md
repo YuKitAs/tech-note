@@ -16,9 +16,9 @@ ERROR:  While executing gem ... (Gem::RemoteFetcher::UnknownHostError)
     timed out (https://rubygems.org/specs.4.8.gz)
 ```
 
-It's said that `rubygems.org` has issues with IPv6 setup and does not response on any of its IPv6 addresses. A workaround is to lower the priority of IPv6 address for `rubygems.org` so that gem will try IPv4 first.
+It's said that `rubygems.org` has issues with IPv6 setup and does not response on any of its IPv6 addresses. A workaround is to lower the priority of IPv6 address for `rubygems.org` so that `gem` will try IPv4 first.
 
-In `/etc/gai.conf`, add the following line:
+In `/etc/gai.conf` (`getaddrinfo` config file), add the following line:
 
 ```
 precedence  2a04:4e42::0/32  5

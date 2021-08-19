@@ -73,7 +73,7 @@ strict-transport-security: max-age=15724800
 }
 ```
 
-Use `-o <file>` to write the output to a file.
+Use `-o <file>` or `> <file>` to write the output to a file.
 
 ### Advanced
 

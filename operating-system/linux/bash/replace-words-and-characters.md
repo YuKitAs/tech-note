@@ -17,7 +17,7 @@
 * Replacing characters in text with `tr`:
 
   ```console
-  $ $ echo "Hello world" | tr l 1
+  $ echo "Hello world" | tr l 1
   He11o wor1d
   $ echo "Hello world" | tr '[:lower:]' '[:upper:]'
   HELLO WORLD
@@ -27,5 +27,5 @@
 
   ```console
   $ echo 'Hello $world!' | tr -dc '[:alnum:]'
-Helloworld
+  Helloworld
   ```

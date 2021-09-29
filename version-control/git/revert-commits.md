@@ -51,3 +51,12 @@ In some situations like a branch is accidentally deleted, so that commit logs ca
   ```
 
   The `-m` option specifies the parent number of the merge commit.
+
+## Revert master to a previous tag
+
+  ```console
+  $ git checkout <tag>
+  $ git diff master > ~/diff.patch
+  $ git checkout master
+  $ git apply ~/diff.patch
+  ```

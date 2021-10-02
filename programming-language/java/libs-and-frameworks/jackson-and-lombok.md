@@ -70,7 +70,7 @@ Parent class:
 
 ```java
 @JsonIgnoreProperties(ignoreUnknown = true) // ignore the fields for child classes
-@JsonTypeInfo(use = JsonTypeInfo.Id.DEDUCTION) // not necessary, if the child classes have distinct fields
+@JsonTypeInfo(use = JsonTypeInfo.Id.DEDUCTION) // not necessary, if the child classes have distinct fields; introduced in Jackson 2.12
 @JsonSubTypes({@JsonSubTypes.Type(Child1.class), @JsonSubTypes.Type(Child2.class)}) // all the child classes, will however cause circular dependency
 @Data
 @NoArgsConstructor // it has to be added here, because the child classes with custom constructors need to have a default constructor
@@ -79,6 +79,8 @@ public class Parent {
     private String name;
 }
 ```
+
+In this way the parent class can also be abstract.
 
 One child class without using `Builder`:
 
@@ -131,3 +133,8 @@ String serializedChild2 = new ObjectMapper().writeValueAsString(child2);
 System.out.println(serializedChild2); // {"name":"Joe","num":42}
 System.out.println(new ObjectMapper().readValue(serializedChild2,  Child2.class)); // Child2(super=Parent(name=Joe), num=42)
 ```
+
+## References
+* [Jackson Polymorphic Deserialization](https://github.com/FasterXML/jackson-docs/wiki/JacksonPolymorphicDeserialization), jackson-docs
+
+* [Jackson 2.12 Most Wanted: Deduction-Based Polymorphism](https://cowtowncoder.medium.com/jackson-2-12-most-wanted-1-5-deduction-based-polymorphism-c7fb51db7818)

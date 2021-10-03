@@ -62,6 +62,8 @@ It can be instantiated as follows and the result will be the same as above:
 Person person = Person.builder().name("Joe").build();
 ```
 
+Alternatively, if not enabling the Lombok setting `addConstructorProperties` mentioned above, we have to add `@Jacksonized` together with `@Builder`.
+
 ### Class with inheritance
 
 This can be a little complicated, if we want to deserialize the JSON directly to a child class, the child classes must have at least one distinguishable field of different types.
@@ -80,7 +82,7 @@ public class Parent {
 }
 ```
 
-In this way the parent class can also be abstract.
+In this way the parent class can also be abstract class or interface.
 
 One child class without using `Builder`:
 

@@ -62,7 +62,7 @@ It can be instantiated as follows and the result will be the same as above:
 Person person = Person.builder().name("Joe").build();
 ```
 
-Alternatively, if not enabling the Lombok setting `addConstructorProperties` mentioned above, we have to add `@Jacksonized` together with `@Builder`.
+Alternatively, if not enabling the Lombok setting `addConstructorProperties` mentioned above, we can use `@Jacksonized` (since Lombok 1.18.16) together with `@Builder`.
 
 ### Class with inheritance
 

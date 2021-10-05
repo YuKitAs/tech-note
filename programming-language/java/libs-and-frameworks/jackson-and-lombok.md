@@ -136,7 +136,7 @@ System.out.println(serializedChild2); // {"name":"Joe","num":42}
 System.out.println(new ObjectMapper().readValue(serializedChild2,  Child2.class)); // Child2(super=Parent(name=Joe), num=42)
 ```
 
-Note: Jackson always needs a default constructor, no matter no args or all args. But the no args constructor cannot be used when there are non-initialized final fields.
+Note: For deserialization, Jackson needs either a no args constructor as default constructor (which cannot be used when there are non-initialized final fields), or a constructor annotated with `@JsonCreator` and the parameters annotated with `@JsonProperty`.
 
 ## References
 * [Jackson Polymorphic Deserialization](https://github.com/FasterXML/jackson-docs/wiki/JacksonPolymorphicDeserialization), jackson-docs

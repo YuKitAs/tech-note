@@ -16,8 +16,6 @@ UPDATE <table_name> SET <col_name> = <col_name> - {'old-value-1', 'old-value-2'}
 
 ## Filter by element in set
 
-Primary-key columns supported only.
-
 ```
-SELECT <col_name> FROM <table_name> WHERE <col_name> CONTAINS 'value';
+SELECT <col_name> FROM <table_name> WHERE <col_name> CONTAINS 'value' [ALLOW FILTERING];
 ```

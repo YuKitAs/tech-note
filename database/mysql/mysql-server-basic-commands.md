@@ -17,7 +17,7 @@ Check server status:
 Login as root (and use a database):
 
 ```console
-$ mysql -u root -p[password] [db_name]
+$ mysql -u root -p<password> [db_name]
 ```
 
 Create a new user:
@@ -29,5 +29,10 @@ mysql> CREATE USER <username>@localhost IDENTIFIED BY <password>;
 Grant a user with all rights:
 
 ```sql
-mysql> GRANT ALL PRIVILEGES ON *.* TO <username>@localhost IDENTIFIED BY <password>;
+mysql> GRANT ALL PRIVILEGES ON *.* TO <username>@'localhost' [IDENTIFIED BY <password>];
 ```
+
+Show user rights:
+
+```sql
+mysql> SHOW GRANTS [FOR <username>];

@@ -73,11 +73,11 @@ strict-transport-security: max-age=15724800
 }
 ```
 
-Write the response to a file (with JSON format):
+Write the response to a file (or with JSON format):
 
 ```console
-$ curl localhost:8080 [| jq] -o <file>
-$ curl localhost:8080 [| jq] > <file>
+$ curl localhost:8080 -o <file>
+$ curl localhost:8080 | jq > <file>
 ```
 
 

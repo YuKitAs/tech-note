@@ -73,7 +73,13 @@ strict-transport-security: max-age=15724800
 }
 ```
 
-Use `-o <file>` or `> <file>` to write the output to a file.
+Write the response to a file (with JSON format):
+
+```console
+$ curl localhost:8080 [| jq] -o <file>
+$ curl localhost:8080 [| jq] > <file>
+```
+
 
 ### Advanced
 

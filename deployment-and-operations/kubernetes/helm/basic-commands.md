@@ -34,6 +34,14 @@ Add a chart repository.
 $ helm repo add [name] [url] [flags]
 ```
 
+**[Helm Install](https://helm.sh/docs/helm/helm_install/)**
+
+Install a chart archive into k8s cluster (the cluster that `kubectl` is pointing to).
+
+```console
+$ helm install [name] [chart] [flags]
+```
+
 ## Pushing Helm chart to GitLab registry
 
 ```bash

@@ -1,24 +1,4 @@
-# MySQL Server Basic Commands
-
-Start/stop/restart MySQL Server:
-
-```console
-# service mysql start
-# service mysql stop
-# service mysql restart
-```
-
-Check server status:
-
-```console
-# service mysql status
-```
-
-Login as root (and use a database):
-
-```console
-$ mysql -u root -p<password> [db_name]
-```
+# MySQL User Management
 
 Create a new user:
 

@@ -1,13 +1,12 @@
 # `kubectl` Config
 
-After installed `kubectl`, create configuration files for different environments in `~/.kube`. The schema looks something like:
+`kubectl` configuration files should be located in `~/.kube/`. The default config is `~/.kube/config`. The schema looks like:
 
 ```
 kind: Config
 apiVersion: v1
 
 contexts:
-
   - name: <context-name>
     context:
       cluster: <context-cluster>
@@ -15,38 +14,39 @@ contexts:
       namespace: <context-namespace>
 
 clusters:
-
   - name: <cluster-name>
-
     cluster:
       server: <cluster-server>
       certificate-authority-data: ...
 
 users:
-
-  - name: <username>
+  - name: <user-name>
     user:
-      token: ...
+      certificate-authority-data: ...
 ```
 
-Set env variables in `~/.bashrc`, for example:
+Set environment variable `KUBECONFIG` in `~/.bashrc` with actual config file paths. For example:
 
 ```
-export KUBECONFIG=~/.kube/kubeconfig-context:~/.kube/kubeconfig-staging:~/.kube/kubeconfig-production
-source <(kubectl completion bash)
+export KUBECONFIG=~/.kube/config-staging:~/.kube/config-production
 ```
 
-The `kubeconfig-context` file only selects the current active context, i.e. the (cluster, user, namespace) combination. We can check it with
+Check config:
+
+```console
+$ kubectl config view
+```
+
+A context associated with a default namespace can be created with:
+
+```console
+$ kubectl config set-context <context-name> --current --namespace <namespace>
+```
+
+List all contexts:
 
 ```console
 $ kubectl config get-contexts
-```
-
-A default namespace can also be set through the console:
-
-```console
-$ kubectl config set-context <context-name> --namespace <namespace>
-$ kubectl config use-context <context-name>
 ```
 
 Check current context:
@@ -55,8 +55,8 @@ Check current context:
 $ kubectl config current-context
 ```
 
-If an alias is set for `kubectl`, add the following config to `~/.bashrc` to use Bash completion:
+Use another context as default:
 
-```
-complete -o default -F __start_kubectl <kubectl_alias>
+```console
+$ kubectl config use-context <context-name>
 ```

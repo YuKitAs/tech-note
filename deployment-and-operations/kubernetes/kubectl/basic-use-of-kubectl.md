@@ -1,12 +1,16 @@
 # Basic Use of `kubectl`
 
+**Check client and server versions**:
+
+```
+kubectl version
+```
+
 **List all the pods for a project**:
 
 ```
 kubectl -n <namespace> get pod [-l <label-key>=<label-value>]
 ```
-
-The `label-key` could be something like `project`, `app` as defined in the metadata for a project.
 
 Add `-w|--watch` to follow the creation and termination status of the pods.
 
@@ -34,8 +38,6 @@ kubectl -n <namespace> delete pod <pod-name> --grace-period=0 --force
 kubectl -n <namespace> exec <pod-name> -c <container-name> <command>
 ```
 
-`command` could be like `env` etc.
-
 Add `-it` and use `bash` to enter the container and run an interactive bash.
 
 **Show logs of a container**:
@@ -50,7 +52,7 @@ kubectl -n <namespace> logs -f <pod-name> <container-name>
 kubectl -n <namespace> get cm|configmaps <pod-name> -o yaml
 ```
 
-**Restart a deployment/pods**:
+**Restart a deployment**:
 
 Since v1.15.0:
 ```

@@ -34,7 +34,7 @@ export KUBECONFIG=~/.kube/config-staging:~/.kube/config-production
 Check config:
 
 ```console
-$ kubectl config view
+$ kubectl config view [--minify]
 ```
 
 A context associated with a default namespace can be created with:

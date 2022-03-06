@@ -56,3 +56,11 @@ Since v1.15.0:
 ```
 kubectl -n <namespace> rollout restart deployment <deployment-name>
 ```
+
+**Completion for alias**:
+
+If an alias is set for `kubectl`, add the following config to `~/.bashrc` to use Bash completion:
+
+```
+complete -o default -F __start_kubectl <kubectl_alias>
+```

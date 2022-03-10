@@ -38,7 +38,5 @@ foo = args.foo
 Boolean arguments:
 
 ```python
-parser.add_argument('--dryrun', action='store_true', dest='dryrun', help='dry run')
-parser.add_argument('--no-dryrun', action='store_false', dest='dryrun')
-parser.set_defaults(dryrun=True)
+parser.add_argument('--dryrun', action='store_true', default=False)
 ```

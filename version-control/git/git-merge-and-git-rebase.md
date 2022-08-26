@@ -1,25 +1,17 @@
 # `git-merge` and `git-rebase`
 
-Both `git rebase` and `git merge` can be used to integrate changes from one branch into another. For example, usual ways to merge a new branch into the `master` branch:
-
-**Merging**
-```console
-$ git checkout master
-$ git pull
-$ git merge <new-branch>
-```
-
-**Rebasing**
+Both `git rebase` and `git merge` can be used to integrate changes from one branch into another. For example, usual ways to merge the `master` branch into a feature branch:
 
 ```console
 $ git checkout master
-$ git pull
-$ git checkout <new-branch>
-$ git pull
-$ git rebase master
+$ git pull --rebase
+$ git checkout <feature-branch>
+$ git merge [-Xours|-Xtheirs] master
 ```
 
-A major difference is, `merge` won't change the existing branches, while `rebase` will remove the entire new branch to `master`.
+The `-Xours|-Xtheirs` option is used to overwrite conflicts, `-Xours` means the changes in the feature branch will overwrite master.
+
+A major difference is, `merge` won't change the existing branches, while `rebase` will remove the entire new branch to `master` without generating a merge commit.
 
 If we want the project history to be as clean as possible, it's better to use `rebase` instead of `merge`.
 
@@ -35,13 +27,19 @@ If it's not wanted, we should always add `--rebase` in such a case.
 
 ## Interactive Rebasing
 
-Futhermore, we can also use `rebase` to clean up a messy history before merging `new-branch` into `master` by adding the `-i` option:
+Furthermore, we can also use `rebase` to clean up a messy history before merging `new-branch` into `master` by adding the `-i` option:
 
 ```console
 $ git rebase -i master
 ```
 
-A list of commits will be shown in a text editor. We can then change the `pick` command and/or reorder the commits as we want. For example, if a commit only fixes a typo in another commit, we can condense them into a single commit by using `fixup` command.
+or for certain number of commits:
+
+```console
+$ git rebase -i HEAD~3
+```
+
+A list of commits will be shown in a text editor. We can then change the `pick` command and/or reorder the commits as we want. For example, if a commit only fixes a typo in another commit, we can condense them into a single commit by using `fixup`/`f` command.
 
 ## References
 

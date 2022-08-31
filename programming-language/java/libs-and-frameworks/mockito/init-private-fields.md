@@ -10,7 +10,7 @@ public class DummyService {
 }
 ```
 
-We can mock private fields that are initialized in the constructor using `FieldSetter` (from `org.mockito.internal.util.reflection`):
+We can mock private fields that are initialized in the constructor using `FieldSetter` (from `org.mockito.internal.util.reflection`, **deprecated in mockito-core 4.3.1**):
 
 
 ```java

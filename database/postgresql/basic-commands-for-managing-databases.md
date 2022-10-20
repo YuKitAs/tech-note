@@ -41,6 +41,11 @@
   ```console
   postgres=# \d <table_name>
   ```
+* **Dump a table**:
+
+  ```console
+  pg_dump -st <table_name> <db_name>
+  ```
 
 * **Set timezone**:
 
@@ -54,8 +59,15 @@
   ```sql
   SELECT * FROM information_schema.triggers;
   ```
-* **Dump a table**:
 
-  ```console
-  pg_dump -st <table_name> <db_name>
+* **List enum type**:
+
+  ```sql
+  SELECT enum_range(NULL::<enum_name>);
+  ```
+  
+* **Add a new value to enum**:
+
+  ```sql
+  ALTER TYPE <enum_name> ADD VALUE '<new_value>';
   ```

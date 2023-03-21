@@ -185,6 +185,20 @@
   ```console
   $ docker volume rm $(docker volume ls -f dangling=true)
   ```
+  
+  or
+  
+  ```console
+  $ docker volume prune
+  ```
+  
+## Docker System
+
+* **Remove all unused and dangling images, containers, networks and build cache (`volumes` need to be set explitly)**:
+
+  ```console
+  $ docker system prune -a -f [--volumes]
+  ```
 
 ## Docker Compose
 

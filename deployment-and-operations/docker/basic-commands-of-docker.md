@@ -180,7 +180,7 @@
   $ docker volume ls
   ```
 
-* **Remove all dangling volumes** (in /var/lib/docker/volumes):
+* **Remove all dangling volumes** (stored in `/var/lib/docker/volumes`):
 
   ```console
   $ docker volume rm $(docker volume ls -f dangling=true)

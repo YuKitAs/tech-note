@@ -172,6 +172,20 @@
 
   `-f` is short for `--format`.
 
+## Docker Volume
+
+* **List all volumes**:
+
+  ```console
+  $ docker volume ls
+  ```
+
+* **Remove all dangling volumes** (in /var/lib/docker/volumes):
+
+  ```console
+  $ docker volume rm $(docker volume ls -f dangling=true)
+  ```
+
 ## Docker Compose
 
 * **Build and run a container with services defined in** `docker-compose.yml`:

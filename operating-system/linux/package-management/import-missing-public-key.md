@@ -7,3 +7,9 @@ On Debian/Ubuntu, when the Apt system doesn't have the public key it needs to in
 ```
 
 `apt-key` is the program that manages a keyring of gpg keys. There are different servers that can be chosen, like `keyserver.ubuntu.com` or `ipv4.pool.sks-keyservers.net`.
+
+Refresh keys for all packages:
+
+```
+# apt-key adv --refresh-keys --keyserver keyserver.ubuntu.com
+```

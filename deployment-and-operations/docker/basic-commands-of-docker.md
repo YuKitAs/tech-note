@@ -194,7 +194,7 @@
   
 ## Docker System
 
-* **Remove all unused and dangling images, containers, networks and build cache (`volumes` need to be set explitly)**:
+* **Remove all unused and dangling images, containers, networks and build cache (`volumes` need to be given explicitly)**:
 
   ```console
   $ docker system prune -a -f [--volumes]

@@ -1,6 +1,6 @@
 # Rename Multiple Files
 
-Use the Perl command `rename` with regex to rename multiple files based on a pattern.
+1. Use the Perl command `rename` with regex to rename multiple files based on a pattern.
 
 For example, rename the followings files
 ```
@@ -19,3 +19,9 @@ rename(1-foo.txt, foo-1.txt)
 rename(2-bar.txt, bar-2.txt)
 ```
 `-n` (`--no-act`) is used to test the regex first without actually renaming the files.
+
+2. Use the command `mmv` ("multiple move"):
+
+```
+$ mmv '*-*.txt' '#2-#1.txt'
+```

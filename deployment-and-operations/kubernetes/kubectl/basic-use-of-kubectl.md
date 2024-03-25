@@ -16,6 +16,8 @@ kubectl api-resources
 
 To specify a namespace for the following commands, add `-n <namespace>`.
 
+## Pod
+
 **Create and run an image in a pod**:
 
 ```
@@ -70,9 +72,11 @@ kubectl logs -f <pod-name> <container-name>
 kubectl get cm|configmaps <pod-name> -o yaml
 ```
 
+## Deployment and Service
+
 **Expose a deployment as a new service**:
 
-Create a ClusterIP Service with an IP address that's accessible within the cluster.
+Creates a ClusterIP Service with an IP address that's accessible within the cluster.
 
 ```
 kubectl expose deploy|deployment <deployment-name>
@@ -90,18 +94,61 @@ kubectl get svc|service
 kubectl proxy --port=<port>
 ```
 
-The default port is 8001. The service can be accessed externally via `http://localhost:8001/api/v1/namespaces/<namespace>/services/<service-name>/proxy/`. 
+The default port is 8001. The service can be accessed externally via `http://localhost:8001/api/v1/namespaces/<namespace>/services/<service-name>/proxy/`.
+
+**Get a deployment**:
+
+```
+kubectl get deploy|deployment
+```
+
+Add `-o wide` to get deployments with additional info like containers and images.
+
+**Update container image for a deployment**:
+
+```
+kubectl set image deploy|deployment <deployment-name> <container-name>=<new-image-name>:<new-tag>
+```
 
 **Restart a deployment**:
 
-Since v1.15.0:
 ```
 kubectl rollout restart deploy|deployment <deployment-name>
 ```
 
+**Rollback a deployment**:
+
+Rollback to a previous stable state of the deployment.
+
+```
+kubectl rollout undo deploy|deployment <deployment-name>
+```
+
+**Get rollout status**:
+
+```
+kubectl rollout status deploy|deployment <deployment-name>
+```
+
+**Autoscale deployment (HPA)**:
+
+Creates an HPA resource associated with the specified deployment.
+
+```
+kubectl autoscale deployment <deployment-name> --min=<min-replicas> --max=<max-replicas> --cpu-percent=<cpu-utilization-target>
+```
+
+**Check HPA status**:
+
+```
+kubectl get hpa <hpa-name> --watch
+```
+
+## Setup
+
 **Completion for alias**:
 
-If an alias is set for `kubectl`, add the following config to `~/.bashrc` to use Bash completion:
+If an alias is set for `kubectl`, add the following config to `~/.bashrc` to use the default completion:
 
 ```
 complete -o default -F __start_kubectl <kubectl_alias>

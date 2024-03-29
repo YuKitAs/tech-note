@@ -139,6 +139,12 @@ kubectl rollout undo deploy|deployment <deployment-name>
 kubectl rollout status deploy|deployment <deployment-name>
 ```
 
+**Get rollout history**:
+
+```
+kubectl rollout history deploy|deployment <deployment-name>
+```
+
 **Autoscale deployment (HPA)**:
 
 Creates an HPA resource associated with the specified deployment.

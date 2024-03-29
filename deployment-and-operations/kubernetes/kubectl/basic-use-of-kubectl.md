@@ -104,6 +104,15 @@ kubectl get deploy|deployment
 
 Add `-o wide` to get deployments with additional info like containers and images.
 
+**Create a tunnel between a localhost and a pod**:
+
+```
+kubectl port-forward deployment/<deployment-name> <local-port>:<pod-port>
+```
+```
+kubectl port-forward <pod-name> <local-port>:<pod-port>
+```
+
 **Update container image for a deployment**:
 
 ```

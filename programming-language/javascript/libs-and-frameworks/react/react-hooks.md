@@ -2,9 +2,9 @@
 
 Hooks should only be called at the top level of React function components so that they can be called in the same order each time a component renders.
 
-## Hooks
+Some commonly used hooks are `useState`, `useEffect`, `useContext`, `useReducer` and `useCallback`.
 
-### State
+## State
 
 **Usage**:
 
@@ -27,7 +27,7 @@ function Example() {
 * We can declare multiple state variables for different states, or declare one state with an object/array value to group them. However, updating a state variable always replaces it instead of merging it.
 
 
-### Effect
+## Effect
 
 **Usage**:
 
@@ -45,13 +45,9 @@ function Example() {
 }
 ```
 
-* A combination of `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` and will be performed after the the first render and after every update by default
+* Initial render: the effect will be performed after the the first render (similar to `componentDidMount`) and after every update by default, we can declare multiple effects to split concerns.
 
-* An effect can be cleaned up when the component unmounts by returning a `cleanup()` function from the effect
-
-* We can declare multiple effects to split concerns
-
-* Effects can be skipped if certain values (props and states) are not changed in order to improve performance:
+* Subsequent renders: effects can be skipped if certain values (props and states) provided as a dependency array are not changed in order to improve performance:
 
   ```typescript
   useEffect(() => {
@@ -59,7 +55,11 @@ function Example() {
   }, [count]); // only re-run the effect if count changes
   ```
 
-  It will only be run once if given an empty array.
+  If no dependency array is give, the effect will run on every render; if given an empty array, it will only be run once.
+
+* Cleanup: an effect can be cleaned up by returning an optional `cleanup()` function from the effect.
+
+* Unmounting: if a cleanup function is present, it'll be executed before the component is unmounted.
 
 ## Reference
 

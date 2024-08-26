@@ -19,6 +19,11 @@ $ git reset HEAD~
 ```
 where `HEAD~` is shorthand for `HEAD~1`, pointing to the previous commit of the most recent one.
 
+Undo the most recent merge commit:
+
+```console
+$ git reset --merge HEAD~
+```
 
 ### Hard reset
 

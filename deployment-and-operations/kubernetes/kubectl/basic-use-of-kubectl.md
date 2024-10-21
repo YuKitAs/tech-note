@@ -14,7 +14,7 @@ List all resource types along with their shortcuts, API version, and whether the
 kubectl api-resources
 ```
 
-To specify a namespace for the following commands, add `-n <namespace>`.
+To specify a namespace other than the current namespace, add `-n <namespace>`.
 
 ## Pod
 
@@ -31,8 +31,6 @@ kubectl get po|pod -l <label-key>=<label-value>
 ```
 
 Add `-w|--watch` to follow the creation and termination status of the pods.
-
-Add `-o wide` to get pods with additional info like IP and node.
 
 **Show details and status of a pod**:
 
@@ -64,12 +62,6 @@ Add `-it` and use `bash` to enter the container and run an interactive bash.
 
 ```
 kubectl logs -f <pod-name> <container-name>
-```
-
-**Output configmaps of a pod in `yaml` format**:
-
-```
-kubectl get cm|configmaps <pod-name> -o yaml
 ```
 
 ## Deployment and Service
@@ -168,3 +160,13 @@ If an alias is set for `kubectl`, add the following config to `~/.bashrc` to use
 ```
 complete -o default -F __start_kubectl <kubectl_alias>
 ```
+
+## Output
+
+Add `-o wide` to show additional info in plain-text format, like IP and node for pods.
+
+Add `-o yaml` to get objects in YAML format, see [configmap](https://github.com/YuKitAs/tech-note/blob/master/deployment-and-operations/kubernetes/configmap-and-secrets.md#configmap) as an example.
+
+Add `-o jsonpath=<template>` to get output defined in a [jsonpath](https://kubernetes.io/docs/reference/kubectl/jsonpath/) expression, see [secret](https://github.com/YuKitAs/tech-note/blob/master/deployment-and-operations/kubernetes/configmap-and-secrets.md#secrets) as an example.
+
+Add `-o custom-columns=<COLUMN_1>:<jsonpath>,<COLUMN_2>:<jsonpath>` to print custom columns, e.g. `-o custom-columns=NAME:.metadata.name` to print the resource name only.

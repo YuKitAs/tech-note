@@ -29,5 +29,5 @@ The `secret-tool` is a command-line tool to store and access passwords in the GN
 * Reference a secret in the script:
 
   ```bash
-  export $MY_PASS=$(secret-tool lookup <attribute_key> <attribute_value>)
+  export MY_PASS=$(secret-tool lookup <attribute_key> <attribute_value>)
   ```

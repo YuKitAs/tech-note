@@ -22,19 +22,20 @@ The aliases defined in `.bash_aliases` or `.bashrc` can't be used in Bash script
 
 2. Define functions instead of aliases
 
-  In `.bashrc`:
+  In `.bashrc`, use the alias as the function name and export it:
 
   ```bash
   docker-compose() {
     docker compose "$@"
   }
+
+  export -f docker-compose
   ```
 
-  Then export the function:
+  Then source `.bashrc`:
 
   ```console
   $ . ~/.bashrc
-  $ export -f docker-compose
   ```
 
   The definitions of exported functions can be found with

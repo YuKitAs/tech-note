@@ -1,4 +1,4 @@
-# Use of Grep
+# Basic Use of Grep
 
 ## Search for Multiple Patterns
 
@@ -31,3 +31,7 @@ $ grep -B<num> -A<num> <pattern> <file>
 ```console
 $ grep -m 1 <pattern> <file>
 ```
+
+## Search in Compressed Files
+
+Some log files are auto compressed in `gzip` format (`g` for GNU), to view, page and filter these files suffixed with `.gz`, use `zcat`, `zless` or `zgrep`.

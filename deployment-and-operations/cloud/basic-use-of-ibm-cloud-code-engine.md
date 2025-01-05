@@ -14,13 +14,19 @@ Use IBM Cloud Code Engine to deploy and manage containerized applications.
   $ ibmcloud ce app create --name <app-name> --image <container-image> [--registry-secret <secret-for-private-registry> --port <port> --build-context-dir <directory-containing-dockerfile> --build-source .]
   ```
 
+  A public deployment URL (`*.cloud`) will be generated at the end which can be used to access the app.
+
+* **List all apps**:
+
+  ```console
+  $ ibmcloud ce app list
+  ```
+
 * **Get the details of an app**:
 
   ```console
   $ ibmcloud ce app get -n <app-name>
   ```
-
-  The generated deployment URL (`*.cloud`) can be used to access the app.
 
 * **Scale an app**:
 

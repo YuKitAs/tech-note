@@ -9,13 +9,13 @@ spec:
   tasks:
     - name: my-task
       taskRef:
-        name: example-task
+        name: template-task
       workspaces:
-        - name: example-task-workspace # Workspace required by example-task
-          workspace: shared-data # Map the pipeline's workspace to the workspace of example-task
+        - name: template-task-workspace # Workspace required by template-task
+          workspace: shared-data # Map the pipeline's workspace to the workspace of template-task
 ```
 
-A PVC (PersistentVolumeClaim) is a request for storage in Kubernetes. It allows a Tekton pipeline or task to persist data by claiming storage from a Kubernetes cluster's storage resources (Persistent Volumes). The PVC definition looks like this:
+A PVC (`PersistentVolumeClaim`) is a request for storage in Kubernetes. It allows a Tekton pipeline or task to persist data by claiming storage from a Kubernetes cluster's storage resources (Persistent Volumes). The PVC definition looks like this:
 
 ```yaml
 apiVersion: v1
@@ -31,7 +31,7 @@ spec:
       storage: 1Gi
 ```
 
-In a PipelineRun definition, the actual storage configuration is provided to the workspace like:
+In a `PipelineRun` definition, the actual storage configuration is provided to the workspace like:
 
 ```yaml
 apiVersion: tekton.dev/v1beta1

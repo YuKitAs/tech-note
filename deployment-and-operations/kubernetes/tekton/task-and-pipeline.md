@@ -19,7 +19,6 @@
         image: alpine:3
         command: [/bin/echo]
         args: ["$(params.message)"]
-
   ```
 
 * Apply `Task`:
@@ -123,4 +122,27 @@
   [build : echo] Building image for template-service ...
 
   [deploy : echo] Deploying master branch of template-service ...
+  ```
+
+* Tasks can run sequentially (with `runAfter`) or in parallel.
+
+* Tasks can be installed from Tekton Catalog (Tekton Hub) like:
+
+  ```console
+  $ tkn hub install task <name>
+  ```
+
+  Installed tasks can be referenced like:
+
+  ```yaml
+  taskRef:
+    name: some-task
+  ```
+
+  Cluster tasks don't need to be installed locally and can be referenced from any workspaces, it should be referenced with `kind` like:
+
+  ```yaml
+  taskRef:
+    name: some-cluster-task
+    kind: ClusterTask
   ```

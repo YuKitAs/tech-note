@@ -1,8 +1,18 @@
 # Setup Virtual Environment
 
+
+**Update: Python 3.3+ includes the built-in `venv` module and `virtualenv` doesn't need to be installed manually.**
+
+Activate virtual environment with:
+
+```console
+$ . venv/bin/activate
+```
+
+## For Older Versions
 [Virtualenv](https://virtualenv.pypa.io/en/stable/) is a tool to create isolated python environment.
 
-## Installation
+### Installation
 
 1. Install `virtualenv`:
 
@@ -25,7 +35,7 @@
   $ virtualenv -p $(which python3) env
   ```
 
-## Usage
+### Usage
 
 1. In the project root directory, use the following command to activate the virtual environment:
 

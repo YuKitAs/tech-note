@@ -1,7 +1,6 @@
 # Ingress Basics
 
-An Ingress is an API object in the Kubernetes (since v1.1) that exposes HTTP and HTTPS routes outside the cluster to services within the cluster. Traffic routing is controlled by `rules` defined in Ingress spec, like:
-
+An Ingress is an API object in the Kubernetes (since v1.1) that exposes HTTP and HTTPS routes outside the cluster to services within the cluster, it requires an Ingress Controller (e.g. Nginx, Traefik) to be deployed in the cluster. Traffic routing is controlled by `rules` defined in Ingress spec, like:
 
 ```yaml
 apiVersion: extensions/v1

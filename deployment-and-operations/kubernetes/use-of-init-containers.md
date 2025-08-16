@@ -22,7 +22,7 @@ The app container and the volume:
 
 ```yaml
 spec:
-	spec:
+    spec:
       containers:
         - name: app
           image: some-image

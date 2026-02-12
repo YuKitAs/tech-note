@@ -121,3 +121,9 @@ An example to connect two hosts through a Linux bridge node with [Containerlab](
 
   send(IP(dst="10.0.0.2")/ICMP())
   ```
+
+5. Cleanup:
+
+  ```bash
+  $ containerlab destroy -t bridge-lab.yml
+  ```

@@ -1,4 +1,4 @@
-# Creating Bridge with Containerlab
+# Creating Bridge
 
 An example to connect two hosts through a Linux bridge node with [Containerlab](https://containerlab.dev), observe traffic with `tshark`, and inspect or manipulate packets with `scapy`.
 

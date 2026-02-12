@@ -60,7 +60,7 @@ An example to connect two hosts through a Linux bridge node with [Containerlab](
   $ containerlab deploy -t bridge-lab.yml
   ```
 
-  Three container will be running:
+  Three containers will be running:
 
   ```
   IMAGE                                PORTS                                                    NAMES

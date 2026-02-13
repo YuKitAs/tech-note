@@ -30,3 +30,5 @@
   ```bash
   $ iptables -F
   ```
+
+More examples can be found in [Linux iptables command examples for new sysadmins](https://www.cyberciti.biz/tips/linux-iptables-examples.html).

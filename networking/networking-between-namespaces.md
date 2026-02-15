@@ -39,12 +39,12 @@
 
 6. Bring veths up:
 
-    ```bash
-    $ sudo ip link set dev vethA up
-    $ sudo ip netns exec ns1 ip link set dev vethB up
-    $ sudo ip link set dev vethC up
-    $ sudo ip netns exec ns2 ip link set dev vethD up
-    ```
+  ```bash
+  $ sudo ip link set dev vethA up
+  $ sudo ip netns exec ns1 ip link set dev vethB up
+  $ sudo ip link set dev vethC up
+  $ sudo ip netns exec ns2 ip link set dev vethD up
+  ```
 
 7. Verify connections with `ping`:
 

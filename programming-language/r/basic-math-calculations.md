@@ -1,0 +1,39 @@
+# Basic Math Calculations
+
+* **Factorial (x!)**: `factorial(x)`
+
+* **Powers**: `x^n`
+
+* **Square root**: `sqrt(x)`
+
+* **Exponential (e^x)**: `exp(x)`
+
+* **Logarithms**:
+
+  ```r
+  log(x) # ln(x)
+  log(x, base=n) # log_n(x)
+  ```
+
+* **Absolute value**: `abs(x)`
+
+* **Functions**:
+
+  ```r
+  f <- function(x) x^2
+  f <- function(x) {
+    return x^2
+  }
+  g <- function(x, y) x + y
+  ```
+
+* **Sum**:
+
+  ```r
+  f <- function(x) x^2
+  sum(f(1:5))
+  ```
+
+* **Integral**: `integrate(function(x) x^2, 0, 1)`
+
+* **Derivative**: `D(expression(x^2), "x")`

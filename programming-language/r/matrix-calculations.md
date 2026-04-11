@@ -18,7 +18,7 @@ A <- matrix(c(1, 0, 0, 1), nrow=2, ncol=2) # fills by columns by default, otherw
 # 0 0 0
 A <- matrix(0, 3, 3) # initialize a 3x3 matrix filled with 0
 A[1,] <- c(1, 0, 0) # row 1
-A[2, c(1, 2)] <- 1 # row 2, column 2
+A[2, c(1, 2)] <- 1 # row 2, column 1, 2
 
 # 1 0 0
 # 0 1 0

@@ -27,6 +27,15 @@
   g <- function(x, y) x + y
   ```
 
+* **Plot functions**:
+
+  ```r
+  x <- seq(-10, 10, 0.1) # from, to, step (default 1)
+  plot(x, f(x), type="l")
+  # or
+  curve(f, -10, 10)
+  ```
+
 * **Sum**:
 
   ```r

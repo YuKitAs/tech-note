@@ -15,6 +15,17 @@
   log(x, base=n) # log_n(x)
   ```
 
+* **Trigonometric**:
+
+  ```r
+  sin()
+  cos()
+  tan()
+  asin() # arcsin
+  acos() # arccos
+  atan() # arctan
+  ```
+
 * **Absolute value**: `abs(x)`
 
 * **Functions**:

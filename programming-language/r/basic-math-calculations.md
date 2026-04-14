@@ -32,8 +32,12 @@
   ```r
   x <- seq(-10, 10, 0.1) # from, to, step (default 1)
   plot(x, f(x), type="l")
+  grid()
   # or
   curve(f, -10, 10)
+  grid()
+  # add to existing plot
+  lines(x, f2(x), col="blue")
   ```
 
 * **Sum**:

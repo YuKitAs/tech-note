@@ -58,6 +58,18 @@
   sum(f(1:5))
   ```
 
-* **Integral**: `integrate(function(x) x^2, 0, 1)`
+* **Integral**:
+
+  ```r
+  integrate(function(x) x^2, 0, 1) # with absolute error
+  integrate(function(x) x^2, 0, 1)$value
+  ```
 
 * **Derivative**: `D(expression(x^2), "x")`
+
+* **Number conversion**:
+
+  ```r
+  round(x, n) # round up to n of decimal places (default 0)
+  MASS::fractions(x) # show result as fractions
+  ```

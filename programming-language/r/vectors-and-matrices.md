@@ -1,10 +1,31 @@
-# Matrix Calculations
+# Vectors and Matrices
 
 * **Define a vector**:
 
 ```r
 b <- c(0, 1)
 ```
+
+* **Vector functions**:
+
+```r
+length(b)
+mean(b) # average
+var(b) # sample variance
+sum(b)
+prod(b)
+```
+
+* **Inspect vector elements**:
+
+```r
+# filters elements
+b[b>=1]
+b[b!=0]
+which(b>=1) # return indices of elements
+b>=1 # return TRUE or FALSE element-wise
+```
+
 
 * **Define a matrix**:
 

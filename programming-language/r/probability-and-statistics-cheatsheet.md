@@ -1,4 +1,4 @@
-# Probability Cheatsheet
+# Probability and Statistics Cheatsheet
 
 * **Choose k from n (unordered)**:
 
@@ -47,13 +47,15 @@
 
   # P(X_mean <= a) for X_mean ~ N(mu, sigma^2/n)
   pnorm(a, mean=mu, sd=sigma / sqrt(n))
-  pnorm((a - mu) / (sigma / sqrt(n)))
 
   # P(a <= X <= b)
   pnorm(b, mean=mu, sd=sigma) - pnorm(a, mean=mu, sd=sigma)
 
-  # find x for P(X <= x) = p = (conf.level + 1) / 2
+  # find x for P(X <= x) = p
   qnorm(p, mean=mu, sd=sigma)
+
+  # two-sided confidence interval quantile
+  qnorm((1 + conf.level) / 2)
   ```
 
 * **Chi-square distribution**:
@@ -64,6 +66,11 @@
 
   # find x for P(X <= x) = p
   qchisq(p, df)
+
+  # confidence interval quantile
+  lower <- qchisq((1 - conf.level) / 2, df)
+  upper <- qchisq((1 + conf.level) / 2, df)
+  c(lower, upper)
   ```
 
 * **t distribution**:
@@ -74,6 +81,9 @@
 
   # find x for P(X <= x) = p = (conf.level + 1) / 2
   qt(p, df)
+
+  # two-sided confidence interval quantile
+  qt((1 + conf.level) / 2, df)
   ```
 
 * **Gamma distribution**:
@@ -85,6 +95,11 @@
   # P(X <= a)
   pgamma(a, shape=alpha, rate=beta)
 
-  # find x for P(X <= x) = p = (conf.level + 1) / 2
+  # find x for P(X <= x) = p
   qgamma(p, shape=alpha, rate=beta)
+
+  # confidence interval quantile
+  lower <- qgamma((1 - conf.level) / 2, shape=alpha, rate=beta)
+  upper <- qgamma((1 + conf.level) / 2, shape=alpha, rate=beta)
+  c(lower, upper)
   ```

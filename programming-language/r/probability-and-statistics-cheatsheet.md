@@ -84,6 +84,19 @@
 
   # two-sided confidence interval quantile
   qt((1 + conf.level) / 2, df)
+
+  # welch's t-test (default, unequal variances)
+  # default: conf.lev=0.95
+  # one sample t-test (mean vs fixed value)
+  t.test(x, conf.lev=conf.level)
+  # two sample t-test (difference of two sample means)
+  t.test(x, y, conf.lev=conf.level)
+
+  # pooled variance t-test (equal variances assumed)
+  t.test(x, y, conf.lev=conf.level, var.equal = TRUE)
+
+  # extract confidence interval
+  t.test(x)$conf.int
   ```
 
 * **Gamma distribution**:

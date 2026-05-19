@@ -86,14 +86,14 @@
   qt((1 + conf.level) / 2, df)
 
   # welch's t-test (default, unequal variances)
-  # default: conf.lev=0.95
+  # default: conf.level=0.95
   # one sample t-test (mean vs fixed value)
-  t.test(x, conf.lev=conf.level)
+  t.test(x, conf.level=conf.level)
   # two sample t-test (difference of two sample means)
-  t.test(x, y, conf.lev=conf.level)
+  t.test(x, y, conf.level=conf.level)
 
   # pooled variance t-test (equal variances assumed)
-  t.test(x, y, conf.lev=conf.level, var.equal = TRUE)
+  t.test(x, y, conf.level=conf.level, var.equal=TRUE)
 
   # extract confidence interval
   t.test(x)$conf.int

@@ -116,3 +116,13 @@
   upper <- qgamma((1 + conf.level) / 2, shape=alpha, rate=beta)
   c(lower, upper)
   ```
+
+* **F distribution**:
+
+  ```r
+  # confidence interval quantile for a ratio of true variances
+  ratio <- s1sq / s2sq # ratio of sample variances
+  lower <- ratio / qf((1 + conf.level) / 2, n1 - 1, n2 - 1)
+  upper <- ratio / qf((1 - conf.level) / 2, n1 - 1, n2 - 1)
+  c(lower, upper)
+  ```
